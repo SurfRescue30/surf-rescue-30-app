@@ -1,0 +1,93 @@
+{
+ "updated": "2026-11-02T02:21:27.711Z",
+ "errors": [],
+ "bom": {
+  "issued": "Mon 10:45",
+  "areas": [
+   {
+    "name": "Sydney Coast: Broken Bay to Port Hacking",
+    "synoptic": "",
+    "periods": [
+     {
+      "label": "Monday 2 Nov",
+      "warning": "",
+      "winds": "Northeasterly about 10 knots increasing to 15 to 20 knots in the middle of the day.",
+      "seas": "Below 0.5 metres, increasing to around 1 metre around midday.",
+      "swell1": "Southerly below 1 metre.",
+      "swell2": "",
+      "weather": "Partly cloudy. 60% chance of showers in the late afternoon and evening. The chance of a thunderstorm in the late afternoon and evening.",
+      "caution": ""
+     },
+     {
+      "label": "Tuesday 3 Nov",
+      "warning": "",
+      "winds": "North to northeasterly 15 to 20 knots shifting south to southeasterly 10 to 15 knots in the evening. Squalls possible with the wind change.",
+      "seas": "1 to 1.5 metres, decreasing to 1 metre during the afternoon.",
+      "swell1": "Northeasterly below 1 metre, increasing to 1 to 2 metres during the morning.",
+      "swell2": "",
+      "weather": "Partly cloudy. 90% chance of showers. A thunderstorm likely.",
+      "caution": ""
+     },
+     {
+      "label": "Wednesday 4 Nov",
+      "warning": "",
+      "winds": "South to southwesterly 15 to 20 knots tending south to southeasterly 10 to 15 knots during the afternoon then becoming variable below 10 knots during the evening.",
+      "seas": "1 to 1.5 metres, decreasing below 1 metre during the afternoon or evening.",
+      "swell1": "Northeasterly 1 to 2 metres, decreasing to around 1 metre during the morning.",
+      "swell2": "Southerly around 1 metre, increasing to 1 to 1.5 metres during the morning.",
+      "weather": "Partly cloudy. 50% chance of showers. The chance of a thunderstorm.",
+      "caution": ""
+     }
+    ]
+   },
+   {
+    "name": "Sydney Enclosed Waters",
+    "synoptic": "A ridge extends over the Sydney waters. A trough will move north across the Sydney waters late on Tuesday, followed by a new trough late on Wednesday. A new ridge will extend over the Sydney waters on Thursday.",
+    "periods": [
+     {
+      "label": "Monday 2 Nov",
+      "warning": "",
+      "winds": "Northeasterly about 10 knots increasing to 15 to 20 knots in the middle of the day.",
+      "seas": "Below 0.5 metres.",
+      "swell1": "",
+      "swell2": "",
+      "weather": "Partly cloudy. 70% chance of showers. The chance of a thunderstorm in the afternoon and evening.",
+      "caution": ""
+     },
+     {
+      "label": "Tuesday 3 Nov",
+      "warning": "",
+      "winds": "North to northeasterly 10 to 15 knots shifting south to southwesterly in the evening.",
+      "seas": "Below 0.5 metres.",
+      "swell1": "",
+      "swell2": "",
+      "weather": "Partly cloudy. 90% chance of showers. A thunderstorm likely.",
+      "caution": ""
+     },
+     {
+      "label": "Wednesday 4 Nov",
+      "warning": "",
+      "winds": "Southwesterly 10 to 15 knots turning southeasterly during the day then becoming variable below 10 knots during the afternoon.",
+      "seas": "Below 0.5 metres.",
+      "swell1": "",
+      "swell2": "",
+      "weather": "Partly cloudy. 50% chance of showers.",
+      "caution": ""
+     },
+     {
+      "label": "Thursday 5 Nov",
+      "warning": "",
+      "winds": "Westerly about 10 knots tending southwesterly 15 to 20 knots during the morning then tending southerly during the day.",
+      "seas": "Below 0.5 metres.",
+      "swell1": "",
+      "swell2": "",
+      "weather": "Mostly sunny.",
+      "caution": ""
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": [],
+ "ww": null
+}
