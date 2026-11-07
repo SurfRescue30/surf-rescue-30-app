@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="1.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.bom.gov.au/schema/v1.7/product.xsd">
+    <amoc>
+        <source>
+            <sender>Australian Government Bureau of Meteorology</sender>
+            <region>New South Wales</region>
+            <office>NSWRO</office>
+            <copyright>http://www.bom.gov.au/other/copyright.shtml</copyright>
+            <disclaimer>http://www.bom.gov.au/other/disclaimer.shtml</disclaimer>
+        </source>
+        <identifier>IDN29000</identifier>
+        <issue-time-utc>2026-11-07T10:49:32Z</issue-time-utc>
+        <issue-time-local tz="EDT">2026-11-07T21:49:32+11:00</issue-time-local>
+        <sent-time>2026-11-07T10:49:32Z</sent-time>
+        <expiry-time>2026-11-08T13:00:00Z</expiry-time>
+        <validity-bgn-time-local tz="EDT">2026-11-07T21:47:00+11:00</validity-bgn-time-local>
+        <validity-end-time-local tz="EDT">2026-11-08T23:59:59+11:00</validity-end-time-local>
+        <next-routine-issue-time-utc>2026-11-07T18:00:00Z</next-routine-issue-time-utc>
+        <next-routine-issue-time-local tz="EDT">2026-11-08T05:00:00+11:00</next-routine-issue-time-local>
+        <status>O</status>
+        <service>WSP</service>
+        <sub-service>WSG</sub-service>
+        <product-type>W</product-type>
+        <phase>REN</phase>
+    </amoc>
+    <warning>
+        <warning-info>
+            <text type="warning_title">Warning to Sheep Graziers</text>
+            <text type="warning_area_summary">Illawarra, South Coast, Central Tablelands, Southern Tablelands, South West Slopes, Snowy Mountains and Australian Capital Territory forecast districts</text>
+            <text type="warning_next_issue">5:00 am EDT Sunday</text>
+        </warning-info>
+        <!---->
+        <!--locale[NSW_EV001, allow-output=yes]-->
+        <!--hazards-exist="yes" non-warning-info-elements-exist="no"-->
+        <area aac="NSW_FA001" description="New South Wales" type="region">
+            <!--===============-->
+            <!--HAZARD ELEMENTS-->
+            <!--===============-->
+            <!--locale[NSW_EV001]/period[variable]-->
+            <hazard index="1" parent-aac="NSW_EV001" phase="REN" type="SHW" severity="STD" urgency="UNK" certainty="UNK" start-time-local="2026-11-07T21:47:00+11:00" end-time-local="2026-11-09T00:00:00+11:00" start-time-utc="2026-11-07T10:47:00Z" end-time-utc="2026-11-08T13:00:00Z">
+                <area-list>
+                    <area aac="NSW_PW006" phase="REN" description="Illawarra" type="public-district"/>
+                    <area aac="NSW_PW007" phase="REN" description="South Coast" type="public-district"/>
+                    <area aac="NSW_PW008" phase="REN" description="Central Tablelands" type="public-district"/>
+                    <area aac="NSW_PW009" phase="REN" description="Southern Tablelands" type="public-district"/>
+                    <area aac="NSW_PW013" phase="REN" description="South West Slopes" type="public-district"/>
+                    <area aac="NSW_PW010" phase="REN" description="Snowy Mountains" type="public-district"/>
+                    <area aac="NSW_PW017" phase="REN" description="Australian Capital Territory" type="public-district"/>
+                </area-list>
+                <priority>W</priority>
+                <text type="warning_phenomena">Warning to Sheep Graziers</text>
+                <text type="warning_areas">Illawarra, South Coast, Central Tablelands, Southern Tablelands, South West Slopes, Snowy Mountains and Australian Capital Territory forecast districts</text>
+                <text type="warning">Sheep graziers are warned that cold temperatures, showers and southerly winds are expected during Saturday and Sunday. Areas likely to be affected include the Illawarra, Southern Tablelands, Snowy Mountains and Australian Capital Territory forecast districts and parts of the South Coast, Central Tablelands and South West Slopes forecast districts. There is a risk of losses of lambs and sheep exposed to these conditions.</text>
+            </hazard>
+        </area>
+    </warning>
+</product>

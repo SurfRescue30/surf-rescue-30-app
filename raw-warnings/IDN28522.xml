@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="1.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.bom.gov.au/schema/v1.7/product.xsd">
+    <amoc>
+        <source>
+            <sender>Australian Government Bureau of Meteorology</sender>
+            <region>New South Wales</region>
+            <office>NSWRO</office>
+            <copyright>http://www.bom.gov.au/other/copyright.shtml</copyright>
+            <disclaimer>http://www.bom.gov.au/other/disclaimer.shtml</disclaimer>
+        </source>
+        <identifier>IDN28522</identifier>
+        <issue-time-utc>2026-11-07T10:49:26Z</issue-time-utc>
+        <issue-time-local tz="EDT">2026-11-07T21:49:26+11:00</issue-time-local>
+        <sent-time>2026-11-07T10:49:26Z</sent-time>
+        <expiry-time>2026-11-09T13:00:00Z</expiry-time>
+        <validity-bgn-time-local tz="EDT">2026-11-08T00:00:00+11:00</validity-bgn-time-local>
+        <validity-end-time-local tz="EDT">2026-11-09T23:59:59+11:00</validity-end-time-local>
+        <next-routine-issue-time-utc>2026-11-07T18:00:00Z</next-routine-issue-time-utc>
+        <next-routine-issue-time-local tz="EDT">2026-11-08T05:00:00+11:00</next-routine-issue-time-local>
+        <status>O</status>
+        <service>WSM</service>
+        <sub-service>WHS</sub-service>
+        <product-type>W</product-type>
+        <phase>REN</phase>
+    </amoc>
+    <warning>
+        <warning-info>
+            <text type="warning_title">Hazardous Surf Warning for New South Wales</text>
+            <text type="warning_advice">
+                <p>NSW Police Force, Marine Area Command advise that:</p>
+                <p>People should consider staying out of the water and avoid walking near surf-exposed areas.</p>
+                <p>Rock fishers should avoid coastal rock platforms exposed to the ocean and seek a safe location that is sheltered from the surf.</p>
+                <p>Boaters planning to cross shallow water and ocean bars should consider changing or delaying their voyage.</p>
+                <p>Boaters already on the water should carry the appropriate safety equipment and wear a lifejacket.</p>
+                <p>Boaters should remember to log on with their local Marine Rescue radio base, via VHF Radio or the Marine Rescue APP, and consider their safety management plan.</p>
+            </text>
+            <text type="postamble">Check the Coastal Waters Forecast for information on wind, wave and weather conditions for these areas at http://www.bom.gov.au/nsw/ or on marine radio.</text>
+            <text type="warning_next_issue">The next warning will be issued by 5:00 am EDT Sunday.</text>
+        </warning-info>
+        <!---->
+        <!--locale[NSW_FA001, allow-output=yes]-->
+        <!--hazards-exist="yes" non-warning-info-elements-exist="yes"-->
+        <area aac="NSW_FA001" description="New South Wales" type="region">
+            <!--===================-->
+            <!--NON-HAZARD ELEMENTS-->
+            <!--===================-->
+            <!--locale[NSW_FA001]/period[variable]-->
+            <!--non-warning-info-elements-exist='yes'-->
+            <forecast-period start-time-local="2026-11-07T21:49:27+11:00" end-time-local="2026-11-07T21:49:27+11:00" start-time-utc="2026-11-07T10:49:27Z" end-time-utc="2026-11-07T10:49:27Z">
+                <text type="synoptic_situation">Surf and swell conditions are expected to be hazardous for coastal activities such as rock fishing, boating, and swimming in the following areas.</text>
+            </forecast-period>
+            <!--===============-->
+            <!--HAZARD ELEMENTS-->
+            <!--===============-->
+            <!--locale[NSW_FA001]/period[day1]-->
+            <forecast-period index="1" start-time-local="2026-11-08T00:00:00+11:00" end-time-local="2026-11-09T00:00:00+11:00" start-time-utc="2026-11-07T13:00:00Z" end-time-utc="2026-11-08T13:00:00Z">
+                <hazard index="1" parent-aac="NSW_FA001" phase="REN" type="HSW" severity="STD" urgency="UNK" certainty="UNK">
+                    <area-list>
+                        <area aac="NSW_MW005" phase="REN" description="Hunter Coast: Seal Rocks to Broken Bay" type="coast"/>
+                        <area aac="NSW_MW004" phase="REN" description="Sydney Coast: Broken Bay to Port Hacking" type="coast"/>
+                    </area-list>
+                    <priority>W</priority>
+                    <text type="warning_phenomena">Hazardous Surf Warning</text>
+                    <text type="warning_areas">Hunter Coast and Sydney Coast</text>
+                </hazard>
+            </forecast-period>
+            <!--locale[NSW_FA001]/period[day2]-->
+            <forecast-period index="2" start-time-local="2026-11-09T00:00:00+11:00" end-time-local="2026-11-10T00:00:00+11:00" start-time-utc="2026-11-08T13:00:00Z" end-time-utc="2026-11-09T13:00:00Z">
+                <hazard index="1" parent-aac="NSW_FA001" phase="REN" type="HSW" severity="STD" urgency="UNK" certainty="UNK">
+                    <area-list>
+                        <area aac="NSW_MW008" phase="REN" description="Byron Coast: Point Danger to Wooli" type="coast"/>
+                        <area aac="NSW_MW007" phase="REN" description="Coffs Coast: Wooli to Smoky Cape" type="coast"/>
+                        <area aac="NSW_MW006" phase="REN" description="Macquarie Coast: Smoky Cape to Seal Rocks" type="coast"/>
+                        <area aac="NSW_MW005" phase="REN" description="Hunter Coast: Seal Rocks to Broken Bay" type="coast"/>
+                        <area aac="NSW_MW004" phase="REN" description="Sydney Coast: Broken Bay to Port Hacking" type="coast"/>
+                        <area aac="NSW_MW003" phase="REN" description="Illawarra Coast: Port Hacking to Ulladulla" type="coast"/>
+                        <area aac="NSW_MW002" phase="REN" description="Batemans Coast: Ulladulla to Montague Island" type="coast"/>
+                        <area aac="NSW_MW001" phase="REN" description="Eden Coast: Montague Island to Gabo Island" type="coast"/>
+                    </area-list>
+                    <priority>W</priority>
+                    <text type="warning_phenomena">Hazardous Surf Warning</text>
+                    <text type="warning_areas">Byron Coast, Coffs Coast, Macquarie Coast, Hunter Coast, Sydney Coast, Illawarra Coast, Batemans Coast and Eden Coast</text>
+                </hazard>
+            </forecast-period>
+        </area>
+    </warning>
+</product>

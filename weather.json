@@ -1,0 +1,154 @@
+{
+ "updated": "2026-11-07T15:53:24.321Z",
+ "errors": [],
+ "bom": {
+  "issued": "Sat 22:00",
+  "areas": [
+   {
+    "name": "Sydney Coast: Broken Bay to Port Hacking",
+    "synoptic": "",
+    "periods": [
+     {
+      "label": "Saturday 7 Nov",
+      "warning": "Strong Wind Warning for Saturday for Sydney Coast",
+      "winds": "Southerly 25 to 30 knots. Squalls possible.",
+      "seas": "2.5 to 3 metres.",
+      "swell1": "Southerly 1.5 to 2 metres.",
+      "swell2": "",
+      "weather": "Cloudy. 50% chance of showers.",
+      "caution": ""
+     },
+     {
+      "label": "Sunday 8 Nov",
+      "warning": "Strong Wind Warning for Sunday for Sydney Coast",
+      "winds": "Southwesterly 25 to 30 knots tending southerly in the morning.",
+      "seas": "2.5 to 3 metres.",
+      "swell1": "Easterly below 0.5 metres, tending southerly 2 to 3 metres during the morning.",
+      "swell2": "Southerly 1.5 to 2 metres, decreasing below 0.5 metres during the morning.",
+      "weather": "Cloudy. 95% chance of showers. The chance of a thunderstorm offshore in the morning and afternoon.",
+      "caution": "Large and powerful surf conditions in the afternoon and evening are expected to be hazardous for coastal activities such as crossing bars by boat and rock fishing."
+     },
+     {
+      "label": "Monday 9 Nov",
+      "warning": "",
+      "winds": "Southerly 20 to 30 knots tending southwesterly in the morning then tending south to southwesterly 15 to 25 knots in the middle of the day.",
+      "seas": "2 to 2.5 metres.",
+      "swell1": "Southerly 2.5 to 3 metres inshore, increasing to 3 to 4 metres offshore during the morning.",
+      "swell2": "",
+      "weather": "Partly cloudy. 70% chance of showers.",
+      "caution": "Large and powerful surf conditions are expected to be hazardous for coastal activities such as crossing bars by boat and rock fishing."
+     },
+     {
+      "label": "Tuesday 10 Nov",
+      "warning": "",
+      "winds": "Southwesterly 15 to 20 knots becoming variable about 10 knots during the morning then becoming northeasterly 10 to 15 knots during the afternoon.",
+      "seas": "1 to 1.5 metres, decreasing below 1 metre during the morning.",
+      "swell1": "Southerly 2.5 to 4 metres, tending southeasterly 2 to 2.5 metres during the afternoon.",
+      "swell2": "",
+      "weather": "Mostly sunny.",
+      "caution": "Large and powerful surf conditions are expected to be hazardous for coastal activities such as crossing bars by boat and rock fishing."
+     }
+    ]
+   },
+   {
+    "name": "Sydney Enclosed Waters",
+    "synoptic": "Northwesterly winds freshen today ahead of a southerly buster this afternoon, with squally gusts and possible thunderstorms. Strong and gusty southerly winds continue through Saturday night and Sunday. Winds are forecast to ease early next week as a high pressure ridge moves across before the next change moves through mid next week.",
+    "periods": [
+     {
+      "label": "Saturday 7 Nov",
+      "warning": "Gale Warning for Saturday for Sydney Enclosed Waters",
+      "winds": "Southerly 25 to 35 knots. Squalls possible.",
+      "seas": "Below 0.5 metres.",
+      "swell1": "",
+      "swell2": "",
+      "weather": "Partly cloudy.",
+      "caution": ""
+     },
+     {
+      "label": "Sunday 8 Nov",
+      "warning": "Strong Wind Warning for Sunday for Sydney Enclosed Waters",
+      "winds": "Southwesterly 15 to 25 knots tending southerly 20 to 30 knots in the morning then decreasing to 15 to 25 knots in the late evening.",
+      "seas": "Below 0.5 metres.",
+      "swell1": "",
+      "swell2": "",
+      "weather": "Partly cloudy. 80% chance of showers.",
+      "caution": ""
+     },
+     {
+      "label": "Monday 9 Nov",
+      "warning": "",
+      "winds": "Southwesterly 15 to 20 knots tending southerly 15 to 25 knots in the middle of the day then becoming south to southwesterly about 10 knots in the late evening.",
+      "seas": "Below 0.5 metres.",
+      "swell1": "",
+      "swell2": "",
+      "weather": "Partly cloudy.",
+      "caution": ""
+     },
+     {
+      "label": "Tuesday 10 Nov",
+      "warning": "",
+      "winds": "Variable about 10 knots becoming northeasterly 10 to 15 knots during the afternoon then decreasing to below 10 knots during the evening.",
+      "seas": "Below 0.5 metres.",
+      "swell1": "",
+      "swell2": "",
+      "weather": "Sunny.",
+      "caution": ""
+     },
+     {
+      "label": "Wednesday 11 Nov",
+      "warning": "",
+      "winds": "Variable below 10 knots becoming easterly 10 to 15 knots during the afternoon then turning south to southeasterly during the evening.",
+      "seas": "Below 0.5 metres.",
+      "swell1": "",
+      "swell2": "",
+      "weather": "Partly cloudy. 60% chance of showers. The chance of a thunderstorm in the afternoon and evening.",
+      "caution": ""
+     }
+    ]
+   }
+  ]
+ },
+ "warnings": [
+  {
+   "title": "Strong Wind Warning for Saturday for Sydney Coast",
+   "area": "Sydney Coast: Broken Bay to Port Hacking",
+   "source": "BOM coastal waters forecast",
+   "detail": "Winds: Southerly 25 to 30 knots. Squalls possible.\nSeas: 2.5 to 3 metres.\nSwell: Southerly 1.5 to 2 metres."
+  },
+  {
+   "title": "Strong Wind Warning for Sunday for Sydney Coast",
+   "area": "Sydney Coast: Broken Bay to Port Hacking",
+   "source": "BOM coastal waters forecast",
+   "detail": "Winds: Southwesterly 25 to 30 knots tending southerly in the morning.\nSeas: 2.5 to 3 metres.\nSwell: Easterly below 0.5 metres, tending southerly 2 to 3 metres during the morning.\nLarge and powerful surf conditions in the afternoon and evening are expected to be hazardous for coastal activities such as crossing bars by boat and rock fishing."
+  },
+  {
+   "title": "Gale Warning for Saturday for Sydney Enclosed Waters",
+   "area": "Sydney Enclosed Waters",
+   "source": "BOM coastal waters forecast",
+   "detail": "Winds: Southerly 25 to 35 knots. Squalls possible.\nSeas: Below 0.5 metres."
+  },
+  {
+   "title": "Strong Wind Warning for Sunday for Sydney Enclosed Waters",
+   "area": "Sydney Enclosed Waters",
+   "source": "BOM coastal waters forecast",
+   "detail": "Winds: Southwesterly 15 to 25 knots tending southerly 20 to 30 knots in the morning then decreasing to 15 to 25 knots in the late evening.\nSeas: Below 0.5 metres."
+  },
+  {
+   "title": "Marine Wind Warning Summary for New South Wales",
+   "detail": "Gale Warning: Sydney Enclosed Waters, Macquarie Coast and Hunter Coast\nStrong Wind Warning: Byron Coast, Sydney Coast, Illawarra Coast, Batemans Coast and Eden Coast\nGale Warning: Byron Coast, Coffs Coast and Macquarie Coast\nStrong Wind Warning: Sydney Enclosed Waters, Hunter Coast, Sydney Coast, Illawarra Coast, Batemans Coast and Eden Coast",
+   "area": "Sydney Enclosed Waters, Sydney Coast, Sydney Enclosed Waters, Sydney Coast",
+   "issued": "Sat 22:00",
+   "link": "https://www.bom.gov.au/products/IDN20400.shtml",
+   "source": "BOM warnings"
+  },
+  {
+   "title": "Hazardous Surf Warning for New South Wales",
+   "detail": "Surf and swell conditions are expected to be hazardous for coastal activities such as rock fishing, boating, and swimming in the following areas.\nHazardous Surf Warning: Hunter Coast and Sydney Coast\nHazardous Surf Warning: Byron Coast, Coffs Coast, Macquarie Coast, Hunter Coast, Sydney Coast, Illawarra Coast, Batemans Coast and Eden Coast\nNSW Police Force, Marine Area Command advise that: People should consider staying out of the water and avoid walking near surf-exposed areas. Rock fishers should avoid coastal rock platforms exposed to the ocean and seek a safe location that is sheltered from the surf. Boaters planning to cross shallow water and ocean bars should consider changing or delaying their voyage. Boaters already on the water should carry the appropriate safety equipment and wear a lifejacket. Boaters should remember to log on with their local Marine Rescue radio base, via VHF Radio or the Marine Rescue APP, and consider their safety management plan.",
+   "area": "Sydney Coast, Sydney Coast",
+   "issued": "Sat 21:49",
+   "link": "https://www.bom.gov.au/products/IDN28522.shtml",
+   "source": "BOM warnings"
+  }
+ ],
+ "ww": null
+}
