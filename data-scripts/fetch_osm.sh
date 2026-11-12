@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # Downloads OpenStreetMap coastline, outcrops and named water places for the
-# route calculator area (Manly → Era, incl. Sydney Harbour, Botany Bay up the
+# route calculator area (Long Reef → Era, incl. Sydney Harbour, Botany Bay up the
 # Georges River and Port Hacking). Run by .github/workflows/osm-data.yml;
 # outputs features.json and names.json into the directory given.
 set -euo pipefail
 OUT="${1:-osm}"
 mkdir -p "$OUT"
-BBOX="-34.20,151.00,-33.76,151.36"
-ENDPOINTS=(https://overpass-api.de/api/interpreter https://overpass.kumi.systems/api/interpreter https://overpass.private.coffee/api/interpreter)
+BBOX="-34.20,151.00,-33.70,151.36"
+ENDPOINTS=(https://overpass-api.de/api/interpreter https://overpass.kumi.systems/api/interpreter https://overpass.private.coffee/api/interpreter https://maps.mail.ru/osm/tools/overpass/api/interpreter)
 # Overpass asks clients to identify themselves; anonymous requests get 406
 UA="surf-rescue-30-app/1.0 (+https://github.com/SurfRescue30/surf-rescue-30-app)"
 

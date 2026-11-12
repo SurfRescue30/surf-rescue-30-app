@@ -66,7 +66,9 @@ const forecastFixture = {
   current: { wind_speed_10m: 14, wind_direction_10m: 22, wind_gusts_10m: 20, temperature_2m: 22 },
   hourly: { time: hours, wind_speed_10m: hours.map((_, i) => i === 6 ? 28 : 15), wind_direction_10m: hours.map(() => 22),
             wind_gusts_10m: hours.map(() => 22), precipitation: hours.map((_, i) => i === 8 ? 1.2 : 0),
-            temperature_2m: hours.map(() => 22), weather_code: hours.map(() => 3) }
+            temperature_2m: hours.map(() => 22), weather_code: hours.map((_, i) => i % 3 === 0 ? 0 : 3),
+            // night from 19:00 to 06:00 local
+            is_day: hours.map(t => { const hr = +t.slice(11, 13); return hr >= 6 && hr < 19 ? 1 : 0; }) }
 };
 const marineFixture = {
   hourly: { time: hours, wave_height: hours.map(() => 1.6), swell_wave_height: hours.map(() => 1.2),
@@ -345,7 +347,7 @@ await check('weather tab: warnings, now tiles, tide, sun and first/last light', 
   assert(/First \/ Last Light\s*0[45]:\d\d · (19|20):\d\d/.test(now), 'first/last light times');
   assert(/(Rising|Falling|Near high|Near low)/.test(now), 'tide direction missing');
   // Tide: next turns in time order, each "High/Low hh:mm (x.x m)" on its own line
-  const tideLines = await page.$$eval('.tile-line', els => els.map(e => [e.textContent, e.getBoundingClientRect().height]));
+  const tideLines = await page.$$eval('#wx-now .tile:nth-child(3) .tile-line', els => els.map(e => [e.textContent, e.getBoundingClientRect().height]));
   assert(tideLines.length >= 1 && tideLines.every(([t]) => /^(High|Low) \d\d:\d\d \(\d\.\d m\)$/.test(t)), `tide lines ${JSON.stringify(tideLines)}`);
   assert(tideLines.every(([, h]) => h < 20), 'a tide line wrapped');
   const tideTimes = tideLines.map(([t]) => t.match(/\d\d:\d\d/)[0]);
@@ -416,6 +418,24 @@ await check('weather tab: 24-hour strip with coloured wind', async () => {
   assert(bg, 'wind cell not coloured');
 });
 
+await check('weather: night hours shaded with the moon or a dark sky; moon tile', async () => {
+  const night = await page.$$eval('.strip .row-time td', tds => tds.map(td => td.classList.contains('night')));
+  const hrs = await page.$$eval('.strip .row-time td', tds => tds.map(td => +td.textContent.trim().slice(-2)));
+  night.forEach((n, i) => assert(n === (hrs[i] < 6 || hrs[i] >= 19), `hour ${hrs[i]} night=${n}`));
+  // A clear night hour shows a moon or stars, never the sun
+  const sky = await page.$$eval('.strip .row-sky td.night', tds => tds.map(td => td.textContent + (td.querySelector('.night-sky') ? '|N' : '')));
+  if (sky.length) assert(!sky.some(t => t.includes('☀️')), `sun at night: ${sky}`);
+  const nightClear = await page.locator('.strip .row-sky td.night .night-sky').count();
+  const expected = await page.evaluate(() => {
+    const tds = [...document.querySelectorAll('.strip .row-sky td')];
+    return tds.filter(td => td.classList.contains('night') && !/☁️/.test(td.textContent) || td.querySelector('.night-sky')).length;
+  });
+  assert(nightClear === expected, `night clear cells ${nightClear} vs ${expected}`);
+  const moon = await page.textContent('.tile-moon');
+  assert(/(moon|quarter|crescent|gibbous)/i.test(moon) && /\d+% lit/.test(moon) && /(Rise|Set) \d\d:\d\d/.test(moon), `moon tile "${moon}"`);
+  assert(await page.locator('.tile-moon svg.moon-icon').count() === 1, 'moon drawing missing');
+});
+
 await check('wind units switch to km/h and are remembered', async () => {
   await page.click('#wind-unit label:has-text("km/h")');
   assert((await page.textContent('#wx-now')).includes('26 km/h NNE'), 'tiles not in km/h');
@@ -477,6 +497,34 @@ await check('job route From and To stack full width on a phone and are searchabl
   await page.keyboard.press('Escape');
 });
 
+await check('job route picker: scrolling the list does not pick; list survives the keyboard closing', async () => {
+  await page.click('[data-tab="tools"]');
+  const before = await page.$eval('#route-to', s => s.value);
+  await page.click('#route-to-input');
+  await page.fill('#route-to-input', '');
+  // A finger put down to scroll: pointerdown with no tap
+  await page.$eval('#route-to-list [role="option"]:nth-of-type(3)', li => {
+    li.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, pointerType: 'touch' }));
+    li.dispatchEvent(new PointerEvent('pointerup', { bubbles: true, pointerType: 'touch' }));
+  });
+  assert(await page.isVisible('#route-to-list'), 'list closed on a scroll touch');
+  assert(await page.$eval('#route-to', s => s.value) === before, 'a scroll touch picked a place');
+  // iPhone "Done" hides the keyboard: the box loses focus but the list stays
+  await page.$eval('#route-to-input', i => i.blur());
+  await page.waitForTimeout(300);
+  assert(await page.isVisible('#route-to-list'), 'list closed when the keyboard was dismissed');
+  await page.locator('#route-to-list').evaluate(l => { l.scrollTop = 400; });
+  const target = page.locator('#route-to-list [role="option"]').nth(12);
+  const name = (await target.textContent()).trim();
+  await target.tap();
+  assert(await page.inputValue('#route-to-input') === name, `tap did not choose ${name}`);
+  assert(!(await page.isVisible('#route-to-list')), 'list did not close after choosing');
+  // A tap elsewhere closes an open list
+  await page.click('#route-from-input');
+  await page.tap('#panel-tools h2');
+  assert(!(await page.isVisible('#route-from-list')), 'list did not close on a tap outside');
+});
+
 await check('job route: Coogee to Ben Buckler by water with time at speed', async () => {
   await page.click('[data-tab="tools"]');
   await pick('from', 'coogee', 'Coogee Beach');
@@ -484,6 +532,7 @@ await check('job route: Coogee to Ben Buckler by water with time at speed', asyn
   await page.fill('#route-speed', '20');
   await page.waitForFunction(() => document.getElementById('route-result').textContent.includes('at 20 kn'));
   const r = await page.textContent('#route-result');
+  assert(await page.locator('#route-result .route-warning').count() === 0, 'open-coast route should have no depth warning');
   const nm = parseFloat(r);
   assert(nm > 1.9 && nm < 2.8 && /min at 20 kn/.test(r) && /Steer \d{3}°T/.test(r), `got "${r}"`);
   assert(await page.locator('#route-map .m-route').count() === 1, 'route not drawn');
@@ -517,11 +566,30 @@ await check('job route reaches Grays Point up Port Hacking', async () => {
   await page.waitForFunction(() => /NM by water/.test(document.getElementById('route-result').textContent) && document.getElementById('route-result').textContent.includes('Grays') === false);
   const nm = parseFloat(await page.textContent('#route-result'));
   assert(nm > 3 && nm < 5, `Bundeena Bay → Grays Point ${nm} NM`);
+  const warn = await page.textContent('#route-result .route-warning');
+  assert(/Port Hacking/.test(warn) && /does not confirm depth/.test(warn) && /affected by the tide/.test(warn) && /Tide now (rising|falling)/.test(warn), `warning "${warn}"`);
   await page.click('#route-to-input');
   await page.fill('#route-to-input', '');
   const groups = await page.$$eval('#route-to-list .picker-group', gs => gs.map(g => g.textContent));
   assert(groups.includes('Port Hacking') && groups.includes('Harbour (eastern bays)'), `groups ${groups}`);
   await page.keyboard.press('Escape');
+});
+
+await check('job route: crew place list, approximate route into Pittwater with warnings', async () => {
+  await page.click('#route-to-input');
+  await page.fill('#route-to-input', '');
+  const groups = await page.$$eval('#route-to-list .picker-group', gs => gs.map(g => g.textContent));
+  assert(groups[0] === 'Boat ramps & wharves' && groups.includes('Pittwater') && groups.includes('Central Coast') && groups.includes('Otford to Scarborough'), `groups ${groups}`);
+  assert(!groups.includes('Lake Macquarie & Newcastle'), 'Newcastle was not chosen');
+  await page.keyboard.press('Escape');
+  await pick('from', 'malabar boat', 'Malabar Boat Ramp');
+  await pick('to', 'bayview', 'Bayview');
+  await page.waitForFunction(() => /NM by water \(approx\.\)/.test(document.getElementById('route-result').textContent), null, { timeout: 10000 });
+  const r = await page.textContent('#route-result');
+  assert(/Pittwater/.test(r) && /does not confirm depth/.test(r), `no Pittwater warning: "${r.slice(0, 200)}"`);
+  assert(await page.locator('#route-result .route-approx').count() === 1, 'approximate note missing');
+  const nm = parseFloat(r);
+  assert(nm > 26 && nm < 34, `Malabar Boat Ramp → Bayview ${nm} NM`);
 });
 
 await check('job route goes around Cape Banks, not over land', async () => {
@@ -536,6 +604,8 @@ await check('info tab shows the phone setup check', async () => {
   await page.click('[data-tab="info"]');
   await page.waitForFunction(() => document.querySelectorAll('#perm-list li').length === 3);
   assert((await page.textContent('#perm-list')).includes('Location'), 'location row missing');
+  const calls = await page.textContent('#panel-info');
+  for (const line of ['Vessel Traffic Services (VTS)', 'Botany Bay: VHF Ch 12', 'Sydney Harbour: VHF Ch 13']) assert(calls.includes(line), `missing "${line}"`);
   await page.click('[data-tab="tools"]');
 });
 
@@ -586,6 +656,50 @@ await check('boundary alarm warns at 500 m and alerts beyond the limit', async (
   await page.waitForFunction(() => document.getElementById('boundary-bar').className === 'boundary-beyond', null, { timeout: 5000 });
   assert((await page.textContent('#boundary-readout')).includes('BEYOND'), 'readout does not say beyond');
   assert(await page.locator('#boundary-map .m-limit').count() >= 1, 'map has no limit line');
+});
+
+// Route engine without the page: detailed and approximate (coarse grid) routes
+const { runInNewContext } = await import('node:vm');
+const routeEngine = await (async () => {
+  const src = f => readFile(join(ROOT, f), 'utf8');
+  const ctx = { Math, console };
+  runInNewContext([(await src('geo.js')).replace(/^const /gm, 'var '),
+    (await src('coast.js')).replace('const COAST', 'var COAST'),
+    (await src('coast-outer.js')).replace('const COAST_OUTER', 'var COAST_OUTER')].join('\n'), ctx);
+  const r = await src('route.js');
+  runInNewContext('var NM = 1852;\n' + r.slice(r.indexOf('  // ── Grids'), r.indexOf('  // ── UI ──')) + '\nthis.route = route;', ctx);
+  return ctx.route;
+})();
+const timed = (a, b) => { const t = performance.now(); const r = routeEngine(a, b); return [r, performance.now() - t]; };
+
+await check('route engine: detailed area runs Era to Long Reef, quickly', async () => {
+  const [r, ms] = timed({ lat: -34.19, lon: 151.06 }, { lat: -33.742, lon: 151.318 });
+  assert(r && !r.approx && r.nm > 28 && r.nm < 34, `Figure Eight → Long Reef ${r && r.nm} NM approx=${r && r.approx}`);
+  assert(ms < 2000, `longest detailed route took ${ms.toFixed(0)} ms`);
+  const [h] = timed({ lat: -34.085, lon: 151.15 }, { lat: -33.853, lon: 151.247 });
+  assert(h && !h.approx, 'Bundeena → Bradleys Head should be detailed');
+});
+
+await check('route engine: into Pittwater goes round Barrenjoey, not over the isthmus', async () => {
+  const [r] = timed({ lat: -33.60055, lon: 151.32315 }, { lat: -33.61426, lon: 151.32256 }); // Palm Beach → Careel Bay
+  assert(r && r.approx && !r.direct, `Palm Beach → Careel Bay: ${JSON.stringify(r && { nm: r.nm, direct: r.direct })}`);
+  assert(Math.max(...r.pts.map(p => p[0])) > -33.585, 'route did not go north round Barrenjoey');
+  assert(r.nm > 3, `${r.nm.toFixed(1)} NM is too short to have gone round`);
+});
+
+await check('route engine: approximate routes reach Woy Woy, Bobbin Head, Newcastle and Scarborough', async () => {
+  for (const [a, b, name] of [
+    [{ lat: -33.48316, lon: 151.32506 }, { lat: -33.54652, lon: 151.34544 }, 'Woy Woy Wharf → Box Head'],
+    [{ lat: -33.66029, lon: 151.16067 }, { lat: -33.55131, lon: 151.27468 }, 'Bobbin Head → Patonga'],
+    [{ lat: -32.92749, lon: 151.78635 }, { lat: -33.44499, lon: 151.44394 }, 'Newcastle Beach → Terrigal'],
+    [{ lat: -34.2675, lon: 150.95972 }, { lat: -34.17, lon: 151.065 }, 'Scarborough → Garie']]) {
+    const [r, ms] = timed(a, b);
+    assert(r && r.approx, `${name}: no approximate route`);
+    assert(ms < 2000, `${name} took ${ms.toFixed(0)} ms`);
+  }
+  // Open water both ends: a straight line
+  const [d] = timed({ lat: -33.85, lon: 151.40 }, { lat: -33.70, lon: 151.42 });
+  assert(d && d.direct, 'clear water should give a straight line');
 });
 
 await check('no uncaught page errors', async () => {

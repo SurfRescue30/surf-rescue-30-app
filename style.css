@@ -595,6 +595,11 @@ details.card:not([open]) summary {
   margin-bottom: 0.5rem;
 }
 
+/* iPad and wider: three across, so the six tiles make two full rows above the moon */
+@media (min-width: 600px) {
+  .tiles { grid-template-columns: repeat(3, 1fr); }
+}
+
 .tile {
   background-color: var(--white);
   border-radius: 8px;
@@ -1009,6 +1014,20 @@ details.card:not([open]) summary {
 }
 
 .warning-item strong { display: block; }
+
+/* Job route: depth and tide warning for river and estuary water */
+.route-warning {
+  margin: 0.5rem 0;
+  padding: 0.6rem 0.7rem;
+  border-radius: 8px;
+  background-color: #FFD23F;
+  border: 3px solid #10233A;
+  color: #10233A;
+  font-weight: 700;
+}
+.route-warning strong { display: block; font-weight: 900; margin-bottom: 0.2rem; }
+.route-warning p { margin: 0.15rem 0 0; }
+.route-approx { margin: 0.4rem 0 0; font-size: 0.8rem; font-weight: 700; color: #10233A; border-left: 4px solid #4A5B70; padding-left: 0.5rem; }
 .warning-meta { display: block; font-size: 0.75rem; font-weight: 600; opacity: 0.9; }
 .all-clear { color: #0B6B3A; font-weight: 800; }
 
@@ -1059,6 +1078,20 @@ details.card:not([open]) summary {
 .strip .row-wind td { font-weight: 900; color: #10233A; }
 .strip .row-gust td { color: #10233A; }
 .strip .row-tide td { font-size: 1rem; }
+/* Night hours: dark time and sky cells, the moon (southern view) or a starry dark sky */
+.strip .row-time td.night,
+.strip .row-sky td.night { background-color: #0B1F3A; color: #FFFFFF; }
+.strip td.night.now { outline-color: #FFD23F; }
+.night-sky { display: inline-flex; align-items: center; gap: 1px; vertical-align: middle; }
+.night-sky .stars { color: #FFE9A8; font-size: 1rem; line-height: 1; }
+.night-sky .night-cloud { font-size: 0.7rem; }
+.moon-icon { display: block; flex: none; }
+.moon-dark { fill: #2E4260; }
+.moon-lit { fill: #F7F0C6; }
+.moon-rim { fill: none; stroke: #8FA3BC; stroke-width: 0.8; }
+/* Moon tile spans the row, drawing on the left */
+.tile-moon { grid-column: 1 / -1; display: grid; grid-template-columns: auto 1fr; column-gap: 0.6rem; align-items: center; }
+.tile-moon .moon-icon { grid-row: 1 / span 4; }
 .dir-arrow { display: inline-block; font-weight: 900; }
 .dir-text { display: block; font-size: 0.65rem; color: #4A5B70; }
 
