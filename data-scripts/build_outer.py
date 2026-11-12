@@ -114,8 +114,33 @@ def rle(row):
     return ','.join(runs)
 
 # Simplified coastline for the route map outside the detailed area
+# Water-area outlines include made-up lines across river mouths and between
+# river sections; keep only the parts with land on one side.
+def wet(x, y):
+    r, c = int((y - y0) // CELL_M), int((x - x0) // CELL_M)
+    return 0 <= r < rows and 0 <= c < cols and bool(sea[r, c])
+def shore_parts(line):
+    out, cur = [], []
+    cc = list(line.coords)
+    for (ax, ay), (bx, by) in zip(cc, cc[1:]):
+        mx, my = (ax + bx) / 2, (ay + by) / 2
+        L = math.hypot(bx - ax, by - ay) or 1
+        nx, ny = -(by - ay) / L * 150, (bx - ax) / L * 150
+        if wet(mx + nx, my + ny) and wet(mx - nx, my - ny):
+            if len(cur) > 1: out.append(LineString(cur))
+            cur = []
+        else:
+            if not cur: cur = [(ax, ay)]
+            cur.append((bx, by))
+    if len(cur) > 1: out.append(LineString(cur))
+    return out
 map_lines = []
-for l in coast + ([water_area.boundary] if water_area is not None else []):
+outlines = []
+if water_area is not None:
+    b = water_area.boundary
+    for part in (b.geoms if hasattr(b, 'geoms') else [b]):
+        outlines += shore_parts(part.segmentize(100))
+for l in coast + outlines:
     for part in (l.geoms if hasattr(l, 'geoms') else [l]):
         s = part.simplify(40)
         if s.length > 400:

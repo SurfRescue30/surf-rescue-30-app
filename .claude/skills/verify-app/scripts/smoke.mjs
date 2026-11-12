@@ -641,6 +641,50 @@ await check('boundary alarm warns at 500 m and alerts beyond the limit', async (
   assert(await page.locator('#boundary-map .m-limit').count() >= 1, 'map has no limit line');
 });
 
+// Route engine without the page: detailed and approximate (coarse grid) routes
+const { runInNewContext } = await import('node:vm');
+const routeEngine = await (async () => {
+  const src = f => readFile(join(ROOT, f), 'utf8');
+  const ctx = { Math, console };
+  runInNewContext([(await src('geo.js')).replace(/^const /gm, 'var '),
+    (await src('coast.js')).replace('const COAST', 'var COAST'),
+    (await src('coast-outer.js')).replace('const COAST_OUTER', 'var COAST_OUTER')].join('\n'), ctx);
+  const r = await src('route.js');
+  runInNewContext('var NM = 1852;\n' + r.slice(r.indexOf('  // ── Grids'), r.indexOf('  // ── UI ──')) + '\nthis.route = route;', ctx);
+  return ctx.route;
+})();
+const timed = (a, b) => { const t = performance.now(); const r = routeEngine(a, b); return [r, performance.now() - t]; };
+
+await check('route engine: detailed area runs Era to Long Reef, quickly', async () => {
+  const [r, ms] = timed({ lat: -34.19, lon: 151.06 }, { lat: -33.742, lon: 151.318 });
+  assert(r && !r.approx && r.nm > 28 && r.nm < 34, `Figure Eight → Long Reef ${r && r.nm} NM approx=${r && r.approx}`);
+  assert(ms < 2000, `longest detailed route took ${ms.toFixed(0)} ms`);
+  const [h] = timed({ lat: -34.085, lon: 151.15 }, { lat: -33.853, lon: 151.247 });
+  assert(h && !h.approx, 'Bundeena → Bradleys Head should be detailed');
+});
+
+await check('route engine: into Pittwater goes round Barrenjoey, not over the isthmus', async () => {
+  const [r] = timed({ lat: -33.60055, lon: 151.32315 }, { lat: -33.61426, lon: 151.32256 }); // Palm Beach → Careel Bay
+  assert(r && r.approx && !r.direct, `Palm Beach → Careel Bay: ${JSON.stringify(r && { nm: r.nm, direct: r.direct })}`);
+  assert(Math.max(...r.pts.map(p => p[0])) > -33.585, 'route did not go north round Barrenjoey');
+  assert(r.nm > 3, `${r.nm.toFixed(1)} NM is too short to have gone round`);
+});
+
+await check('route engine: approximate routes reach Woy Woy, Bobbin Head, Newcastle and Scarborough', async () => {
+  for (const [a, b, name] of [
+    [{ lat: -33.48316, lon: 151.32506 }, { lat: -33.54652, lon: 151.34544 }, 'Woy Woy Wharf → Box Head'],
+    [{ lat: -33.66029, lon: 151.16067 }, { lat: -33.55131, lon: 151.27468 }, 'Bobbin Head → Patonga'],
+    [{ lat: -32.92749, lon: 151.78635 }, { lat: -33.44499, lon: 151.44394 }, 'Newcastle Beach → Terrigal'],
+    [{ lat: -34.2675, lon: 150.95972 }, { lat: -34.17, lon: 151.065 }, 'Scarborough → Garie']]) {
+    const [r, ms] = timed(a, b);
+    assert(r && r.approx, `${name}: no approximate route`);
+    assert(ms < 2000, `${name} took ${ms.toFixed(0)} ms`);
+  }
+  // Open water both ends: a straight line
+  const [d] = timed({ lat: -33.85, lon: 151.40 }, { lat: -33.70, lon: 151.42 });
+  assert(d && d.direct, 'clear water should give a straight line');
+});
+
 await check('no uncaught page errors', async () => {
   assert(errors.length === 0, errors.join('; '));
 });
