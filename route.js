@@ -227,10 +227,13 @@
 
   // Named beaches, bays and points from Figure Eight Pools to Manly, the
   // harbour's eastern bays, Botany Bay/Georges River and Port Hacking
-  const places = COAST.routePlaces;
+  // The crew's chosen list (route-places.js) when present, else the OSM names in coast.js
+  const PLACE_SRC = typeof ROUTE_PLACES !== 'undefined' ? ROUTE_PLACES : COAST;
+  const places = PLACE_SRC.routePlaces;
+  const regions = PLACE_SRC.routeRegions;
   const placeById = new Map(places.map((p, i) => [String(i), p]));
   const option = (value, text) => { const o = document.createElement('option'); o.value = value; o.textContent = text; return o; };
-  const groups = () => COAST.routeRegions.map(region => {
+  const groups = () => regions.map(region => {
     const g = document.createElement('optgroup');
     g.label = region;
     places.forEach((p, i) => { if (p.region === region) g.append(option(String(i), p.name)); });
@@ -242,7 +245,13 @@
 
   try {
     const saved = JSON.parse(localStorage.getItem(ROUTE_KEY)) || {};
-    if (saved.from && (saved.from === 'gps' || placeById.has(saved.from))) fromSel.value = saved.from;
+    // Saved by name (fromName) so a changed place list can't swap it for another
+    // place; older saves only have the list position, which is dropped
+    if (saved.from === 'gps') fromSel.value = 'gps';
+    else if (saved.fromName) {
+      const i = places.findIndex(p => p.name === saved.fromName);
+      if (i >= 0) fromSel.value = String(i);
+    }
     if (saved.speed) speedIn.value = saved.speed;
   } catch { /* nothing saved */ }
 
@@ -274,7 +283,7 @@
       const q = query.trim().toLowerCase();
       list.replaceChildren();
       if (includeGps && (!q || 'current gps position'.includes(q))) list.append(item('gps', '📍 Current GPS position'));
-      COAST.routeRegions.forEach(region => {
+      regions.forEach(region => {
         const matches = places.map((p, i) => [p, i])
           .filter(([p]) => p.region === region && (!q || p.name.toLowerCase().includes(q) || region.toLowerCase().includes(q)));
         if (!matches.length) return;
@@ -321,7 +330,7 @@
   const fmtMins = h => { const m = Math.round(h * 60); return m >= 60 ? `${Math.floor(m / 60)} h ${m % 60} min` : `${m} min`; };
 
   const saveChoice = () => {
-    try { localStorage.setItem(ROUTE_KEY, JSON.stringify({ from: fromSel.value, speed: speedIn.value })); } catch { /* storage unavailable */ }
+    try { localStorage.setItem(ROUTE_KEY, JSON.stringify({ from: fromSel.value === 'gps' ? 'gps' : '', fromName: findPlace(fromSel.value)?.name || '', speed: speedIn.value })); } catch { /* storage unavailable */ }
   };
   const spinner = text => { result.innerHTML = `<span class="boat-spinner small" aria-hidden="true"></span> ${text}`; };
 
