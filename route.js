@@ -320,6 +320,56 @@
     showRoute(true);
   }
 
+  // ── River and estuary water: depth and tide warning ─────────────────
+  // The grid knows where water is, not how deep it is. Any route that enters
+  // these areas gets a warning box. Polygons are [lat, lon] rings.
+  const SHALLOW_ZONES = [
+    { name: 'Georges River', ring: [[-33.93, 150.85], [-33.93, 151.135], [-34.06, 151.135], [-34.06, 150.85]] },
+    { name: 'Port Hacking', ring: [[-34.03, 150.98], [-34.03, 151.150], [-34.11, 151.150], [-34.11, 150.98]] },
+    // Inside the Barrenjoey–West Head line, along the Palm Beach peninsula
+    { name: 'Pittwater', ring: [[-33.576, 151.240], [-33.576, 151.318], [-33.595, 151.319], [-33.610, 151.322], [-33.630, 151.322],
+      [-33.650, 151.315], [-33.670, 151.310], [-33.710, 151.300], [-33.710, 151.240]] },
+    // West of Juno Point and Croppy Point: Cowan Creek and the river
+    { name: 'Hawkesbury River and Cowan Creek', ring: [[-33.43, 151.05], [-33.43, 151.255], [-33.71, 151.255], [-33.71, 151.05]] },
+    // Inside the Ettalong entrance
+    { name: 'Brisbane Water', ring: [[-33.40, 151.28], [-33.40, 151.365], [-33.525, 151.365], [-33.525, 151.28]] },
+    // Swansea Channel and Lake Macquarie
+    { name: 'Lake Macquarie', ring: [[-32.94, 151.50], [-32.94, 151.655], [-33.16, 151.655], [-33.16, 151.50]] }
+  ];
+  const inRing = ([lat, lon], ring) => {
+    let inside = false;
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const [ya, xa] = ring[i], [yb, xb] = ring[j];
+      if ((ya > lat) !== (yb > lat) && lon < (xb - xa) * (lat - ya) / (yb - ya) + xa) inside = !inside;
+    }
+    return inside;
+  };
+  const shallowZonesOn = pts => SHALLOW_ZONES.filter(z => pts.some(p => inRing(p, z.ring))).map(z => z.name);
+
+  function tideNow() {
+    if (typeof Tide === 'undefined') return '';
+    const now = Date.now();
+    const next = Tide.turns(now, now + 26 * 3600000);
+    if (!next.length) return '';
+    const n = next[0];
+    const hm = new Date(n.at).toLocaleTimeString('en-AU', { timeZone: 'Australia/Sydney', hour: '2-digit', minute: '2-digit', hour12: false });
+    return `Tide now ${n.type === 'high' ? 'rising' : 'falling'}, ${n.type} ${hm} (${n.height.toFixed(1)} m at Fort Denison).`;
+  }
+
+  function routeWarning(zones) {
+    const box = document.createElement('div');
+    box.className = 'route-warning';
+    box.setAttribute('role', 'alert');
+    const head = document.createElement('strong');
+    head.textContent = `⚠️ River and estuary water: ${zones.join(', ')}`;
+    const depth = document.createElement('p');
+    depth.textContent = 'Check the depth. This tool does not confirm depth.';
+    const tide = document.createElement('p');
+    tide.textContent = `This route is affected by the tide. Check the tide before trusting it. ${tideNow()}`.trim();
+    box.append(head, depth, tide);
+    return box;
+  }
+
   function showRoute(redraw) {
     const { from, to, r } = shown;
     const kn = parseFloat(speedIn.value);
@@ -357,7 +407,10 @@
     extra.className = 'muted small';
     const eta = kn > 0 ? new Date(Date.now() + r.nm / kn * 3600000).toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit', hour12: false }) : null;
     extra.textContent = `Straight line ${r.straightNm.toFixed(1)} NM${eta ? ` · ETA if leaving now ${eta}` : ''} · keeps 50 m off land and rocks`;
-    result.append(big, legs, extra);
+    const zones = shallowZonesOn([...r.pts, [from.lat, from.lon], [to.lat, to.lon]]);
+    result.append(big);
+    if (zones.length) result.append(routeWarning(zones));
+    result.append(legs, extra);
     if (redraw) draw(r, from, to);
   }
 

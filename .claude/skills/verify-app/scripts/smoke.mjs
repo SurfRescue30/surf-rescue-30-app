@@ -532,6 +532,7 @@ await check('job route: Coogee to Ben Buckler by water with time at speed', asyn
   await page.fill('#route-speed', '20');
   await page.waitForFunction(() => document.getElementById('route-result').textContent.includes('at 20 kn'));
   const r = await page.textContent('#route-result');
+  assert(await page.locator('#route-result .route-warning').count() === 0, 'open-coast route should have no depth warning');
   const nm = parseFloat(r);
   assert(nm > 1.9 && nm < 2.8 && /min at 20 kn/.test(r) && /Steer \d{3}°T/.test(r), `got "${r}"`);
   assert(await page.locator('#route-map .m-route').count() === 1, 'route not drawn');
@@ -565,6 +566,8 @@ await check('job route reaches Grays Point up Port Hacking', async () => {
   await page.waitForFunction(() => /NM by water/.test(document.getElementById('route-result').textContent) && document.getElementById('route-result').textContent.includes('Grays') === false);
   const nm = parseFloat(await page.textContent('#route-result'));
   assert(nm > 3 && nm < 5, `Bundeena Bay → Grays Point ${nm} NM`);
+  const warn = await page.textContent('#route-result .route-warning');
+  assert(/Port Hacking/.test(warn) && /does not confirm depth/.test(warn) && /affected by the tide/.test(warn) && /Tide now (rising|falling)/.test(warn), `warning "${warn}"`);
   await page.click('#route-to-input');
   await page.fill('#route-to-input', '');
   const groups = await page.$$eval('#route-to-list .picker-group', gs => gs.map(g => g.textContent));
@@ -585,7 +588,7 @@ await check('info tab shows the phone setup check', async () => {
   await page.waitForFunction(() => document.querySelectorAll('#perm-list li').length === 3);
   assert((await page.textContent('#perm-list')).includes('Location'), 'location row missing');
   const calls = await page.textContent('#panel-info');
-  for (const line of ['Vessel Traffic Services (VTS)', 'Botany Bay: VHF ch 12', 'Sydney Harbour: VHF ch 13']) assert(calls.includes(line), `missing "${line}"`);
+  for (const line of ['Vessel Traffic Services (VTS)', 'Botany Bay: VHF Ch 12', 'Sydney Harbour: VHF Ch 13']) assert(calls.includes(line), `missing "${line}"`);
   await page.click('[data-tab="tools"]');
 });
 

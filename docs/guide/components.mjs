@@ -156,7 +156,7 @@ export const SCREENS = [
       { selector: '#route-result', title: 'Route result',
         what: 'Distance by water, time at your speed, numbered courses (degrees true and distance for each leg), straight-line distance and ETA if leaving now.',
         use: 'A spinner shows while the route is worked out (under a second). Changing the speed updates the times straight away without working out the route again.',
-        note: 'Routes go around headlands and rocks, keep mid-channel and follow charted channels where mapped. There is no depth data, so check the chart in shallow water.' },
+        note: 'Routes go around headlands and rocks, keep mid-channel and follow charted channels where mapped. A route into river or estuary water (Georges River, Port Hacking, Pittwater, Hawkesbury and Cowan Creek, Brisbane Water, Lake Macquarie) shows a yellow warning box: check the depth (the tool does not confirm depth) and the tide, with the next tide turn at Fort Denison.' },
       { selector: '#route-map', title: 'Route map',
         what: 'The route drawn over the coastline: green start, red job location, dashed red track. Each place name sits on whichever side of its dot has room, so it is never cut off.' },
       { selector: '#sdt-speed', title: 'Calculator: Speed, Distance, Time',
@@ -186,7 +186,7 @@ export const SCREENS = [
       { selector: '#panel-info details:nth-of-type(1)', title: 'Surf Rescue 30 quick facts',
         what: 'Callsign, base, coverage, operations, vessel, survey, fuel, tasking (13SURF), comms, navigation, safety gear, equipment and the ORB coordinator contact.' },
       { selector: '#panel-info details:nth-of-type(2)', title: 'Distress, urgency & safety calls',
-        what: 'MAYDAY, PAN-PAN and SÉCURITÉ call formats, channel 16, and the Vessel Traffic Services channels: Botany Bay VHF ch 12, Sydney Harbour VHF ch 13.' },
+        what: 'MAYDAY, PAN-PAN and SÉCURITÉ call formats, channel 16, and the Vessel Traffic Services channels: Botany Bay VHF Ch 12, Sydney Harbour VHF Ch 13.' },
       { selector: '#panel-info details:nth-of-type(3)', title: 'Phonetic alphabet & prowords' },
       { selector: '#panel-info details:nth-of-type(4)', title: 'Beaufort scale',
         what: 'Force, knots, description and sea state, with the Strong Wind and Gale Warning thresholds.' }

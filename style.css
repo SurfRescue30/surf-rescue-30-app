@@ -1014,6 +1014,19 @@ details.card:not([open]) summary {
 }
 
 .warning-item strong { display: block; }
+
+/* Job route: depth and tide warning for river and estuary water */
+.route-warning {
+  margin: 0.5rem 0;
+  padding: 0.6rem 0.7rem;
+  border-radius: 8px;
+  background-color: #FFD23F;
+  border: 3px solid #10233A;
+  color: #10233A;
+  font-weight: 700;
+}
+.route-warning strong { display: block; font-weight: 900; margin-bottom: 0.2rem; }
+.route-warning p { margin: 0.15rem 0 0; }
 .warning-meta { display: block; font-size: 0.75rem; font-weight: 600; opacity: 0.9; }
 .all-clear { color: #0B6B3A; font-weight: 800; }
 
