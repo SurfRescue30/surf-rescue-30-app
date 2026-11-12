@@ -473,9 +473,9 @@ await check('header scrolls away, tabs stay pinned', async () => {
   assert(Math.abs(top) < 2 && headerBottom <= 0, `tabs top ${top}, header bottom ${headerBottom}`);
 });
 
-// Choose a place in a job-route picker by typing part of its name
+// Choose a place in a job-route chooser by typing part of its name
 const pick = async (which, typed, name) => {
-  await page.click(`#route-${which}-input`);
+  await page.click(`#route-${which}-btn`);
   await page.fill(`#route-${which}-input`, typed);
   await page.click(`#route-${which}-list [role="option"]:text-is("${name}")`);
 };
@@ -488,41 +488,69 @@ await check('tools tab order: Job Route, Calculator, Fuel & Range, 2 NM Boundary
 });
 
 await check('job route From and To stack full width on a phone and are searchable', async () => {
-  const [a, b] = await Promise.all(['#route-from-input', '#route-to-input'].map(sel => page.$eval(sel, el => el.getBoundingClientRect().toJSON())));
-  assert(b.top > a.bottom - 1 && Math.abs(a.width - b.width) < 2 && a.width > 300, `from ${JSON.stringify(a)} to ${JSON.stringify(b)}`);
-  await page.click('#route-to-input');
+  const [a, b] = await Promise.all(['#route-from-btn', '#route-to-btn'].map(sel => page.$eval(sel, el => el.getBoundingClientRect().toJSON())));
+  assert(b.top > a.bottom - 1 && Math.abs(a.width - b.width) < 2 && a.width > 300 && a.height >= 48, `from ${JSON.stringify(a)} to ${JSON.stringify(b)}`);
+  await page.click('#route-to-btn');
   await page.fill('#route-to-input', 'gunna');
   const opts = await page.$$eval('#route-to-list [role="option"]', os => os.map(o => o.textContent));
   assert(opts.length >= 1 && opts.every(o => /gunna/i.test(o)), `options ${opts}`);
   await page.keyboard.press('Escape');
+  assert(!(await page.isVisible('#route-to-sheet')), 'Escape did not close the chooser');
 });
 
-await check('job route picker: scrolling the list does not pick; list survives the keyboard closing', async () => {
+await check('place chooser: opens full screen, cleared and focused; scrolling never closes or picks', async () => {
   await page.click('[data-tab="tools"]');
+  await pick('to', 'coogee b', 'Coogee Beach');
   const before = await page.$eval('#route-to', s => s.value);
-  await page.click('#route-to-input');
-  await page.fill('#route-to-input', '');
+  await page.click('#route-to-btn');
+  // Full screen on a phone, search box empty and ready for typing
+  const box = await page.$eval('#route-to-sheet', d => d.getBoundingClientRect().toJSON());
+  assert(box.width >= 389 && box.height >= 800, `chooser not full screen: ${JSON.stringify(box)}`);
+  assert(await page.inputValue('#route-to-input') === '', 'search box was not cleared');
+  assert(await page.evaluate(() => document.activeElement.id) === 'route-to-input', 'search box not focused');
+  // The current choice is marked in the list
+  assert((await page.textContent('#route-to-list [aria-selected="true"]')).trim() === 'Coogee Beach', 'current place not marked');
   // A finger put down to scroll: pointerdown with no tap
   await page.$eval('#route-to-list [role="option"]:nth-of-type(3)', li => {
     li.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, pointerType: 'touch' }));
     li.dispatchEvent(new PointerEvent('pointerup', { bubbles: true, pointerType: 'touch' }));
   });
-  assert(await page.isVisible('#route-to-list'), 'list closed on a scroll touch');
+  assert(await page.isVisible('#route-to-sheet'), 'chooser closed on a scroll touch');
   assert(await page.$eval('#route-to', s => s.value) === before, 'a scroll touch picked a place');
-  // iPhone "Done" hides the keyboard: the box loses focus but the list stays
+  // Keyboard closed (iPhone "Done"), then scroll the list: still open
   await page.$eval('#route-to-input', i => i.blur());
-  await page.waitForTimeout(300);
-  assert(await page.isVisible('#route-to-list'), 'list closed when the keyboard was dismissed');
-  await page.locator('#route-to-list').evaluate(l => { l.scrollTop = 400; });
-  const target = page.locator('#route-to-list [role="option"]').nth(12);
+  await page.locator('#route-to-list').evaluate(l => { l.scrollTop = 1500; l.dispatchEvent(new Event('scroll')); });
+  await page.waitForTimeout(200);
+  assert(await page.isVisible('#route-to-sheet'), 'chooser closed when the keyboard was dismissed and the list scrolled');
+  const target = page.locator('#route-to-list [role="option"]').nth(40);
   const name = (await target.textContent()).trim();
   await target.tap();
-  assert(await page.inputValue('#route-to-input') === name, `tap did not choose ${name}`);
-  assert(!(await page.isVisible('#route-to-list')), 'list did not close after choosing');
-  // A tap elsewhere closes an open list
-  await page.click('#route-from-input');
-  await page.tap('#panel-tools h2');
-  assert(!(await page.isVisible('#route-from-list')), 'list did not close on a tap outside');
+  assert((await page.textContent('#route-to-btn')).trim() === name, `tap did not choose ${name}`);
+  assert(!(await page.isVisible('#route-to-sheet')), 'chooser did not close after choosing');
+  // Close backs out without a change
+  await page.click('#route-from-btn');
+  const fromBefore = await page.$eval('#route-from', s => s.value);
+  await page.click('#route-from-close');
+  assert(!(await page.isVisible('#route-from-sheet')) && await page.$eval('#route-from', s => s.value) === fromBefore, 'Close changed the place or left the chooser open');
+  await page.waitForTimeout(100);
+  assert(!(await page.evaluate(() => history.state?.placeSheet)), 'Close left a history step behind');
+});
+
+await check('place chooser: the phone Back closes it and stays on the Tools tab', async () => {
+  await page.click('[data-tab="tools"]');
+  const url = page.url();
+  const toBefore = await page.$eval('#route-to', s => s.value);
+  await page.click('#route-to-btn');
+  assert(await page.isVisible('#route-to-sheet'), 'chooser did not open');
+  await page.goBack();
+  await page.waitForTimeout(200);
+  assert(!(await page.isVisible('#route-to-sheet')), 'Back did not close the chooser');
+  assert(page.url() === url && await page.isVisible('#panel-tools'), `Back left the page: ${page.url()}`);
+  assert(await page.$eval('#route-to', s => s.value) === toBefore, 'Back changed the place');
+  // After choosing, no stray history step is left for Back to use up
+  await pick('to', 'bondi b', 'Bondi Beach');
+  await page.waitForTimeout(200);
+  assert(!(await page.evaluate(() => history.state?.placeSheet)), 'choosing left a history step behind');
 });
 
 await check('job route: Coogee to Ben Buckler by water with time at speed', async () => {
@@ -568,16 +596,14 @@ await check('job route reaches Grays Point up Port Hacking', async () => {
   assert(nm > 3 && nm < 5, `Bundeena Bay → Grays Point ${nm} NM`);
   const warn = await page.textContent('#route-result .route-warning');
   assert(/Port Hacking/.test(warn) && /does not confirm depth/.test(warn) && /affected by the tide/.test(warn) && /Tide now (rising|falling)/.test(warn), `warning "${warn}"`);
-  await page.click('#route-to-input');
-  await page.fill('#route-to-input', '');
+  await page.click('#route-to-btn');
   const groups = await page.$$eval('#route-to-list .picker-group', gs => gs.map(g => g.textContent));
   assert(groups.includes('Port Hacking') && groups.includes('Harbour (eastern bays)'), `groups ${groups}`);
   await page.keyboard.press('Escape');
 });
 
 await check('job route: crew place list, approximate route into Pittwater with warnings', async () => {
-  await page.click('#route-to-input');
-  await page.fill('#route-to-input', '');
+  await page.click('#route-to-btn');
   const groups = await page.$$eval('#route-to-list .picker-group', gs => gs.map(g => g.textContent));
   assert(groups[0] === 'Boat ramps & wharves' && groups.includes('Pittwater') && groups.includes('Central Coast') && groups.includes('Otford to Scarborough'), `groups ${groups}`);
   assert(!groups.includes('Lake Macquarie & Newcastle'), 'Newcastle was not chosen');
