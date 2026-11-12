@@ -324,6 +324,10 @@
       if (e.key === 'Enter') {
         const first = list.querySelector('[data-value]');
         if (first) { e.preventDefault(); choose(first.dataset.value); }
+      } else if (e.key === 'Escape') {
+        // A search box with text only clears itself on Escape; close the chooser
+        e.preventDefault();
+        close();
       }
     });
     // Scrolling the list hides the keyboard, so the whole list is in view
