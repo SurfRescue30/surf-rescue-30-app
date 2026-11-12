@@ -7,7 +7,7 @@
    the next open uses it. Weather data is not cached here (weather.js keeps
    its own last-good copy).
 */
-const CACHE = 'sr30-shell-v14';
+const CACHE = 'sr30-shell-v15';
 const SHELL = [
   './', 'index.html', 'style.css', 'config.js', 'places.js', 'vocab.js', 'geo.js', 'tide-constants.js', 'tide.js', 'moon.js',
   'coast.js', 'geofence.js', 'route.js', 'setup.js', 'script.js', 'weather.js', 'tools.js',

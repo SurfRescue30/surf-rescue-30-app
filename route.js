@@ -1,7 +1,7 @@
 /* ── Surf Patrol Log – route.js ──
    Job route: distance and courses by water between two points, going around
    headlands, islands and rock platforms (keeps ≥50 m off land). Uses the
-   navigable-water grid in coast.js (Figure Eight Pools → Manly, incl. the
+   navigable-water grid in coast.js (Figure Eight Pools → Long Reef, incl. the
    harbour's eastern bays, Botany Bay/Georges River and Port Hacking)
    and A* path-finding, then straightens the path into a few legs.
    An aid for planning — the plotter is the authority.
