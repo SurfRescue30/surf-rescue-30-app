@@ -532,6 +532,25 @@ await check('place chooser: opens full screen, cleared and focused; scrolling ne
   const fromBefore = await page.$eval('#route-from', s => s.value);
   await page.click('#route-from-close');
   assert(!(await page.isVisible('#route-from-sheet')) && await page.$eval('#route-from', s => s.value) === fromBefore, 'Close changed the place or left the chooser open');
+  await page.waitForTimeout(100);
+  assert(!(await page.evaluate(() => history.state?.placeSheet)), 'Close left a history step behind');
+});
+
+await check('place chooser: the phone Back closes it and stays on the Tools tab', async () => {
+  await page.click('[data-tab="tools"]');
+  const url = page.url();
+  const toBefore = await page.$eval('#route-to', s => s.value);
+  await page.click('#route-to-btn');
+  assert(await page.isVisible('#route-to-sheet'), 'chooser did not open');
+  await page.goBack();
+  await page.waitForTimeout(200);
+  assert(!(await page.isVisible('#route-to-sheet')), 'Back did not close the chooser');
+  assert(page.url() === url && await page.isVisible('#panel-tools'), `Back left the page: ${page.url()}`);
+  assert(await page.$eval('#route-to', s => s.value) === toBefore, 'Back changed the place');
+  // After choosing, no stray history step is left for Back to use up
+  await pick('to', 'bondi b', 'Bondi Beach');
+  await page.waitForTimeout(200);
+  assert(!(await page.evaluate(() => history.state?.placeSheet)), 'choosing left a history step behind');
 });
 
 await check('job route: Coogee to Ben Buckler by water with time at speed', async () => {

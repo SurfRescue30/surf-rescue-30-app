@@ -259,8 +259,11 @@
   // Each field is a button showing the chosen place. Tapping it opens a
   // full-screen chooser (a modal <dialog>) with an empty search box and the
   // keyboard up; with the keyboard closed the whole screen is the list, so
-  // scrolling it can't close anything. A tap on a place chooses it; Close or
-  // Escape backs out without a change. The hidden <select>s keep the value.
+  // scrolling it can't close anything. A tap on a place chooses it; Close,
+  // Escape or the phone's own Back (Android back button/gesture, iPhone edge
+  // swipe) backs out without a change and stays on this tab: opening the
+  // chooser adds a history step that Back uses up. The hidden <select>s keep
+  // the value.
   function makePicker(sel, w, includeGps, emptyText) {
     const field = document.getElementById(`route-${w}-btn`);
     const sheet = document.getElementById(`route-${w}-sheet`);
@@ -317,6 +320,12 @@
       list.scrollTop = 0;
       sheet.showModal();
       input.focus();               // same tap, so the phone raises the keyboard
+      history.pushState({ placeSheet: w }, '');
+    });
+    // Phone Back while the chooser is open: close it, don't leave the page
+    let closedByBack = false;
+    window.addEventListener('popstate', () => {
+      if (sheet.open) { closedByBack = true; sheet.close(); }
     });
     closeBtn.addEventListener('click', close);
     input.addEventListener('input', () => { render(input.value); list.scrollTop = 0; });
@@ -332,8 +341,13 @@
     });
     // Scrolling the list hides the keyboard, so the whole list is in view
     list.addEventListener('touchmove', () => { if (document.activeElement === input) input.blur(); }, { passive: true });
-    // Back on the field the chooser was opened from
-    sheet.addEventListener('close', () => field.focus());
+    sheet.addEventListener('close', () => {
+      // Closed some other way (a choice, Close, Escape): take back the history
+      // step so the next Back behaves as it did before the chooser opened
+      if (!closedByBack && history.state?.placeSheet === w) history.back();
+      closedByBack = false;
+      field.focus();               // back on the field it was opened from
+    });
     syncField();
   }
   makePicker(fromSel, 'from', true, '📍 Current GPS position');

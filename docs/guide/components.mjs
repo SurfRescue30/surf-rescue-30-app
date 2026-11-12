@@ -146,7 +146,7 @@ export const SCREENS = [
     components: [
       { selector: '#route-from-btn', title: 'Job Route: From',
         what: 'Where you are: current GPS or a named place. Tapping it opens a full-screen place chooser with an empty search box and the keyboard up; places are grouped by area and the current one is highlighted.',
-        use: 'Type part of a name, or close the keyboard and scroll the whole list, then tap a place. Scrolling never closes the chooser; Close backs out without a change.',
+        use: 'Type part of a name, or close the keyboard and scroll the whole list, then tap a place. Scrolling never closes the chooser. Close, or the phone\'s own Back (Android back button or gesture, iPhone edge swipe), backs out without a change and stays on the Tools tab.',
         data: '334 places chosen by the crew in the SR30 Route Locations list, from Scarborough to Norah Head, with boat ramps and wharves first. Positions from OpenStreetMap.' },
       { selector: '#route-to-btn', title: 'Job Route: To',
         what: 'The job location, chosen the same way.' },
