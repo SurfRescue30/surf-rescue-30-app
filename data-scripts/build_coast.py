@@ -353,6 +353,43 @@ for rank, name, reg, lat, lon in cands:
 route_places.sort(key=lambda p: (REGIONS.index(p['region']), -p['lat'] if p['region'] != 'Botany Bay & Georges River' else p['lon']))
 print('route places', len(route_places), {r: sum(1 for p in route_places if p['region'] == r) for r in REGIONS})
 
+# ── Map shoreline: coastline plus the estuary water-area outlines ─────
+# OSM's coastline closes across Sydney Harbour at the Heads (and across Port
+# Hacking), with the water behind mapped as water areas. Draw those outlines
+# too, and drop any piece with water on both sides (the made-up closing lines),
+# so the harbour shows as open water with its real shore.
+def _wet(x, y):
+    r_, c_ = int((y - y0) // CELL_M), int((x - x0) // CELL_M)
+    return 0 <= r_ < rows and 0 <= c_ < cols and bool(sea[r_, c_])
+def _shore_parts(line, off=90):
+    out, cur = [], []
+    cc = list(line.coords)
+    for (ax, ay), (bx, by) in zip(cc, cc[1:]):
+        L = math.hypot(bx - ax, by - ay) or 1
+        mx, my = (ax + bx) / 2, (ay + by) / 2
+        nx, ny = -(by - ay) / L * off, (bx - ax) / L * off
+        if _wet(mx + nx, my + ny) and _wet(mx - nx, my - ny):
+            if len(cur) > 1: out.append(LineString(cur))
+            cur = []
+        else:
+            if not cur: cur = [(ax, ay)]
+            cur.append((bx, by))
+    if len(cur) > 1: out.append(LineString(cur))
+    return out
+_outlines = list(lines)
+if est_polys:
+    _b = unary_union(est_polys).boundary
+    _outlines += list(_b.geoms) if hasattr(_b, 'geoms') else [_b]
+map_coast = []
+for l in _outlines:
+    gi = l.intersection(grid_box)
+    for part in (gi.geoms if hasattr(gi, 'geoms') else [gi]):
+        if part.geom_type != 'LineString': continue
+        for piece in _shore_parts(part.segmentize(40)):
+            if piece.length > 300:
+                map_coast.append([[round(v, 5) for v in UP(x, y)] for x, y in piece.simplify(12).coords])
+print('map shoreline pieces', len(map_coast), 'points', sum(len(m) for m in map_coast))
+
 js = f"""/* ── Surf Patrol Log – coast.js (generated) ──
    Coastline, islands, rock platforms and reefs from South Head to Cape Baily,
    and the pre-computed 2 NM line measured from the outermost land or outcrop.
