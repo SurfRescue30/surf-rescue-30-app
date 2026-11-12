@@ -1027,6 +1027,7 @@ details.card:not([open]) summary {
 }
 .route-warning strong { display: block; font-weight: 900; margin-bottom: 0.2rem; }
 .route-warning p { margin: 0.15rem 0 0; }
+.route-approx { margin: 0.4rem 0 0; font-size: 0.8rem; font-weight: 700; color: #10233A; border-left: 4px solid #4A5B70; padding-left: 0.5rem; }
 .warning-meta { display: block; font-size: 0.75rem; font-weight: 600; opacity: 0.9; }
 .all-clear { color: #0B6B3A; font-weight: 800; }
 

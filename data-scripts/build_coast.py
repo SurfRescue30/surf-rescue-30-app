@@ -86,7 +86,7 @@ for g in coast + outcrops:
 print('runtime features', len(features), 'points', sum(len(f) for f in features))
 
 # Main coast for the map, simplified more
-grid_box = box(*P(-34.20, 151.03), *P(-33.775, 151.37))
+grid_box = box(*P(-34.20, 151.03), *P(-33.725, 151.37))
 map_coast = []
 for l in lines:
     gi = l.intersection(grid_box)
@@ -102,8 +102,8 @@ from collections import deque
 # 50 m keeps narrow waterways (Gunnamatta Bay, upper Georges River) open
 CLEAR_M = 50.0
 CELL_M = 50.0
-# Figure Eight Pools → Manly, incl. the harbour, Botany Bay/Georges River and Port Hacking
-G_LAT_MIN, G_LAT_MAX, G_LON_MIN, G_LON_MAX = -34.20, -33.775, 151.04, 151.36
+# Figure Eight Pools → Long Reef, incl. the harbour, Botany Bay/Georges River and Port Hacking
+G_LAT_MIN, G_LAT_MAX, G_LON_MIN, G_LON_MAX = -34.20, -33.725, 151.04, 151.36
 x0, y0 = P(G_LAT_MIN, G_LON_MIN)
 x1, y1 = P(G_LAT_MAX, G_LON_MAX)
 cols = int((x1 - x0) // CELL_M) + 1
@@ -299,15 +299,15 @@ print('nav grid', rows, 'x', cols, 'water cells', int(sea.sum()))
 # ── Route places: named beaches, bays, points… on navigable water ──────
 # Area: Figure Eight Pools → Manly, Sydney Harbour eastern bays, Botany Bay up
 # the Georges River to Tom Uglys Bridge, Port Hacking to Grays Point.
-REGIONS = ['Manly & North Head', 'Harbour (eastern bays)', 'Eastern beaches', 'Botany Bay & Georges River',
+REGIONS = ['Long Reef to North Head', 'Harbour (eastern bays)', 'Eastern beaches', 'Botany Bay & Georges River',
            'Kurnell & Cronulla', 'Port Hacking', 'Royal National Park']
 def region_of(lat, lon):
     if -33.875 < lat < -33.79 and 151.225 <= lon < 151.287 and not (lon > 151.2855 and lat > -33.806):
         if lat > -33.826 and lon < 151.262:
             return None  # Middle Harbour isn't one of the eastern bays
         return 'Harbour (eastern bays)'
-    if lat >= -33.83 and lon >= 151.28:
-        return 'Manly & North Head'
+    if -33.83 <= lat <= -33.733 and lon >= 151.28:
+        return 'Long Reef to North Head'
     if -34.005 < lat <= -33.83 and lon >= 151.244:
         return 'Eastern beaches'
     if -34.03 < lat <= -33.93 and 151.105 <= lon < 151.244 and (lat > -34.012 or lon < 151.19):

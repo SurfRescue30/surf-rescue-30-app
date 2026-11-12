@@ -9,179 +9,213 @@
 (() => {
   const ROUTE_KEY = 'surfPatrolRoute';
   const NM = 1852;
-  const nav = COAST.nav;
-  const { lat0, lon0, kx, ky } = nav.proj;
+  const { kx, ky } = COAST.nav.proj;
 
-  // ── Grid ──────────────────────────────────────────────────────────
-  // 0 land, 1 open water, 2 within 200 m of land, 3 within 100 m, 4 charted channel
-  const water = new Uint8Array(nav.rows * nav.cols);
-  nav.data.forEach((row, r) => {
-    let c = 0;
-    row.split(',').forEach(run => {
-      const [v, n] = run.split('x').map(Number);
-      if (v) water.fill(v, r * nav.cols + c, r * nav.cols + c + n);
-      c += n;
+  // ── Grids ─────────────────────────────────────────────────────────
+  // makeRouter(nav, COST) wraps one navigable-water grid: decode, snap, A*,
+  // straighten. The detailed grid (coast.js) covers Era Beach → Long Reef with
+  // the harbour to Bradleys Head, Botany Bay/Georges River and Port Hacking.
+  // The coarse grid (coast-outer.js, Newcastle → Scarborough) only keeps
+  // routes off land; it's decoded the first time it's needed.
+  function makeRouter(nav, COST) {
+    const { lat0, lon0, kx, ky } = nav.proj;
+    const water = new Uint8Array(nav.rows * nav.cols);
+    nav.data.forEach((row, r) => {
+      let c = 0;
+      row.split(',').forEach(run => {
+        const [v, n] = run.split('x').map(Number);
+        if (v) water.fill(v, r * nav.cols + c, r * nav.cols + c + n);
+        c += n;
+      });
     });
-  });
-  // No depth data, so stay mid-channel: water near shore costs more, charted
-  // fairways/recommended tracks cost less
-  const COST = [Infinity, 1, 1.25, 1.8, 0.7];
-  const ox = (nav.origin[1] - lon0) * kx;
-  const oy = (nav.origin[0] - lat0) * ky;
-  const toXY = (lat, lon) => [(lon - lon0) * kx, (lat - lat0) * ky];
-  const toLL = (x, y) => [lat0 + y / ky, lon0 + x / kx];
-  const cellOf = (lat, lon) => {
-    const [x, y] = toXY(lat, lon);
-    return [Math.floor((y - oy) / nav.cellM), Math.floor((x - ox) / nav.cellM)];
-  };
-  const centre = (r, c) => [ox + (c + 0.5) * nav.cellM, oy + (r + 0.5) * nav.cellM];
-  const inGrid = (r, c) => r >= 0 && r < nav.rows && c >= 0 && c < nav.cols;
-  const isWater = (r, c) => inGrid(r, c) && water[r * nav.cols + c] > 0;
+    const ox = (nav.origin[1] - lon0) * kx;
+    const oy = (nav.origin[0] - lat0) * ky;
+    const toXY = (lat, lon) => [(lon - lon0) * kx, (lat - lat0) * ky];
+    const toLL = (x, y) => [lat0 + y / ky, lon0 + x / kx];
+    const cellOf = (lat, lon) => {
+      const [x, y] = toXY(lat, lon);
+      return [Math.floor((y - oy) / nav.cellM), Math.floor((x - ox) / nav.cellM)];
+    };
+    const centre = (r, c) => [ox + (c + 0.5) * nav.cellM, oy + (r + 0.5) * nav.cellM];
+    const inGrid = (r, c) => r >= 0 && r < nav.rows && c >= 0 && c < nav.cols;
+    const isWater = (r, c) => inGrid(r, c) && water[r * nav.cols + c] > 0;
+    const covers = (lat, lon) => inGrid(...cellOf(lat, lon));
 
-  // Nearest water cell (a beach or headland position is on land)
-  function snap(lat, lon) {
-    const [r0, c0] = cellOf(lat, lon);
-    if (isWater(r0, c0)) return [r0, c0];
-    for (let rad = 1; rad <= 60; rad++) {
-      let best = null, bestD = Infinity;
-      for (let dr = -rad; dr <= rad; dr++) {
-        for (let dc = -rad; dc <= rad; dc++) {
-          if (Math.max(Math.abs(dr), Math.abs(dc)) !== rad) continue;
-          if (isWater(r0 + dr, c0 + dc) && dr * dr + dc * dc < bestD) { best = [r0 + dr, c0 + dc]; bestD = dr * dr + dc * dc; }
+    // Nearest water cell (a beach or headland position is on land), within ~3 km
+    function snap(lat, lon) {
+      const [r0, c0] = cellOf(lat, lon);
+      if (isWater(r0, c0)) return [r0, c0];
+      const maxRad = Math.ceil(3000 / nav.cellM);
+      for (let rad = 1; rad <= maxRad; rad++) {
+        let best = null, bestD = Infinity;
+        for (let dr = -rad; dr <= rad; dr++) {
+          for (let dc = -rad; dc <= rad; dc++) {
+            if (Math.max(Math.abs(dr), Math.abs(dc)) !== rad) continue;
+            if (isWater(r0 + dr, c0 + dc) && dr * dr + dc * dc < bestD) { best = [r0 + dr, c0 + dc]; bestD = dr * dr + dc * dc; }
+          }
+        }
+        if (best) return best;
+      }
+      return null;
+    }
+
+    // ── A* over 8-connected water cells ─────────────────────────────
+    // Typed arrays and a flat binary heap: no allocation per step, so the
+    // longest routes take a fraction of a second on an older phone.
+    const minCost = Math.min(...COST.slice(1));
+    function astar(start, goal) {
+      const cols = nav.cols, rows = nav.rows, N = rows * cols;
+      const g = new Float32Array(N).fill(Infinity);
+      const came = new Int32Array(N).fill(-1);
+      const closed = new Uint8Array(N);
+      const [gr, gc] = goal;
+      // Octile distance at the cheapest cost: still never overestimates, but
+      // tighter than straight-line distance, so fewer cells are explored
+      const h = (r, c) => {
+        const dr = Math.abs(r - gr), dc = Math.abs(c - gc);
+        return (Math.max(dr, dc) + (Math.SQRT2 - 1) * Math.min(dr, dc)) * minCost;
+      };
+      let keys = new Float64Array(4096), vals = new Int32Array(4096), size = 0;
+      const push = (f, i) => {
+        if (size === keys.length) {
+          const k2 = new Float64Array(size * 2); k2.set(keys); keys = k2;
+          const v2 = new Int32Array(size * 2); v2.set(vals); vals = v2;
+        }
+        let k = size++;
+        while (k > 0) {
+          const p = (k - 1) >> 1;
+          if (keys[p] <= f) break;
+          keys[k] = keys[p]; vals[k] = vals[p]; k = p;
+        }
+        keys[k] = f; vals[k] = i;
+      };
+      const pop = () => {
+        const top = vals[0];
+        const f = keys[--size], v = vals[size];
+        let k = 0;
+        for (;;) {
+          const l = 2 * k + 1;
+          if (l >= size) break;
+          const m = l + 1 < size && keys[l + 1] < keys[l] ? l + 1 : l;
+          if (keys[m] >= f) break;
+          keys[k] = keys[m]; vals[k] = vals[m]; k = m;
+        }
+        keys[k] = f; vals[k] = v;
+        return top;
+      };
+      const wet = (r, c) => r >= 0 && r < rows && c >= 0 && c < cols && water[r * cols + c] > 0;
+      const DR = [1, -1, 0, 0, 1, 1, -1, -1], DC = [0, 0, 1, -1, 1, -1, 1, -1];
+      const STEP = [1, 1, 1, 1, Math.SQRT2, Math.SQRT2, Math.SQRT2, Math.SQRT2];
+      const s = start[0] * cols + start[1], t = gr * cols + gc;
+      g[s] = 0;
+      push(h(start[0], start[1]), s);
+      while (size) {
+        const cur = pop();
+        if (cur === t) break;
+        if (closed[cur]) continue;
+        closed[cur] = 1;
+        const r = (cur / cols) | 0, c = cur - r * cols, gcur = g[cur];
+        for (let k = 0; k < 8; k++) {
+          const dr = DR[k], dc = DC[k], rr = r + dr, cc = c + dc;
+          if (!wet(rr, cc)) continue;
+          // Don't cut diagonally past a land corner
+          if (k >= 4 && (!wet(r + dr, c) || !wet(r, c + dc))) continue;
+          const ni = rr * cols + cc;
+          const ng = gcur + STEP[k] * COST[water[ni]];
+          if (ng < g[ni]) { g[ni] = ng; came[ni] = cur; push(ng + h(rr, cc), ni); }
         }
       }
-      if (best) return best;
+      if (g[t] === Infinity) return null;
+      const path = [];
+      for (let i = t; i !== -1; i = came[i]) path.push([(i / cols) | 0, i % cols]);
+      return path.reverse();
     }
-    return null;
+
+    // Straight line between two cells that never gets closer to shore than the
+    // path it replaces (so straightening doesn't undo the mid-channel routing).
+    // worst = Infinity: any water will do.
+    function lineOfSight(a, b, worst) {
+      const steps = Math.ceil(Math.hypot(b[0] - a[0], b[1] - a[1]) * 2);
+      for (let i = 1; i < steps; i++) {
+        const r = Math.round(a[0] + (b[0] - a[0]) * i / steps), c = Math.round(a[1] + (b[1] - a[1]) * i / steps);
+        if (!isWater(r, c)) return false;
+        const v = water[r * nav.cols + c];
+        if (v !== 4 && v > worst) return false;
+      }
+      return true;
+    }
+
+    // Pull the cell path tight into as few straight legs as possible
+    function straighten(path) {
+      const out = [path[0]];
+      let anchor = 0;
+      while (anchor < path.length - 1) {
+        // Scan forward, tracking the closest-to-shore class seen so far; stop
+        // once the straight line has failed for a while
+        let far = anchor + 1, worst = 1, misses = 0;
+        const at = k => water[path[k][0] * nav.cols + path[k][1]];
+        if (at(anchor) !== 4) worst = Math.max(worst, at(anchor));
+        for (let j = anchor + 1; j < path.length && misses < 40; j++) {
+          const v = at(j);
+          if (v !== 4 && v > worst) worst = v;
+          if (lineOfSight(path[anchor], path[j], worst)) { far = j; misses = 0; } else misses++;
+        }
+        out.push(path[far]);
+        anchor = far;
+      }
+      return out;
+    }
+
+    function summarise(legsCells) {
+      const pts = legsCells.map(([r, c]) => toLL(...centre(r, c)));
+      const legs = [];
+      let metres = 0;
+      for (let i = 0; i < pts.length - 1; i++) {
+        const [x1, y1] = toXY(...pts[i]), [x2, y2] = toXY(...pts[i + 1]);
+        const m = Math.hypot(x2 - x1, y2 - y1);
+        if (m < 1) continue;
+        metres += m;
+        legs.push({ nm: m / NM, brg: bearingDeg(pts[i][0], pts[i][1], pts[i + 1][0], pts[i + 1][1]) });
+      }
+      // Straight line between the same water points the route uses (a place's map
+      // point can be on land, e.g. a bridge or the middle of a beach)
+      const [sa, sb] = [pts[0], pts[pts.length - 1]];
+      return { pts, legs, nm: metres / NM, straightNm: distanceNm(sa[0], sa[1], sb[0], sb[1]) };
+    }
+
+    // straightFirst: if the direct line is clear of land, use it as is
+    function route(from, to, straightFirst = false) {
+      const a = snap(from.lat, from.lon), b = snap(to.lat, to.lon);
+      if (!a || !b) return null;
+      if (straightFirst && lineOfSight(a, b, Infinity)) return { ...summarise([a, b]), direct: true };
+      const cells = astar(a, b);
+      if (!cells) return null;
+      return summarise(straighten(cells));
+    }
+
+    return { route, covers };
   }
 
-  // ── A* over 8-connected water cells ───────────────────────────────
-  // Typed arrays and a flat binary heap: no allocation per step, so the
-  // longest routes take a fraction of a second on an older phone.
-  function astar(start, goal) {
-    const cols = nav.cols, rows = nav.rows, N = rows * cols;
-    const g = new Float32Array(N).fill(Infinity);
-    const came = new Int32Array(N).fill(-1);
-    const closed = new Uint8Array(N);
-    const [gr, gc] = goal;
-    // Octile distance at the cheapest cost: still never overestimates, but
-    // tighter than straight-line distance, so fewer cells are explored
-    const minCost = COST[4];
-    const h = (r, c) => {
-      const dr = Math.abs(r - gr), dc = Math.abs(c - gc);
-      return (Math.max(dr, dc) + (Math.SQRT2 - 1) * Math.min(dr, dc)) * minCost;
-    };
-    let keys = new Float64Array(4096), vals = new Int32Array(4096), size = 0;
-    const push = (f, i) => {
-      if (size === keys.length) {
-        const k2 = new Float64Array(size * 2); k2.set(keys); keys = k2;
-        const v2 = new Int32Array(size * 2); v2.set(vals); vals = v2;
-      }
-      let k = size++;
-      while (k > 0) {
-        const p = (k - 1) >> 1;
-        if (keys[p] <= f) break;
-        keys[k] = keys[p]; vals[k] = vals[p]; k = p;
-      }
-      keys[k] = f; vals[k] = i;
-    };
-    const pop = () => {
-      const top = vals[0];
-      const f = keys[--size], v = vals[size];
-      let k = 0;
-      for (;;) {
-        const l = 2 * k + 1;
-        if (l >= size) break;
-        const m = l + 1 < size && keys[l + 1] < keys[l] ? l + 1 : l;
-        if (keys[m] >= f) break;
-        keys[k] = keys[m]; vals[k] = vals[m]; k = m;
-      }
-      keys[k] = f; vals[k] = v;
-      return top;
-    };
-    const wet = (r, c) => r >= 0 && r < rows && c >= 0 && c < cols && water[r * cols + c] > 0;
-    const DR = [1, -1, 0, 0, 1, 1, -1, -1], DC = [0, 0, 1, -1, 1, -1, 1, -1];
-    const STEP = [1, 1, 1, 1, Math.SQRT2, Math.SQRT2, Math.SQRT2, Math.SQRT2];
-    const s = start[0] * cols + start[1], t = gr * cols + gc;
-    g[s] = 0;
-    push(h(start[0], start[1]), s);
-    while (size) {
-      const cur = pop();
-      if (cur === t) break;
-      if (closed[cur]) continue;
-      closed[cur] = 1;
-      const r = (cur / cols) | 0, c = cur - r * cols, gcur = g[cur];
-      for (let k = 0; k < 8; k++) {
-        const dr = DR[k], dc = DC[k], rr = r + dr, cc = c + dc;
-        if (!wet(rr, cc)) continue;
-        // Don't cut diagonally past a land corner
-        if (k >= 4 && (!wet(r + dr, c) || !wet(r, c + dc))) continue;
-        const ni = rr * cols + cc;
-        const ng = gcur + STEP[k] * COST[water[ni]];
-        if (ng < g[ni]) { g[ni] = ng; came[ni] = cur; push(ng + h(rr, cc), ni); }
-      }
-    }
-    if (g[t] === Infinity) return null;
-    const path = [];
-    for (let i = t; i !== -1; i = came[i]) path.push([(i / cols) | 0, i % cols]);
-    return path.reverse();
-  }
+  // Detailed: no depth data, so stay mid-channel: water near shore costs more,
+  // charted fairways/recommended tracks cost less
+  const detailed = makeRouter(COAST.nav, [Infinity, 1, 1.25, 1.8, 0.7]);
+  let coarse = null;
+  const coarseRouter = () => {
+    if (!coarse && typeof COAST_OUTER !== 'undefined') coarse = makeRouter(COAST_OUTER.nav, [Infinity, 1, 1.3]);
+    return coarse;
+  };
 
-  // Straight line of water cells between two cells?
-  // Straight line between two cells that never gets closer to shore than the
-  // path it replaces (so straightening doesn't undo the mid-channel routing)
-  function lineOfSight(a, b, worst) {
-    const steps = Math.ceil(Math.hypot(b[0] - a[0], b[1] - a[1]) * 2);
-    for (let i = 1; i < steps; i++) {
-      const r = Math.round(a[0] + (b[0] - a[0]) * i / steps), c = Math.round(a[1] + (b[1] - a[1]) * i / steps);
-      if (!isWater(r, c)) return false;
-      const v = water[r * nav.cols + c];
-      if (v !== 4 && v > worst) return false;
-    }
-    return true;
-  }
-
-  // Pull the cell path tight into as few straight legs as possible
-  function straighten(path) {
-    const out = [path[0]];
-    let anchor = 0;
-    while (anchor < path.length - 1) {
-      // Scan forward, tracking the closest-to-shore class seen so far; stop
-      // once the straight line has failed for a while
-      let far = anchor + 1, worst = 1, misses = 0;
-      const at = k => water[path[k][0] * nav.cols + path[k][1]];
-      if (at(anchor) !== 4) worst = Math.max(worst, at(anchor));
-      for (let j = anchor + 1; j < path.length && misses < 40; j++) {
-        const v = at(j);
-        if (v !== 4 && v > worst) worst = v;
-        if (lineOfSight(path[anchor], path[j], worst)) { far = j; misses = 0; } else misses++;
-      }
-      out.push(path[far]);
-      anchor = far;
-    }
-    return out;
-  }
-
+  // Both ends in the detailed area: detailed route. Otherwise the coarse grid:
+  // a straight line when it's clear of land, else around the land.
   function route(from, to) {
-    const a = snap(from.lat, from.lon), b = snap(to.lat, to.lon);
-    if (!a || !b) return null;
-    const cells = astar(a, b);
-    if (!cells) return null;
-    const legsCells = straighten(cells);
-    const pts = legsCells.map(([r, c]) => toLL(...centre(r, c)));
-    const legs = [];
-    let metres = 0;
-    for (let i = 0; i < pts.length - 1; i++) {
-      const [x1, y1] = toXY(...pts[i]), [x2, y2] = toXY(...pts[i + 1]);
-      const m = Math.hypot(x2 - x1, y2 - y1);
-      if (m < 1) continue;
-      metres += m;
-      legs.push({ nm: m / NM, brg: bearingDeg(pts[i][0], pts[i][1], pts[i + 1][0], pts[i + 1][1]) });
+    if (detailed.covers(from.lat, from.lon) && detailed.covers(to.lat, to.lon)) {
+      const r = detailed.route(from, to);
+      if (r) return r;
     }
-    // Straight line between the same water points the route uses (a place's map
-    // point can be on land, e.g. a bridge or the middle of a beach)
-    const [sa, sb] = [pts[0], pts[pts.length - 1]];
-    return { pts, legs, nm: metres / NM, straightNm: distanceNm(sa[0], sa[1], sb[0], sb[1]) };
+    const c = coarseRouter();
+    if (!c) return null;
+    const r = c.route(from, to, true);
+    return r && { ...r, approx: true };
   }
 
   // ── UI ────────────────────────────────────────────────────────────
@@ -376,13 +410,14 @@
     result.replaceChildren();
     if (!r) {
       const nm = distanceNm(from.lat, from.lon, to.lat, to.lon);
-      result.textContent = `No water route found (outside the mapped area). Straight line ${nm.toFixed(1)} NM, ${pad3(bearingDeg(from.lat, from.lon, to.lat, to.lon))}°T.`;
+      result.textContent = `No water route found (outside the mapped area, Newcastle to Scarborough). Straight line ${nm.toFixed(1)} NM, ${pad3(bearingDeg(from.lat, from.lon, to.lat, to.lon))}°T.`;
       svg.innerHTML = '';
       return;
     }
     const big = document.createElement('div');
     big.className = 'big';
-    big.textContent = `${r.nm.toFixed(1)} NM by water` + (kn > 0 ? ` · ${fmtMins(r.nm / kn)} at ${kn} kn` : '');
+    const what = r.direct ? 'NM straight line' : r.approx ? 'NM by water (approx.)' : 'NM by water';
+    big.textContent = `${r.nm.toFixed(1)} ${what}` + (kn > 0 ? ` · ${fmtMins(r.nm / kn)} at ${kn} kn` : '');
     // For reading out, merge legs within 20° of each other (the map keeps the exact path)
     const merged = [];
     r.legs.forEach(l => {
@@ -406,11 +441,17 @@
     const extra = document.createElement('div');
     extra.className = 'muted small';
     const eta = kn > 0 ? new Date(Date.now() + r.nm / kn * 3600000).toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit', hour12: false }) : null;
-    extra.textContent = `Straight line ${r.straightNm.toFixed(1)} NM${eta ? ` · ETA if leaving now ${eta}` : ''} · keeps 50 m off land and rocks`;
+    extra.textContent = r.approx
+      ? `${r.direct ? 'Clear of land all the way' : `Straight line ${r.straightNm.toFixed(1)} NM`}${eta ? ` · ETA if leaving now ${eta}` : ''}`
+      : `Straight line ${r.straightNm.toFixed(1)} NM${eta ? ` · ETA if leaving now ${eta}` : ''} · keeps 50 m off land and rocks`;
+    const approxNote = document.createElement('p');
+    approxNote.className = 'route-approx';
+    approxNote.textContent = 'Approximate: outside the detailed area (Era Beach to Long Reef, the harbour to Bradleys Head). It goes around land but not rocks, reefs or shallows.';
     const zones = shallowZonesOn([...r.pts, [from.lat, from.lon], [to.lat, to.lon]]);
     result.append(big);
     if (zones.length) result.append(routeWarning(zones));
     result.append(legs, extra);
+    if (r.approx) result.append(approxNote);
     if (redraw) draw(r, from, to);
   }
 
@@ -428,7 +469,12 @@
     const sy = lat => ((latMax - lat) / (latMax - latMin)) * H;
     const path = line => line.map(([lat, lon], i) => `${i ? 'L' : 'M'}${sx(lon).toFixed(1)},${sy(lat).toFixed(1)}`).join('');
     let out = `<rect width="${W}" height="${H.toFixed(0)}" class="m-sea"/>`;
+    const inView = l => l.some(([lat, lon]) => lat >= latMin && lat <= latMax && lon >= lonMin && lon <= lonMax);
     COAST.mapCoast.forEach(l => { out += `<path d="${path(l)}" class="m-coast"/>`; });
+    // Outside the detailed area, the simplified coastline from coast-outer.js
+    if (r.approx && typeof COAST_OUTER !== 'undefined') {
+      COAST_OUTER.mapCoast.forEach(l => { if (inView(l)) out += `<path d="${path(l)}" class="m-coast"/>`; });
+    }
     COAST.mapOutcrops.forEach(l => { out += `<path d="${path(l)}" class="m-outcrop"/>`; });
     out += `<path d="${path(r.pts)}" class="m-route"/>`;
     out += `<circle cx="${sx(from.lon)}" cy="${sy(from.lat)}" r="6" class="m-from"/>`;
