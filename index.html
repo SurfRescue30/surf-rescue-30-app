@@ -205,18 +205,36 @@
         <p class="muted small">Distance, courses and time by water. Detailed from Era Beach to Long Reef, the harbour, Botany Bay to Tom Uglys Bridge and Port Hacking: follows channels and goes around headlands and rocks. Approximate beyond that, from Scarborough to Norah Head: a straight line, or around land where it's in the way.</p>
         <div class="route-fields">
           <div class="picker">
-            <label for="route-from-input">From</label>
-            <input id="route-from-input" type="search" placeholder="Search a place, or use GPS" autocomplete="off"
-                   role="combobox" aria-expanded="false" aria-controls="route-from-list" aria-autocomplete="list" />
-            <ul class="picker-list" id="route-from-list" role="listbox" hidden></ul>
+            <span class="picker-label" id="route-from-label">From</span>
+            <button type="button" class="picker-field" id="route-from-btn" aria-haspopup="dialog" aria-labelledby="route-from-label route-from-btn">📍 Current GPS position</button>
             <select id="route-from" aria-hidden="true" tabindex="-1" hidden></select>
+            <!-- Full-screen place chooser: search at the top, the whole screen is the list -->
+            <dialog class="place-sheet" id="route-from-sheet" aria-labelledby="route-from-sheet-title">
+              <div class="sheet-head">
+                <h2 id="route-from-sheet-title">From</h2>
+                <button type="button" class="sheet-close" id="route-from-close">Close</button>
+              </div>
+              <input id="route-from-input" type="search" placeholder="Search a place" autocomplete="off" enterkeyhint="search"
+                     role="combobox" aria-expanded="true" aria-controls="route-from-list" aria-autocomplete="list" aria-label="Search places" />
+              <p class="sheet-hint muted small">Type to search, or close the keyboard and scroll.</p>
+              <ul class="picker-list" id="route-from-list" role="listbox" aria-label="From places"></ul>
+            </dialog>
           </div>
           <div class="picker">
-            <label for="route-to-input">To</label>
-            <input id="route-to-input" type="search" placeholder="Search the job location" autocomplete="off"
-                   role="combobox" aria-expanded="false" aria-controls="route-to-list" aria-autocomplete="list" />
-            <ul class="picker-list" id="route-to-list" role="listbox" hidden></ul>
+            <span class="picker-label" id="route-to-label">To</span>
+            <button type="button" class="picker-field" id="route-to-btn" aria-haspopup="dialog" aria-labelledby="route-to-label route-to-btn">Choose job location…</button>
             <select id="route-to" aria-hidden="true" tabindex="-1" hidden></select>
+            <!-- Full-screen place chooser: search at the top, the whole screen is the list -->
+            <dialog class="place-sheet" id="route-to-sheet" aria-labelledby="route-to-sheet-title">
+              <div class="sheet-head">
+                <h2 id="route-to-sheet-title">To</h2>
+                <button type="button" class="sheet-close" id="route-to-close">Close</button>
+              </div>
+              <input id="route-to-input" type="search" placeholder="Search the job location" autocomplete="off" enterkeyhint="search"
+                     role="combobox" aria-expanded="true" aria-controls="route-to-list" aria-autocomplete="list" aria-label="Search places" />
+              <p class="sheet-hint muted small">Type to search, or close the keyboard and scroll.</p>
+              <ul class="picker-list" id="route-to-list" role="listbox" aria-label="To places"></ul>
+            </dialog>
           </div>
           <label class="route-speed">Speed (kn)<input id="route-speed" type="number" inputmode="decimal" min="1" step="any" placeholder="e.g. 20" /></label>
         </div>

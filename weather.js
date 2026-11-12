@@ -70,8 +70,12 @@
     if (mins < 60) return `${mins} min ago`;
     return `${Math.round(mins / 60)} h ago`;
   }
-  async function fetchJson(url) {
-    const res = await fetch(url, { cache: 'no-store' });
+  // One bar of signal can leave a request hanging for minutes; give up after
+  // 12 s so the saved copy is used instead of a spinner
+  async function fetchJson(url, ms = 12000) {
+    const ctl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    const timer = ctl && setTimeout(() => ctl.abort(), ms);
+    const res = await fetch(url, { cache: 'no-store', signal: ctl?.signal }).finally(() => clearTimeout(timer));
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return res.json();
   }
@@ -523,12 +527,17 @@
   // using the saved copy first so the badge shows straight away.
   const savedFeed = cacheGet(FEED_CACHE);
   if (savedFeed) renderFeed(savedFeed.data, savedFeed.at);
-  fetchJson(`${APP_CONFIG.dataUrl}?t=${Math.floor(Date.now() / 300000)}`)
-    .then(d => { cacheSet(FEED_CACHE, d); renderFeed(d, Date.now()); })
-    .catch(() => { /* offline — saved copy (if any) already shown */ });
 
-  // Get the forecast ready in the background so the tab opens loaded
-  setTimeout(() => load(), 1500);
+  // Open on the saved forecast (if it still covers today) so the tab is never
+  // empty, then fetch fresh data straight away in the background
+  const savedModel = cacheGet(WX_CACHE);
+  if (savedModel && Date.now() - savedModel.at < 36 * 3600000) {
+    try {
+      renderModel(savedModel.data, savedModel.at);
+      wxUpdated.textContent += ' · updating…';
+    } catch { /* old cache shape — wait for fresh data */ }
+  }
+  load();
 
   window.sunEventForTest = sunEvent;
 })();

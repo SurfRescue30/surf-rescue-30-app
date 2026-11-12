@@ -255,18 +255,28 @@
     if (saved.speed) speedIn.value = saved.speed;
   } catch { /* nothing saved */ }
 
-  // ── Searchable From / To pickers ──────────────────────────────────
-  // The hidden <select>s keep the chosen value; the search box filters the
-  // places as you type, grouped by area.
-  function makePicker(sel, input, list, includeGps) {
+  // ── From / To place choosers ──────────────────────────────────────
+  // Each field is a button showing the chosen place. Tapping it opens a
+  // full-screen chooser (a modal <dialog>) with an empty search box and the
+  // keyboard up; with the keyboard closed the whole screen is the list, so
+  // scrolling it can't close anything. A tap on a place chooses it; Close or
+  // Escape backs out without a change. The hidden <select>s keep the value.
+  function makePicker(sel, w, includeGps, emptyText) {
+    const field = document.getElementById(`route-${w}-btn`);
+    const sheet = document.getElementById(`route-${w}-sheet`);
+    const input = document.getElementById(`route-${w}-input`);
+    const list = document.getElementById(`route-${w}-list`);
+    const closeBtn = document.getElementById(`route-${w}-close`);
     const label = v => v === 'gps' ? '📍 Current GPS position' : (placeById.get(v)?.name || '');
-    const syncInput = () => { input.value = label(sel.value); };
-    const open = on => { list.hidden = !on; input.setAttribute('aria-expanded', String(on)); };
+    const syncField = () => {
+      field.textContent = label(sel.value) || emptyText;
+      field.classList.toggle('is-empty', !label(sel.value));
+    };
+    const close = () => { if (sheet.open) sheet.close(); };
     const choose = value => {
       sel.value = value;
-      syncInput();
-      open(false);
-      input.blur();
+      syncField();
+      close();
       sel.dispatchEvent(new Event('change'));
     };
     const item = (value, text) => {
@@ -274,8 +284,9 @@
       li.setAttribute('role', 'option');
       li.dataset.value = value;
       li.textContent = text;
-      // click, not pointerdown: on a phone a finger put down to scroll the list
-      // must not pick whatever row it landed on. click only fires for a tap.
+      if (value === sel.value) li.setAttribute('aria-selected', 'true');
+      // click, not pointerdown: a finger put down to scroll the list must not
+      // pick whatever row it landed on. click only fires for a tap.
       li.addEventListener('click', () => choose(value));
       return li;
     };
@@ -299,32 +310,30 @@
         none.textContent = 'No matching places';
         list.append(none);
       }
-      open(true);
     }
-    // The list stays open when the box loses focus (e.g. iPhone "Done" hides the
-    // keyboard) so it can still be scrolled and tapped. It closes on a choice,
-    // Escape, a tap anywhere else, or focus moving to another control.
-    const picker = input.closest('.picker');
-    const close = () => { if (!list.hidden) { open(false); syncInput(); } };
-    // Keep focus in the box when a row is pressed (no keyboard flicker, no blur race)
-    list.addEventListener('mousedown', e => e.preventDefault());
-    document.addEventListener('pointerdown', e => { if (!picker.contains(e.target)) close(); }, true);
-    document.addEventListener('focusin', e => { if (!picker.contains(e.target)) close(); });
-    input.addEventListener('focus', () => { input.select(); render(''); });
-    input.addEventListener('input', () => render(input.value));
+    field.addEventListener('click', () => {
+      input.value = '';            // cleared, ready to type
+      render('');
+      list.scrollTop = 0;
+      sheet.showModal();
+      input.focus();               // same tap, so the phone raises the keyboard
+    });
+    closeBtn.addEventListener('click', close);
+    input.addEventListener('input', () => { render(input.value); list.scrollTop = 0; });
     input.addEventListener('keydown', e => {
       if (e.key === 'Enter') {
         const first = list.querySelector('[data-value]');
         if (first) { e.preventDefault(); choose(first.dataset.value); }
-      } else if (e.key === 'Escape') {
-        open(false);
-        input.blur();
       }
     });
-    syncInput();
+    // Scrolling the list hides the keyboard, so the whole list is in view
+    list.addEventListener('touchmove', () => { if (document.activeElement === input) input.blur(); }, { passive: true });
+    // Back on the field the chooser was opened from
+    sheet.addEventListener('close', () => field.focus());
+    syncField();
   }
-  makePicker(fromSel, document.getElementById('route-from-input'), document.getElementById('route-from-list'), true);
-  makePicker(toSel, document.getElementById('route-to-input'), document.getElementById('route-to-list'), false);
+  makePicker(fromSel, 'from', true, '📍 Current GPS position');
+  makePicker(toSel, 'to', false, 'Choose job location…');
 
   const pad3 = n => String(Math.round(n) % 360).padStart(3, '0');
   const fmtMins = h => { const m = Math.round(h * 60); return m >= 60 ? `${Math.floor(m / 60)} h ${m % 60} min` : `${m} min`; };
