@@ -575,6 +575,23 @@ await check('job route reaches Grays Point up Port Hacking', async () => {
   await page.keyboard.press('Escape');
 });
 
+await check('job route: crew place list, approximate route into Pittwater with warnings', async () => {
+  await page.click('#route-to-input');
+  await page.fill('#route-to-input', '');
+  const groups = await page.$$eval('#route-to-list .picker-group', gs => gs.map(g => g.textContent));
+  assert(groups[0] === 'Boat ramps & wharves' && groups.includes('Pittwater') && groups.includes('Central Coast') && groups.includes('Otford to Scarborough'), `groups ${groups}`);
+  assert(!groups.includes('Lake Macquarie & Newcastle'), 'Newcastle was not chosen');
+  await page.keyboard.press('Escape');
+  await pick('from', 'malabar boat', 'Malabar Boat Ramp');
+  await pick('to', 'bayview', 'Bayview');
+  await page.waitForFunction(() => /NM by water \(approx\.\)/.test(document.getElementById('route-result').textContent), null, { timeout: 10000 });
+  const r = await page.textContent('#route-result');
+  assert(/Pittwater/.test(r) && /does not confirm depth/.test(r), `no Pittwater warning: "${r.slice(0, 200)}"`);
+  assert(await page.locator('#route-result .route-approx').count() === 1, 'approximate note missing');
+  const nm = parseFloat(r);
+  assert(nm > 26 && nm < 34, `Malabar Boat Ramp → Bayview ${nm} NM`);
+});
+
 await check('job route goes around Cape Banks, not over land', async () => {
   await pick('from', 'little bay', 'Little Bay Beach');
   await pick('to', 'frenchmans', 'Frenchmans Bay');
