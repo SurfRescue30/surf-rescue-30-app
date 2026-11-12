@@ -4,7 +4,8 @@
      "Weather data" GitHub workflow), shown as a badge/banner app-wide.
    - Model forecast from Open-Meteo (free, no key): now tiles, tide estimate
      and a 24-hour strip.
-   - Sun, first and last light calculated on the device.
+   - Sun, first and last light and the moon (moon.js) calculated on the device.
+     Night hours in the strip are shaded, with the moon (or a dark sky) in place of the sun.
    - Live maps: Windy (wind, waves) and RainViewer (radar, auto-plays).
    Last good data is cached so a dead spot still shows the latest, with its age.
 */
@@ -46,6 +47,14 @@
   const compass = deg => deg == null ? '–' : COMPASS[Math.round(deg / 22.5) % 16];
   const fmt = (v, dp = 0) => v == null || Number.isNaN(v) ? '–' : Number(v).toFixed(dp);
   const hhmm = d => d.toLocaleTimeString('en-AU', { timeZone: 'Australia/Sydney', hour: '2-digit', minute: '2-digit', hour12: false });
+  // Sydney wall-clock "YYYY-MM-DDTHH:MM" → instant, right in both AEST (+10) and AEDT (+11)
+  const sydneyMs = t => {
+    for (const off of ['+11:00', '+10:00']) {
+      const ms = new Date(t.slice(0, 16) + ':00' + off).getTime();
+      if (sydneyKey(new Date(ms)) === t.slice(0, 13)) return ms;
+    }
+    return new Date(t.slice(0, 16) + ':00+10:00').getTime(); // the hour skipped when clocks go forward
+  };
   const sydneyKey = d => d.toLocaleString('sv-SE', { timeZone: 'Australia/Sydney' }).slice(0, 13).replace(' ', 'T'); // YYYY-MM-DDTHH
   const el = (tag, cls, text) => {
     const n = document.createElement(tag);
@@ -133,12 +142,52 @@
     const common = `latitude=${point.lat}&longitude=${point.lon}&timezone=Australia%2FSydney&forecast_days=3`;
     const [wx, sea] = await Promise.all([
       fetchJson(`https://api.open-meteo.com/v1/forecast?${common}&wind_speed_unit=kn` +
-        '&hourly=wind_speed_10m,wind_direction_10m,wind_gusts_10m,precipitation,temperature_2m,weather_code' +
+        '&hourly=wind_speed_10m,wind_direction_10m,wind_gusts_10m,precipitation,temperature_2m,weather_code,is_day' +
         '&current=wind_speed_10m,wind_direction_10m,wind_gusts_10m,temperature_2m'),
       fetchJson(`https://marine-api.open-meteo.com/v1/marine?${common}` +
         '&hourly=swell_wave_height,swell_wave_direction,swell_wave_period,sea_surface_temperature')
     ]);
     return { wx, sea };
+  }
+
+  // Night sky for clear to partly cloudy hours: the moon if it's up, else a dark starry sky
+  const NIGHT_CLEAR = 2;
+  function nightSky(code, ms) {
+    const box = el('span', 'night-sky');
+    if (Moon.isUp(ms, point.lat, point.lon)) {
+      const { phase, fraction } = Moon.illumination(ms);
+      box.append(Moon.icon(phase, 20));
+      box.title = `Moon up, ${Math.round(fraction * 100)}% lit`;
+    } else {
+      box.append(el('span', 'stars', '✦'));
+      box.title = 'Moon down — dark sky';
+    }
+    if (code === 2) box.append(el('span', 'night-cloud', '☁️'));
+    return box;
+  }
+  // Day or night at an hour: Open-Meteo's is_day, else sunrise/sunset worked out here
+  function isNight(h, i) {
+    const flag = h.is_day?.[i];
+    if (flag != null) return flag === 0;
+    const ms = sydneyMs(h.time[i]), key = h.time[i].slice(0, 10);
+    const rise = sunEvent(key, 90.833, true), set = sunEvent(key, 90.833, false);
+    return !rise || !set ? false : ms < rise.getTime() || ms >= set.getTime();
+  }
+
+  // ── Moon tile: phase, % lit, next rise and set ────────────────────
+  function moonTile() {
+    const now = Date.now();
+    const { phase, fraction } = Moon.illumination(now);
+    const ev = Moon.events(now, now + 30 * 3600000, point.lat, point.lon);
+    const rise = ev.find(e => e.type === 'rise'), set = ev.find(e => e.type === 'set');
+    const up = Moon.isUp(now, point.lat, point.lon);
+    const t = tile('Moon', Moon.phaseName(phase), [
+      `${Math.round(fraction * 100)}% lit · ${up ? 'up now' : 'down now'}`,
+      [rise, set].filter(Boolean).sort((a, b) => a.at - b.at)
+        .map(e => `${e.type === 'rise' ? 'Rise' : 'Set'} ${hhmm(e.at)}`).join(' · ') || 'No rise or set in the next 30 h'
+    ], 'tile-moon');
+    t.prepend(Moon.icon(phase, 44));
+    return t;
   }
 
   const SKY = code => code == null ? '' : code === 0 ? '☀️' : code <= 2 ? '🌤️' : code === 3 ? '☁️' : code <= 48 ? '🌫️'
@@ -192,7 +241,8 @@
         : tile('Tide', '–', 'no tide data'),
       tile('Water', `${fmt(m.sea_surface_temperature[si], 1)} °C`, c.temperature_2m != null ? `air ${fmt(c.temperature_2m)} °C` : ''),
       tile('Sunrise / Sunset', `${sun.sunrise ? hhmm(sun.sunrise) : '–'} · ${sun.sunset ? hhmm(sun.sunset) : '–'}`, ''),
-      tile('First / Last Light', `${sun.firstLight ? hhmm(sun.firstLight) : '–'} · ${sun.lastLight ? hhmm(sun.lastLight) : '–'}`, '')
+      tile('First / Last Light', `${sun.firstLight ? hhmm(sun.firstLight) : '–'} · ${sun.lastLight ? hhmm(sun.lastLight) : '–'}`, ''),
+      moonTile()
     );
     wxNow.replaceChildren(grid);
 
@@ -207,7 +257,7 @@
 
     // Tide direction per hour from the Fort Denison prediction
     const tideAt = i => {
-      const ms = new Date(h.time[i] + ':00+11:00').getTime();
+      const ms = sydneyMs(h.time[i]);
       return Tide.height(ms + 1800000) > Tide.height(ms) ? '↑' : '↓';
     };
 
@@ -216,10 +266,13 @@
         const t = h.time[i];
         const label = t.slice(11, 13);
         return i === start || label === '00'
-          ? `${new Date(t + ':00+11:00').toLocaleDateString('en-AU', { weekday: 'short', timeZone: 'Australia/Sydney' })} ${label}`
+          ? `${new Date(t.slice(0, 10) + 'T12:00:00Z').toLocaleDateString('en-AU', { weekday: 'short', timeZone: 'UTC' })} ${label}`
           : label;
       }, 'row-time'],
-      ['', i => SKY(h.weather_code?.[i]), 'row-sky'],
+      ['', i => {
+        const code = h.weather_code?.[i];
+        return isNight(h, i) && code != null && code <= NIGHT_CLEAR ? nightSky(code, sydneyMs(h.time[i])) : SKY(code);
+      }, 'row-sky'],
       ['Temp °C', i => fmt(h.temperature_2m?.[i])],
       ['Rain mm', i => h.precipitation?.[i] ? fmt(h.precipitation[i], 1) : ''],
       [`Wind ${windLabel()}`, i => fmt(wind(h.wind_speed_10m[i])), 'row-wind'],
@@ -243,9 +296,12 @@
           const arrow = el('span', 'dir-arrow', '↓');
           arrow.style.transform = `rotate(${h.wind_direction_10m[i]}deg)`;
           td.append(arrow, el('span', 'dir-text', v));
+        } else if (v instanceof Node) {
+          td.append(v);
         } else {
           td.textContent = v;
         }
+        if ((cls === 'row-time' || cls === 'row-sky') && isNight(h, i)) td.classList.add('night');
         if (cls === 'row-wind') td.style.backgroundColor = windColour(h.wind_speed_10m[i]);
         if (cls === 'row-gust') td.style.backgroundColor = windColour(h.wind_gusts_10m[i]);
         if (h.time[i].slice(11, 13) === '00' && i !== start) td.classList.add('day-start');

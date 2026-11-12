@@ -22,11 +22,12 @@ Mobile-first voice log and toolkit for the Surf Rescue 30 offshore rescue boat (
 | `places.js` | Generated place list (Central Coast → Illawarra) with OSM coordinates; `confirmed:false` = nickname for the skipper to check |
 | `geo.js` | DDM/DMS formatting, distance/bearing, nearest landmark, position parsing |
 | `tide.js` / `tide-constants.js` | Fort Denison tide predictions on the phone (harmonic constants with nodal corrections). Refit yearly: `python3 data-scripts/fit_tides.py h333.csv tide-constants.js` with https://uhslc.soest.hawaii.edu/data/csv/fast/hourly/h333.csv |
+| `moon.js` | Moon phase, % lit, rise/set and an SVG moon drawn as seen from Sydney (waxing lit on the left), all on the phone |
 | `coast.js` | Generated coastline + outcrops (South Head → Cape Baily), pre-computed 2 NM / warning lines, and the navigable-water grid for routing |
 | `geofence.js` | 2 NM boundary alarm (watchPosition) and SVG map |
 | `route.js` | Job route by water (A* on the navigable grid; 50 m off land, 25 m in estuaries), searchable From/To pickers, courses, time at speed, route map |
 | `setup.js` | Phone setup check: mic / location / notification permissions with one-tap request |
-| `weather.js` | Sydney-only warnings (badge + Log banner) and Sydney Coast BOM forecast from `weather.json`; Open-Meteo now tiles, tide ("Near high/low" within the estimate's margin), 24 h strip; sun/first/last light computed locally; wind units (kn/km/h) remembered; one Windy map (wind/waves/radar pills change its layer, full-screen button for pinch zoom) loaded only when scrolled to; data prefetched at start-up and a loading screen until it's in |
+| `weather.js` | Sydney-only warnings (badge + Log banner) and Sydney Coast BOM forecast from `weather.json`; Open-Meteo now tiles, tide ("Near high/low" within the estimate's margin), 24 h strip; sun/first/last light and a Moon tile computed locally; night hours in the 24 h strip are shaded with the moon (if up) or a star for dark sky; Sydney times convert with the right AEST/AEDT offset; wind units (kn/km/h) remembered; one Windy map (wind/waves/radar pills change its layer, full-screen button for pinch zoom) loaded only when scrolled to; data prefetched at start-up and a loading screen until it's in |
 | `tools.js` | Speed/distance/time calculator, fuel range (rule of thirds) |
 | `config.js` | `dataUrl` (raw URL of `weather.json`), forecast point |
 | `sw.js` / `manifest.webmanifest` / `icons/` | App shell cache (cache-first, so it opens instantly on one bar; a new version installs in the background and is used from the next open), Home Screen install |

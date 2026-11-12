@@ -231,8 +231,8 @@
       li.setAttribute('role', 'option');
       li.dataset.value = value;
       li.textContent = text;
-      // pointerdown so the choice lands before the search box loses focus
-      li.addEventListener('pointerdown', e => { e.preventDefault(); choose(value); });
+      // click, not pointerdown: on a phone a finger put down to scroll the list
+      // must not pick whatever row it landed on. click only fires for a tap.
       li.addEventListener('click', () => choose(value));
       return li;
     };
@@ -258,11 +258,17 @@
       }
       open(true);
     }
-    // A quick tap back into the box must cancel the close queued by the blur
-    let closeTimer;
-    input.addEventListener('focus', () => { clearTimeout(closeTimer); input.select(); render(''); });
+    // The list stays open when the box loses focus (e.g. iPhone "Done" hides the
+    // keyboard) so it can still be scrolled and tapped. It closes on a choice,
+    // Escape, a tap anywhere else, or focus moving to another control.
+    const picker = input.closest('.picker');
+    const close = () => { if (!list.hidden) { open(false); syncInput(); } };
+    // Keep focus in the box when a row is pressed (no keyboard flicker, no blur race)
+    list.addEventListener('mousedown', e => e.preventDefault());
+    document.addEventListener('pointerdown', e => { if (!picker.contains(e.target)) close(); }, true);
+    document.addEventListener('focusin', e => { if (!picker.contains(e.target)) close(); });
+    input.addEventListener('focus', () => { input.select(); render(''); });
     input.addEventListener('input', () => render(input.value));
-    input.addEventListener('blur', () => { closeTimer = setTimeout(() => { open(false); syncInput(); }, 150); });
     input.addEventListener('keydown', e => {
       if (e.key === 'Enter') {
         const first = list.querySelector('[data-value]');
