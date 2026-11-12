@@ -152,7 +152,7 @@ shots.weather = await shoot(byId('weather'));
 // Tools with a worked job route
 await page.click('[data-tab="tools"]');
 for (const [which, typed, name] of [['from', 'coogee', 'Coogee Beach'], ['to', 'ben buck', 'Ben Buckler Headland']]) {
-  await page.click(`#route-${which}-input`);
+  await page.click(`#route-${which}-btn`);
   await page.fill(`#route-${which}-input`, typed);
   await page.click(`#route-${which}-list [role="option"]:text-is("${name}")`);
 }
