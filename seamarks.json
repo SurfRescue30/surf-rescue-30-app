@@ -1,0 +1,6567 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-12T11:24:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 26360414,
+  "lat": -33.9499509,
+  "lon": 151.1688941,
+  "tags": {
+    "check_date": "2024-04-14",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pole",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:period": "3",
+    "seamark:light:range": "3",
+    "seamark:light:reference": "K 2630",
+    "seamark:name": "006",
+    "seamark:radar_reflector": "yes",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 543387478,
+  "lat": -33.8151754,
+  "lon": 151.0116747,
+  "tags": {
+    "artist_name": "Susan Milne;Greg Stonehouse",
+    "artwork_type": "installation",
+    "check_date": "2024-03-24",
+    "name": "Sentry Box",
+    "note": "this looks very much like a port-hand marker, but it's just an artwork. However, it's very conspicuous so it's worth tagging as a seamark to avoid confusion",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "saltire",
+    "seamark:beacon_lateral:height": "8",
+    "seamark:beacon_lateral:shape": "tower",
+    "seamark:name": "Sentry Box",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral",
+    "start_date": "2009",
+    "tourism": "artwork"
+  }
+},
+{
+  "type": "node",
+  "id": 890236514,
+  "lat": -33.9759074,
+  "lon": 151.1517334,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "228",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 890236516,
+  "lat": -33.9790133,
+  "lon": 151.1509974,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "229",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 890236517,
+  "lat": -33.9699148,
+  "lon": 151.1541084,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 890236525,
+  "lat": -33.9810885,
+  "lon": 151.1502904,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "230",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 890236527,
+  "lat": -33.9726993,
+  "lon": 151.1526569,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "227",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 1104320967,
+  "lat": -34.0096820,
+  "lon": 151.1324740,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1104320969,
+  "lat": -34.0102059,
+  "lon": 151.1340351,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1104320974,
+  "lat": -34.0029719,
+  "lon": 151.1409861,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:type": "beacon_lateral",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1104320980,
+  "lat": -33.9959253,
+  "lon": 151.0715463,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1104320981,
+  "lat": -33.9941793,
+  "lon": 151.1540490,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:light:colour": "green",
+    "seamark:name": "018",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 1104320982,
+  "lat": -33.9948266,
+  "lon": 151.0703111,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1104321003,
+  "lat": -34.0084704,
+  "lon": 151.1306132,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1104321021,
+  "lat": -34.0117821,
+  "lon": 151.1312344,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1104321026,
+  "lat": -33.9948502,
+  "lon": 151.0676411,
+  "tags": {
+    "maxspeed": "8 knots",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "green",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1104321027,
+  "lat": -33.9754454,
+  "lon": 151.2008644,
+  "tags": {
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:light:colour": "red",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 1104321032,
+  "lat": -33.9935971,
+  "lon": 151.0685177,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1104321033,
+  "lat": -33.9957373,
+  "lon": 151.0759938,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1104321052,
+  "lat": -34.0097276,
+  "lon": 151.1398067,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:type": "beacon_lateral",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1104321061,
+  "lat": -34.0053661,
+  "lon": 151.1450047,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:type": "beacon_lateral",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1104321076,
+  "lat": -33.9922005,
+  "lon": 151.0672254,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1104321077,
+  "lat": -33.9960297,
+  "lon": 151.0772916,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1104321078,
+  "lat": -33.9946814,
+  "lon": 151.0695923,
+  "tags": {
+    "note": "is the inner right one in this diagram http://upload.wikimedia.org/wikipedia/commons/9/9d/Cardinal_mark_diagram.svg",
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "white",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1104321085,
+  "lat": -33.9956341,
+  "lon": 151.0786927,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1111379395,
+  "lat": -34.0070660,
+  "lon": 151.1187780,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1120447914,
+  "lat": -34.0733038,
+  "lon": 151.1413547,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "green",
+    "seamark:light:period": "3",
+    "seamark:light:range": "2",
+    "seamark:light:reference": "K 2621.572",
+    "seamark:light:sequence": "1+(2)",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1120447916,
+  "lat": -34.0734919,
+  "lon": 151.1539089,
+  "tags": {
+    "beacon": "lateral_starboad",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "green",
+    "seamark:light:period": "3",
+    "seamark:light:range": "4",
+    "seamark:light:reference": "K 2621.59",
+    "seamark:light:sequence": "1+(2)",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1120447918,
+  "lat": -34.0751778,
+  "lon": 151.1491106,
+  "tags": {
+    "beacon": "lateral_starboard",
+    "beacon:colour": "red",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:period": "3",
+    "seamark:light:range": "4",
+    "seamark:light:reference": "K 2621.582",
+    "seamark:light:sequence": "1+(2)",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1120447920,
+  "lat": -34.0746610,
+  "lon": 151.1407698,
+  "tags": {
+    "beacon": "lateral_port",
+    "beacon:colour": "red",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:period": "3",
+    "seamark:light:range": "2",
+    "seamark:light:reference": "K 2621.576",
+    "seamark:light:sequence": "1+(2)",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1191078061,
+  "lat": -33.8404752,
+  "lon": 151.2642918,
+  "tags": {
+    "man_made": "lighthouse",
+    "name": "Western Channel Pile Light",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "white",
+    "seamark:beacon_lateral:shape": "tower",
+    "seamark:light:character": "Oc",
+    "seamark:light:colour": "red",
+    "seamark:light:height": "8",
+    "seamark:light:period": "3",
+    "seamark:light:range": "5",
+    "seamark:light:reference": "K 2644",
+    "seamark:light:sequence": "2+(1)",
+    "seamark:name": "Western Channel Beacon",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2010-09-02.",
+    "wikidata": "Q7987710",
+    "wikimedia_commons": "File:Western_Channel_Pile_Light_located_on_Sydney_Harbour.jpg"
+  }
+},
+{
+  "type": "node",
+  "id": 1191078118,
+  "lat": -33.8417938,
+  "lon": 151.2718219,
+  "tags": {
+    "man_made": "lighthouse",
+    "name": "Eastern Channel Pile Light",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "white",
+    "seamark:beacon_lateral:shape": "tower",
+    "seamark:light:character": "Oc",
+    "seamark:light:colour": "green",
+    "seamark:light:height": "8",
+    "seamark:light:period": "3",
+    "seamark:light:range": "5",
+    "seamark:light:reference": "K 2652",
+    "seamark:light:sequence": "2+(1)",
+    "seamark:name": "Eastern Channel Beacon",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2010-09-02.",
+    "wikidata": "Q5330051",
+    "wikimedia_commons": "File:East_Channel_Pile_Light.jpg"
+  }
+},
+{
+  "type": "node",
+  "id": 1191078544,
+  "lat": -33.8465613,
+  "lon": 151.2197279,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:light:character": "Iso",
+    "seamark:light:colour": "red",
+    "seamark:light:height": "2",
+    "seamark:light:period": "6",
+    "seamark:light:reference": "K 2673.50",
+    "seamark:name": "Wudyong Point",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2010-09-02."
+  }
+},
+{
+  "type": "node",
+  "id": 1191078568,
+  "lat": -33.8528873,
+  "lon": 151.2188756,
+  "tags": {
+    "check_date": "2024-01-22",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "F",
+    "seamark:light:colour": "green",
+    "seamark:light:height": "3",
+    "seamark:light:range": "3",
+    "seamark:light:reference": "K 2674",
+    "seamark:name": "Kirribilli Point Reef",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2010-09-02."
+  }
+},
+{
+  "type": "node",
+  "id": 1191078605,
+  "lat": -33.8557329,
+  "lon": 151.2108673,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "F",
+    "seamark:light:colour": "red",
+    "seamark:light:height": "7",
+    "seamark:light:range": "6",
+    "seamark:light:reference": "K 2682",
+    "seamark:name": "Sydney Cove",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2010-09-02."
+  }
+},
+{
+  "type": "node",
+  "id": 1191078645,
+  "lat": -33.8549408,
+  "lon": 151.2102372,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "grey",
+    "seamark:beacon_lateral:shape": "tower",
+    "seamark:fog_signal:category": "siren",
+    "seamark:fog_signal:group": "1",
+    "seamark:fog_signal:period": "15",
+    "seamark:light:character": "F",
+    "seamark:light:colour": "red",
+    "seamark:light:height": "7",
+    "seamark:light:range": "6",
+    "seamark:light:reference": "K 2684",
+    "seamark:name": "32 / Dawes Point",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2010-09-02."
+  }
+},
+{
+  "type": "node",
+  "id": 1191078688,
+  "lat": -33.8505723,
+  "lon": 151.2038624,
+  "tags": {
+    "check_date": "2024-01-17",
+    "height": "15",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "white",
+    "seamark:beacon_lateral:construction": "framework",
+    "seamark:beacon_lateral:shape": "tower",
+    "seamark:light:character": "Iso",
+    "seamark:light:colour": "green",
+    "seamark:light:height": "18",
+    "seamark:light:period": "2",
+    "seamark:light:range": "6",
+    "seamark:light:reference": "K 2688",
+    "seamark:name": "Blues Point",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 1191079635,
+  "lat": -33.9862727,
+  "lon": 151.2135440,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "green",
+    "seamark:light:period": "3",
+    "seamark:light:reference": "K 2626.40",
+    "seamark:name": "No.1",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-19.;nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1191079678,
+  "lat": -33.9880520,
+  "lon": 151.2116182,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:information": "Channel marked by lighted buoys and beacons.",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:period": "3",
+    "seamark:light:reference": "K 2626.42",
+    "seamark:name": "No.2",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-19.;nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1198094087,
+  "lat": -33.9844670,
+  "lon": 151.2111330,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1198094088,
+  "lat": -33.9862355,
+  "lon": 151.2091115,
+  "tags": {
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:light:colour": "red",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 1198094089,
+  "lat": -33.9850913,
+  "lon": 151.2076539,
+  "tags": {
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:light:colour": "red",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 1198094091,
+  "lat": -33.9787684,
+  "lon": 151.2014238,
+  "tags": {
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:light:colour": "red",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 1198094092,
+  "lat": -33.9823752,
+  "lon": 151.2084112,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1198094094,
+  "lat": -33.9824413,
+  "lon": 151.2039664,
+  "tags": {
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:light:colour": "red",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 1230220633,
+  "lat": -33.9612871,
+  "lon": 151.1952746,
+  "tags": {
+    "check_date": "2024-05-05",
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:buoy_lateral:shape": "conical",
+    "seamark:light:colour": "green",
+    "seamark:name": "255",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 1230220637,
+  "lat": -33.9580703,
+  "lon": 151.1978527,
+  "tags": {
+    "check_date": "2024-05-05",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "grey;black",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:colour": "red",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 1230220641,
+  "lat": -33.9584806,
+  "lon": 151.1975638,
+  "tags": {
+    "check_date": "2024-05-05",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "grey;black",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:colour": "green",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 1230231672,
+  "lat": -33.9969269,
+  "lon": 151.1463439,
+  "tags": {
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 1230252287,
+  "lat": -34.0008628,
+  "lon": 151.1510889,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 1230252296,
+  "lat": -33.9976149,
+  "lon": 151.1479972,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:name": "095",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 1323016232,
+  "lat": -34.0063452,
+  "lon": 151.0477754,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323016235,
+  "lat": -34.0164761,
+  "lon": 151.0494309,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323016237,
+  "lat": -34.0036067,
+  "lon": 151.0492553,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323016241,
+  "lat": -33.9985378,
+  "lon": 151.0560661,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323016243,
+  "lat": -34.0181291,
+  "lon": 151.0495112,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323016246,
+  "lat": -34.0050398,
+  "lon": 151.0484021,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323016249,
+  "lat": -34.0134635,
+  "lon": 151.0480993,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323016252,
+  "lat": -34.0105585,
+  "lon": 151.0460699,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323016254,
+  "lat": -34.0111381,
+  "lon": 151.0466512,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323016256,
+  "lat": -33.9962492,
+  "lon": 151.0578552,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323016258,
+  "lat": -34.0086533,
+  "lon": 151.0458863,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323016260,
+  "lat": -34.0069718,
+  "lon": 151.0463422,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323016263,
+  "lat": -33.9955067,
+  "lon": 151.0585022,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323184557,
+  "lat": -33.9986424,
+  "lon": 151.1428302,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:beacon_cardinal:shape": "pile",
+    "seamark:name": "104",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 1323184558,
+  "lat": -33.9848557,
+  "lon": 151.1491798,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "198",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323184559,
+  "lat": -33.9870150,
+  "lon": 151.1489178,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "199",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323184560,
+  "lat": -33.9913662,
+  "lon": 151.1491784,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "201",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323184561,
+  "lat": -33.9892710,
+  "lon": 151.1490221,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "200",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1323184562,
+  "lat": -33.9943303,
+  "lon": 151.1497186,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "202",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 3889949885,
+  "lat": -33.9736898,
+  "lon": 151.1911853,
+  "tags": {
+    "seamark:beacon_cardinal:category": "west",
+    "seamark:beacon_cardinal:colour": "yellow;black;yellow",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:light:character": "Q",
+    "seamark:light:colour": "white",
+    "seamark:light:group": "9",
+    "seamark:light:period": "15",
+    "seamark:light:reference": "K 2628",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones point together",
+    "seamark:type": "beacon_cardinal",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 5726046165,
+  "lat": -33.8716431,
+  "lon": 151.1772990,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_cardinal:category": "north",
+    "seamark:buoy_cardinal:colour": "black;yellow",
+    "seamark:buoy_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "302",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones up",
+    "seamark:type": "buoy_cardinal",
+    "source": "LPI NSW Imagery"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478618,
+  "lat": -33.8236012,
+  "lon": 151.0482290,
+  "tags": {
+    "check_date": "2024-01-29",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "718",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478619,
+  "lat": -33.8234665,
+  "lon": 151.0484525,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "717",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478620,
+  "lat": -33.8238667,
+  "lon": 151.0489995,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "716",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478621,
+  "lat": -33.8239792,
+  "lon": 151.0497230,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "715",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478622,
+  "lat": -33.8243281,
+  "lon": 151.0500390,
+  "tags": {
+    "check_date": "2024-01-29",
+    "seamark:beacon_cardinal:category": "north",
+    "seamark:beacon_cardinal:colour": "black;yellow",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:beacon_cardinal:shape": "pile",
+    "seamark:name": "714",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones up",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478623,
+  "lat": -33.8226329,
+  "lon": 151.0477708,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "720",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478624,
+  "lat": -33.8227691,
+  "lon": 151.0475540,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "719",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478625,
+  "lat": -33.8218116,
+  "lon": 151.0471019,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "721",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478626,
+  "lat": -33.8219366,
+  "lon": 151.0468808,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "722",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478627,
+  "lat": -33.8208088,
+  "lon": 151.0459798,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "723",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478628,
+  "lat": -33.8206849,
+  "lon": 151.0462005,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "724",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478629,
+  "lat": -33.8196981,
+  "lon": 151.0450804,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "726",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478630,
+  "lat": -33.8195450,
+  "lon": 151.0453070,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "725",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478631,
+  "lat": -33.8184218,
+  "lon": 151.0444063,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "727",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478632,
+  "lat": -33.8184960,
+  "lon": 151.0441221,
+  "tags": {
+    "check_date": "2024-01-29",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "728",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478633,
+  "lat": -33.8183176,
+  "lon": 151.0435674,
+  "tags": {
+    "check_date": "2024-01-29",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "729",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478634,
+  "lat": -33.8182184,
+  "lon": 151.0432158,
+  "tags": {
+    "check_date": "2024-01-29",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "730",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478635,
+  "lat": -33.8180092,
+  "lon": 151.0429652,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "731",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7780478636,
+  "lat": -33.8177130,
+  "lon": 151.0429775,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "732",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7802568239,
+  "lat": -34.0570239,
+  "lon": 151.1471019,
+  "tags": {
+    "ref": "85",
+    "seamark:buoy_lateral:colour": "yellow",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7802568240,
+  "lat": -34.0573908,
+  "lon": 151.1473093,
+  "tags": {
+    "ref": "84",
+    "seamark:buoy_lateral:colour": "yellow",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 7924909770,
+  "lat": -33.8233736,
+  "lon": 151.3003673,
+  "tags": {
+    "check_date": "2024-02-10",
+    "height": "4",
+    "man_made": "lighthouse",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:shape": "mast",
+    "seamark:light:character": "Iso",
+    "seamark:light:colour": "green",
+    "seamark:light:height": "73",
+    "seamark:light:period": "2",
+    "seamark:light:range": "3",
+    "seamark:light:reference": "K 2637",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-19."
+  }
+},
+{
+  "type": "node",
+  "id": 8373636096,
+  "lat": -33.8379791,
+  "lon": 151.2629660,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "Q",
+    "seamark:light:colour": "green",
+    "seamark:light:reference": "K 2643",
+    "seamark:name": "Georges Head",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-19."
+  }
+},
+{
+  "type": "node",
+  "id": 8373636097,
+  "lat": -33.8285540,
+  "lon": 151.2720418,
+  "tags": {
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "buoy_lateral",
+    "source": "Aerial Imagery;survey"
+  }
+},
+{
+  "type": "node",
+  "id": 8373636099,
+  "lat": -33.8354879,
+  "lon": 151.2690353,
+  "tags": {
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8373636101,
+  "lat": -33.8333340,
+  "lon": 151.2769467,
+  "tags": {
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "buoy_lateral",
+    "source": "Aerial Imagery;survey"
+  }
+},
+{
+  "type": "node",
+  "id": 8373653491,
+  "lat": -33.8304979,
+  "lon": 151.2742425,
+  "tags": {
+    "seamark:beacon_cardinal:category": "north",
+    "seamark:beacon_cardinal:colour": "black;yellow",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "Junction Bell",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones up",
+    "seamark:type": "beacon_cardinal",
+    "source": "Aerial Imagery;survey"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752468,
+  "lat": -33.8142411,
+  "lon": 151.0111275,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "789",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752470,
+  "lat": -33.8146195,
+  "lon": 151.0111506,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "788",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752471,
+  "lat": -33.8150053,
+  "lon": 151.0120121,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "786",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752472,
+  "lat": -33.8151042,
+  "lon": 151.0117169,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "787",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752473,
+  "lat": -33.8157798,
+  "lon": 151.0134266,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "783",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752474,
+  "lat": -33.8156111,
+  "lon": 151.0138450,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "782",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752475,
+  "lat": -33.8159648,
+  "lon": 151.0152370,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "781",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752476,
+  "lat": -33.8161996,
+  "lon": 151.0151820,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "780",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752477,
+  "lat": -33.8159849,
+  "lon": 151.0162105,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "778",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752478,
+  "lat": -33.8162102,
+  "lon": 151.0162125,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "779",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752479,
+  "lat": -33.8162133,
+  "lon": 151.0172336,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "777",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752480,
+  "lat": -33.8157373,
+  "lon": 151.0192345,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "774",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752481,
+  "lat": -33.8155989,
+  "lon": 151.0188675,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "775",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752482,
+  "lat": -33.8154042,
+  "lon": 151.0193409,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "773",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752483,
+  "lat": -33.8150659,
+  "lon": 151.0203973,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "772",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752484,
+  "lat": -33.8148732,
+  "lon": 151.0202471,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "771",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752485,
+  "lat": -33.8144282,
+  "lon": 151.0243217,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "765",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752486,
+  "lat": -33.8146027,
+  "lon": 151.0249667,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "764",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752487,
+  "lat": -33.8143408,
+  "lon": 151.0251442,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "784",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752488,
+  "lat": -33.8149594,
+  "lon": 151.0264821,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "761",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752490,
+  "lat": -33.8158420,
+  "lon": 151.0261417,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "758",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752491,
+  "lat": -33.8158761,
+  "lon": 151.0264200,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "757",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752492,
+  "lat": -33.8166225,
+  "lon": 151.0264200,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "756",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752494,
+  "lat": -33.8171936,
+  "lon": 151.0268477,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "755",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752495,
+  "lat": -33.8175023,
+  "lon": 151.0275574,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "754",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752496,
+  "lat": -33.8178042,
+  "lon": 151.0292975,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "752",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752497,
+  "lat": -33.8180182,
+  "lon": 151.0292294,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "753",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752498,
+  "lat": -33.8183411,
+  "lon": 151.0310191,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "750",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752499,
+  "lat": -33.8184218,
+  "lon": 151.0328093,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "748",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752500,
+  "lat": -33.8187309,
+  "lon": 151.0345638,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "747",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752501,
+  "lat": -33.8190468,
+  "lon": 151.0362993,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "744",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752502,
+  "lat": -33.8192567,
+  "lon": 151.0362613,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "745",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752503,
+  "lat": -33.8190243,
+  "lon": 151.0370109,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "743",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752505,
+  "lat": -33.8187490,
+  "lon": 151.0376410,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "741",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752506,
+  "lat": -33.8189227,
+  "lon": 151.0378121,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "742",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752507,
+  "lat": -33.8183857,
+  "lon": 151.0381489,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "740",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752508,
+  "lat": -33.8184737,
+  "lon": 151.0385617,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "739",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752509,
+  "lat": -33.8179885,
+  "lon": 151.0396862,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "738",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752510,
+  "lat": -33.8178441,
+  "lon": 151.0405417,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "735",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752511,
+  "lat": -33.8176298,
+  "lon": 151.0405661,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "736",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752512,
+  "lat": -33.8177539,
+  "lon": 151.0395775,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "737",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8549752513,
+  "lat": -33.8137286,
+  "lon": 151.0108904,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "790",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 8826615122,
+  "lat": -33.9562174,
+  "lon": 151.1944472,
+  "tags": {
+    "check_date": "2024-05-05",
+    "seamark:beacon_cardinal:category": "south",
+    "seamark:beacon_cardinal:colour": "yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones down",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 8826615124,
+  "lat": -33.9569627,
+  "lon": 151.1957373,
+  "tags": {
+    "check_date": "2024-05-05",
+    "seamark:beacon_cardinal:category": "south",
+    "seamark:beacon_cardinal:colour": "yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones down",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 8826615127,
+  "lat": -33.9577859,
+  "lon": 151.1968129,
+  "tags": {
+    "check_date": "2024-05-05",
+    "seamark:beacon_cardinal:category": "south",
+    "seamark:beacon_cardinal:colour": "yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:beacon_cardinal:shape": "pile",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones down",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 8859891329,
+  "lat": -33.8589054,
+  "lon": 151.2003338,
+  "tags": {
+    "check_date": "2024-01-17",
+    "seamark:buoy_cardinal:category": "west",
+    "seamark:buoy_cardinal:colour": "yellow;black;yellow",
+    "seamark:buoy_cardinal:colour_pattern": "horizontal",
+    "seamark:buoy_cardinal:shape": "can",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones point together",
+    "seamark:type": "buoy_cardinal",
+    "source": "LPI NSW Imagery"
+  }
+},
+{
+  "type": "node",
+  "id": 8859891331,
+  "lat": -33.8594448,
+  "lon": 151.2003730,
+  "tags": {
+    "check_date": "2024-01-17",
+    "seamark:buoy_cardinal:category": "west",
+    "seamark:buoy_cardinal:colour": "yellow;black;yellow",
+    "seamark:buoy_cardinal:colour_pattern": "horizontal",
+    "seamark:buoy_cardinal:shape": "can",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones point together",
+    "seamark:type": "buoy_cardinal",
+    "source": "LPI NSW Imagery"
+  }
+},
+{
+  "type": "node",
+  "id": 9131006006,
+  "lat": -33.8599579,
+  "lon": 151.1966351,
+  "tags": {
+    "check_date": "2024-01-29",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Oc",
+    "seamark:light:colour": "green",
+    "seamark:light:height": "4",
+    "seamark:light:period": "2",
+    "seamark:light:range": "2",
+    "seamark:light:reference": "K 2696",
+    "seamark:light:sequence": "1.5+(0.5)",
+    "seamark:name": "Peacock Point",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 9140655126,
+  "lat": -33.8657364,
+  "lon": 151.1500803,
+  "tags": {
+    "check_date": "2024-05-16",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_cardinal:category": "north",
+    "seamark:buoy_cardinal:colour": "black;yellow",
+    "seamark:buoy_cardinal:colour_pattern": "horizontal",
+    "seamark:buoy_cardinal:shape": "can",
+    "seamark:name": "306",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones up",
+    "seamark:type": "buoy_cardinal",
+    "source": "LPI NSW Imagery"
+  }
+},
+{
+  "type": "node",
+  "id": 9140655127,
+  "lat": -33.8639101,
+  "lon": 151.1465013,
+  "tags": {
+    "check_date": "2024-05-16",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_cardinal:category": "north",
+    "seamark:buoy_cardinal:colour": "black;yellow",
+    "seamark:buoy_cardinal:colour_pattern": "horizontal",
+    "seamark:buoy_cardinal:shape": "can",
+    "seamark:name": "307",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones up",
+    "seamark:type": "buoy_cardinal",
+    "source": "LPI NSW Imagery"
+  }
+},
+{
+  "type": "node",
+  "id": 10220830274,
+  "lat": -33.8505891,
+  "lon": 151.1989101,
+  "tags": {
+    "check_date": "2024-01-22",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "pillar",
+    "seamark:light:character": "Q",
+    "seamark:light:colour": "red",
+    "seamark:light:group": "3",
+    "seamark:light:period": "5",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 10220830276,
+  "lat": -33.8533581,
+  "lon": 151.1974361,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "F",
+    "seamark:light:colour": "green",
+    "seamark:light:range": "2",
+    "seamark:light:reference": "K 2695.45",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 10251795750,
+  "lat": -33.8337142,
+  "lon": 151.2667914,
+  "tags": {
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "buoy_lateral",
+    "source": "Aerial Imagery;survey"
+  }
+},
+{
+  "type": "node",
+  "id": 10251795751,
+  "lat": -33.8364670,
+  "lon": 151.2740185,
+  "tags": {
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "buoy_lateral",
+    "source": "Aerial Imagery;survey"
+  }
+},
+{
+  "type": "node",
+  "id": 10251795793,
+  "lat": -33.8369019,
+  "lon": 151.2703374,
+  "tags": {
+    "check_date": "2024-05-05",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "west",
+    "seamark:beacon_cardinal:colour": "yellow;black;yellow",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:beacon_cardinal:shape": "pole",
+    "seamark:name": "020",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones point together",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 10251795795,
+  "lat": -33.8369351,
+  "lon": 151.2715742,
+  "tags": {
+    "check_date": "2024-05-05",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:beacon_cardinal:shape": "pole",
+    "seamark:name": "018",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 10251795796,
+  "lat": -33.8360127,
+  "lon": 151.2701761,
+  "tags": {
+    "check_date": "2024-05-05",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "north",
+    "seamark:beacon_cardinal:colour": "black;yellow",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:beacon_cardinal:shape": "pole",
+    "seamark:name": "021",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones up",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 10251795797,
+  "lat": -33.8374509,
+  "lon": 151.2709585,
+  "tags": {
+    "check_date": "2024-05-05",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "south",
+    "seamark:beacon_cardinal:colour": "yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:beacon_cardinal:shape": "pole",
+    "seamark:name": "019",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones down",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 10251808112,
+  "lat": -33.8141981,
+  "lon": 151.2742029,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_cardinal:category": "east",
+    "seamark:buoy_cardinal:colour": "black;yellow;black",
+    "seamark:buoy_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "002",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "buoy_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 10251808113,
+  "lat": -33.8137526,
+  "lon": 151.2715796,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_cardinal:category": "west",
+    "seamark:buoy_cardinal:colour": "yellow;black;yellow",
+    "seamark:buoy_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "003",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones point together",
+    "seamark:type": "buoy_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 10251808114,
+  "lat": -33.8159120,
+  "lon": 151.2731714,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_cardinal:category": "south",
+    "seamark:buoy_cardinal:colour": "yellow;black",
+    "seamark:buoy_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "001",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones down",
+    "seamark:type": "buoy_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 10251808118,
+  "lat": -33.8552680,
+  "lon": 151.2249582,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "Oc",
+    "seamark:light:colour": "green",
+    "seamark:light:height": "6",
+    "seamark:light:period": "3",
+    "seamark:light:range": "6",
+    "seamark:light:reference": "K 2668",
+    "seamark:light:sequence": "2+(1)",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 10251808119,
+  "lat": -33.8601746,
+  "lon": 151.2588690,
+  "tags": {
+    "seamark:beacon_cardinal:category": "south",
+    "seamark:beacon_cardinal:colour": "yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:information": "Q.(6)+L.Fl.",
+    "seamark:light:period": "15",
+    "seamark:light:reference": "K 2656.6",
+    "seamark:name": "042",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones down",
+    "seamark:type": "beacon_cardinal",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11523835021,
+  "lat": -33.8554181,
+  "lon": 151.2002155,
+  "tags": {
+    "check_date": "2024-01-17",
+    "seamark:beacon_cardinal:category": "north",
+    "seamark:beacon_cardinal:colour": "black;yellow",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:beacon_cardinal:shape": "lattice",
+    "seamark:light:character": "Q",
+    "seamark:light:colour": "white",
+    "seamark:light:period": "2",
+    "seamark:light:sequence": "(1)+1",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones up",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 11523835022,
+  "lat": -33.8553028,
+  "lon": 151.2019400,
+  "tags": {
+    "check_date": "2026-04-06",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "grey;black",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11523835032,
+  "lat": -33.8541385,
+  "lon": 151.1936502,
+  "tags": {
+    "check_date": "2024-01-17",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "F",
+    "seamark:light:colour": "red",
+    "seamark:light:reference": "K 2695.50",
+    "seamark:name": "Simmons Point",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11523860201,
+  "lat": -33.8322225,
+  "lon": 151.0995446,
+  "tags": {
+    "check_date": "2024-01-17",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "can",
+    "seamark:name": "841",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11523860202,
+  "lat": -33.8316947,
+  "lon": 151.1013728,
+  "tags": {
+    "check_date": "2024-04-06",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:name": "840",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11523860204,
+  "lat": -33.8339035,
+  "lon": 151.1041460,
+  "tags": {
+    "check_date": "2024-04-06",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:name": "839",
+    "seamark:radar_reflector": "yes",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11523860221,
+  "lat": -33.8238906,
+  "lon": 151.0931880,
+  "tags": {
+    "check_date": "2024-01-29",
+    "seamark:beacon_cardinal:category": "north",
+    "seamark:beacon_cardinal:colour": "black;yellow",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:beacon_cardinal:shape": "pile",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones up",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 11523860228,
+  "lat": -33.8219142,
+  "lon": 151.0841279,
+  "tags": {
+    "check_date": "2024-04-05",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:name": "842",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11523860230,
+  "lat": -33.8405252,
+  "lon": 151.1144773,
+  "tags": {
+    "check_date": "2024-01-17",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_cardinal:category": "east",
+    "seamark:buoy_cardinal:colour": "black;yellow;black",
+    "seamark:buoy_cardinal:colour_pattern": "horizontal",
+    "seamark:buoy_cardinal:shape": "can",
+    "seamark:name": "831",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "buoy_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 11535944929,
+  "lat": -33.8706892,
+  "lon": 151.2001692,
+  "tags": {
+    "check_date": "2021-01-21",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "black",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "green",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11535944930,
+  "lat": -33.8708039,
+  "lon": 151.2001534,
+  "tags": {
+    "check_date": "2021-01-21",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "black",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "green",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11535944931,
+  "lat": -33.8707499,
+  "lon": 151.2003935,
+  "tags": {
+    "check_date": "2021-01-21",
+    "seamark:beacon_lateral:colour": "black",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11535944935,
+  "lat": -33.8703517,
+  "lon": 151.2004438,
+  "tags": {
+    "check_date": "2021-01-21",
+    "seamark:beacon_lateral:colour": "black",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11535944936,
+  "lat": -33.8702987,
+  "lon": 151.2002119,
+  "tags": {
+    "check_date": "2021-01-21",
+    "seamark:beacon_lateral:colour": "black",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "green",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11539300968,
+  "lat": -33.8505102,
+  "lon": 151.2024166,
+  "tags": {
+    "fixme": "does this still exist?",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11539308569,
+  "lat": -33.8509844,
+  "lon": 151.1957052,
+  "tags": {
+    "check_date": "2024-01-22",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:light:character": "Iso",
+    "seamark:light:colour": "red",
+    "seamark:light:height": "8",
+    "seamark:light:period": "2",
+    "seamark:light:range": "6",
+    "seamark:light:reference": "K 2695.40",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11539331816,
+  "lat": -33.8558904,
+  "lon": 151.2154980,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "F",
+    "seamark:light:colour": "red",
+    "seamark:light:height": "4",
+    "seamark:light:range": "3",
+    "seamark:light:reference": "K 2678",
+    "seamark:name": "Bennelong Point",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11545318677,
+  "lat": -33.9976996,
+  "lon": 151.2197381,
+  "tags": {
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11545318679,
+  "lat": -33.9958621,
+  "lon": 151.2289441,
+  "tags": {
+    "check_date": "2024-01-24",
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:buoy_lateral:shape": "pillar",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11553950534,
+  "lat": -33.8682242,
+  "lon": 151.1860413,
+  "tags": {
+    "check_date": "2024-01-27",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "can",
+    "seamark:light:colour": "red",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11553950535,
+  "lat": -33.8684497,
+  "lon": 151.1859574,
+  "tags": {
+    "check_date": "2024-01-27",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "can",
+    "seamark:light:colour": "red",
+    "seamark:name": "3",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331399,
+  "lat": -33.8219229,
+  "lon": 151.0787474,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;grey",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "824",
+    "seamark:topmark:colour": "white",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331406,
+  "lat": -33.8221042,
+  "lon": 151.0797435,
+  "tags": {
+    "check_date": "2024-04-05",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:name": "823",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331407,
+  "lat": -33.8216195,
+  "lon": 151.0796113,
+  "tags": {
+    "check_date": "2024-04-05",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "704",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331408,
+  "lat": -33.8219045,
+  "lon": 151.0816095,
+  "tags": {
+    "check_date": "2024-04-05",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:name": "822",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331418,
+  "lat": -33.8455865,
+  "lon": 151.1361511,
+  "tags": {
+    "check_date": "2024-01-29",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:name": "819",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331419,
+  "lat": -33.8454892,
+  "lon": 151.1350141,
+  "tags": {
+    "check_date": "2024-01-29",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:name": "817",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331420,
+  "lat": -33.8450579,
+  "lon": 151.1384958,
+  "tags": {
+    "check_date": "2024-04-06",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "818",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331428,
+  "lat": -33.8199785,
+  "lon": 151.0750879,
+  "tags": {
+    "check_date": "2024-01-29",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:name": "843",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331437,
+  "lat": -33.8194020,
+  "lon": 151.0734558,
+  "tags": {
+    "check_date": "2024-04-05",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:name": "706",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331439,
+  "lat": -33.8194333,
+  "lon": 151.0717963,
+  "tags": {
+    "check_date": "2024-04-05",
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:name": "793",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331440,
+  "lat": -33.8191226,
+  "lon": 151.0725688,
+  "tags": {
+    "check_date": "2024-01-29",
+    "seamark:beacon_cardinal:category": "south",
+    "seamark:beacon_cardinal:colour": "yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "825",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones down",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331441,
+  "lat": -33.8201838,
+  "lon": 151.0722804,
+  "tags": {
+    "check_date": "2024-04-05",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "707",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331442,
+  "lat": -33.8200370,
+  "lon": 151.0737566,
+  "tags": {
+    "check_date": "2024-04-05",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "705",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331443,
+  "lat": -33.8210192,
+  "lon": 151.0698710,
+  "tags": {
+    "check_date": "2024-01-29",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:name": "844",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331444,
+  "lat": -33.8221953,
+  "lon": 151.0684836,
+  "tags": {
+    "check_date": "2024-01-29",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:name": "709",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331445,
+  "lat": -33.8226084,
+  "lon": 151.0688277,
+  "tags": {
+    "check_date": "2024-01-29",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:name": "708",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331446,
+  "lat": -33.8243652,
+  "lon": 151.0657943,
+  "tags": {
+    "check_date": "2024-04-05",
+    "description": "light: white on range line, red either side",
+    "direction": "forward",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:light:colour": "red;white",
+    "seamark:name": "846",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "board",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331452,
+  "lat": -33.8242027,
+  "lon": 151.0613036,
+  "tags": {
+    "check_date": "2024-04-05",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:name": "711",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11563331453,
+  "lat": -33.8240524,
+  "lon": 151.0582491,
+  "tags": {
+    "check_date": "2024-01-29",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:name": "712",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11564032757,
+  "lat": -33.8686406,
+  "lon": 151.1855749,
+  "tags": {
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:buoy_lateral:shape": "conical",
+    "seamark:light:colour": "green",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11564032758,
+  "lat": -33.8678256,
+  "lon": 151.1859363,
+  "tags": {
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:buoy_lateral:shape": "conical",
+    "seamark:light:colour": "green",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11564032762,
+  "lat": -33.8640638,
+  "lon": 151.2001821,
+  "tags": {
+    "aeroway": "windsock",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:period": "3",
+    "seamark:light:sequence": "(2)+1",
+    "seamark:name": "440",
+    "seamark:radar_reflector": "yes",
+    "seamark:topmark:colour": "yellow",
+    "seamark:topmark:shape": "flag",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11581365215,
+  "lat": -33.8432911,
+  "lon": 151.1916518,
+  "tags": {
+    "check_date": "2024-02-10",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "west",
+    "seamark:beacon_cardinal:colour": "yellow;black;yellow",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "395",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones point together",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 11581428676,
+  "lat": -33.8515332,
+  "lon": 151.2489130,
+  "tags": {
+    "check_date": "2024-02-03",
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:beacon_cardinal:shape": "pile",
+    "seamark:light:character": "Q",
+    "seamark:light:colour": "white",
+    "seamark:light:group": "3",
+    "seamark:light:period": "10",
+    "seamark:light:reference": "K 2662.20",
+    "seamark:name": "026",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11581428677,
+  "lat": -33.8570861,
+  "lon": 151.2300096,
+  "tags": {
+    "check_date": "2024-02-03",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "Q",
+    "seamark:light:colour": "red",
+    "seamark:light:reference": "K 2665",
+    "seamark:name": "Garden Island",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11581462880,
+  "lat": -33.8578537,
+  "lon": 151.2555148,
+  "tags": {
+    "check_date": "2024-02-03",
+    "seamark:beacon_cardinal:category": "west",
+    "seamark:beacon_cardinal:colour": "yellow;black;yellow",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:light:character": "Q",
+    "seamark:light:colour": "white",
+    "seamark:light:group": "9",
+    "seamark:light:period": "15",
+    "seamark:light:reference": "K 2657",
+    "seamark:name": "025",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones point together",
+    "seamark:type": "beacon_cardinal",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11607146494,
+  "lat": -33.8432289,
+  "lon": 151.1878819,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "post;dolphin",
+    "seamark:light:character": "F",
+    "seamark:light:colour": "green",
+    "seamark:light:reference": "K 2697",
+    "seamark:name": "Mann's Point",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11607681018,
+  "lat": -33.8410120,
+  "lon": 151.2156325,
+  "tags": {
+    "check_date": "2024-02-10",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "spherical",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11607681019,
+  "lat": -33.8410721,
+  "lon": 151.2156680,
+  "tags": {
+    "check_date": "2024-02-10",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "spherical",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11607681020,
+  "lat": -33.8412342,
+  "lon": 151.2157908,
+  "tags": {
+    "check_date": "2024-02-10",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "spherical",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11607681021,
+  "lat": -33.8412999,
+  "lon": 151.2158967,
+  "tags": {
+    "check_date": "2024-02-10",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "spherical",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11607681022,
+  "lat": -33.8413417,
+  "lon": 151.2159805,
+  "tags": {
+    "check_date": "2024-02-10",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "spherical",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11607687187,
+  "lat": -33.8423660,
+  "lon": 151.2187379,
+  "tags": {
+    "check_date": "2024-02-10",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_cardinal:category": "south",
+    "seamark:buoy_cardinal:colour": "yellow;black",
+    "seamark:buoy_cardinal:colour_pattern": "horizontal",
+    "seamark:buoy_cardinal:shape": "pillar",
+    "seamark:name": "300",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones down",
+    "seamark:type": "buoy_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 11658554231,
+  "lat": -34.0151511,
+  "lon": 151.1376616,
+  "tags": {
+    "check_date": "2024-02-24",
+    "seamark:beacon_cardinal:category": "west",
+    "seamark:beacon_cardinal:colour": "yellow;black;yellow",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "091",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones point together",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 11695569044,
+  "lat": -34.0624047,
+  "lon": 151.0786018,
+  "tags": {
+    "colour": "red",
+    "ref": "55",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:shape": "pole",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:period": "5",
+    "seamark:light:range": "2",
+    "seamark:light:reference": "K 2621.5",
+    "seamark:light:sequence": "1+(4)",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11709870081,
+  "lat": -33.8017829,
+  "lon": 151.2734094,
+  "tags": {
+    "check_date": "2024-03-10",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:name": "053",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11710168563,
+  "lat": -33.8490306,
+  "lon": 151.2067012,
+  "tags": {
+    "check_date": "2024-03-15",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "white",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "F",
+    "seamark:light:colour": "green",
+    "seamark:light:period": "3",
+    "seamark:light:sequence": "(2.5)+0.5",
+    "seamark:name": "439",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11733913236,
+  "lat": -33.8649015,
+  "lon": 151.2002605,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:period": "3",
+    "seamark:light:sequence": "(2)+1",
+    "seamark:name": "441",
+    "seamark:radar_reflector": "yes",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11757301218,
+  "lat": -33.8159833,
+  "lon": 151.0171966,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "776",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11757301219,
+  "lat": -33.8143469,
+  "lon": 151.0211479,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "770",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11757301229,
+  "lat": -33.8145338,
+  "lon": 151.0212837,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "769",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11757301230,
+  "lat": -33.8143543,
+  "lon": 151.0218087,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "768",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11757301256,
+  "lat": -33.8181206,
+  "lon": 151.0310658,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "751",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11757301259,
+  "lat": -33.8186508,
+  "lon": 151.0327669,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "749",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11757301262,
+  "lat": -33.8189567,
+  "lon": 151.0345062,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "746",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11757548318,
+  "lat": -33.8465048,
+  "lon": 151.1863547,
+  "tags": {
+    "check_date": "2024-03-24",
+    "description": "ostensibly called 'Longnose Point'",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "white;red",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "F",
+    "seamark:light:colour": "red",
+    "seamark:light:range": "4",
+    "seamark:light:reference": "K 2697.20",
+    "seamark:name": "62",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11757548319,
+  "lat": -33.8479160,
+  "lon": 151.1928090,
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "green",
+    "seamark:light:period": "3",
+    "seamark:light:range": "6",
+    "seamark:light:reference": "K 2696.84",
+    "seamark:light:sequence": "1+(2)",
+    "seamark:name": "Balls Head",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11786709389,
+  "lat": -33.8306705,
+  "lon": 151.1506536,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:light:colour": "green",
+    "seamark:name": "320",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709390,
+  "lat": -33.8303725,
+  "lon": 151.1522361,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:light:colour": "green",
+    "seamark:name": "319",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709391,
+  "lat": -33.8306459,
+  "lon": 151.1528249,
+  "tags": {
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:light:colour": "red",
+    "seamark:name": "318",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709392,
+  "lat": -33.8298428,
+  "lon": 151.1538331,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:light:colour": "green",
+    "seamark:name": "317",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709393,
+  "lat": -33.8297531,
+  "lon": 151.1550420,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:light:colour": "green",
+    "seamark:name": "316",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709394,
+  "lat": -33.8301743,
+  "lon": 151.1552611,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:light:colour": "red",
+    "seamark:name": "315",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709395,
+  "lat": -33.8307628,
+  "lon": 151.1573991,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:light:colour": "red",
+    "seamark:name": "314",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709396,
+  "lat": -33.8313769,
+  "lon": 151.1590818,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:light:colour": "red",
+    "seamark:name": "313",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709397,
+  "lat": -33.8332963,
+  "lon": 151.1615174,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:light:colour": "red",
+    "seamark:name": "312",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709427,
+  "lat": -33.8293595,
+  "lon": 151.1447603,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:name": "325",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709428,
+  "lat": -33.8287504,
+  "lon": 151.1442560,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:name": "326",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709429,
+  "lat": -33.8271735,
+  "lon": 151.1453345,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:name": "327",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709430,
+  "lat": -33.8258921,
+  "lon": 151.1483059,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "328",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709431,
+  "lat": -33.8237520,
+  "lon": 151.1484548,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "329",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709432,
+  "lat": -33.8349937,
+  "lon": 151.1637804,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:light:colour": "green",
+    "seamark:name": "310",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709434,
+  "lat": -33.8415215,
+  "lon": 151.1800149,
+  "tags": {
+    "check_date": "2024-04-04",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:buoy_lateral:shape": "conical",
+    "seamark:light:colour": "green",
+    "seamark:name": "396",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11791985143,
+  "lat": -33.8242271,
+  "lon": 151.0649561,
+  "tags": {
+    "check_date": "2024-04-05",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:name": "710",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11792066154,
+  "lat": -33.8413630,
+  "lon": 151.1210992,
+  "tags": {
+    "check_date": "2024-04-05",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "837",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11792089240,
+  "lat": -33.8463283,
+  "lon": 151.1660497,
+  "tags": {
+    "check_date": "2024-04-05",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "conical",
+    "seamark:light:colour": "red",
+    "seamark:name": "304",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11792089243,
+  "lat": -33.8502010,
+  "lon": 151.1640108,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "F",
+    "seamark:light:colour": "green",
+    "seamark:light:reference": "K 2698",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11792089244,
+  "lat": -33.8507459,
+  "lon": 151.1672429,
+  "tags": {
+    "check_date": "2024-05-20",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_cardinal:category": "north",
+    "seamark:buoy_cardinal:colour": "black;yellow",
+    "seamark:buoy_cardinal:colour_pattern": "horizontal",
+    "seamark:buoy_cardinal:shape": "can",
+    "seamark:name": "305",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones up",
+    "seamark:type": "buoy_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 11795069543,
+  "lat": -33.8566900,
+  "lon": 151.1962622,
+  "tags": {
+    "check_date": "2024-04-06",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "grey",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "438",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11795070582,
+  "lat": -33.8419547,
+  "lon": 151.1543343,
+  "tags": {
+    "check_date": "2024-04-13",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:period": "3",
+    "seamark:light:reference": "K 2698.35",
+    "seamark:light:sequence": "1+(2)",
+    "seamark:name": "437 / Wrights Point",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11795070583,
+  "lat": -33.8386678,
+  "lon": 151.1492110,
+  "tags": {
+    "seamark:beacon_cardinal:category": "east",
+    "seamark:beacon_cardinal:colour": "black;yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:beacon_cardinal:shape": "pile",
+    "seamark:light:character": "Q",
+    "seamark:light:colour": "white",
+    "seamark:light:group": "3",
+    "seamark:light:period": "10",
+    "seamark:light:reference": "K 2698.36",
+    "seamark:name": "308 / Tarban Point",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones base together",
+    "seamark:type": "beacon_cardinal",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11795070584,
+  "lat": -33.8432880,
+  "lon": 151.1452361,
+  "tags": {
+    "check_date": "2024-04-06",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "can",
+    "seamark:name": "701",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11795070585,
+  "lat": -33.8377558,
+  "lon": 151.1119575,
+  "tags": {
+    "check_date": "2024-04-06",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:period": "0.5",
+    "seamark:name": "852",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11795084836,
+  "lat": -33.8226052,
+  "lon": 151.0891470,
+  "tags": {
+    "check_date": "2024-05-13",
+    "note": "not really a topmark, it's a cage around the lamp",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;black",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "702",
+    "seamark:topmark:colour": "grey",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11813432126,
+  "lat": -33.8399744,
+  "lon": 151.1873280,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "green",
+    "seamark:light:period": "3",
+    "seamark:light:range": "6",
+    "seamark:light:reference": "K 2696.82",
+    "seamark:light:sequence": "1+(2)",
+    "seamark:name": "Gore Cove",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11813744290,
+  "lat": -33.8485407,
+  "lon": 151.2667061,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:character": "Q",
+    "seamark:light:colour": "red",
+    "seamark:light:reference": "K 2653.50",
+    "seamark:name": "Shark Bay",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11813744291,
+  "lat": -33.8470283,
+  "lon": 151.2711822,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:period": "3",
+    "seamark:light:range": "2",
+    "seamark:light:reference": "K 2652.50",
+    "seamark:name": "022 / Bottle and Glass Point",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "node",
+  "id": 11816075515,
+  "lat": -33.9337440,
+  "lon": 151.1609556,
+  "tags": {
+    "check_date": "2024-04-14",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "can",
+    "seamark:light:colour": "red",
+    "seamark:name": "100",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11816075516,
+  "lat": -33.9327170,
+  "lon": 151.1600395,
+  "tags": {
+    "check_date": "2024-04-14",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:buoy_lateral:shape": "conical",
+    "seamark:light:colour": "green",
+    "seamark:name": "008",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11816075517,
+  "lat": -33.9322363,
+  "lon": 151.1577372,
+  "tags": {
+    "check_date": "2024-04-14",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "can",
+    "seamark:light:colour": "red",
+    "seamark:name": "101",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11816075518,
+  "lat": -33.9315746,
+  "lon": 151.1568721,
+  "tags": {
+    "check_date": "2024-04-14",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "can",
+    "seamark:light:colour": "red",
+    "seamark:name": "098",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11816075519,
+  "lat": -33.9316688,
+  "lon": 151.1571244,
+  "tags": {
+    "check_date": "2024-04-14",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:buoy_lateral:shape": "conical",
+    "seamark:light:colour": "green",
+    "seamark:name": "097",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11816117457,
+  "lat": -33.9482896,
+  "lon": 151.1563922,
+  "tags": {
+    "check_date": "2024-04-14",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "194",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11816117458,
+  "lat": -33.9464234,
+  "lon": 151.1595274,
+  "tags": {
+    "check_date": "2024-04-14",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "193",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11816147201,
+  "lat": -33.9491874,
+  "lon": 151.1686835,
+  "tags": {
+    "check_date": "2024-04-14",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:buoy_lateral:shape": "conical",
+    "seamark:light:colour": "green",
+    "seamark:name": "239",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11816147212,
+  "lat": -33.9593418,
+  "lon": 151.1963821,
+  "tags": {
+    "check_date": "2024-05-05",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "grey;black",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:colour": "green",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11830320979,
+  "lat": -33.8663149,
+  "lon": 151.2341912,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:period": "3",
+    "seamark:light:reference": "K 2663.50",
+    "seamark:name": "350",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-19."
+  }
+},
+{
+  "type": "node",
+  "id": 11830320997,
+  "lat": -33.8636425,
+  "lon": 151.2413116,
+  "tags": {
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Q",
+    "seamark:light:colour": "green",
+    "seamark:light:reference": "K 2663",
+    "seamark:name": "Clark Island",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-19."
+  }
+},
+{
+  "type": "node",
+  "id": 11830425347,
+  "lat": -34.0064881,
+  "lon": 151.1919158,
+  "tags": {
+    "description": "Lit Starboard - Beacon with TM",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "ref": "261",
+    "ref:AU-NSW:seamark": "64a49b",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:light:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11830425348,
+  "lat": -34.0064075,
+  "lon": 151.1921778,
+  "tags": {
+    "description": "Lit Port - Beacon with TM",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "ref": "262",
+    "ref:AU-NSW:seamark": "f30fa6",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:light:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11830425368,
+  "lat": -34.0070809,
+  "lon": 151.2091127,
+  "tags": {
+    "description": "Lit north - cardinal beacon",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "ref": "007",
+    "ref:AU-NSW:seamark": "8dddc4",
+    "seamark:beacon_cardinal:category": "north",
+    "seamark:beacon_cardinal:colour": "black;yellow",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:beacon_cardinal:shape": "pile",
+    "seamark:light:character": "Q",
+    "seamark:light:colour": "white",
+    "seamark:light:reference": "K 2626.30",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones up",
+    "seamark:type": "beacon_cardinal",
+    "source": "US NGA Pub. 111. 2024-04-19."
+  }
+},
+{
+  "type": "node",
+  "id": 11830457370,
+  "lat": -33.9974811,
+  "lon": 151.2166616,
+  "tags": {
+    "seamark:beacon_cardinal:category": "north",
+    "seamark:beacon_cardinal:colour": "black;yellow",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:beacon_cardinal:shape": "pile",
+    "seamark:light:character": "Q",
+    "seamark:light:colour": "white",
+    "seamark:light:height": "8",
+    "seamark:light:range": "7",
+    "seamark:light:reference": "K 2624.50",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones up",
+    "seamark:type": "beacon_cardinal",
+    "source": "US NGA Pub. 111. 2024-04-19."
+  }
+},
+{
+  "type": "node",
+  "id": 11830457397,
+  "lat": -33.9670065,
+  "lon": 151.1966381,
+  "tags": {
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:light:colour": "green",
+    "seamark:name": "253",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11830457398,
+  "lat": -33.9722778,
+  "lon": 151.1981749,
+  "tags": {
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:light:colour": "green",
+    "seamark:name": "250",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11830457399,
+  "lat": -33.9589090,
+  "lon": 151.1970422,
+  "tags": {
+    "check_date": "2024-05-05",
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:buoy_lateral:shape": "conical",
+    "seamark:light:colour": "green",
+    "seamark:name": "257",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11830457400,
+  "lat": -33.9584839,
+  "lon": 151.1969172,
+  "tags": {
+    "check_date": "2024-05-05",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "can",
+    "seamark:light:colour": "red",
+    "seamark:name": "251",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11830457401,
+  "lat": -33.9589463,
+  "lon": 151.1959071,
+  "tags": {
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:light:colour": "red",
+    "seamark:name": "258",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11830457402,
+  "lat": -33.9598681,
+  "lon": 151.1940622,
+  "tags": {
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:light:colour": "red",
+    "seamark:name": "256",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880507964,
+  "lat": -33.9586229,
+  "lon": 151.2007852,
+  "tags": {
+    "seamark:buoy_cardinal:category": "north",
+    "seamark:buoy_cardinal:colour": "black;yellow",
+    "seamark:buoy_cardinal:colour_pattern": "horizontal",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones up",
+    "seamark:type": "buoy_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 11880663325,
+  "lat": -33.9912196,
+  "lon": 151.1570426,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "green",
+    "seamark:name": "010",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880663326,
+  "lat": -33.9908605,
+  "lon": 151.1564724,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "north",
+    "seamark:beacon_cardinal:colour": "black;yellow",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "094",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones up",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 11880663327,
+  "lat": -33.9905575,
+  "lon": 151.1632041,
+  "tags": {
+    "description": "Lit Port - Beacon with TM",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "ref": "009",
+    "ref:AU-NSW:seamark": "4bee13",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880663329,
+  "lat": -33.9916565,
+  "lon": 151.1216582,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:light:colour": "red",
+    "seamark:name": "021",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673508,
+  "lat": -33.8211002,
+  "lon": 151.0934011,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_cardinal:category": "south",
+    "seamark:beacon_cardinal:colour": "yellow;black",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "820",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones down",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673509,
+  "lat": -33.8564906,
+  "lon": 151.1221154,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:light:colour": "green",
+    "seamark:name": "834",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673510,
+  "lat": -33.8427725,
+  "lon": 151.1643312,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_cardinal:category": "south",
+    "seamark:buoy_cardinal:colour": "yellow;black",
+    "seamark:buoy_cardinal:colour_pattern": "horizontal",
+    "seamark:buoy_cardinal:shape": "conical",
+    "seamark:name": "303",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones down",
+    "seamark:type": "buoy_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673511,
+  "lat": -33.8580312,
+  "lon": 151.1584068,
+  "tags": {
+    "check_date": "2024-05-16",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:beacon_lateral:shape": "pile",
+    "seamark:name": "397",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673512,
+  "lat": -33.8618956,
+  "lon": 151.1594980,
+  "tags": {
+    "check_date": "2024-05-16",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:buoy_lateral:shape": "can",
+    "seamark:name": "309",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673515,
+  "lat": -33.8160740,
+  "lon": 151.1440560,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:name": "334",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673516,
+  "lat": -33.8165029,
+  "lon": 151.1444567,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:name": "333",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673517,
+  "lat": -33.8096304,
+  "lon": 151.1423429,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:name": "338",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673518,
+  "lat": -33.8063458,
+  "lon": 151.1436219,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:name": "342",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673519,
+  "lat": -33.7993121,
+  "lon": 151.1512388,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "343",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673520,
+  "lat": -33.8002081,
+  "lon": 151.1550079,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "345",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673521,
+  "lat": -33.8003506,
+  "lon": 151.1547538,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "344",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673522,
+  "lat": -33.8569620,
+  "lon": 151.2668174,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "061",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673523,
+  "lat": -33.8633427,
+  "lon": 151.2666390,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "023",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673524,
+  "lat": -33.8423851,
+  "lon": 151.2791599,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "128",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673534,
+  "lat": -33.8138482,
+  "lon": 151.2330410,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green;white",
+    "seamark:beacon_lateral:colour_pattern": "horizontal",
+    "seamark:light:colour": "green",
+    "seamark:name": "005",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673537,
+  "lat": -33.8185718,
+  "lon": 151.2264484,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:light:colour": "green",
+    "seamark:name": "006",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673538,
+  "lat": -33.8180136,
+  "lon": 151.2212411,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:light:colour": "green",
+    "seamark:name": "007",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673540,
+  "lat": -33.8019325,
+  "lon": 151.2308337,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:light:colour": "red",
+    "seamark:name": "008",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673541,
+  "lat": -33.8024846,
+  "lon": 151.2346764,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:light:colour": "green",
+    "seamark:name": "009",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673542,
+  "lat": -33.7942334,
+  "lon": 151.2292138,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:light:colour": "red",
+    "seamark:name": "011",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673543,
+  "lat": -33.7872177,
+  "lon": 151.2325338,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:light:colour": "red",
+    "seamark:name": "012",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673544,
+  "lat": -33.7850487,
+  "lon": 151.2302473,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:light:colour": "red",
+    "seamark:name": "013",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673545,
+  "lat": -33.7850975,
+  "lon": 151.2202915,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:light:colour": "red",
+    "seamark:name": "014",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673546,
+  "lat": -33.7941196,
+  "lon": 151.2347484,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:light:colour": "green",
+    "seamark:name": "010",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673547,
+  "lat": -33.7820610,
+  "lon": 151.2142645,
+  "tags": {
+    "check_date": "2026-05-31",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:buoy_lateral:shape": "conical",
+    "seamark:light:colour": "green",
+    "seamark:name": "015",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880673548,
+  "lat": -33.7782970,
+  "lon": 151.2118714,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:light:colour": "green",
+    "seamark:name": "016",
+    "seamark:topmark:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880709276,
+  "lat": -33.7119028,
+  "lon": 151.2822661,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_cardinal:category": "north",
+    "seamark:buoy_cardinal:colour": "black;yellow",
+    "seamark:buoy_cardinal:colour_pattern": "horizontal",
+    "seamark:name": "021",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones up",
+    "seamark:type": "buoy_cardinal"
+  }
+},
+{
+  "type": "node",
+  "id": 11880709277,
+  "lat": -33.7041814,
+  "lon": 151.2993880,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "001",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880709278,
+  "lat": -33.7084787,
+  "lon": 151.2981416,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "002",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880709279,
+  "lat": -33.7163604,
+  "lon": 151.2949367,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "005",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880709280,
+  "lat": -33.7169420,
+  "lon": 151.2905103,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "009",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880709281,
+  "lat": -33.7157632,
+  "lon": 151.2867114,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "018",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880709282,
+  "lat": -33.7140276,
+  "lon": 151.2849381,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "016",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880709283,
+  "lat": -33.7131650,
+  "lon": 151.2877442,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "014",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880709284,
+  "lat": -33.7122100,
+  "lon": 151.2919174,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "012",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880709285,
+  "lat": -33.7133153,
+  "lon": 151.2921037,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "011",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880709365,
+  "lat": -33.7144834,
+  "lon": 151.2846192,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:name": "017",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880709366,
+  "lat": -33.7159320,
+  "lon": 151.2859379,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:name": "019",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880709367,
+  "lat": -33.7170498,
+  "lon": 151.2935450,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "starboard",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:name": "006",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880709368,
+  "lat": -33.7179750,
+  "lon": 151.2913002,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "008",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 11880721769,
+  "lat": -33.7184565,
+  "lon": 151.2932581,
+  "tags": {
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "seamark:buoy_lateral:category": "port",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:name": "007",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13533361887,
+  "lat": -34.0630079,
+  "lon": 151.0806277,
+  "tags": {
+    "ref": "54",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:shape": "pole",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:period": "5",
+    "seamark:light:range": "2",
+    "seamark:light:reference": "K 2621.502",
+    "seamark:light:sequence": "1+(4)",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13533361888,
+  "lat": -34.0629795,
+  "lon": 151.0820851,
+  "tags": {
+    "ref": "53",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pole",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "green",
+    "seamark:light:period": "5",
+    "seamark:light:range": "2",
+    "seamark:light:reference": "K 2621.504",
+    "seamark:light:sequence": "1+(4)",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13533361889,
+  "lat": -34.0672485,
+  "lon": 151.0878729,
+  "tags": {
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pole",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "green",
+    "seamark:light:period": "5",
+    "seamark:light:range": "2",
+    "seamark:light:reference": "K 2621.512",
+    "seamark:light:sequence": "1+(4)",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13533361890,
+  "lat": -34.0669922,
+  "lon": 151.0909416,
+  "tags": {
+    "ref": "46",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pole",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "green",
+    "seamark:light:period": "5",
+    "seamark:light:range": "2",
+    "seamark:light:reference": "K 2621.518",
+    "seamark:light:sequence": "1+(4)",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13533361891,
+  "lat": -34.0635232,
+  "lon": 151.0832612,
+  "tags": {
+    "ref": "52",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:shape": "pole",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:period": "3",
+    "seamark:light:range": "3.5",
+    "seamark:light:reference": "K 2621.506",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13533361892,
+  "lat": -34.0639664,
+  "lon": 151.0903449,
+  "tags": {
+    "ref": "44",
+    "seamark:beacon_lateral:shape": "pole",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13533361893,
+  "lat": -34.0644139,
+  "lon": 151.0901449,
+  "tags": {
+    "ref": "45",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:beacon_lateral:shape": "pole",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13533361894,
+  "lat": -34.0645370,
+  "lon": 151.0901926,
+  "tags": {
+    "operator": "46",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:shape": "pole",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13533361895,
+  "lat": -34.0679363,
+  "lon": 151.0885988,
+  "tags": {
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "red",
+    "seamark:beacon_lateral:shape": "pole",
+    "seamark:beacon_lateral:system": "iala-a",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:period": "3",
+    "seamark:light:range": "2",
+    "seamark:light:reference": "K 2621.514",
+    "seamark:topmark:colour": "red",
+    "seamark:topmark:shape": "cylinder",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13533361900,
+  "lat": -34.0485640,
+  "lon": 151.1084465,
+  "tags": {
+    "ref": "116",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13533370101,
+  "lat": -34.0487744,
+  "lon": 151.1088390,
+  "tags": {
+    "ref": "115",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13533370102,
+  "lat": -34.0539777,
+  "lon": 151.1073831,
+  "tags": {
+    "ref": "114",
+    "seamark:buoy_lateral:colour": "red",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13533370103,
+  "lat": -34.0539932,
+  "lon": 151.1081241,
+  "tags": {
+    "ref": "113",
+    "seamark:buoy_lateral:colour": "green",
+    "seamark:type": "buoy_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13684549358,
+  "lat": -34.0058841,
+  "lon": 151.1917939,
+  "tags": {
+    "description": "Lit Starboard - Beacon with TM",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "ref": "263",
+    "ref:AU-NSW:seamark": "bb460e",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "green",
+    "seamark:light:colour": "green",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_lateral"
+  }
+},
+{
+  "type": "node",
+  "id": 13684549361,
+  "lat": -34.0047431,
+  "lon": 151.1823638,
+  "tags": {
+    "description": "Lit west - cardinal beacon",
+    "operator": "Transport for NSW",
+    "operator:wikidata": "Q7834923",
+    "ref": "107",
+    "ref:AU-NSW:seamark": "a0925e",
+    "seamark:beacon_cardinal:category": "west",
+    "seamark:beacon_cardinal:colour": "yellow;black;yellow",
+    "seamark:beacon_cardinal:colour_pattern": "horizontal",
+    "seamark:light:colour": "white",
+    "seamark:light:group": "9",
+    "seamark:topmark:colour": "black",
+    "seamark:topmark:shape": "2 cones point together",
+    "seamark:type": "beacon_cardinal"
+  }
+},
+{
+  "type": "way",
+  "id": 901401972,
+  "bounds": {
+    "minlat": -33.8404752,
+    "minlon": 151.2629660,
+    "maxlat": -33.8285540,
+    "maxlon": 151.2742425
+  },
+  "nodes": [
+    1191078061,
+    8373636096,
+    10251795750,
+    8373636097,
+    10251795798,
+    8373653491,
+    8373636099,
+    1191078061
+  ],
+  "geometry": [
+    { "lat": -33.8404752, "lon": 151.2642918 },
+    { "lat": -33.8379791, "lon": 151.2629660 },
+    { "lat": -33.8337142, "lon": 151.2667914 },
+    { "lat": -33.8285540, "lon": 151.2720418 },
+    { "lat": -33.8295259, "lon": 151.2731422 },
+    { "lat": -33.8304979, "lon": 151.2742425 },
+    { "lat": -33.8354879, "lon": 151.2690353 },
+    { "lat": -33.8404752, "lon": 151.2642918 }
+  ],
+  "tags": {
+    "seamark:name": "Western Channel",
+    "seamark:type": "fairway"
+  }
+},
+{
+  "type": "way",
+  "id": 901401973,
+  "bounds": {
+    "minlat": -33.8403157,
+    "minlon": 151.2739050,
+    "maxlat": -33.8304979,
+    "maxlon": 151.2769467
+  },
+  "nodes": [
+    8373653491,
+    8373636101,
+    8373636102,
+    10251795752,
+    8373636103,
+    10251795751,
+    8373653491
+  ],
+  "geometry": [
+    { "lat": -33.8304979, "lon": 151.2742425 },
+    { "lat": -33.8333340, "lon": 151.2769467 },
+    { "lat": -33.8384068, "lon": 151.2765241 },
+    { "lat": -33.8403157, "lon": 151.2750257 },
+    { "lat": -33.8383557, "lon": 151.2739050 },
+    { "lat": -33.8364670, "lon": 151.2740185 },
+    { "lat": -33.8304979, "lon": 151.2742425 }
+  ],
+  "tags": {
+    "seamark:name": "Eastern Channel",
+    "seamark:type": "fairway"
+  }
+},
+{
+  "type": "way",
+  "id": 1117522070,
+  "bounds": {
+    "minlat": -33.8597113,
+    "minlon": 151.1981126,
+    "maxlat": -33.8513554,
+    "maxlon": 151.1986848
+  },
+  "nodes": [
+    10220830269,
+    10220830268,
+    10220830270
+  ],
+  "geometry": [
+    { "lat": -33.8513554, "lon": 151.1981126 },
+    { "lat": -33.8516353, "lon": 151.1981296 },
+    { "lat": -33.8597113, "lon": 151.1986848 }
+  ],
+  "tags": {
+    "seamark:navigation_line:category": "transit",
+    "seamark:type": "navigation_line",
+    "source": "extrapolation"
+  }
+},
+{
+  "type": "way",
+  "id": 1117522071,
+  "bounds": {
+    "minlat": -33.8597784,
+    "minlon": 151.1971148,
+    "maxlat": -33.8518211,
+    "maxlon": 151.1977711
+  },
+  "nodes": [
+    10220830264,
+    10220830265,
+    10220830271
+  ],
+  "geometry": [
+    { "lat": -33.8518211, "lon": 151.1971148 },
+    { "lat": -33.8523215, "lon": 151.1971561 },
+    { "lat": -33.8597784, "lon": 151.1977711 }
+  ],
+  "tags": {
+    "seamark:navigation_line:category": "transit",
+    "seamark:type": "navigation_line",
+    "source": "extrapolation"
+  }
+},
+{
+  "type": "way",
+  "id": 1117522072,
+  "bounds": {
+    "minlat": -33.8525770,
+    "minlon": 151.1970927,
+    "maxlat": -33.8513894,
+    "maxlon": 151.2051316
+  },
+  "nodes": [
+    10220830267,
+    10220830266,
+    10220830272
+  ],
+  "geometry": [
+    { "lat": -33.8513894, "lon": 151.1970927 },
+    { "lat": -33.8515504, "lon": 151.1981826 },
+    { "lat": -33.8525770, "lon": 151.2051316 }
+  ],
+  "tags": {
+    "seamark:navigation_line:category": "transit",
+    "seamark:type": "navigation_line",
+    "source": "extrapolation"
+  }
+},
+{
+  "type": "way",
+  "id": 1120885329,
+  "bounds": {
+    "minlat": -33.8459183,
+    "minlon": 151.2773407,
+    "maxlat": -33.8232594,
+    "maxlon": 151.3420595
+  },
+  "nodes": [
+    10251795748,
+    10251795749
+  ],
+  "geometry": [
+    { "lat": -33.8459183, "lon": 151.3420595 },
+    { "lat": -33.8232594, "lon": 151.2773407 }
+  ],
+  "tags": {
+    "seamark:recommended_track:category": "fixed_marks",
+    "seamark:recommended_track:traffic_flow": "two-way",
+    "seamark:type": "recommended_track"
+  }
+},
+{
+  "type": "way",
+  "id": 1120885330,
+  "bounds": {
+    "minlat": -33.8232594,
+    "minlon": 151.2463764,
+    "maxlat": -33.8121316,
+    "maxlon": 151.2773407
+  },
+  "nodes": [
+    10251795749,
+    281356861,
+    46500819
+  ],
+  "geometry": [
+    { "lat": -33.8232594, "lon": 151.2773407 },
+    { "lat": -33.8177323, "lon": 151.2615567 },
+    { "lat": -33.8121316, "lon": 151.2463764 }
+  ],
+  "tags": {
+    "check_date": "2024-07-13",
+    "seamark:navigation_line:category": "leading",
+    "seamark:navigation_line:orientation": "294",
+    "seamark:type": "navigation_line",
+    "source": "plaque at Rosherville Lighthouse"
+  }
+},
+{
+  "type": "way",
+  "id": 1243957854,
+  "bounds": {
+    "minlat": -33.8245761,
+    "minlon": 151.0583951,
+    "maxlat": -33.8238204,
+    "maxlon": 151.0627521
+  },
+  "nodes": [
+    11563331460,
+    11563331459
+  ],
+  "geometry": [
+    { "lat": -33.8238204, "lon": 151.0583951 },
+    { "lat": -33.8245761, "lon": 151.0627521 }
+  ],
+  "tags": {
+    "check_date": "2024-01-29",
+    "seamark:recommended_track:category": "fixed_marks",
+    "seamark:recommended_track:traffic_flow": "two-way",
+    "seamark:type": "recommended_track"
+  }
+},
+{
+  "type": "way",
+  "id": 1243957855,
+  "bounds": {
+    "minlat": -33.8238204,
+    "minlon": 151.0552772,
+    "maxlat": -33.8232802,
+    "maxlon": 151.0583951
+  },
+  "nodes": [
+    11563331458,
+    11563331457,
+    11563331460
+  ],
+  "geometry": [
+    { "lat": -33.8232802, "lon": 151.0552772 },
+    { "lat": -33.8234755, "lon": 151.0564038 },
+    { "lat": -33.8238204, "lon": 151.0583951 }
+  ],
+  "tags": {
+    "check_date": "2024-01-29",
+    "seamark:navigation_line:category": "leading",
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1243957856,
+  "bounds": {
+    "minlat": -33.8243988,
+    "minlon": 151.0542778,
+    "maxlat": -33.8238204,
+    "maxlon": 151.0583951
+  },
+  "nodes": [
+    11563331460,
+    11563331463
+  ],
+  "geometry": [
+    { "lat": -33.8238204, "lon": 151.0583951 },
+    { "lat": -33.8243988, "lon": 151.0542778 }
+  ],
+  "tags": {
+    "check_date": "2024-01-29",
+    "seamark:recommended_track:category": "fixed_marks",
+    "seamark:recommended_track:traffic_flow": "two-way",
+    "seamark:type": "recommended_track"
+  }
+},
+{
+  "type": "way",
+  "id": 1243957857,
+  "bounds": {
+    "minlat": -33.8238204,
+    "minlon": 151.0583951,
+    "maxlat": -33.8233284,
+    "maxlon": 151.0618980
+  },
+  "nodes": [
+    11563331462,
+    11563331461,
+    11563331460
+  ],
+  "geometry": [
+    { "lat": -33.8233284, "lon": 151.0618980 },
+    { "lat": -33.8234951, "lon": 151.0607111 },
+    { "lat": -33.8238204, "lon": 151.0583951 }
+  ],
+  "tags": {
+    "check_date": "2024-01-29",
+    "seamark:navigation_line:category": "leading",
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1244015157,
+  "bounds": {
+    "minlat": -33.8539417,
+    "minlon": 151.2851907,
+    "maxlat": -33.8233736,
+    "maxlon": 151.3003673
+  },
+  "nodes": [
+    7924909770,
+    11563743899,
+    11563743900,
+    11563743901,
+    1162539123
+  ],
+  "geometry": [
+    { "lat": -33.8233736, "lon": 151.3003673 },
+    { "lat": -33.8272926, "lon": 151.2984238 },
+    { "lat": -33.8301366, "lon": 151.2969981 },
+    { "lat": -33.8329065, "lon": 151.2956364 },
+    { "lat": -33.8539417, "lon": 151.2851907 }
+  ],
+  "tags": {
+    "check_date": "2024-01-29",
+    "name": "Line Zulu",
+    "seamark:navigation_line:category": "clearing",
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1244050329,
+  "bounds": {
+    "minlat": -33.8655633,
+    "minlon": 151.1887272,
+    "maxlat": -33.8617521,
+    "maxlon": 151.1908262
+  },
+  "nodes": [
+    9125253855,
+    9125253854,
+    11564032760
+  ],
+  "geometry": [
+    { "lat": -33.8655633, "lon": 151.1908262 },
+    { "lat": -33.8643785, "lon": 151.1901737 },
+    { "lat": -33.8617521, "lon": 151.1887272 }
+  ],
+  "tags": {
+    "check_date": "2024-01-29",
+    "note": "for the cruise ship/container ship turning basin",
+    "seamark:navigation_line:category": "leading",
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1265765787,
+  "bounds": {
+    "minlat": -33.8560884,
+    "minlon": 151.2085398,
+    "maxlat": -33.8542898,
+    "maxlon": 151.2205336
+  },
+  "nodes": [
+    11757692335,
+    1191078605,
+    11757692334
+  ],
+  "geometry": [
+    { "lat": -33.8542898, "lon": 151.2205336 },
+    { "lat": -33.8557329, "lon": 151.2108673 },
+    { "lat": -33.8560884, "lon": 151.2085398 }
+  ],
+  "tags": {
+    "check_date": "2024-03-24",
+    "seamark:navigation_line:category": "leading",
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1265765788,
+  "bounds": {
+    "minlat": -33.8542898,
+    "minlon": 151.2205336,
+    "maxlat": -33.8535890,
+    "maxlon": 151.2252320
+  },
+  "nodes": [
+    11757692333,
+    11757692335
+  ],
+  "geometry": [
+    { "lat": -33.8535890, "lon": 151.2252320 },
+    { "lat": -33.8542898, "lon": 151.2205336 }
+  ],
+  "tags": {
+    "check_date": "2024-03-24",
+    "oneway": "yes",
+    "seamark:recommended_track:category": "fixed_marks",
+    "seamark:recommended_track:traffic_flow": "one-way",
+    "seamark:type": "recommended_track"
+  }
+},
+{
+  "type": "way",
+  "id": 1269018942,
+  "bounds": {
+    "minlat": -33.8300706,
+    "minlon": 151.1525858,
+    "maxlat": -33.8279090,
+    "maxlon": 151.1555100
+  },
+  "nodes": [
+    11786709426,
+    11786709424,
+    11786709425
+  ],
+  "geometry": [
+    { "lat": -33.8300706, "lon": 151.1555100 },
+    { "lat": -33.8281096, "lon": 151.1528571 },
+    { "lat": -33.8279090, "lon": 151.1525858 }
+  ],
+  "tags": {
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1269048476,
+  "bounds": {
+    "minlat": -33.8304979,
+    "minlon": 151.2625668,
+    "maxlat": -33.8299112,
+    "maxlon": 151.2742425
+  },
+  "nodes": [
+    8373653491,
+    11661538957,
+    11786941579
+  ],
+  "geometry": [
+    { "lat": -33.8304979, "lon": 151.2742425 },
+    { "lat": -33.8299588, "lon": 151.2633183 },
+    { "lat": -33.8299112, "lon": 151.2625668 }
+  ],
+  "tags": {
+    "seamark:navigation_line:category": "clearing",
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1269866665,
+  "bounds": {
+    "minlat": -33.8236204,
+    "minlon": 151.0668255,
+    "maxlat": -33.8199319,
+    "maxlon": 151.0719327
+  },
+  "nodes": [
+    11791985146,
+    11791985145
+  ],
+  "geometry": [
+    { "lat": -33.8236204, "lon": 151.0668255 },
+    { "lat": -33.8199319, "lon": 151.0719327 }
+  ],
+  "tags": {
+    "seamark:type": "recommended_track"
+  }
+},
+{
+  "type": "way",
+  "id": 1269866666,
+  "bounds": {
+    "minlat": -33.8247885,
+    "minlon": 151.0652082,
+    "maxlat": -33.8236204,
+    "maxlon": 151.0668255
+  },
+  "nodes": [
+    11791985146,
+    11563331446,
+    11791985144
+  ],
+  "geometry": [
+    { "lat": -33.8236204, "lon": 151.0668255 },
+    { "lat": -33.8243652, "lon": 151.0657943 },
+    { "lat": -33.8247885, "lon": 151.0652082 }
+  ],
+  "tags": {
+    "seamark:navigation_line:category": "leading",
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1269866668,
+  "bounds": {
+    "minlat": -33.8459721,
+    "minlon": 151.1293145,
+    "maxlat": -33.8412410,
+    "maxlon": 151.1342477
+  },
+  "nodes": [
+    11791985153,
+    11791985151,
+    11791985152
+  ],
+  "geometry": [
+    { "lat": -33.8459721, "lon": 151.1342477 },
+    { "lat": -33.8413391, "lon": 151.1294168 },
+    { "lat": -33.8412410, "lon": 151.1293145 }
+  ],
+  "tags": {
+    "check_date": "2024-04-05",
+    "fixme": "very approximate location",
+    "seamark:navigation_line:category": "leading",
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1270368790,
+  "bounds": {
+    "minlat": -33.8582056,
+    "minlon": 151.2729512,
+    "maxlat": -33.8419387,
+    "maxlon": 151.2747951
+  },
+  "nodes": [
+    11795417001,
+    11795417003,
+    11795417004
+  ],
+  "geometry": [
+    { "lat": -33.8582056, "lon": 151.2729512 },
+    { "lat": -33.8495582, "lon": 151.2739315 },
+    { "lat": -33.8419387, "lon": 151.2747951 }
+  ],
+  "tags": {
+    "check_date": "2024-04-07",
+    "seamark:navigation_line:category": "leading",
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1270368791,
+  "bounds": {
+    "minlat": -33.8419387,
+    "minlon": 151.2747951,
+    "maxlat": -33.8306103,
+    "maxlon": 151.2760790
+  },
+  "nodes": [
+    11795417004,
+    11795417002
+  ],
+  "geometry": [
+    { "lat": -33.8419387, "lon": 151.2747951 },
+    { "lat": -33.8306103, "lon": 151.2760790 }
+  ],
+  "tags": {
+    "check_date": "2024-04-07",
+    "seamark:recommended_track:category": "fixed_marks",
+    "seamark:type": "recommended_track"
+  }
+},
+{
+  "type": "way",
+  "id": 1272457985,
+  "bounds": {
+    "minlat": -33.8542898,
+    "minlon": 151.2028510,
+    "maxlat": -33.8516348,
+    "maxlon": 151.2205336
+  },
+  "nodes": [
+    11757692335,
+    11816030418
+  ],
+  "geometry": [
+    { "lat": -33.8542898, "lon": 151.2205336 },
+    { "lat": -33.8516348, "lon": 151.2028510 }
+  ],
+  "tags": {
+    "check_date": "2024-04-14",
+    "oneway": "yes",
+    "seamark:recommended_track:category": "fixed_marks",
+    "seamark:recommended_track:orientation": "101",
+    "seamark:recommended_track:traffic_flow": "one-way",
+    "seamark:type": "recommended_track"
+  }
+},
+{
+  "type": "way",
+  "id": 1272457986,
+  "bounds": {
+    "minlat": -33.8516348,
+    "minlon": 151.1988497,
+    "maxlat": -33.8510340,
+    "maxlon": 151.2028510
+  },
+  "nodes": [
+    11816030418,
+    10220830273
+  ],
+  "geometry": [
+    { "lat": -33.8516348, "lon": 151.2028510 },
+    { "lat": -33.8510340, "lon": 151.1988497 }
+  ],
+  "tags": {
+    "check_date": "2024-04-14",
+    "seamark:navigation_line:category": "leading",
+    "seamark:navigation_line:orientation": "101",
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1274082820,
+  "bounds": {
+    "minlat": -33.9942901,
+    "minlon": 151.2229456,
+    "maxlat": -33.9898406,
+    "maxlon": 151.2405905
+  },
+  "nodes": [
+    11830457373,
+    11830457372,
+    11830457374
+  ],
+  "geometry": [
+    { "lat": -33.9898406, "lon": 151.2405905 },
+    { "lat": -33.9922821, "lon": 151.2308923 },
+    { "lat": -33.9942901, "lon": 151.2229456 }
+  ],
+  "tags": {
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1274082821,
+  "bounds": {
+    "minlat": -33.9958155,
+    "minlon": 151.1992891,
+    "maxlat": -33.9957423,
+    "maxlon": 151.2026192
+  },
+  "nodes": [
+    11830425361,
+    11830425359
+  ],
+  "geometry": [
+    { "lat": -33.9957423, "lon": 151.1992891 },
+    { "lat": -33.9958155, "lon": 151.2026192 }
+  ],
+  "tags": {
+    "fixme": "271°22`",
+    "seamark:type": "navigation_line",
+    "source": "notes on Lx K2625.50"
+  }
+},
+{
+  "type": "way",
+  "id": 1274082822,
+  "bounds": {
+    "minlat": -33.9959380,
+    "minlon": 151.1992891,
+    "maxlat": -33.9957423,
+    "maxlon": 151.2026303
+  },
+  "nodes": [
+    11830425361,
+    11830425360
+  ],
+  "geometry": [
+    { "lat": -33.9957423, "lon": 151.1992891 },
+    { "lat": -33.9959380, "lon": 151.2026303 }
+  ],
+  "tags": {
+    "fixme": "273°53`",
+    "seamark:type": "navigation_line",
+    "source": "notes on Lx K2625.50"
+  }
+},
+{
+  "type": "way",
+  "id": 1274082823,
+  "bounds": {
+    "minlat": -33.9991261,
+    "minlon": 151.2038928,
+    "maxlat": -33.9976936,
+    "maxlon": 151.2094742
+  },
+  "nodes": [
+    11830457375,
+    1191079531,
+    11830425352
+  ],
+  "geometry": [
+    { "lat": -33.9976936, "lon": 151.2094742 },
+    { "lat": -33.9985131, "lon": 151.2062303 },
+    { "lat": -33.9991261, "lon": 151.2038928 }
+  ],
+  "tags": {
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1274082824,
+  "bounds": {
+    "minlat": -33.9976936,
+    "minlon": 151.2094742,
+    "maxlat": -33.9942901,
+    "maxlon": 151.2229456
+  },
+  "nodes": [
+    11830457374,
+    11830457375
+  ],
+  "geometry": [
+    { "lat": -33.9942901, "lon": 151.2229456 },
+    { "lat": -33.9976936, "lon": 151.2094742 }
+  ],
+  "tags": {
+    "seamark:recommended_track:category": "fixed_marks",
+    "seamark:recommended_track:traffic_flow": "two-way",
+    "seamark:type": "recommended_track"
+  }
+},
+{
+  "type": "way",
+  "id": 1274082825,
+  "bounds": {
+    "minlat": -33.9676935,
+    "minlon": 151.2203836,
+    "maxlat": -33.9675845,
+    "maxlon": 151.2208382
+  },
+  "nodes": [
+    11830457380,
+    11830457381
+  ],
+  "geometry": [
+    { "lat": -33.9675845, "lon": 151.2208382 },
+    { "lat": -33.9676935, "lon": 151.2203836 }
+  ],
+  "tags": {
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1274082826,
+  "bounds": {
+    "minlat": -33.9680623,
+    "minlon": 151.2206075,
+    "maxlat": -33.9679526,
+    "maxlon": 151.2210147
+  },
+  "nodes": [
+    11830457379,
+    11830457378
+  ],
+  "geometry": [
+    { "lat": -33.9679526, "lon": 151.2210147 },
+    { "lat": -33.9680623, "lon": 151.2206075 }
+  ],
+  "tags": {
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1274082863,
+  "bounds": {
+    "minlat": -34.0078374,
+    "minlon": 151.2046136,
+    "maxlat": -33.9808685,
+    "maxlon": 151.2414523
+  },
+  "nodes": [
+    11830457511,
+    11830457374,
+    11830457510
+  ],
+  "geometry": [
+    { "lat": -33.9808685, "lon": 151.2046136 },
+    { "lat": -33.9942901, "lon": 151.2229456 },
+    { "lat": -34.0078374, "lon": 151.2414523 }
+  ],
+  "tags": {
+    "seamark:recommended_track:category": "fixed_marks",
+    "seamark:recommended_track:orientation": "312",
+    "seamark:recommended_track:traffic_flow": "two-way",
+    "seamark:type": "recommended_track",
+    "source": "Lx K2624"
+  }
+},
+{
+  "type": "way",
+  "id": 1274082864,
+  "bounds": {
+    "minlat": -33.9808685,
+    "minlon": 151.1852094,
+    "maxlat": -33.9666596,
+    "maxlon": 151.2046136
+  },
+  "nodes": [
+    11830425346,
+    11830457511
+  ],
+  "geometry": [
+    { "lat": -33.9666596, "lon": 151.1852094 },
+    { "lat": -33.9808685, "lon": 151.2046136 }
+  ],
+  "tags": {
+    "seamark:navigation_line:category": "leading",
+    "seamark:navigation_line:orientation": "312",
+    "seamark:type": "navigation_line",
+    "source": "Lx K2624"
+  }
+},
+{
+  "type": "way",
+  "id": 1274082868,
+  "bounds": {
+    "minlat": -33.9596941,
+    "minlon": 151.1953424,
+    "maxlat": -33.9529176,
+    "maxlon": 151.1970979
+  },
+  "nodes": [
+    3387561420,
+    1230220628,
+    11830457553
+  ],
+  "geometry": [
+    { "lat": -33.9529176, "lon": 151.1953424 },
+    { "lat": -33.9551586, "lon": 151.1959229 },
+    { "lat": -33.9596941, "lon": 151.1970979 }
+  ],
+  "tags": {
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1274082869,
+  "bounds": {
+    "minlat": -33.9596016,
+    "minlon": 151.1960804,
+    "maxlat": -33.9534033,
+    "maxlon": 151.1976815
+  },
+  "nodes": [
+    11830457512,
+    1230220627,
+    11830457554
+  ],
+  "geometry": [
+    { "lat": -33.9534033, "lon": 151.1960804 },
+    { "lat": -33.9555534, "lon": 151.1966358 },
+    { "lat": -33.9596016, "lon": 151.1976815 }
+  ],
+  "tags": {
+    "seamark:type": "navigation_line"
+  }
+},
+{
+  "type": "way",
+  "id": 1279821622,
+  "bounds": {
+    "minlat": -33.9880520,
+    "minlon": 151.2008260,
+    "maxlat": -33.9750403,
+    "maxlon": 151.2135440
+  },
+  "nodes": [
+    1104321027,
+    11880601622,
+    11880601623,
+    11880601621,
+    11880601624,
+    1198094091,
+    1198094094,
+    1198094089,
+    1198094088,
+    1191079678,
+    1191079635,
+    1198094087,
+    1198094092,
+    11880601619,
+    11880601620,
+    11880601625,
+    1104321027
+  ],
+  "geometry": [
+    { "lat": -33.9754454, "lon": 151.2008644 },
+    { "lat": -33.9756239, "lon": 151.2008260 },
+    { "lat": -33.9759334, "lon": 151.2008347 },
+    { "lat": -33.9782196, "lon": 151.2012653 },
+    { "lat": -33.9785377, "lon": 151.2013399 },
+    { "lat": -33.9787684, "lon": 151.2014238 },
+    { "lat": -33.9824413, "lon": 151.2039664 },
+    { "lat": -33.9850913, "lon": 151.2076539 },
+    { "lat": -33.9862355, "lon": 151.2091115 },
+    { "lat": -33.9880520, "lon": 151.2116182 },
+    { "lat": -33.9862727, "lon": 151.2135440 },
+    { "lat": -33.9844670, "lon": 151.2111330 },
+    { "lat": -33.9823752, "lon": 151.2084112 },
+    { "lat": -33.9820932, "lon": 151.2087463 },
+    { "lat": -33.9750403, "lon": 151.2011401 },
+    { "lat": -33.9752308, "lon": 151.2009835 },
+    { "lat": -33.9754454, "lon": 151.2008644 }
+  ],
+  "tags": {
+    "check_date": "2024-05-05",
+    "seamark:fairway:restriction": "no_anchoring",
+    "seamark:type": "fairway"
+  }
+},
+{
+  "type": "way",
+  "id": 1282068583,
+  "bounds": {
+    "minlat": -34.0195646,
+    "minlon": 151.1267521,
+    "maxlat": -34.0091255,
+    "maxlon": 151.1389327
+  },
+  "nodes": [
+    11897800308,
+    1191080010,
+    1191080011
+  ],
+  "geometry": [
+    { "lat": -34.0091255, "lon": 151.1389327 },
+    { "lat": -34.0194585, "lon": 151.1268759 },
+    { "lat": -34.0195646, "lon": 151.1267521 }
+  ],
+  "tags": {
+    "check_date": "2024-05-12",
+    "seamark:type": "navigation_line"
+  }
+}
+
+  ]
+}

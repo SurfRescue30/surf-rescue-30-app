@@ -1,0 +1,8491 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-06-01T08:52:28Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 8099480,
+  "lat": -33.8605384,
+  "lon": 151.2106150,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "yes",
+    "ferry": "yes",
+    "local_ref": "5A",
+    "name": "Circular Quay 5A",
+    "public_transport": "stop_position",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8099501,
+  "lat": -33.8568299,
+  "lon": 151.1962419,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Balmain East Wharf",
+    "public_transport": "station",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8408936,
+  "lat": -33.8605820,
+  "lon": 151.2109195,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "yes",
+    "ferry": "yes",
+    "local_ref": "4B",
+    "name": "Circular Quay 4B",
+    "public_transport": "stop_position",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8590354,
+  "lat": -33.8606896,
+  "lon": 151.2114007,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "yes",
+    "ferry": "yes",
+    "local_ref": "3B",
+    "name": "Circular Quay 3B",
+    "public_transport": "stop_position",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8779269,
+  "lat": -33.8433982,
+  "lon": 151.2217027,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "bicycle": "yes",
+    "ferry": "yes",
+    "foot": "yes",
+    "name": "Kurraba Point",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "stop_position",
+    "ref": "20892",
+    "website": "https://transportnsw.info/stop?q=20892",
+    "wikidata": "Q20065287"
+  }
+},
+{
+  "type": "node",
+  "id": 13804584,
+  "lat": -33.8308506,
+  "lon": 151.1018466,
+  "tags": {
+    "name": "Kissing Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14095001.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 13816424,
+  "lat": -33.8363620,
+  "lon": 151.1803087,
+  "tags": {
+    "name": "Onions Point",
+    "natural": "cape",
+    "source": "historical",
+    "source:location": "PGS",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14039902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 13816944,
+  "lat": -33.8590316,
+  "lon": 151.2221616,
+  "tags": {
+    "name": "Mrs Macquarie's Point / Yurong",
+    "name:aus": "Yurong",
+    "name:en": "Mrs Macquarie's Point / Yurong",
+    "name:zh": "麦觉理夫人角",
+    "natural": "cape",
+    "old_name": "Mrs Macquarie's Point",
+    "ref:nswgnb": "82289",
+    "source": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 13816965,
+  "lat": -33.8561299,
+  "lon": 151.2154429,
+  "tags": {
+    "name": "Bennelong Point / Dubbagullee",
+    "name:aus": "Dubbagullee",
+    "name:en": "Bennelong Point / Dubbagullee",
+    "name:etymology": "Bennelong",
+    "name:etymology:wikidata": "Q817828",
+    "natural": "cape",
+    "old_name:aus": "Jubgalee",
+    "ref:nswgnb": "4164",
+    "source": "PGS"
+  }
+},
+{
+  "type": "node",
+  "id": 13817301,
+  "lat": -33.8388775,
+  "lon": 151.1489788,
+  "tags": {
+    "alt_name": "Huntleys Point",
+    "name": "Tarban Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14039902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 14758810,
+  "lat": -33.9886291,
+  "lon": 151.2320796,
+  "tags": {
+    "name": "La Perouse",
+    "name:aus": "Gooriwal",
+    "name:etymology": "Jean-François de Galaup, comte de Lapérouse",
+    "name:etymology:wikidata": "Q294478",
+    "name:fr": "La Pérouse",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 17922717,
+  "lat": -34.0558505,
+  "lon": 151.1497664,
+  "tags": {
+    "leisure": "marina",
+    "name": "Cronulla Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "node",
+  "id": 17923784,
+  "lat": -34.0200181,
+  "lon": 151.1226751,
+  "tags": {
+    "name": "Taren Point",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 18256152,
+  "lat": -34.0563421,
+  "lon": 151.1496597,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "check_date": "2025-06-07",
+    "ferry": "yes",
+    "name": "Cronulla",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 18263736,
+  "lat": -34.0222379,
+  "lon": 151.1880555,
+  "tags": {
+    "name": "Kurnell",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 18373862,
+  "lat": -33.8432736,
+  "lon": 151.2825736,
+  "tags": {
+    "name": "Watsons Bay",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 18531827,
+  "lat": -33.9199082,
+  "lon": 151.2606572,
+  "tags": {
+    "name": "Dolphins Point",
+    "natural": "cape",
+    "place": "locality",
+    "source": "LPI Base Map July 2018"
+  }
+},
+{
+  "type": "node",
+  "id": 20959048,
+  "lat": -33.8605040,
+  "lon": 151.2101153,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "local_ref": "6A",
+    "name": "Circular Quay 6A",
+    "not:network:wikidata": "Q3162795",
+    "public_transport": "stop_position",
+    "ref": "2000234",
+    "website": "https://transportnsw.info/stop?q=2000234",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 20959049,
+  "lat": -33.8606782,
+  "lon": 151.2119493,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "yes",
+    "ferry": "yes",
+    "local_ref": "2B",
+    "name": "Circular Quay 2B",
+    "public_transport": "stop_position",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 25843272,
+  "lat": -33.8675516,
+  "lon": 151.1995619,
+  "tags": {
+    "name": "Darling Harbour",
+    "name:aus": "Tumbalong",
+    "name:etymology": "Governor Ralph Darling",
+    "natural": "bay",
+    "ref:nswgnb": "82284",
+    "source:name:aus": "nswgnb",
+    "tourism": "attraction",
+    "wheelchair": "yes",
+    "wikidata": "Q54488",
+    "wikipedia": "en:Darling Harbour"
+  }
+},
+{
+  "type": "node",
+  "id": 25921256,
+  "lat": -33.8740127,
+  "lon": 151.2332531,
+  "tags": {
+    "description": "Holders of the annual Sydney-Hobart Yacht Race",
+    "leisure": "marina",
+    "name": "Cruising Yacht Club of Australia Marina",
+    "operator": "Cruising Yacht Club of Australia",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://cyca.com.au/marina-facilities/"
+  }
+},
+{
+  "type": "node",
+  "id": 26410541,
+  "lat": -33.8712418,
+  "lon": 151.1804934,
+  "tags": {
+    "name": "Glebe Point",
+    "natural": "cape",
+    "note": "Arguably this could be a bit further south, as anything north of Wigram Rd is commonly refered to as being on Glebe Point.",
+    "place": "neighbourhood",
+    "wikidata": "Q5567446",
+    "wikipedia": "en:Glebe Point"
+  }
+},
+{
+  "type": "node",
+  "id": 29026523,
+  "lat": -34.0680729,
+  "lon": 151.1159938,
+  "tags": {
+    "name": "Lilli Pilli",
+    "place": "suburb",
+    "source": "knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 29048218,
+  "lat": -34.0020730,
+  "lon": 151.0967132,
+  "tags": {
+    "name": "Kangaroo Point",
+    "place": "suburb",
+    "source": "knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 29376986,
+  "lat": -34.0845443,
+  "lon": 151.1512348,
+  "tags": {
+    "name": "Bundeena",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 33364238,
+  "lat": -33.8454368,
+  "lon": 151.2165148,
+  "tags": {
+    "name": "Careening Cove",
+    "name:aus": "Weeyuh Weeyuh",
+    "natural": "bay",
+    "old_name": "Weye Weye",
+    "ref:nswgnb": "82281",
+    "source:name": "survey",
+    "source:name:aus": "nswgnb",
+    "wikidata": "Q5038889"
+  }
+},
+{
+  "type": "node",
+  "id": 46500819,
+  "lat": -33.8121316,
+  "lon": 151.2463764,
+  "tags": {
+    "direction": "114",
+    "man_made": "lighthouse",
+    "name": "Rosherville Lighthouse",
+    "operator": "Port Authority of New South Wales",
+    "operator:wikidata": "Q60742921",
+    "ref": "2B",
+    "seamark:beacon_special_purpose:colour": "white",
+    "seamark:beacon_special_purpose:shape": "tower",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "green",
+    "seamark:light:height": "43",
+    "seamark:light:period": "3",
+    "seamark:light:range": "12",
+    "seamark:light:reference": "K 2638.10",
+    "seamark:light:sequence": "1+(2)",
+    "seamark:name": "2B / Rosherville",
+    "seamark:type": "light_major",
+    "source": "US NGA Pub. 111. 2024-04-19.",
+    "start_date": "1911"
+  }
+},
+{
+  "type": "node",
+  "id": 77988668,
+  "lat": -33.8376508,
+  "lon": 151.1876443,
+  "tags": {
+    "created_by": "JOSM",
+    "name": "Gore Cove",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 78007114,
+  "lat": -33.8447297,
+  "lon": 151.1983499,
+  "tags": {
+    "name": "Berrys Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 78007131,
+  "lat": -33.8458842,
+  "lon": 151.2079067,
+  "tags": {
+    "alt_name:aus": "Quibaree;Quiberie;Quibree;",
+    "name": "Lavender Bay",
+    "name:aus": "Gooweebahree",
+    "name:etymology": "George Lavender",
+    "natural": "bay",
+    "source": "historical",
+    "source:alt_name:aus": "sign at Quibaree Park",
+    "source:name:aus": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 81303555,
+  "lat": -33.8420792,
+  "lon": 151.2252917,
+  "tags": {
+    "created_by": "JOSM",
+    "name": "Shell Cove",
+    "natural": "bay",
+    "source:name": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 82000656,
+  "lat": -33.8387588,
+  "lon": 151.2306477,
+  "tags": {
+    "name": "Mosman Bay",
+    "name:aus": "Goram Bullagong",
+    "natural": "bay",
+    "old_name": "Gorman-Bullagong,Great Cirrius Cove",
+    "ref:nswgnb": "82280",
+    "source": "historical",
+    "source:name:aus": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 82452043,
+  "lat": -33.8156024,
+  "lon": 151.2376191,
+  "tags": {
+    "name": "Quakers Hat Bay",
+    "natural": "bay",
+    "source:name": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 82455850,
+  "lat": -33.8205456,
+  "lon": 151.2255028,
+  "tags": {
+    "created_by": "JOSM",
+    "name": "Willoughby Bay",
+    "natural": "bay",
+    "source:name": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 82552020,
+  "lat": -33.8166128,
+  "lon": 151.2278852,
+  "tags": {
+    "created_by": "JOSM",
+    "name": "Long Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 86838949,
+  "lat": -33.8266803,
+  "lon": 151.1529156,
+  "tags": {
+    "created_by": "JOSM",
+    "name": "Burns Bay",
+    "natural": "bay",
+    "source:name": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 88978883,
+  "lat": -33.8147190,
+  "lon": 151.2499456,
+  "tags": {
+    "name": "Shell Cove",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 89037479,
+  "lat": -33.8303624,
+  "lon": 151.2613356,
+  "tags": {
+    "created_by": "Potlatch 0.9c",
+    "name": "Obelisk Bay",
+    "natural": "bay",
+    "source:name": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 89055943,
+  "lat": -33.8239347,
+  "lon": 151.2548831,
+  "tags": {
+    "name": "Hunters Bay",
+    "natural": "bay",
+    "source:name": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 89803889,
+  "lat": -33.8403156,
+  "lon": 151.2540251,
+  "tags": {
+    "name": "Chowder Bay",
+    "name:aus": "Gooree",
+    "natural": "bay",
+    "old_name": "Koree",
+    "ref:nswgnb": "82277",
+    "source": "historical",
+    "source:name:aus": "nswgnb",
+    "wikidata": "Q21916048"
+  }
+},
+{
+  "type": "node",
+  "id": 89819782,
+  "lat": -33.8470181,
+  "lon": 151.2435343,
+  "tags": {
+    "name": "Athol Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 89819798,
+  "lat": -33.8415981,
+  "lon": 151.2365221,
+  "tags": {
+    "created_by": "JOSM",
+    "name": "Little Sirius Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 97704236,
+  "lat": -33.8037503,
+  "lon": 151.2267911,
+  "tags": {
+    "name": "Sailor's Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 109588978,
+  "lat": -33.7940024,
+  "lon": 151.2267808,
+  "tags": {
+    "created_by": "JOSM",
+    "name": "Sugarloaf Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 117083759,
+  "lat": -33.7419800,
+  "lon": 151.3171101,
+  "tags": {
+    "addr:country": "AU",
+    "addr:postcode": "2097",
+    "addr:state": "NSW",
+    "addr:suburb": "Collaroy",
+    "name": "Long Reef",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 117132494,
+  "lat": -34.0647381,
+  "lon": 151.1265284,
+  "tags": {
+    "name": "Dolans Bay",
+    "place": "suburb",
+    "place:nswgnb": "SUBURB",
+    "ref:nswgnb": "68806",
+    "source": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 117132599,
+  "lat": -34.0591451,
+  "lon": 151.0786995,
+  "tags": {
+    "name": "Grays Point",
+    "place": "suburb",
+    "place:nswgnb": "SUBURB",
+    "ref:nswgnb": "21676",
+    "source": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 117132695,
+  "lat": -34.0783413,
+  "lon": 151.1303571,
+  "tags": {
+    "name": "Maianbar",
+    "place": "suburb",
+    "place:nswgnb": "SUBURB",
+    "ref:nswgnb": "35653",
+    "source": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 117132803,
+  "lat": -34.0185844,
+  "lon": 151.1122800,
+  "tags": {
+    "name": "Sylvania Waters",
+    "place": "suburb",
+    "place:nswgnb": "SUBURB",
+    "ref:nswgnb": "56533",
+    "source": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 117133036,
+  "lat": -34.0502778,
+  "lon": 151.1033333,
+  "tags": {
+    "created_by": "JOSM",
+    "name": "Yowie Bay",
+    "place": "suburb",
+    "place:nswgnb": "SUBURB",
+    "ref:nswgnb": "67760",
+    "source": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 161595100,
+  "lat": -33.8305500,
+  "lon": 151.1120933,
+  "tags": {
+    "created_by": "JOSM",
+    "name": "Morrison Bay",
+    "natural": "bay",
+    "source:name": "knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 247164406,
+  "lat": -33.8219491,
+  "lon": 151.0788441,
+  "tags": {
+    "air_conditioning": "no",
+    "alt_name": "Wentworth Point",
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "internet_access": "no",
+    "name": "Sydney Olympic Park",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 251589111,
+  "lat": -33.7536919,
+  "lon": 151.1954574,
+  "tags": {
+    "name": "Lockley Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 252058553,
+  "lat": -33.8499776,
+  "lon": 151.2139939,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "check_date": "2026-05-19",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Jefferys Street",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 252058576,
+  "lat": -33.8518201,
+  "lon": 151.2170734,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Beulah Street Wharf",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 267805779,
+  "lat": -33.9983853,
+  "lon": 151.2383435,
+  "tags": {
+    "name": "Henry Head",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 281356861,
+  "lat": -33.8177323,
+  "lon": 151.2615567,
+  "tags": {
+    "check_date": "2023-07-01",
+    "man_made": "lighthouse",
+    "name": "Grotto Point Lighthouse",
+    "seamark:beacon_special_purpose:colour": "white",
+    "seamark:beacon_special_purpose:shape": "tower",
+    "seamark:light:1:character": "Oc",
+    "seamark:light:1:colour": "green",
+    "seamark:light:1:group": "4",
+    "seamark:light:1:height": "19",
+    "seamark:light:1:period": "15",
+    "seamark:light:1:range": "9",
+    "seamark:light:1:sector_end": "288",
+    "seamark:light:1:sector_start": "276",
+    "seamark:light:1:sequence": "1+(1)+1+(1)+1+(1)+8+(1)",
+    "seamark:light:2:character": "Oc",
+    "seamark:light:2:colour": "white",
+    "seamark:light:2:group": "4",
+    "seamark:light:2:height": "19",
+    "seamark:light:2:period": "15",
+    "seamark:light:2:range": "12",
+    "seamark:light:2:sector_end": "306",
+    "seamark:light:2:sector_start": "288",
+    "seamark:light:2:sequence": "1+(1)+1+(1)+1+(1)+8+(1)",
+    "seamark:light:3:character": "Oc",
+    "seamark:light:3:colour": "red",
+    "seamark:light:3:group": "4",
+    "seamark:light:3:height": "19",
+    "seamark:light:3:period": "15",
+    "seamark:light:3:range": "9",
+    "seamark:light:3:sector_end": "312",
+    "seamark:light:3:sector_start": "306",
+    "seamark:light:3:sequence": "1+(1)+1+(1)+1+(1)+8+(1)",
+    "seamark:light:reference": "K 2638",
+    "seamark:name": "Grotto Point",
+    "seamark:type": "light_major",
+    "source": "US NGA Pub. 111. 2024-04-19.",
+    "wikidata": "Q5610807",
+    "wikipedia": "en:Grotto Point Light"
+  }
+},
+{
+  "type": "node",
+  "id": 290310235,
+  "lat": -34.0827153,
+  "lon": 151.1506701,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Bundeena",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 290378323,
+  "lat": -34.0779225,
+  "lon": 151.1115679,
+  "tags": {
+    "name": "Costens Point",
+    "name:etymology": "William Costen",
+    "natural": "cape",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 290378438,
+  "lat": -34.0768757,
+  "lon": 151.1178486,
+  "tags": {
+    "name": "Red Jacks Point",
+    "natural": "cape",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 290378708,
+  "lat": -34.0763082,
+  "lon": 151.1242604,
+  "tags": {
+    "name": "Yenabilli Point",
+    "natural": "cape",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 293134357,
+  "lat": -33.8549888,
+  "lon": 151.1685498,
+  "tags": {
+    "alt_name": "Elliott Street Wharf",
+    "amenity": "ferry_terminal",
+    "end_date": "2013",
+    "ferry": "yes",
+    "name": "Balmain West",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "stop_position",
+    "start_date": "2025",
+    "wikidata": "Q4852348",
+    "wikipedia": "en:Balmain West ferry wharf"
+  }
+},
+{
+  "type": "node",
+  "id": 316022664,
+  "lat": -33.8578059,
+  "lon": 151.1575454,
+  "tags": {
+    "name": "Sisters Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 316022668,
+  "lat": -33.8594167,
+  "lon": 151.1535972,
+  "tags": {
+    "name": "Half Moon Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 325456848,
+  "lat": -33.9414857,
+  "lon": 151.2653455,
+  "tags": {
+    "name": "Mistral Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 332522882,
+  "lat": -33.8454206,
+  "lon": 151.1572043,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Drummoyne Ferry Wharf",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station",
+    "wikidata": "Q5309259",
+    "wikipedia": "en:Drummoyne ferry wharf"
+  }
+},
+{
+  "type": "node",
+  "id": 342703411,
+  "lat": -34.0017406,
+  "lon": 151.2236472,
+  "tags": {
+    "name": "Inscription Point",
+    "natural": "cape",
+    "place": "locality",
+    "sport": "water_sports",
+    "sport:scuba_diving": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 345536405,
+  "lat": -33.9590642,
+  "lon": 151.2653349,
+  "tags": {
+    "name": "Magic Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 373834088,
+  "lat": -33.8355298,
+  "lon": 151.1086792,
+  "tags": {
+    "name": "Putney Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14095001.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 373846249,
+  "lat": -33.8318083,
+  "lon": 151.1019668,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Kissing Point",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 437244368,
+  "lat": -34.0008963,
+  "lon": 151.2488722,
+  "tags": {
+    "name": "Cape Banks",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 453045873,
+  "lat": -33.8436238,
+  "lon": 151.1282504,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Abbotsford",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 458705369,
+  "lat": -33.8668898,
+  "lon": 151.2006920,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "disused": "yes",
+    "ferry": "yes",
+    "name": "Darling Harbour Wharf 3",
+    "name:ko": "달링하버",
+    "operator": "NSW Maritime",
+    "public_transport": "station",
+    "wikidata": "Q6412067"
+  }
+},
+{
+  "type": "node",
+  "id": 458705423,
+  "lat": -33.8406661,
+  "lon": 151.1169013,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Cabarita",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 458705435,
+  "lat": -33.8213122,
+  "lon": 151.0902305,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "gtfs:stop_id": "21141",
+    "name": "Meadowbank",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station",
+    "ref": "21141",
+    "tactile_paving": "yes",
+    "website": "https://transportnsw.info/stop?q=21141",
+    "wheelchair": "yes",
+    "wikidata": "Q6803311",
+    "wikipedia": "en:Meadowbank ferry wharf"
+  }
+},
+{
+  "type": "node",
+  "id": 458707027,
+  "lat": -33.8422141,
+  "lon": 151.1419671,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Huntleys Point",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station",
+    "wheelchair": "yes",
+    "wikidata": "Q14934838",
+    "wikipedia": "en:Huntleys Point ferry wharf"
+  }
+},
+{
+  "type": "node",
+  "id": 458710317,
+  "lat": -33.8454805,
+  "lon": 151.1734436,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "internet_access": "no",
+    "name": "Cockatoo Island",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 538124780,
+  "lat": -33.8008526,
+  "lon": 151.2760338,
+  "tags": {
+    "name": "Kay-ye-my Point",
+    "natural": "cape",
+    "place": "locality",
+    "source": "local_knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 538125242,
+  "lat": -33.8113008,
+  "lon": 151.2692961,
+  "tags": {
+    "name": "Crater Cove",
+    "natural": "bay",
+    "source": "survey",
+    "wikidata": "Q95512810"
+  }
+},
+{
+  "type": "node",
+  "id": 538125248,
+  "lat": -33.8111082,
+  "lon": 151.2730212,
+  "tags": {
+    "name": "Dobroyd Head",
+    "natural": "cape",
+    "source": "local_knowledge",
+    "wikidata": "Q5286863"
+  }
+},
+{
+  "type": "node",
+  "id": 539328479,
+  "lat": -33.8181237,
+  "lon": 151.2611753,
+  "tags": {
+    "name": "Grotto Point",
+    "natural": "cape",
+    "source": "local_knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 841965447,
+  "lat": -33.8161966,
+  "lon": 151.1435704,
+  "tags": {
+    "name": "Sugarloaf Point",
+    "natural": "cape",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 907824698,
+  "lat": -33.9977236,
+  "lon": 151.1133601,
+  "tags": {
+    "name": "Shipwrights Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 907848724,
+  "lat": -33.9929290,
+  "lon": 151.0744864,
+  "tags": {
+    "name": "Neverfail Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 907848725,
+  "lat": -33.9867362,
+  "lon": 151.0878564,
+  "tags": {
+    "name": "Oatley Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 907851063,
+  "lat": -33.9850686,
+  "lon": 151.0617792,
+  "tags": {
+    "name": "Jew Fish Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 907851064,
+  "lat": -33.9877813,
+  "lon": 151.0698653,
+  "tags": {
+    "name": "Gungah Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 907851065,
+  "lat": -33.9949148,
+  "lon": 151.0584308,
+  "tags": {
+    "name": "Thompsons Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 910343347,
+  "lat": -33.9934125,
+  "lon": 151.0991720,
+  "tags": {
+    "name": "Harness Cask Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343348,
+  "lat": -34.0697731,
+  "lon": 151.1288396,
+  "tags": {
+    "name": "Little Turriell Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039503.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343349,
+  "lat": -34.0808007,
+  "lon": 151.1518312,
+  "tags": {
+    "name": "Bundeena Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039503.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343352,
+  "lat": -34.0739441,
+  "lon": 151.1405909,
+  "tags": {
+    "name": "Burraneer Point",
+    "natural": "cape",
+    "source:location": "wikipedia text",
+    "source:name": "local_knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 910343354,
+  "lat": -34.0339949,
+  "lon": 151.2248315,
+  "tags": {
+    "name": "Long Nose Point",
+    "natural": "cape",
+    "place": "locality",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039502.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343355,
+  "lat": -33.9980323,
+  "lon": 151.0726236,
+  "tags": {
+    "name": "Double Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343356,
+  "lat": -33.9925386,
+  "lon": 151.0852355,
+  "tags": {
+    "name": "Oatley Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343358,
+  "lat": -34.0008231,
+  "lon": 151.1023054,
+  "tags": {
+    "name": "Bald Face Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343359,
+  "lat": -34.0780968,
+  "lon": 151.1267329,
+  "tags": {
+    "name": "Fishermans Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039503.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343360,
+  "lat": -33.9978509,
+  "lon": 151.0755769,
+  "tags": {
+    "name": "Green Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343364,
+  "lat": -34.0590531,
+  "lon": 151.1012985,
+  "tags": {
+    "name": "Yowie Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039503.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343365,
+  "lat": -34.0002127,
+  "lon": 151.1623043,
+  "tags": {
+    "name": "Towra Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039502.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343367,
+  "lat": -34.0418082,
+  "lon": 151.2149804,
+  "tags": {
+    "name": "Potter Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039502.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343374,
+  "lat": -33.9915653,
+  "lon": 151.2355817,
+  "tags": {
+    "name": "Congwong Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 910343377,
+  "lat": -33.9999379,
+  "lon": 151.1222950,
+  "tags": {
+    "name": "Saint Kilda Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343379,
+  "lat": -34.0012882,
+  "lon": 151.1150762,
+  "tags": {
+    "name": "Tom Uglys Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343381,
+  "lat": -34.0010225,
+  "lon": 151.0705870,
+  "tags": {
+    "name": "Carina Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid",
+    "wikidata": "Q21960671"
+  }
+},
+{
+  "type": "node",
+  "id": 910343382,
+  "lat": -34.0049049,
+  "lon": 151.0562030,
+  "tags": {
+    "name": "Bonnet Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039502.sid",
+    "wikidata": "Q21922303"
+  }
+},
+{
+  "type": "node",
+  "id": 910343383,
+  "lat": -34.0126265,
+  "lon": 151.1171250,
+  "tags": {
+    "name": "Sandy Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343384,
+  "lat": -33.9931059,
+  "lon": 151.0908398,
+  "tags": {
+    "name": "Connels Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343386,
+  "lat": -34.0102021,
+  "lon": 151.1270069,
+  "tags": {
+    "name": "Taren Point",
+    "natural": "cape",
+    "old_name": "Commons Point",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 910343388,
+  "lat": -34.0747996,
+  "lon": 151.1687908,
+  "tags": {
+    "name": "Port Hacking Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039503.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343389,
+  "lat": -34.0619012,
+  "lon": 151.1067373,
+  "tags": {
+    "name": "Willarong Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039503.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343390,
+  "lat": -34.0739593,
+  "lon": 151.1481621,
+  "tags": {
+    "name": "Hungry Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039503.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343391,
+  "lat": -33.9984342,
+  "lon": 151.0699391,
+  "tags": {
+    "name": "Scylla Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid",
+    "wikidata": "Q21957585"
+  }
+},
+{
+  "type": "node",
+  "id": 910343392,
+  "lat": -34.0232286,
+  "lon": 151.1344514,
+  "tags": {
+    "name": "Shell Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039502.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343393,
+  "lat": -34.0110453,
+  "lon": 151.1183512,
+  "tags": {
+    "name": "Gwawley Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343394,
+  "lat": -34.0549728,
+  "lon": 151.1076761,
+  "tags": {
+    "name": "Yowie Bay",
+    "natural": "bay",
+    "old_name": "Ewey Bay",
+    "source:name": "local_knowledge",
+    "source:old_name": "historical",
+    "source_ref:old_name": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039503.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343395,
+  "lat": -34.0058182,
+  "lon": 151.1286257,
+  "tags": {
+    "name": "Rocky Point",
+    "natural": "cape",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 910343396,
+  "lat": -34.0651357,
+  "lon": 151.0859772,
+  "tags": {
+    "name": "Grays Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039503.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343397,
+  "lat": -33.9914879,
+  "lon": 151.0953460,
+  "tags": {
+    "name": "Connells Bay",
+    "natural": "bay",
+    "old_name": "Connels Bay",
+    "source:name": "guess",
+    "source:old_name": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343398,
+  "lat": -33.9945961,
+  "lon": 151.1489115,
+  "tags": {
+    "name": "Dolls Point",
+    "natural": "cape",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 910343399,
+  "lat": -34.0079967,
+  "lon": 151.1869070,
+  "tags": {
+    "name": "Bonna Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039502.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343400,
+  "lat": -34.0394228,
+  "lon": 151.2209159,
+  "tags": {
+    "name": "Cape Baily",
+    "natural": "cape",
+    "place": "locality",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 910343402,
+  "lat": -33.9976929,
+  "lon": 151.0960699,
+  "tags": {
+    "name": "Kangaroo Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343403,
+  "lat": -34.0522918,
+  "lon": 151.0970783,
+  "tags": {
+    "name": "Gymea Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039503.sid",
+    "wikidata": "Q21912407",
+    "wikipedia": "en:Gymea Bay"
+  }
+},
+{
+  "type": "node",
+  "id": 910343404,
+  "lat": -33.9986100,
+  "lon": 151.0774829,
+  "tags": {
+    "name": "Froghollow Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343405,
+  "lat": -34.0071599,
+  "lon": 151.1157562,
+  "tags": {
+    "name": "Shag Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343406,
+  "lat": -34.0048984,
+  "lon": 151.1123890,
+  "tags": {
+    "name": "Horse Rock Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343407,
+  "lat": -34.0028667,
+  "lon": 151.0928724,
+  "tags": {
+    "name": "Oyster Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343408,
+  "lat": -34.0704446,
+  "lon": 151.1573636,
+  "tags": {
+    "name": "Glaisher Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039503.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910343409,
+  "lat": -34.0797832,
+  "lon": 151.1458830,
+  "tags": {
+    "name": "Cabbage Tree Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039503.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 910387495,
+  "lat": -33.9922572,
+  "lon": 151.0332086,
+  "tags": {
+    "name": "Little Moon Bay",
+    "natural": "bay",
+    "source": "historical",
+    "wikidata": "Q21960656"
+  }
+},
+{
+  "type": "node",
+  "id": 910387496,
+  "lat": -33.9905983,
+  "lon": 151.0463162,
+  "tags": {
+    "name": "Edith Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 910387497,
+  "lat": -33.9771366,
+  "lon": 151.0343090,
+  "tags": {
+    "name": "Alfords Point",
+    "natural": "cape",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 911561237,
+  "lat": -33.8606594,
+  "lon": 151.2190656,
+  "tags": {
+    "name": "Farm Cove",
+    "name:aus": "Wahganmuggalee",
+    "natural": "bay",
+    "old_name": "Kookaroo; Woccanmagulli; Yah-Loong",
+    "ref:nswgnb": "18241",
+    "source": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 911567249,
+  "lat": -33.8694744,
+  "lon": 151.2451688,
+  "tags": {
+    "name": "Double Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 911567251,
+  "lat": -33.8723063,
+  "lon": 151.1883233,
+  "tags": {
+    "name": "Blackwattle Bay",
+    "natural": "bay",
+    "source": "historical",
+    "wikidata": "Q4923568",
+    "wikipedia": "en:Blackwattle Bay"
+  }
+},
+{
+  "type": "node",
+  "id": 911567259,
+  "lat": -33.8708740,
+  "lon": 151.1785217,
+  "tags": {
+    "name": "Rozelle Bay",
+    "natural": "bay",
+    "source": "historical",
+    "wikidata": "Q7375342",
+    "wikipedia": "en:Rozelle Bay"
+  }
+},
+{
+  "type": "node",
+  "id": 911567262,
+  "lat": -33.8485783,
+  "lon": 151.1854620,
+  "tags": {
+    "name": "Snails Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 911567266,
+  "lat": -33.8641410,
+  "lon": 151.1831364,
+  "tags": {
+    "name": "White Bay",
+    "natural": "bay",
+    "source": "historical",
+    "wikidata": "Q7994457",
+    "wikipedia": "en:White Bay (New South Wales)"
+  }
+},
+{
+  "type": "node",
+  "id": 911567268,
+  "lat": -33.9855152,
+  "lon": 151.2285575,
+  "tags": {
+    "name": "Frenchmans Bay",
+    "natural": "bay",
+    "old_name": "Frenchman's Bay",
+    "ref:nswgnb": "19438"
+  }
+},
+{
+  "type": "node",
+  "id": 911567272,
+  "lat": -33.9375155,
+  "lon": 151.2617618,
+  "tags": {
+    "name": "Lurline Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 911567274,
+  "lat": -33.8542760,
+  "lon": 151.1890541,
+  "tags": {
+    "name": "Mort's Bay",
+    "natural": "bay",
+    "old_name": "Waterview Bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 911567276,
+  "lat": -33.9790466,
+  "lon": 151.2259907,
+  "tags": {
+    "name": "Yarra Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 911567282,
+  "lat": -33.8617326,
+  "lon": 151.1910729,
+  "tags": {
+    "name": "Johnston's Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 911567287,
+  "lat": -33.8649583,
+  "lon": 151.1904053,
+  "tags": {
+    "name": "Elizabeth Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 911593776,
+  "lat": -33.8479305,
+  "lon": 151.1348679,
+  "tags": {
+    "name": "Fig Tree Bay",
+    "natural": "bay",
+    "source": "historical",
+    "wikidata": "Q21952429"
+  }
+},
+{
+  "type": "node",
+  "id": 911593777,
+  "lat": -33.8376116,
+  "lon": 151.0974760,
+  "tags": {
+    "name": "Yaralla Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 911593778,
+  "lat": -33.8312480,
+  "lon": 151.0930907,
+  "tags": {
+    "name": "Brays Bay",
+    "natural": "bay",
+    "source:name": "local_knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 911593781,
+  "lat": -33.8306908,
+  "lon": 151.0805789,
+  "tags": {
+    "name": "Homebush Bay",
+    "natural": "bay",
+    "source": "historical",
+    "wikidata": "Q3139640",
+    "wikipedia": "en:Homebush Bay"
+  }
+},
+{
+  "type": "node",
+  "id": 911593782,
+  "lat": -33.8418380,
+  "lon": 151.1147836,
+  "tags": {
+    "name": "Kendall Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 911593783,
+  "lat": -33.8406848,
+  "lon": 151.1030830,
+  "tags": {
+    "name": "Majors Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 911593785,
+  "lat": -33.8440811,
+  "lon": 151.1547364,
+  "tags": {
+    "name": "Drummoyne Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 911593786,
+  "lat": -33.8485710,
+  "lon": 151.1456847,
+  "tags": {
+    "name": "Five Dock Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 913265086,
+  "lat": -33.7984013,
+  "lon": 151.2374057,
+  "tags": {
+    "name": "Powder Hulk Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 913265091,
+  "lat": -33.8208420,
+  "lon": 151.2870299,
+  "tags": {
+    "name": "Inner North Head",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 913265095,
+  "lat": -33.8003040,
+  "lon": 151.2970286,
+  "tags": {
+    "name": "Cabbage Tree Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 913265096,
+  "lat": -33.8094630,
+  "lon": 151.2869730,
+  "tags": {
+    "name": "Little Manly Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 913265097,
+  "lat": -33.8072511,
+  "lon": 151.2744848,
+  "tags": {
+    "name": "Reef Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 913265105,
+  "lat": -33.8013775,
+  "lon": 151.2497876,
+  "tags": {
+    "name": "Fisher Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 913265109,
+  "lat": -33.8149514,
+  "lon": 151.2833517,
+  "tags": {
+    "name": "Cannae Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 913265111,
+  "lat": -33.8093106,
+  "lon": 151.2824839,
+  "tags": {
+    "name": "Manly Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 913265123,
+  "lat": -33.8118629,
+  "lon": 151.2861631,
+  "tags": {
+    "name": "Spring Cove",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 913265124,
+  "lat": -33.8073280,
+  "lon": 151.3068632,
+  "tags": {
+    "alt_name": "North Point",
+    "name": "Blue Fish Point",
+    "natural": "cape",
+    "source": "Local knowledge",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 913265137,
+  "lat": -33.8105185,
+  "lon": 151.2532203,
+  "tags": {
+    "name": "Clontarf Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 913265140,
+  "lat": -33.7862372,
+  "lon": 151.2913427,
+  "tags": {
+    "name": "Queenscliff Head",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 913265144,
+  "lat": -33.8028781,
+  "lon": 151.2805152,
+  "tags": {
+    "name": "Manly Cove",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 913265145,
+  "lat": -33.8000511,
+  "lon": 151.2700368,
+  "tags": {
+    "name": "North Harbour",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 913265146,
+  "lat": -33.8086296,
+  "lon": 151.2895136,
+  "tags": {
+    "name": "Collins Flat",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 926183187,
+  "lat": -33.8944943,
+  "lon": 151.2786957,
+  "tags": {
+    "name": "Bondi Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 926183197,
+  "lat": -33.9009726,
+  "lon": 151.2712894,
+  "tags": {
+    "name": "Dixon's Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 926183198,
+  "lat": -33.9159229,
+  "lon": 151.2632857,
+  "tags": {
+    "name": "Gordon's Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 926183199,
+  "lat": -33.9147851,
+  "lon": 151.2716082,
+  "tags": {
+    "name": "Shark Point",
+    "natural": "cape",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 926183200,
+  "lat": -33.8497334,
+  "lon": 151.2718003,
+  "tags": {
+    "name": "Vauclause Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 926183210,
+  "lat": -33.8492083,
+  "lon": 151.2661864,
+  "tags": {
+    "name": "Shark Bay",
+    "natural": "bay",
+    "source": "historical",
+    "wikidata": "Q21923431"
+  }
+},
+{
+  "type": "node",
+  "id": 926183211,
+  "lat": -33.8622673,
+  "lon": 151.2842171,
+  "tags": {
+    "name": "Diamond Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 926183212,
+  "lat": -33.9036261,
+  "lon": 151.2699285,
+  "tags": {
+    "name": "Nelson Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 926183213,
+  "lat": -33.8581642,
+  "lon": 151.2673779,
+  "tags": {
+    "name": "Hermit Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 926183218,
+  "lat": -33.8486196,
+  "lon": 151.2761688,
+  "tags": {
+    "name": "Parsley Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 926183222,
+  "lat": -33.8660695,
+  "lon": 151.2633104,
+  "tags": {
+    "name": "Rose Bay",
+    "natural": "bay",
+    "source": "historical"
+  }
+},
+{
+  "type": "node",
+  "id": 934188472,
+  "lat": -33.9216459,
+  "lon": 151.2596280,
+  "tags": {
+    "name": "Coogee Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://nla.gov.au/nla.map-rm1273"
+  }
+},
+{
+  "type": "node",
+  "id": 934188475,
+  "lat": -33.8391523,
+  "lon": 151.2780095,
+  "tags": {
+    "name": "Camp Cove",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://nla.gov.au/nla.map-rm1273",
+    "wikidata": "Q110087902"
+  }
+},
+{
+  "type": "node",
+  "id": 934188476,
+  "lat": -33.8349915,
+  "lon": 151.2788371,
+  "tags": {
+    "name": "Lady Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://nla.gov.au/nla.map-rm1273"
+  }
+},
+{
+  "type": "node",
+  "id": 934188478,
+  "lat": -33.8438141,
+  "lon": 151.2797336,
+  "tags": {
+    "name": "Watsons Bay",
+    "name:aus": "kooti",
+    "name:en": "Watsons Bay",
+    "name:etymology": "Robert Watson",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://nla.gov.au/nla.map-rm1273"
+  }
+},
+{
+  "type": "node",
+  "id": 951196804,
+  "lat": -34.0194399,
+  "lon": 151.1721437,
+  "tags": {
+    "name": "Pell's Point",
+    "natural": "cape",
+    "place": "locality",
+    "source": "historical",
+    "source_ref": "http://nla.gov.au/nla.map-rm903"
+  }
+},
+{
+  "type": "node",
+  "id": 960010752,
+  "lat": -34.0580587,
+  "lon": 151.0958068,
+  "tags": {
+    "name": "Lightning Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039503.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 960056749,
+  "lat": -34.0671648,
+  "lon": 151.1439673,
+  "tags": {
+    "name": "Gunnamatta Bay",
+    "natural": "bay",
+    "wikidata": "Q5618920"
+  }
+},
+{
+  "type": "node",
+  "id": 963990567,
+  "lat": -34.0620707,
+  "lon": 151.1125438,
+  "tags": {
+    "name": "Great Turriell Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 963990568,
+  "lat": -34.0699590,
+  "lon": 151.1201368,
+  "tags": {
+    "name": "Little Turriell Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 963990570,
+  "lat": -34.0651643,
+  "lon": 151.1328333,
+  "tags": {
+    "name": "Burraneer Bay",
+    "natural": "bay",
+    "wikidata": "Q17986172",
+    "wikipedia": "en:Burraneer Bay"
+  }
+},
+{
+  "type": "node",
+  "id": 963990578,
+  "lat": -34.0644424,
+  "lon": 151.1282277,
+  "tags": {
+    "name": "Dolans Bay",
+    "natural": "bay",
+    "wikidata": "Q21922379",
+    "wikipedia": "en:Dolans Bay"
+  }
+},
+{
+  "type": "node",
+  "id": 963990582,
+  "lat": -34.0646487,
+  "lon": 151.1129794,
+  "tags": {
+    "name": "Gannons Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 971447327,
+  "lat": -33.8417066,
+  "lon": 151.1283209,
+  "tags": {
+    "name": "Bedlam Point",
+    "natural": "cape",
+    "source": "historical",
+    "source:location": "PGS",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14039902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 980059129,
+  "lat": -34.0828038,
+  "lon": 151.1008204,
+  "tags": {
+    "name": "South West Arm",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 980059138,
+  "lat": -34.0571846,
+  "lon": 151.0890598,
+  "tags": {
+    "name": "North West Arm",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 1005123959,
+  "lat": -34.0669941,
+  "lon": 151.1577797,
+  "tags": {
+    "name": "Windy Point",
+    "natural": "cape",
+    "source": "survey",
+    "source:location": "nearmap"
+  }
+},
+{
+  "type": "node",
+  "id": 1005124127,
+  "lat": -34.0579046,
+  "lon": 151.1579325,
+  "tags": {
+    "name": "Cronulla Point",
+    "natural": "cape",
+    "ref": "41",
+    "source:name": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 1116469098,
+  "lat": -33.8389054,
+  "lon": 151.1761614,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Woolwich Wharf",
+    "public_transport": "stop_position"
+  }
+},
+{
+  "type": "node",
+  "id": 1162539123,
+  "lat": -33.8539417,
+  "lon": 151.2851907,
+  "tags": {
+    "man_made": "lighthouse",
+    "name": "Macquarie Lighthouse",
+    "seamark:beacon_special_purpose:colour": "white",
+    "seamark:beacon_special_purpose:construction": "masonry",
+    "seamark:beacon_special_purpose:height": "25.9",
+    "seamark:beacon_special_purpose:shape": "tower",
+    "seamark:light:1:character": "Fl",
+    "seamark:light:1:colour": "white",
+    "seamark:light:1:group": "2",
+    "seamark:light:1:height": "105",
+    "seamark:light:1:period": "10",
+    "seamark:light:1:range": "22",
+    "seamark:light:1:sector_end": "359",
+    "seamark:light:1:sector_start": "204",
+    "seamark:light:1:sequence": "0.1+(1.9)+0.1+(7.9)",
+    "seamark:light:reference": "K 2632",
+    "seamark:name": "Macquarie",
+    "seamark:type": "light_major",
+    "source": "US NGA Pub. 111. 2024-04-19.",
+    "wikimedia_commons": "File:1_Macquarie_Lighthouse1.JPG"
+  }
+},
+{
+  "type": "node",
+  "id": 1162939499,
+  "lat": -33.8484747,
+  "lon": 151.1701741,
+  "tags": {
+    "name": "Sutherland Dock",
+    "natural": "bay",
+    "was:waterway": "dock"
+  }
+},
+{
+  "type": "node",
+  "id": 1186838135,
+  "lat": -33.8505436,
+  "lon": 151.2643343,
+  "tags": {
+    "name": "Steele Point",
+    "name:etymology": "Thomas Steele",
+    "name:etymology:wikidata": "Q7794182",
+    "natural": "cape",
+    "old_name": "Shark Point",
+    "old_name_1": "Steel Point",
+    "source:location": "nearmap",
+    "source:name": "extrapolation from signs from survey",
+    "source:name:etymology": "NSW GNB"
+  }
+},
+{
+  "type": "node",
+  "id": 1191078061,
+  "lat": -33.8404752,
+  "lon": 151.2642918,
+  "tags": {
+    "man_made": "lighthouse",
+    "name": "Western Channel Pile Light",
+    "seamark:beacon_lateral:category": "port",
+    "seamark:beacon_lateral:colour": "white",
+    "seamark:beacon_lateral:shape": "tower",
+    "seamark:light:character": "Oc",
+    "seamark:light:colour": "red",
+    "seamark:light:height": "8",
+    "seamark:light:period": "3",
+    "seamark:light:range": "5",
+    "seamark:light:reference": "K 2644",
+    "seamark:light:sequence": "2+(1)",
+    "seamark:name": "Western Channel Beacon",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2010-09-02.",
+    "wikidata": "Q7987710",
+    "wikimedia_commons": "File:Western_Channel_Pile_Light_located_on_Sydney_Harbour.jpg"
+  }
+},
+{
+  "type": "node",
+  "id": 1191078118,
+  "lat": -33.8417938,
+  "lon": 151.2718219,
+  "tags": {
+    "man_made": "lighthouse",
+    "name": "Eastern Channel Pile Light",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "white",
+    "seamark:beacon_lateral:shape": "tower",
+    "seamark:light:character": "Oc",
+    "seamark:light:colour": "green",
+    "seamark:light:height": "8",
+    "seamark:light:period": "3",
+    "seamark:light:range": "5",
+    "seamark:light:reference": "K 2652",
+    "seamark:light:sequence": "2+(1)",
+    "seamark:name": "Eastern Channel Beacon",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2010-09-02.",
+    "wikidata": "Q5330051",
+    "wikimedia_commons": "File:East_Channel_Pile_Light.jpg"
+  }
+},
+{
+  "type": "node",
+  "id": 1208010817,
+  "lat": -33.9845296,
+  "lon": 151.0336592,
+  "tags": {
+    "name": "Soily Bottom Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 1246612921,
+  "lat": -33.7941709,
+  "lon": 151.1488488,
+  "tags": {
+    "name": "Schwartz Point",
+    "natural": "cape",
+    "source": "historical",
+    "source:location": "nearmap",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14014504.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 1246775227,
+  "lat": -33.8306798,
+  "lon": 151.1741961,
+  "tags": {
+    "name": "Woodford Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14039902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 1246775244,
+  "lat": -33.8292584,
+  "lon": 151.1611691,
+  "tags": {
+    "name": "Tambourine Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14039902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 1246775247,
+  "lat": -33.8372864,
+  "lon": 151.1527015,
+  "tags": {
+    "name": "Luke's Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14039902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 1246775265,
+  "lat": -33.8430899,
+  "lon": 151.1635937,
+  "tags": {
+    "name": "Fern Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14039902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 1246775270,
+  "lat": -33.8362915,
+  "lon": 151.1623225,
+  "tags": {
+    "name": "Alexandra Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14039902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 1246775277,
+  "lat": -33.8401978,
+  "lon": 151.1264385,
+  "tags": {
+    "name": "Looking Glass Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14039902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 1246775282,
+  "lat": -33.8346269,
+  "lon": 151.1672245,
+  "tags": {
+    "name": "Yacht Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14039902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 1349110661,
+  "lat": -33.8551809,
+  "lon": 151.2052887,
+  "tags": {
+    "name": "Walsh Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 1420558773,
+  "lat": -33.8345721,
+  "lon": 151.1196036,
+  "tags": {
+    "name": "Glades Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source:url": "http://nla.gov.au/nla.news-article17021153",
+    "wikidata": "Q21952424"
+  }
+},
+{
+  "type": "node",
+  "id": 1437139966,
+  "lat": -33.8463698,
+  "lon": 151.1864566,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Birchgrove",
+    "public_transport": "station",
+    "source": "PGS;bing",
+    "wikidata": "Q4915737",
+    "wikipedia": "en:Birchgrove ferry wharf"
+  }
+},
+{
+  "type": "node",
+  "id": 1623022447,
+  "lat": -33.8447112,
+  "lon": 151.1616646,
+  "tags": {
+    "name": "Pulpit Point",
+    "natural": "cape",
+    "source": "historical",
+    "source:location": "PGS",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14039902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 1626473159,
+  "lat": -33.8345442,
+  "lon": 151.1040594,
+  "tags": {
+    "attribution": "aharvey",
+    "name": "Mortlake Point",
+    "natural": "cape",
+    "old_name": "Bottle Point",
+    "source:location": "PGS",
+    "source:name": "historical",
+    "source:old_name": "historical",
+    "source_ref:name": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14095001.sid",
+    "source_ref:old_name": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14094901.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 1711513972,
+  "lat": -33.8506030,
+  "lon": 151.2038920,
+  "tags": {
+    "name": "Blues Point",
+    "name:aus": "Warungareeyuh",
+    "natural": "cape",
+    "old_name": "Warrungara;Warung Area",
+    "ref:nswgnb": "82283",
+    "source": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 1712374538,
+  "lat": -33.8466514,
+  "lon": 151.1953935,
+  "tags": {
+    "name": "Balls Head",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 1712374548,
+  "lat": -33.8515199,
+  "lon": 151.2459734,
+  "tags": {
+    "alt_name:aus": "Burrogy",
+    "name": "Bradleys Head / Booraghee",
+    "name:aus": "Booraghee",
+    "name:en": "Bradleys Head",
+    "name:en:etymology": "Named after Lt.William Bradley, a surveyor. (Information from A Place of Pioneers) RAHS Journal Vo. 31 A.S)",
+    "name:en:etymology:wikidata": "Q8005833",
+    "natural": "cape",
+    "ref:nswgnb": "8656",
+    "source:alt_name:aus": "plaque",
+    "source:name:aus": "nswgnb",
+    "source:name:en:etymology": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 1800327849,
+  "lat": -33.8984974,
+  "lon": 151.2765216,
+  "tags": {
+    "name": "Mackenzies Point",
+    "name:en": "Mackenzies Point",
+    "name:ko": "맥켄지 포인트",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 1838532348,
+  "lat": -33.8488684,
+  "lon": 151.2066882,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "local_ref": "A",
+    "name": "McMahons Point Wharf",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "stop_position"
+  }
+},
+{
+  "type": "node",
+  "id": 1840889196,
+  "lat": -33.8705836,
+  "lon": 151.2621329,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "gtfs:stop_id": "20291",
+    "name": "Rose Bay Wharf",
+    "public_transport": "stop_position",
+    "ref": "20291",
+    "source": "survey",
+    "website": "https://transportnsw.info/stop?q=20291"
+  }
+},
+{
+  "type": "node",
+  "id": 1872059697,
+  "lat": -33.8664091,
+  "lon": 151.2395702,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Darling Point",
+    "public_transport": "stop_position",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1937009879,
+  "lat": -33.8581058,
+  "lon": 151.2299574,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Garden Island",
+    "name:xdk": "Bayingua",
+    "public_transport": "stop_position"
+  }
+},
+{
+  "type": "node",
+  "id": 2287568041,
+  "lat": -33.8712809,
+  "lon": 151.2317647,
+  "tags": {
+    "name": "Macleay Point",
+    "name:aus": "Yurrandubbee",
+    "name:etymology": "Sir William Macleay",
+    "natural": "cape",
+    "ref:nswgnb": "35150",
+    "source": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 2289974044,
+  "lat": -33.8447042,
+  "lon": 151.2188413,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "North Sydney",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "stop_position",
+    "ref": "20603",
+    "website": "https://transportnsw.info/stop?q=20603"
+  }
+},
+{
+  "type": "node",
+  "id": 2374448074,
+  "lat": -33.8180023,
+  "lon": 151.0437376,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Rydalmere Ferry Wharf",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2384091524,
+  "lat": -34.1368273,
+  "lon": 151.1267999,
+  "tags": {
+    "name": "Martin Head",
+    "name:etymology": "William Martin",
+    "natural": "cape",
+    "old_name": "Providential Head",
+    "source:name:etymology": "NSW GNR"
+  }
+},
+{
+  "type": "node",
+  "id": 2611981614,
+  "lat": -33.7769600,
+  "lon": 151.2323791,
+  "tags": {
+    "name": "Bantry Bay",
+    "natural": "bay",
+    "source": "extrapolation"
+  }
+},
+{
+  "type": "node",
+  "id": 2798072837,
+  "lat": -33.8669987,
+  "lon": 151.1963453,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "man_made": "pier",
+    "name": "Casino Wharf",
+    "operator": "NSW Maritime",
+    "public_transport": "station",
+    "source": "survey",
+    "source:location": "AGRI"
+  }
+},
+{
+  "type": "node",
+  "id": 2886284269,
+  "lat": -33.8233015,
+  "lon": 151.2523343,
+  "tags": {
+    "name": "Rocky Point Island",
+    "place": "island"
+  }
+},
+{
+  "type": "node",
+  "id": 3020493331,
+  "lat": -34.0735300,
+  "lon": 151.1261300,
+  "tags": {
+    "name": "Port Hacking",
+    "natural": "bay",
+    "wikidata": "Q2350307",
+    "wikipedia": "en:Port Hacking"
+  }
+},
+{
+  "type": "node",
+  "id": 3148482291,
+  "lat": -33.8641619,
+  "lon": 151.2538679,
+  "tags": {
+    "name": "Felix Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 3202475902,
+  "lat": -33.8656330,
+  "lon": 151.1496693,
+  "tags": {
+    "name": "Rodd Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 3304182832,
+  "lat": -33.8493903,
+  "lon": 151.2204926,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Kirribilli",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "stop_position",
+    "ref": "20614",
+    "website": "https://transportnsw.info/stop?q=20614",
+    "wheelchair": "no",
+    "wikidata": "Q6312138"
+  }
+},
+{
+  "type": "node",
+  "id": 3345144407,
+  "lat": -34.0729054,
+  "lon": 151.1505559,
+  "tags": {
+    "name": "Salmon Haul Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 3373250611,
+  "lat": -34.0166150,
+  "lon": 151.2317835,
+  "tags": {
+    "name": "Cape Solander",
+    "natural": "cape",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 3834012808,
+  "lat": -34.0644603,
+  "lon": 151.1377905,
+  "tags": {
+    "name": "Burraneer",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 3834855328,
+  "lat": -34.0676607,
+  "lon": 151.1234522,
+  "tags": {
+    "name": "Port Hacking",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 3891118259,
+  "lat": -33.9759423,
+  "lon": 151.2238016,
+  "tags": {
+    "name": "Bumbora Point",
+    "natural": "cape",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 3891983315,
+  "lat": -33.9824010,
+  "lon": 151.2284737,
+  "tags": {
+    "name": "Yarra Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 3947706201,
+  "lat": -33.8435261,
+  "lon": 151.2809765,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Watsons Bay Wharf",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "stop_position",
+    "ref": "20301",
+    "website": "https://transportnsw.info/stop?q=20301",
+    "wheelchair": "no",
+    "wikidata": "Q20861562"
+  }
+},
+{
+  "type": "node",
+  "id": 3951468699,
+  "lat": -33.7997440,
+  "lon": 151.2804035,
+  "tags": {
+    "name": "Federation Point",
+    "natural": "cape",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 3956251710,
+  "lat": -33.8027931,
+  "lon": 151.2501564,
+  "tags": {
+    "name": "Brady's Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 3956251711,
+  "lat": -33.8083299,
+  "lon": 151.2377764,
+  "tags": {
+    "name": "Beauty Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 3956253312,
+  "lat": -33.8188030,
+  "lon": 151.2256804,
+  "tags": {
+    "name": "Folly Point",
+    "natural": "cape",
+    "place": "locality"
+  }
+},
+{
+  "type": "node",
+  "id": 3956277667,
+  "lat": -33.8376150,
+  "lon": 151.2608450,
+  "tags": {
+    "name": "George's Head",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 3956277668,
+  "lat": -33.8431934,
+  "lon": 151.2536085,
+  "tags": {
+    "name": "Chowder Head",
+    "name:aus": "Gooragal",
+    "natural": "cape",
+    "ref:nswgnb": "12406",
+    "source:name:aus": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 3956277669,
+  "lat": -33.8443070,
+  "lon": 151.2478270,
+  "tags": {
+    "name": "Taylor's Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 3956277670,
+  "lat": -33.8448649,
+  "lon": 151.2370075,
+  "tags": {
+    "name": "Little Sirius Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 3956292591,
+  "lat": -33.8621043,
+  "lon": 151.2255991,
+  "tags": {
+    "description": "A point now partly joined to Garden Island. Located on the east side of Wooloomooloo Bay.",
+    "name": "Potts Point",
+    "name:aus": "Derrawunn",
+    "natural": "cape",
+    "old_name": "Paddys Point; Karrajeen; Kurrajeen; Yarrandabbi",
+    "ref:nswgnb": "82291",
+    "source": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 3956296471,
+  "lat": -33.8256641,
+  "lon": 151.2611863,
+  "tags": {
+    "name": "Cobbler's Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 3956298858,
+  "lat": -33.8031938,
+  "lon": 151.2518307,
+  "tags": {
+    "name": "Sandy Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 3956298859,
+  "lat": -33.8040600,
+  "lon": 151.2392962,
+  "tags": {
+    "name": "Peach Tree Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 3956313905,
+  "lat": -33.7939985,
+  "lon": 151.2353712,
+  "tags": {
+    "name": "Pickering Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 3956381427,
+  "lat": -33.8205242,
+  "lon": 151.2879175,
+  "tags": {
+    "name": "Quarantine Head",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 3956381428,
+  "lat": -33.8155313,
+  "lon": 151.2854582,
+  "tags": {
+    "name": "Spring Cove",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 3964296549,
+  "lat": -33.8479032,
+  "lon": 151.2698233,
+  "tags": {
+    "name": "Bottle and Glass Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 3965834373,
+  "lat": -33.8527150,
+  "lon": 151.2187871,
+  "tags": {
+    "name": "Kirribili Point / Mattawunga",
+    "name:aus": "Mattawunga",
+    "natural": "cape",
+    "wikidata": "Q21942438"
+  }
+},
+{
+  "type": "node",
+  "id": 3976662488,
+  "lat": -33.9982453,
+  "lon": 151.2381709,
+  "tags": {
+    "man_made": "lighthouse",
+    "name": "Endeavour Light",
+    "seamark:beacon_special_purpose:colour": "white",
+    "seamark:beacon_special_purpose:height": "4.0",
+    "seamark:beacon_special_purpose:shape": "tower",
+    "seamark:light:1:character": "Oc",
+    "seamark:light:1:colour": "red",
+    "seamark:light:1:height": "27",
+    "seamark:light:1:period": "3",
+    "seamark:light:1:range": "7",
+    "seamark:light:1:sector_end": "320",
+    "seamark:light:1:sector_start": "285",
+    "seamark:light:1:sequence": "2+(1)",
+    "seamark:light:2:character": "Oc",
+    "seamark:light:2:colour": "white",
+    "seamark:light:2:height": "27",
+    "seamark:light:2:period": "3",
+    "seamark:light:2:range": "7",
+    "seamark:light:2:sector_end": "103",
+    "seamark:light:2:sector_start": "320",
+    "seamark:light:2:sequence": "2+(1)",
+    "seamark:light:3:character": "Oc",
+    "seamark:light:3:colour": "red",
+    "seamark:light:3:height": "27",
+    "seamark:light:3:period": "3",
+    "seamark:light:3:range": "7",
+    "seamark:light:3:sector_end": "140",
+    "seamark:light:3:sector_start": "103",
+    "seamark:light:3:sequence": "2+(1)",
+    "seamark:light:4:character": "F",
+    "seamark:light:4:colour": "blue",
+    "seamark:light:4:sector_end": "114",
+    "seamark:light:4:sector_start": "260",
+    "seamark:light:reference": "K 2623",
+    "seamark:name": "Endeavour Light",
+    "seamark:type": "beacon_special_purpose",
+    "source": "US NGA Pub. 111. 2024-04-19."
+  }
+},
+{
+  "type": "node",
+  "id": 4084216641,
+  "lat": -33.9680979,
+  "lon": 151.2652417,
+  "tags": {
+    "name": "Boora Point",
+    "natural": "cape",
+    "old_name": "Malabar Battery"
+  }
+},
+{
+  "type": "node",
+  "id": 4146795594,
+  "lat": -33.8005639,
+  "lon": 151.2841043,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "local_ref": "2",
+    "name": "Manly Fast Ferry terminal (Circular Quay)",
+    "public_transport": "stop_position",
+    "ref": "209525"
+  }
+},
+{
+  "type": "node",
+  "id": 4265984317,
+  "lat": -33.8406057,
+  "lon": 151.2764243,
+  "tags": {
+    "name": "Green Point",
+    "natural": "cape",
+    "source": "survey",
+    "source:position": "NSW LPI Imagery"
+  }
+},
+{
+  "type": "node",
+  "id": 4272342421,
+  "lat": -33.8007193,
+  "lon": 151.2846960,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "local_ref": "3",
+    "name": "Manly Wharf 3",
+    "operator": "Matilda Cruises",
+    "public_transport": "station",
+    "ref": "209593"
+  }
+},
+{
+  "type": "node",
+  "id": 4361466637,
+  "lat": -33.9912322,
+  "lon": 151.0417337,
+  "tags": {
+    "addr:housenumber": "1220",
+    "addr:postcode": "2210",
+    "addr:street": "Forest Road",
+    "addr:suburb": "Lugarno",
+    "leisure": "marina",
+    "name": "Lugarno Marina and Boatshed",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "http://www.lugarnomarina.com.au/"
+  }
+},
+{
+  "type": "node",
+  "id": 4438512191,
+  "lat": -33.8676093,
+  "lon": 151.2009525,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Darling Harbour, King St Wharf 5",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 4551487144,
+  "lat": -33.8084554,
+  "lon": 151.2432655,
+  "tags": {
+    "name": "Pearl Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 4551487145,
+  "lat": -33.8271740,
+  "lon": 151.2541446,
+  "tags": {
+    "name": "Balmoral Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 5175883061,
+  "lat": -33.8428527,
+  "lon": 151.1866945,
+  "tags": {
+    "name": "Manns Point",
+    "natural": "cape",
+    "tourism": "viewpoint",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 5383152855,
+  "lat": -33.8205495,
+  "lon": 151.0923943,
+  "tags": {
+    "name": "Shepherds Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 5413375037,
+  "lat": -33.8423786,
+  "lon": 151.2193562,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Neutral Bay",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "stop_position",
+    "ref": "20891",
+    "website": "https://transportnsw.info/stop?q=20891"
+  }
+},
+{
+  "type": "node",
+  "id": 5413375060,
+  "lat": -33.8463913,
+  "lon": 151.2395952,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Taronga Zoo",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5417750546,
+  "lat": -33.8454015,
+  "lon": 151.1418525,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Chiswick",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station",
+    "wheelchair": "yes",
+    "wikidata": "Q5102170",
+    "wikipedia": "en:Chiswick ferry wharf"
+  }
+},
+{
+  "type": "node",
+  "id": 5423844613,
+  "lat": -33.8299892,
+  "lon": 151.1560604,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Riverview College Wharf",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5423856052,
+  "lat": -33.8357841,
+  "lon": 151.1611273,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Hunters Hill Ferry Wharf",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5423856058,
+  "lat": -33.8361656,
+  "lon": 151.1693958,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Longueville Wharf",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5423856065,
+  "lat": -33.8325893,
+  "lon": 151.1786249,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Northwood Wharf",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5423856071,
+  "lat": -33.8420141,
+  "lon": 151.1806722,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "foot": "yes",
+    "level": "0",
+    "name": "Greenwich Point Wharf",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5423856072,
+  "lat": -33.8341936,
+  "lon": 151.1822646,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Greenwich Wharf",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5425669714,
+  "lat": -33.7139242,
+  "lon": 151.2824603,
+  "tags": {
+    "name": "Pipeclay Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 5425711246,
+  "lat": -33.8596142,
+  "lon": 151.2577205,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Shark Island Wharf",
+    "public_transport": "stop_position"
+  }
+},
+{
+  "type": "node",
+  "id": 5502691492,
+  "lat": -34.1834361,
+  "lon": 151.0475598,
+  "tags": {
+    "board_type": "notice",
+    "information": "board",
+    "name": "Figure 8 Pools",
+    "tourism": "information"
+  }
+},
+{
+  "type": "node",
+  "id": 5565444600,
+  "lat": -33.8382216,
+  "lon": 151.1114402,
+  "tags": {
+    "name": "Breakfast Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 5565444882,
+  "lat": -33.8525342,
+  "lon": 151.1188264,
+  "tags": {
+    "name": "Harmony Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 5601069117,
+  "lat": -33.8545307,
+  "lon": 151.1863011,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Balmain",
+    "public_transport": "station",
+    "url": "https://transportnsw.info/routes/details/sydney-ferries/f3/090F3",
+    "wheelchair": "yes",
+    "wikidata": "Q4852350",
+    "wikipedia": "en:Balmain ferry wharf"
+  }
+},
+{
+  "type": "node",
+  "id": 5601069121,
+  "lat": -33.8533957,
+  "lon": 151.1887056,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Balmain Wharf, Yeend St",
+    "public_transport": "platform"
+  }
+},
+{
+  "type": "node",
+  "id": 5601091629,
+  "lat": -33.8681952,
+  "lon": 151.1988620,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Pyrmont Bay Wharf",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5601101452,
+  "lat": -33.8689065,
+  "lon": 151.2012780,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Darling Harbour Wharf 9",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5601109475,
+  "lat": -33.8661252,
+  "lon": 151.2007539,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Darling Harbour Wharf 1",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5705013928,
+  "lat": -33.8239045,
+  "lon": 151.3002616,
+  "tags": {
+    "name": "Outer North Head",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 5705013972,
+  "lat": -33.8314262,
+  "lon": 151.0986205,
+  "tags": {
+    "name": "Rocky Point",
+    "natural": "cape",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN03/14094901.sid"
+  }
+},
+{
+  "type": "node",
+  "id": 5709181259,
+  "lat": -33.8599252,
+  "lon": 151.1960702,
+  "tags": {
+    "name": "Peacock Point",
+    "natural": "cape",
+    "source": "LPI Base Map Mar 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5709181260,
+  "lat": -33.8545487,
+  "lon": 151.1934185,
+  "tags": {
+    "name": "Simmons Point",
+    "natural": "cape",
+    "source": "LPI Base Map Mar 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5755146860,
+  "lat": -33.8630692,
+  "lon": 151.1943239,
+  "tags": {
+    "name": "Jones Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 5755146861,
+  "lat": -33.8651279,
+  "lon": 151.1973702,
+  "tags": {
+    "name": "Pyrmont Bay",
+    "name:ja": "ピアモント湾",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 5789609980,
+  "lat": -33.7818850,
+  "lon": 151.2147608,
+  "tags": {
+    "name": "Killarney Point",
+    "natural": "cape",
+    "source": "LPI Base Map July 2018"
+  }
+},
+{
+  "type": "node",
+  "id": 5822671894,
+  "lat": -33.8004511,
+  "lon": 151.2837119,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "local_ref": "1",
+    "name": "Manly Wharf",
+    "public_transport": "stop_position",
+    "ref": "20951"
+  }
+},
+{
+  "type": "node",
+  "id": 5833641513,
+  "lat": -33.8617088,
+  "lon": 151.1862661,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "White Bay Cruise Terminal",
+    "operator": "Captain Cook",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5837202912,
+  "lat": -33.8641723,
+  "lon": 151.2004232,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "yes",
+    "ferry": "yes",
+    "local_ref": "1A",
+    "name": "Barangaroo, Wharf 1, Sida A",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station",
+    "source": "local knowledge;inspection"
+  }
+},
+{
+  "type": "node",
+  "id": 6086844044,
+  "lat": -33.8547526,
+  "lon": 151.2259035,
+  "tags": {
+    "man_made": "lighthouse",
+    "name": "Fort Denison Light",
+    "seamark:beacon_special_purpose:colour": "grey",
+    "seamark:beacon_special_purpose:construction": "concreted",
+    "seamark:beacon_special_purpose:shape": "tower",
+    "seamark:fog_signal:category": "bell",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "white",
+    "seamark:light:group": "4",
+    "seamark:light:height": "19",
+    "seamark:light:period": "15",
+    "seamark:light:range": "5",
+    "seamark:light:reference": "K 2666",
+    "seamark:light:sequence": "1+(2)+1+(2)+1+(2)+1+(5)",
+    "seamark:name": "Fort Denison",
+    "seamark:type": "beacon_special_purpose",
+    "source": "US NGA Pub. 111. 2024-04-13.",
+    "wikidata": "Q5471050",
+    "wikipedia": "en:Fort Denison Light"
+  }
+},
+{
+  "type": "node",
+  "id": 6086844048,
+  "lat": -33.8545497,
+  "lon": 151.2254320,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Fort Denison",
+    "public_transport": "stop_position"
+  }
+},
+{
+  "type": "node",
+  "id": 6366853374,
+  "lat": -33.8080786,
+  "lon": 151.2824389,
+  "tags": {
+    "name": "Smedleys Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 6412941497,
+  "lat": -34.0015985,
+  "lon": 151.2212437,
+  "tags": {
+    "name": "Sutherland Point",
+    "natural": "cape",
+    "place": "locality",
+    "source": "LPI Base Map Apr 2019"
+  }
+},
+{
+  "type": "node",
+  "id": 6422200686,
+  "lat": -33.8130902,
+  "lon": 151.2981105,
+  "tags": {
+    "name": "North Head",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 6422200688,
+  "lat": -33.8329686,
+  "lon": 151.2804991,
+  "tags": {
+    "name": "South Head",
+    "natural": "cape",
+    "source:name": "local_knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 6596481061,
+  "lat": -33.8563764,
+  "lon": 151.2101901,
+  "tags": {
+    "name": "Campbells Cove",
+    "name:aus": "Meeliyahwool",
+    "name:etymology": "Robert Campbell",
+    "natural": "bay",
+    "ref:nswgnb": "10801",
+    "source": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 6804603708,
+  "lat": -33.8682560,
+  "lon": 151.2011998,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Darling Harbour, King St Wharf 7",
+    "public_transport": "station",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6899644860,
+  "lat": -33.7774206,
+  "lon": 151.2073284,
+  "tags": {
+    "name": "Echo Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 6956713290,
+  "lat": -33.8551044,
+  "lon": 151.1168117,
+  "tags": {
+    "name": "Exile Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 6956725141,
+  "lat": -33.8641393,
+  "lon": 151.1191302,
+  "tags": {
+    "name": "Kings Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 6956725142,
+  "lat": -33.8609828,
+  "lon": 151.1180467,
+  "tags": {
+    "name": "Canada Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 6956725143,
+  "lat": -33.8497521,
+  "lon": 151.1168177,
+  "tags": {
+    "name": "France Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 7423997739,
+  "lat": -33.8713832,
+  "lon": 151.1852378,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Blackwattle Bay Wharf",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 7423997740,
+  "lat": -33.8646364,
+  "lon": 151.1910041,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Pirrama Park Wharf",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 7424039135,
+  "lat": -33.8412427,
+  "lon": 151.1743189,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Clarke Road Wharf",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 7479769887,
+  "lat": -33.8641269,
+  "lon": 151.2561357,
+  "tags": {
+    "name": "Woollahra Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 7779934582,
+  "lat": -33.8370193,
+  "lon": 151.1157249,
+  "tags": {
+    "name": "Raven Point",
+    "name:etymology": "Captain William Raven",
+    "name:etymology:wikidata": "Q8017393",
+    "name:etymology:wikipedia": "en:William Raven",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 7784677531,
+  "lat": -33.8210279,
+  "lon": 151.0888130,
+  "tags": {
+    "name": "Charity Point",
+    "name:aus": "Mur-ray-mah",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 7797946462,
+  "lat": -33.8491782,
+  "lon": 151.2680103,
+  "tags": {
+    "name": "Shakespeares Point",
+    "natural": "cape",
+    "opening_hours": "Mo-Su 06:00-sunset; Dec 25-Jan 01 closed",
+    "operator": "Sydney Harbour National Park",
+    "website": "https://www.nationalparks.nsw.gov.au/things-to-do/picnic-areas/shakespeares-point"
+  }
+},
+{
+  "type": "node",
+  "id": 8151009562,
+  "lat": -33.8634552,
+  "lon": 151.2006846,
+  "tags": {
+    "name": "Watermans Cove",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 8151065419,
+  "lat": -33.8678792,
+  "lon": 151.2011583,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Darling Harbour, King St Wharf 6",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8151065420,
+  "lat": -33.8672410,
+  "lon": 151.2010089,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Darling Harbour, King St Wharf 4",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8151065421,
+  "lat": -33.8664850,
+  "lon": 151.2009258,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Darling Harbour, King St Wharf 2",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8151065422,
+  "lat": -33.8685300,
+  "lon": 151.2012294,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Darling Harbour, King St Wharf 8",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8678101521,
+  "lat": -33.8997605,
+  "lon": 151.2728421,
+  "tags": {
+    "name": "Mackenzies Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 8870625077,
+  "lat": -33.8161923,
+  "lon": 151.2524618,
+  "tags": {
+    "name": "Wyargine Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 9354459688,
+  "lat": -33.8361181,
+  "lon": 151.1426855,
+  "tags": {
+    "name": "Tarban Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 9515322970,
+  "lat": -33.9779841,
+  "lon": 151.2557506,
+  "tags": {
+    "name": "Buchan Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 9515322971,
+  "lat": -33.9760849,
+  "lon": 151.2588699,
+  "tags": {
+    "name": "Tupia Head",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 9518193591,
+  "lat": -33.8643909,
+  "lon": 151.2003870,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "yes",
+    "ferry": "yes",
+    "local_ref": "1B",
+    "name": "Barangaroo, Wharf 1, Side B",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station",
+    "source": "local knowledge;inspection"
+  }
+},
+{
+  "type": "node",
+  "id": 9518262819,
+  "lat": -33.8647578,
+  "lon": 151.2004875,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "yes",
+    "ferry": "yes",
+    "local_ref": "2A",
+    "name": "Barangaroo, Wharf 2, Side A",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station",
+    "source": "local knowledge;inspection"
+  }
+},
+{
+  "type": "node",
+  "id": 9518262820,
+  "lat": -33.8649764,
+  "lon": 151.2004513,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "yes",
+    "ferry": "yes",
+    "local_ref": "2B",
+    "name": "Barangaroo, Wharf 2, Side B",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station",
+    "source": "local knowledge;inspection"
+  }
+},
+{
+  "type": "node",
+  "id": 9908967525,
+  "lat": -33.8938276,
+  "lon": 151.2835771,
+  "tags": {
+    "name": "Ben Buckler Headland",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 10006898254,
+  "lat": -34.0687099,
+  "lon": 151.0887941,
+  "tags": {
+    "name": "Leg of Mutton Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 10074175459,
+  "lat": -33.8398627,
+  "lon": 151.2537049,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Clifton Gardens",
+    "public_transport": "stop_position",
+    "waterway": "access_point"
+  }
+},
+{
+  "type": "node",
+  "id": 10125768425,
+  "lat": -33.9698316,
+  "lon": 151.0442339,
+  "tags": {
+    "name": "One Tree Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 10125768515,
+  "lat": -33.9941856,
+  "lon": 151.0475966,
+  "tags": {
+    "name": "Wearne Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 10125768516,
+  "lat": -33.9892503,
+  "lon": 151.0324338,
+  "tags": {
+    "name": "Moon Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 10125768517,
+  "lat": -33.9866420,
+  "lon": 151.0309463,
+  "tags": {
+    "name": "Great Moon Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 10314361550,
+  "lat": -34.0613011,
+  "lon": 151.0901586,
+  "tags": {
+    "name": "Mansion Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 10314361551,
+  "lat": -34.0629857,
+  "lon": 151.0876568,
+  "tags": {
+    "name": "Mansion Bay",
+    "natural": "bay",
+    "wikidata": "Q21952382"
+  }
+},
+{
+  "type": "node",
+  "id": 10314361552,
+  "lat": -34.0645932,
+  "lon": 151.0904413,
+  "tags": {
+    "name": "Point Danger",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 10314361553,
+  "lat": -34.0633007,
+  "lon": 151.1003225,
+  "tags": {
+    "name": "Wants Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 10314361554,
+  "lat": -34.0645729,
+  "lon": 151.1000019,
+  "tags": {
+    "name": "Dark Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 10314361555,
+  "lat": -34.0684778,
+  "lon": 151.1021265,
+  "tags": {
+    "name": "Carruthers Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 10314361556,
+  "lat": -34.0723260,
+  "lon": 151.1116108,
+  "tags": {
+    "name": "Lilli Pilli Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 10314361557,
+  "lat": -34.0720439,
+  "lon": 151.1060848,
+  "tags": {
+    "name": "Gogerlys Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 10314361558,
+  "lat": -34.0794062,
+  "lon": 151.1054487,
+  "tags": {
+    "name": "Grahams Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 10591573007,
+  "lat": -34.0043649,
+  "lon": 151.1587458,
+  "tags": {
+    "name": "Elephants Trunk",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 10591573078,
+  "lat": -34.0061552,
+  "lon": 151.1609329,
+  "tags": {
+    "name": "Towra Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 10591573079,
+  "lat": -34.0146683,
+  "lon": 151.1423060,
+  "tags": {
+    "name": "Pelican Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 10687598582,
+  "lat": -33.8257743,
+  "lon": 151.2671411,
+  "tags": {
+    "name": "Middle Head",
+    "name:aus": "Gubbuh Gubbuh",
+    "natural": "cape",
+    "ref:nswgnb": "82276",
+    "source": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 10744557165,
+  "lat": -33.9972011,
+  "lon": 151.0887159,
+  "tags": {
+    "name": "Caravan Head",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 10982537820,
+  "lat": -34.0412275,
+  "lon": 151.2096837,
+  "tags": {
+    "name": "Doughboy Head",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11134155044,
+  "lat": -34.0208691,
+  "lon": 151.1722190,
+  "tags": {
+    "name": "The Knoll",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11297502310,
+  "lat": -33.8421270,
+  "lon": 151.1818346,
+  "tags": {
+    "name": "Greenwich Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11508357014,
+  "lat": -33.8495932,
+  "lon": 151.2108613,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Milsons Point Wharf",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station",
+    "ref": "20611",
+    "website": "https://transportnsw.info/stop?q=20611",
+    "wheelchair": "yes",
+    "wikidata": "Q6860761",
+    "wikipedia": "en:Milsons Point ferry wharf"
+  }
+},
+{
+  "type": "node",
+  "id": 11513468085,
+  "lat": -33.8483280,
+  "lon": 151.2326180,
+  "tags": {
+    "name": "Robertsons Point",
+    "natural": "cape",
+    "wikidata": "Q21913263"
+  }
+},
+{
+  "type": "node",
+  "id": 11513501907,
+  "lat": -33.8519463,
+  "lon": 151.1902063,
+  "tags": {
+    "name": "Ballast Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11513501908,
+  "lat": -33.8427877,
+  "lon": 151.1739924,
+  "tags": {
+    "name": "Clarkes Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11513501909,
+  "lat": -33.8548651,
+  "lon": 151.1645736,
+  "tags": {
+    "name": "Birkenhead Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11513501910,
+  "lat": -33.8468740,
+  "lon": 151.1866817,
+  "tags": {
+    "alt_name": "Long Nose Point",
+    "name": "Yurulbin Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11513866369,
+  "lat": -33.8424830,
+  "lon": 151.1541658,
+  "tags": {
+    "name": "Wrights Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11513866370,
+  "lat": -33.8436886,
+  "lon": 151.1445841,
+  "tags": {
+    "name": "Five Dock Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11513866371,
+  "lat": -33.8459113,
+  "lon": 151.1421600,
+  "tags": {
+    "name": "Blackwall Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11513866372,
+  "lat": -33.8437711,
+  "lon": 151.1295628,
+  "tags": {
+    "name": "Abbotsford Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11513866373,
+  "lat": -33.8421038,
+  "lon": 151.1203880,
+  "tags": {
+    "name": "Cabarita Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11513866374,
+  "lat": -33.8416733,
+  "lon": 151.1254290,
+  "tags": {
+    "name": "Looking Glass Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11513866375,
+  "lat": -33.8256205,
+  "lon": 151.0943014,
+  "tags": {
+    "name": "Uhrs Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11513866376,
+  "lat": -33.8222400,
+  "lon": 151.0838036,
+  "tags": {
+    "name": "Wentworth Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11529853967,
+  "lat": -33.8714005,
+  "lon": 151.2005068,
+  "tags": {
+    "name": "Cockle Bay",
+    "natural": "bay",
+    "wikidata": "Q5139623",
+    "wikipedia": "en:Cockle Bay (Sydney)"
+  }
+},
+{
+  "type": "node",
+  "id": 11539331818,
+  "lat": -33.8542521,
+  "lon": 151.2095667,
+  "tags": {
+    "name": "Dawes Point / Tar-Ra",
+    "name:aus": "Tar-Ra",
+    "name:etymology": "William Dawes",
+    "natural": "cape",
+    "old_name": "Tabagulla;Tilagulla;Tarra;Dawes Point Battery",
+    "ref:nswgnb": "81221",
+    "source": "nswgnb"
+  }
+},
+{
+  "type": "node",
+  "id": 11599708012,
+  "lat": -33.8732939,
+  "lon": 151.2340714,
+  "tags": {
+    "leisure": "marina",
+    "name": "d’Albora Rushcutters Bay Marina",
+    "operator": "d’Albora Marinas",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://www.dalbora.com.au/marinas/rushcutters-bay"
+  }
+},
+{
+  "type": "node",
+  "id": 11607140581,
+  "lat": -33.8403646,
+  "lon": 151.1907942,
+  "tags": {
+    "name": "Oyster Cove",
+    "natural": "bay",
+    "old_name": "Kerosene Bay;Table Bay;Wollstonecraft Bay;Balls Head Bay"
+  }
+},
+{
+  "type": "node",
+  "id": 11724239847,
+  "lat": -33.8600768,
+  "lon": 151.2125511,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "local_ref": "1",
+    "name": "Circular Quay, Eastern Pontoon",
+    "public_transport": "stop_position",
+    "ref": "2000273"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709421,
+  "lat": -33.8341621,
+  "lon": 151.1617875,
+  "tags": {
+    "name": "Newcombe Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709422,
+  "lat": -33.8356520,
+  "lon": 151.1687136,
+  "tags": {
+    "name": "Butchers Block Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11786709423,
+  "lat": -33.8293028,
+  "lon": 151.1496902,
+  "tags": {
+    "name": "Linley Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11786738762,
+  "lat": -33.8604792,
+  "lon": 151.2099242,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "local_ref": "6B",
+    "name": "Circular Quay 6B",
+    "not:network:wikidata": "Q3162795",
+    "public_transport": "stop_position",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11786934826,
+  "lat": -33.8487196,
+  "lon": 151.2747618,
+  "tags": {
+    "name": "Point Seymour",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11786934827,
+  "lat": -33.8594461,
+  "lon": 151.2682260,
+  "tags": {
+    "name": "Hermit Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11786934828,
+  "lat": -33.8470126,
+  "lon": 151.2779662,
+  "tags": {
+    "name": "Village Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11813469339,
+  "lat": -33.8479326,
+  "lon": 151.2200897,
+  "tags": {
+    "name": "Wudyong Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11813704076,
+  "lat": -33.8638790,
+  "lon": 151.2524512,
+  "tags": {
+    "name": "Point Piper",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11813704077,
+  "lat": -33.8665516,
+  "lon": 151.2403034,
+  "tags": {
+    "name": "Darling Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 11830457388,
+  "lat": -33.9696416,
+  "lon": 151.2141725,
+  "tags": {
+    "name": "Brotherson Dock",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 11830457391,
+  "lat": -33.9671150,
+  "lon": 151.1995662,
+  "tags": {
+    "name": "Hayes Dock",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 11922082912,
+  "lat": -33.8403776,
+  "lon": 151.1065223,
+  "tags": {
+    "name": "Fairmile Cove",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 12002010481,
+  "lat": -33.8606756,
+  "lon": 151.2121354,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "local_ref": "2A",
+    "name": "Circular Quay 2A",
+    "public_transport": "stop_position",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12002010521,
+  "lat": -33.8605165,
+  "lon": 151.2104245,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "yes",
+    "ferry": "yes",
+    "local_ref": "5B",
+    "name": "Circular Quay 5B",
+    "public_transport": "stop_position",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12002010522,
+  "lat": -33.8606009,
+  "lon": 151.2110973,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "yes",
+    "ferry": "yes",
+    "local_ref": "4A",
+    "name": "Circular Quay 4A",
+    "public_transport": "stop_position",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12022107438,
+  "lat": -33.8033072,
+  "lon": 151.2352247,
+  "tags": {
+    "name": "Seaforth Bluff",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 12064448695,
+  "lat": -33.8727774,
+  "lon": 151.2426643,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "Double Bay",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station",
+    "ref": "20281",
+    "website": "https://transportnsw.info/stop?q=20281",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12064585083,
+  "lat": -33.8607094,
+  "lon": 151.2116197,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "fare_gates": "yes",
+    "ferry": "yes",
+    "local_ref": "3A",
+    "name": "Circular Quay 3A",
+    "public_transport": "stop_position",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12135383554,
+  "lat": -33.8146148,
+  "lon": 151.2242133,
+  "tags": {
+    "name": "Wreck Bay",
+    "natural": "bay",
+    "source": "https://northbridgenews.com.au/what-to-see-at-the-northbridge-wreck-bay-walking-track/"
+  }
+},
+{
+  "type": "node",
+  "id": 12326779635,
+  "lat": -33.8406887,
+  "lon": 151.1169336,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "check_date": "2024-11-09",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "name": "Cabarita",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194",
+    "public_transport": "station",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12503314234,
+  "lat": -33.8181390,
+  "lon": 151.0701490,
+  "tags": {
+    "name": "Ermington Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 12686839584,
+  "lat": -33.8441295,
+  "lon": 151.2333889,
+  "tags": {
+    "name": "Curraghbeena Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 13371338248,
+  "lat": -33.9806643,
+  "lon": 151.2534291,
+  "tags": {
+    "name": "The Gutter",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 13371338249,
+  "lat": -33.9832351,
+  "lon": 151.2542422,
+  "tags": {
+    "name": "The Trap",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 13373055985,
+  "lat": -33.9890514,
+  "lon": 151.2289927,
+  "tags": {
+    "name": "La Perouse Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 13413005966,
+  "lat": -34.0023729,
+  "lon": 151.2167448,
+  "tags": {
+    "air_conditioning": "no",
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "internet_access": "no",
+    "name": "Ferry to La Perouse",
+    "note": "Under contruction. Expected to be finished in late 2024.",
+    "operator": "NSW Government",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 13703207890,
+  "lat": -33.8426798,
+  "lon": 151.2180958,
+  "tags": {
+    "name": "Neutral Bay",
+    "natural": "bay"
+  }
+},
+{
+  "type": "node",
+  "id": 13705692588,
+  "lat": -33.8548842,
+  "lon": 151.1691761,
+  "tags": {
+    "name": "Sommerville Point",
+    "natural": "cape"
+  }
+},
+{
+  "type": "node",
+  "id": 13898574252,
+  "lat": -33.8136312,
+  "lon": 151.2321086,
+  "tags": {
+    "alt_name": "Hallstrom Point",
+    "name": "Fig Tree Point",
+    "natural": "cape",
+    "website": "https://www.willoughby.nsw.gov.au/Residents/Parks-and-recreation/Parks-reserves-and-playgrounds/Fig-Tree-Point-Hallstrom-Point"
+  }
+},
+{
+  "type": "way",
+  "id": 3681290,
+  "center": {
+    "lat": -34.0001920,
+    "lon": 151.1151642
+  },
+  "tags": {
+    "highway": "cycleway",
+    "name": "Tom Ugly's Bridge",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 4042219,
+  "center": {
+    "lat": -33.7820562,
+    "lon": 151.2911721
+  },
+  "tags": {
+    "name": "Freshwater Beach",
+    "natural": "beach",
+    "old_name": "Harbord Beach",
+    "source:old_name": "historical",
+    "source_ref:old_name": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14041902.sid",
+    "supervised": "yes",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 4042355,
+  "center": {
+    "lat": -33.7508215,
+    "lon": 151.3000457
+  },
+  "tags": {
+    "name": "Dee Why Beach",
+    "natural": "beach",
+    "operator": "Northern Beaches Council",
+    "operator:wikidata": "Q56477644",
+    "surface": "sand",
+    "website": "https://www.northernbeaches.nsw.gov.au/things-to-do/recreation-area/dee-why-beach"
+  }
+},
+{
+  "type": "way",
+  "id": 4354480,
+  "center": {
+    "lat": -33.8504364,
+    "lon": 151.2665242
+  },
+  "tags": {
+    "name": "Shark Beach",
+    "natural": "beach",
+    "sport": "swimming",
+    "surface": "sand",
+    "wikidata": "Q21956811"
+  }
+},
+{
+  "type": "way",
+  "id": 4354525,
+  "center": {
+    "lat": -33.8565396,
+    "lon": 151.2672770
+  },
+  "tags": {
+    "name": "Milk Beach",
+    "natural": "beach",
+    "source:name": "historical",
+    "source_ref:name": "http://nla.gov.au/nla.map-rm1273",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 10420683,
+  "center": {
+    "lat": -33.8258785,
+    "lon": 151.2628372
+  },
+  "tags": {
+    "lifeguard": "no",
+    "name": "Cobblers Beach",
+    "natural": "beach",
+    "naturism": "yes",
+    "nudism": "yes",
+    "source": "yahoo_imagery",
+    "source:name": "historical",
+    "source_ref": "https://nudebeachmap.com",
+    "supervised": "no",
+    "surface": "sand",
+    "website": "https://nudebeachmap.com/places/cobblers-beach/",
+    "wikidata": "Q21924414"
+  }
+},
+{
+  "type": "way",
+  "id": 13858409,
+  "center": {
+    "lat": -33.7443351,
+    "lon": 151.3091288
+  },
+  "tags": {
+    "name": "Long Reef Beach",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 13858421,
+  "center": {
+    "lat": -33.6991808,
+    "lon": 151.3099208
+  },
+  "tags": {
+    "dog": "no",
+    "name": "Turimetta Beach",
+    "natural": "beach",
+    "operator": "Northern Beaches Council",
+    "operator:wikidata": "Q56477644",
+    "supervised": "no",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 14040821,
+  "center": {
+    "lat": -33.7076694,
+    "lon": 151.3045708
+  },
+  "tags": {
+    "name": "North Narrabeen Beach",
+    "natural": "beach",
+    "old_name": "Long Reef Beach",
+    "source:old_name": "historical",
+    "source_ref:old_name": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14015902.sid",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 14040977,
+  "center": {
+    "lat": -33.7176392,
+    "lon": 151.3007179
+  },
+  "tags": {
+    "name": "Narrabeen Beach",
+    "natural": "beach",
+    "old_name": "Long Reef Beach",
+    "source:old_name": "historical",
+    "source_ref:old_name": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14015902.sid",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 14041013,
+  "center": {
+    "lat": -33.7280849,
+    "lon": 151.3017037
+  },
+  "tags": {
+    "name": "Collaroy Beach",
+    "natural": "beach",
+    "old_name": "Long Reef Beach",
+    "source:old_name": "historical",
+    "source_ref:old_name": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN04/14015902.sid",
+    "surface": "sand",
+    "wikidata": "Q21957521"
+  }
+},
+{
+  "type": "way",
+  "id": 23019739,
+  "center": {
+    "lat": -34.0550712,
+    "lon": 151.1550840
+  },
+  "tags": {
+    "alt_name": "South Cronulla Beach",
+    "layer": "-1",
+    "name": "Cronulla Beach",
+    "natural": "beach",
+    "source:alt_name": "local_knowledge",
+    "source:name": "survey",
+    "supervised": "yes",
+    "surface": "sand",
+    "wikidata": "Q5187744",
+    "wikipedia": "en:Cronulla Beach"
+  }
+},
+{
+  "type": "way",
+  "id": 23074838,
+  "center": {
+    "lat": -34.0598275,
+    "lon": 151.1599019
+  },
+  "tags": {
+    "name": "Shark Island",
+    "natural": "coastline",
+    "place": "islet",
+    "wikidata": "Q7489797",
+    "wikipedia": "en:Shark Island (Cronulla Beach)"
+  }
+},
+{
+  "type": "way",
+  "id": 23140813,
+  "center": {
+    "lat": -34.1700773,
+    "lon": 151.0691086
+  },
+  "tags": {
+    "name": "Garie Beach",
+    "natural": "beach",
+    "surface": "sand",
+    "wikidata": "Q5523312"
+  }
+},
+{
+  "type": "way",
+  "id": 23141277,
+  "center": {
+    "lat": -34.0823528,
+    "lon": 151.1485911
+  },
+  "tags": {
+    "name": "Horderns Beach",
+    "name:etymology": "Samuel Hordern",
+    "natural": "beach",
+    "surface": "sand",
+    "wikidata": "Q21922371"
+  }
+},
+{
+  "type": "way",
+  "id": 23240543,
+  "center": {
+    "lat": -33.8032645,
+    "lon": 151.2518562
+  },
+  "tags": {
+    "dog": "unleashed",
+    "name": "Clontarf Beach",
+    "natural": "beach"
+  }
+},
+{
+  "type": "way",
+  "id": 23240559,
+  "center": {
+    "lat": -33.7999200,
+    "lon": 151.2750987
+  },
+  "tags": {
+    "name": "Fairlight Beach",
+    "natural": "beach",
+    "source:name": "local_knowledge",
+    "surface": "sand",
+    "wikidata": "Q21957122"
+  }
+},
+{
+  "type": "way",
+  "id": 23240560,
+  "center": {
+    "lat": -33.7995013,
+    "lon": 151.2782354
+  },
+  "tags": {
+    "name": "Delwood Beach",
+    "natural": "beach"
+  }
+},
+{
+  "type": "way",
+  "id": 23240573,
+  "center": {
+    "lat": -33.8035048,
+    "lon": 151.2701944
+  },
+  "tags": {
+    "name": "Forty Baskets Beach",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 23240574,
+  "center": {
+    "lat": -33.8151891,
+    "lon": 151.2633703
+  },
+  "tags": {
+    "lifeguard": "no",
+    "name": "Washaway Beach",
+    "natural": "beach",
+    "nudism": "permissive",
+    "source:name": "local_knowledge",
+    "supervised": "no",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 23784596,
+  "center": {
+    "lat": -34.1744626,
+    "lon": 151.0626755
+  },
+  "tags": {
+    "name": "Little Garie Beach",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 23784597,
+  "center": {
+    "lat": -34.1783842,
+    "lon": 151.0572326
+  },
+  "tags": {
+    "name": "North Era Beach",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 23785173,
+  "center": {
+    "lat": -34.1811228,
+    "lon": 151.0533147
+  },
+  "tags": {
+    "name": "South Era Beach",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 26491957,
+  "center": {
+    "lat": -34.1211437,
+    "lon": 151.1352094
+  },
+  "tags": {
+    "name": "Little Marley Beach",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 26492096,
+  "center": {
+    "lat": -34.1144394,
+    "lon": 151.1415472
+  },
+  "tags": {
+    "name": "Marley Beach",
+    "natural": "beach",
+    "surface": "sand",
+    "wikidata": "Q19875388"
+  }
+},
+{
+  "type": "way",
+  "id": 26765655,
+  "center": {
+    "lat": -34.0764976,
+    "lon": 151.1674956
+  },
+  "tags": {
+    "lifeguard": "no",
+    "name": "Little Jibbon Beach",
+    "natural": "beach",
+    "naturism": "yes",
+    "nudism": "yes",
+    "source": "https://nudebeachmap.com/places/little-jibbon-beach/",
+    "supervised": "no",
+    "surface": "sand",
+    "website": "https://nudebeachmap.com/places/little-jibbon-beach/"
+  }
+},
+{
+  "type": "way",
+  "id": 27006536,
+  "center": {
+    "lat": -34.0826513,
+    "lon": 151.1525526
+  },
+  "tags": {
+    "name": "Gunyah Beach",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 27006539,
+  "center": {
+    "lat": -34.0822404,
+    "lon": 151.1550393
+  },
+  "tags": {
+    "name": "Gunyah Beach",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 29388919,
+  "center": {
+    "lat": -33.9208297,
+    "lon": 151.2585636
+  },
+  "tags": {
+    "check_date": "2023-03-01",
+    "dog": "no",
+    "foot": "yes",
+    "lifeguard": "yes",
+    "name": "Coogee Beach",
+    "natural": "beach",
+    "smoking": "no",
+    "supervised": "yes",
+    "surface": "sand",
+    "wikidata": "Q21957520"
+  }
+},
+{
+  "type": "way",
+  "id": 37066937,
+  "center": {
+    "lat": -33.8738302,
+    "lon": 151.2441481
+  },
+  "tags": {
+    "bicycle": "yes",
+    "dog": "no",
+    "foot": "yes",
+    "lifeguard": "no",
+    "motor_vehicle": "no",
+    "name": "Double Bay Beach",
+    "natural": "beach",
+    "source:access": "survey",
+    "supervised": "no",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 39373324,
+  "center": {
+    "lat": -34.0799531,
+    "lon": 151.1701542
+  },
+  "tags": {
+    "name": "Shelley Beach",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 40800824,
+  "center": {
+    "lat": -34.1869710,
+    "lon": 151.0440089
+  },
+  "tags": {
+    "name": "Burning Palms Beach",
+    "natural": "beach",
+    "supervised": "Sa-Su summer",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 41740993,
+  "center": {
+    "lat": -33.7700088,
+    "lon": 151.2968455
+  },
+  "tags": {
+    "name": "Curl Curl Beach",
+    "natural": "beach",
+    "surface": "sand",
+    "wikidata": "Q21957138"
+  }
+},
+{
+  "type": "way",
+  "id": 47894641,
+  "center": {
+    "lat": -33.8355498,
+    "lon": 151.2793729
+  },
+  "tags": {
+    "check_date": "2025-10-21",
+    "dog": "no",
+    "lifeguard": "no",
+    "name": "Lady Bay Beach",
+    "natural": "beach",
+    "naturism": "yes",
+    "note": "Nude Beach",
+    "nudism": "yes",
+    "source": "https://nudebeachmap.com/places/lady-bay-beach/",
+    "supervised": "no",
+    "surface": "sand",
+    "website": "https://nudebeachmap.com/places/lady-bay-beach/",
+    "wikidata": "Q21957042"
+  }
+},
+{
+  "type": "way",
+  "id": 77085587,
+  "center": {
+    "lat": -34.0075477,
+    "lon": 151.2037379
+  },
+  "tags": {
+    "fixme": "isn't accurate to real beach dimensions based on aerial imagery",
+    "name": "Silver Beach",
+    "natural": "beach",
+    "source": "nearmap",
+    "source:name": "survey",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 77090123,
+  "center": {
+    "lat": -34.0465444,
+    "lon": 151.1594376
+  },
+  "tags": {
+    "name": "Elouera Beach",
+    "natural": "beach",
+    "note:source:location": "nodes exact locations from nearmap, boundary of named beach from signs from survey",
+    "source:location": "survey;nearmap",
+    "source:name": "survey",
+    "supervised": "yes",
+    "surface": "sand",
+    "wikidata": "Q5367227",
+    "wikipedia": "en:Elouera Beach"
+  }
+},
+{
+  "type": "way",
+  "id": 86379306,
+  "center": {
+    "lat": -34.0372084,
+    "lon": 151.1751370
+  },
+  "tags": {
+    "fixme:name": "name is a bit speculative as I'm not sure if it is the name of the beach or just the place",
+    "name": "Greenhills Beach",
+    "natural": "beach",
+    "source:name": "survey",
+    "surface": "sand",
+    "wikidata": "Q18922828",
+    "wikipedia": "en:Greenhills Beach"
+  }
+},
+{
+  "type": "way",
+  "id": 86484406,
+  "center": {
+    "lat": -34.0601901,
+    "lon": 151.1571657
+  },
+  "tags": {
+    "name": "Blackwoods Beach",
+    "natural": "beach",
+    "source": "nearmap",
+    "source:name": "survey",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 102757017,
+  "center": {
+    "lat": -33.8648654,
+    "lon": 151.2533773
+  },
+  "tags": {
+    "foot": "yes",
+    "name": "Lady Martins Beach",
+    "natural": "beach",
+    "source": "nearmap",
+    "surface": "sand",
+    "wikidata": "Q21957038"
+  }
+},
+{
+  "type": "way",
+  "id": 102757069,
+  "center": {
+    "lat": -33.8696224,
+    "lon": 151.2539608
+  },
+  "tags": {
+    "name": "Bellamy Beach",
+    "natural": "beach",
+    "source": "survey",
+    "source:location": "nearmap",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 102758329,
+  "center": {
+    "lat": -33.8611211,
+    "lon": 151.2689252
+  },
+  "tags": {
+    "name": "Queens Beach",
+    "natural": "beach",
+    "source": "survey",
+    "source:location": "nearmap",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 102758775,
+  "center": {
+    "lat": -33.8574608,
+    "lon": 151.2682199
+  },
+  "tags": {
+    "name": "Tingara Beach",
+    "natural": "beach",
+    "source": "survey",
+    "source:location": "nearmap",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 102758786,
+  "center": {
+    "lat": -33.8587685,
+    "lon": 151.2691168
+  },
+  "tags": {
+    "dog": "no",
+    "name": "Hermit Beach",
+    "natural": "beach",
+    "source": "nearmap",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 104740406,
+  "center": {
+    "lat": -34.0034497,
+    "lon": 151.1640572
+  },
+  "tags": {
+    "name": "Towra Spit Beach",
+    "natural": "beach",
+    "source": "nearmap",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 112266963,
+  "center": {
+    "lat": -33.8298105,
+    "lon": 151.2610110
+  },
+  "tags": {
+    "name": "Obelisk Beach",
+    "natural": "beach",
+    "nudism": "yes",
+    "source:location": "nearmap",
+    "source:name": "extrapolation/local_knowledge",
+    "surface": "sand",
+    "wikidata": "Q7074702"
+  }
+},
+{
+  "type": "way",
+  "id": 133028222,
+  "center": {
+    "lat": -33.8416309,
+    "lon": 151.2194164
+  },
+  "tags": {
+    "alt_name": "Neutral Bay Beach",
+    "check_date": "2026-03-29",
+    "dog": "yes",
+    "lifeguard": "no",
+    "name": "Hayes Street Beach",
+    "natural": "beach",
+    "supervised": "no",
+    "surface": "sand",
+    "wikidata": "Q65068180",
+    "wikipedia": "en:Neutral Bay Beach"
+  }
+},
+{
+  "type": "way",
+  "id": 168814472,
+  "center": {
+    "lat": -33.7155118,
+    "lon": 151.2931036
+  },
+  "tags": {
+    "name": "Sanctuary Island",
+    "natural": "wood",
+    "place": "islet",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 168834629,
+  "center": {
+    "lat": -33.9643432,
+    "lon": 151.2524856
+  },
+  "tags": {
+    "name": "Malabar Beach",
+    "natural": "beach",
+    "source": "bing",
+    "surface": "sand",
+    "wikidata": "Q21957006"
+  }
+},
+{
+  "type": "way",
+  "id": 172616049,
+  "center": {
+    "lat": -34.0805907,
+    "lon": 151.1625574
+  },
+  "tags": {
+    "access": "yes",
+    "foot": "yes",
+    "name": "Jibbon Beach",
+    "natural": "beach",
+    "source": "bing",
+    "surface": "sand",
+    "wikidata": "Q21909937"
+  }
+},
+{
+  "type": "way",
+  "id": 172947863,
+  "center": {
+    "lat": -33.8522617,
+    "lon": 151.1669196
+  },
+  "tags": {
+    "name": "Snapper Island",
+    "place": "island",
+    "wikidata": "Q7547328",
+    "wikipedia": "en:Snapper Island (New South Wales)"
+  }
+},
+{
+  "type": "way",
+  "id": 172983356,
+  "center": {
+    "lat": -33.8396994,
+    "lon": 151.2787460
+  },
+  "tags": {
+    "dog": "no",
+    "name": "Camp Cove Beach",
+    "name:ko": "캠프 코브 비치",
+    "natural": "beach",
+    "operator": "Woollahra Municipal Council",
+    "smoking": "no",
+    "source": "survey",
+    "source:geometry": "Bing;LPI Imagery",
+    "supervised": "no",
+    "surface": "sand",
+    "survey:date": "2022-02-18",
+    "website": "https://www.woollahra.nsw.gov.au/recreation/parks,_reserves_and_playgrounds/list_of_parks_and_playgrounds/parks_and_playgrounds/camp_cove_beach"
+  }
+},
+{
+  "type": "way",
+  "id": 172986494,
+  "center": {
+    "lat": -33.9259441,
+    "lon": 151.2655439
+  },
+  "tags": {
+    "name": "Wedding Cake Island",
+    "natural": "coastline",
+    "note": "Do you know why is it called \"Wedding Cake Island\"? It is called Wedding Cake Island because seagulls which pooped on the island made it look white, like a wedding cake!",
+    "place": "islet",
+    "source": "bing;local knowledge",
+    "source:name": "local knowledge"
+  }
+},
+{
+  "type": "way",
+  "id": 173244595,
+  "center": {
+    "lat": -33.8923747,
+    "lon": 151.2780805
+  },
+  "tags": {
+    "beach": "sand",
+    "name": "Bondi Beach",
+    "name:es": "Playa Bondi",
+    "name:ko": "본다이 비치",
+    "natural": "beach",
+    "supervised": "yes",
+    "surface": "sand",
+    "tourism": "attraction",
+    "wikidata": "Q21919992",
+    "wikipedia": "en:Bondi Beach"
+  }
+},
+{
+  "type": "way",
+  "id": 173257848,
+  "center": {
+    "lat": -33.9005688,
+    "lon": 151.2704819
+  },
+  "tags": {
+    "name": "Tamarama Beach",
+    "name:en": "Tamarama Beach",
+    "name:es": "Playa Tamarama",
+    "natural": "beach",
+    "source": "survey;Bing",
+    "surface": "sand",
+    "tourism": "attraction",
+    "wikidata": "Q21956774"
+  }
+},
+{
+  "type": "way",
+  "id": 173257859,
+  "center": {
+    "lat": -33.9135052,
+    "lon": 151.2664147
+  },
+  "tags": {
+    "name": "Clovelly Beach",
+    "natural": "beach",
+    "source": "survey;Bing",
+    "sport": "swimming",
+    "surface": "sand",
+    "wikidata": "Q21957153"
+  }
+},
+{
+  "type": "way",
+  "id": 176725263,
+  "center": {
+    "lat": -33.8465760,
+    "lon": 151.2808039
+  },
+  "tags": {
+    "name": "Gibson's Beach",
+    "natural": "beach",
+    "source": "bing",
+    "source:name": "NSW LPI Base Map",
+    "source:name:date": "2015-12",
+    "surface": "sand",
+    "wikidata": "Q21957099"
+  }
+},
+{
+  "type": "way",
+  "id": 176725266,
+  "center": {
+    "lat": -33.8471979,
+    "lon": 151.2791089
+  },
+  "tags": {
+    "name": "Kutti Beach",
+    "natural": "beach",
+    "source": "bing",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 176726580,
+  "center": {
+    "lat": -33.8692865,
+    "lon": 151.2679864
+  },
+  "tags": {
+    "dog": "yes",
+    "name": "Rose Bay Beach",
+    "natural": "beach",
+    "source": "bing",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 179541460,
+  "center": {
+    "lat": -33.8076278,
+    "lon": 151.2741541
+  },
+  "tags": {
+    "name": "Reef Beach",
+    "natural": "beach",
+    "source": "bing",
+    "surface": "sand",
+    "wikidata": "Q21956826"
+  }
+},
+{
+  "type": "way",
+  "id": 179732278,
+  "center": {
+    "lat": -33.8442395,
+    "lon": 151.2815769
+  },
+  "tags": {
+    "name": "Watsons Bay",
+    "name:en": "Watsons Bay",
+    "name:ko": "왓슨스 베이",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 179912450,
+  "center": {
+    "lat": -33.8381126,
+    "lon": 151.2292572
+  },
+  "tags": {
+    "name": "Corner Beach",
+    "natural": "beach"
+  }
+},
+{
+  "type": "way",
+  "id": 179913213,
+  "center": {
+    "lat": -33.8444102,
+    "lon": 151.2382212
+  },
+  "tags": {
+    "name": "Whiting Beach",
+    "natural": "beach",
+    "source": "bing",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 179913855,
+  "center": {
+    "lat": -33.8240387,
+    "lon": 151.2536950
+  },
+  "tags": {
+    "name": "Balmoral Beach",
+    "natural": "beach",
+    "surface": "sand",
+    "wikidata": "Q21957218"
+  }
+},
+{
+  "type": "way",
+  "id": 179934230,
+  "center": {
+    "lat": -33.8145528,
+    "lon": 151.2485269
+  },
+  "tags": {
+    "name": "Chinamans Beach",
+    "natural": "beach",
+    "operator": "Mosman Council",
+    "source": "bing",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 179948425,
+  "center": {
+    "lat": -33.8005227,
+    "lon": 151.2979356
+  },
+  "tags": {
+    "alcohol": "no",
+    "alt_name": "Shelley Beach",
+    "dog": "no",
+    "lifeguard": "no",
+    "name": "Shelly Beach",
+    "natural": "beach",
+    "smoking": "no",
+    "supervised": "no",
+    "surface": "sand",
+    "wikidata": "Q7493888"
+  }
+},
+{
+  "type": "way",
+  "id": 179951390,
+  "center": {
+    "lat": -33.7827844,
+    "lon": 151.2254567
+  },
+  "tags": {
+    "alt_name": "Killarney Beach",
+    "name": "Flat Rock Beach",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 180522305,
+  "center": {
+    "lat": -33.8116661,
+    "lon": 151.2590211
+  },
+  "tags": {
+    "name": "Castle Rock Beach",
+    "natural": "beach",
+    "source": "bing",
+    "surface": "sand",
+    "wikidata": "Q21957160"
+  }
+},
+{
+  "type": "way",
+  "id": 182458290,
+  "center": {
+    "lat": -34.0796638,
+    "lon": 151.1748099
+  },
+  "tags": {
+    "name": "Jibbon Bombora",
+    "natural": "reef",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 207840948,
+  "center": {
+    "lat": -33.8412919,
+    "lon": 151.1827268
+  },
+  "tags": {
+    "fee": "yes",
+    "name": "Greenwich Baths",
+    "natural": "beach",
+    "opening_hours": "Oct,Mar 07:00-18:00; Nov,Feb 07:00-19:00; Dec,Jan 07:00-20:00; Apr 07:00-17:00",
+    "surface": "sand",
+    "website": "https://www.greenwichbaths.com.au/"
+  }
+},
+{
+  "type": "way",
+  "id": 223789521,
+  "center": {
+    "lat": -33.7976829,
+    "lon": 151.2894717
+  },
+  "tags": {
+    "alt_name": "Cabbage Tree Beach",
+    "name": "Manly Beach",
+    "name:en": "Manly Beach",
+    "name:ja": "マンリービーチ",
+    "natural": "beach",
+    "old_name": "South Steyne Beach",
+    "surface": "sand",
+    "tourism": "attraction",
+    "wikidata": "Q3271969",
+    "wikipedia": "en:Manly Beach"
+  }
+},
+{
+  "type": "way",
+  "id": 223791335,
+  "center": {
+    "lat": -33.8066070,
+    "lon": 151.2866272
+  },
+  "tags": {
+    "area": "yes",
+    "name": "Little Manly Cove",
+    "natural": "beach",
+    "source": "Bing",
+    "surface": "sand",
+    "wikidata": "Q6650828"
+  }
+},
+{
+  "type": "way",
+  "id": 223791501,
+  "center": {
+    "lat": -33.8082827,
+    "lon": 151.2915410
+  },
+  "tags": {
+    "area": "yes",
+    "name": "Collins Flat Beach",
+    "natural": "beach",
+    "opening_hours": "sunrise-sunset",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 245022351,
+  "center": {
+    "lat": -33.8138854,
+    "lon": 151.0105368
+  },
+  "tags": {
+    "amenity": "ferry_terminal",
+    "area": "yes",
+    "fare_gates": "no",
+    "ferry": "yes",
+    "floating": "yes",
+    "man_made": "pier",
+    "name": "Parramatta Ferry Wharf",
+    "network": "Sydney Ferries",
+    "network:wikidata": "Q3162795",
+    "operator": "Transdev Sydney Ferries",
+    "operator:wikidata": "Q16927194"
+  }
+},
+{
+  "type": "way",
+  "id": 253258716,
+  "center": {
+    "lat": -34.0373528,
+    "lon": 151.1929634
+  },
+  "tags": {
+    "name": "Boat Harbour Beach",
+    "natural": "beach",
+    "source:name": "survey",
+    "surface": "sand",
+    "wikidata": "Q4931493"
+  }
+},
+{
+  "type": "way",
+  "id": 253258718,
+  "center": {
+    "lat": -34.0424070,
+    "lon": 151.1635187
+  },
+  "tags": {
+    "fixme:name": "not sure how far NorthEast the Wanda beach goes...but it at least goes up to ref 5",
+    "layer": "-1",
+    "name": "Wanda Beach",
+    "natural": "beach",
+    "source:name": "survey",
+    "supervised": "yes",
+    "surface": "sand",
+    "wikidata": "Q7967101",
+    "wikipedia": "en:Wanda Beach"
+  }
+},
+{
+  "type": "way",
+  "id": 270507389,
+  "center": {
+    "lat": -34.0772992,
+    "lon": 151.1334695
+  },
+  "tags": {
+    "alt_name": "Deeban Spit",
+    "name": "Maian Bar Beach",
+    "natural": "beach",
+    "note": "The location/shape of the beach and spit changes drastically from year to year, so don't bother making the outline super detailed. Only use a few nodes so it can be easily updated",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 284927125,
+  "center": {
+    "lat": -33.8363393,
+    "lon": 151.0804901
+  },
+  "tags": {
+    "access": "no",
+    "historic": "wreck",
+    "name": "HMAS Karangi",
+    "natural": "wetland",
+    "place": "islet",
+    "seamark:name": "SS Heroic",
+    "seamark:type": "wreck",
+    "seamark:wreck:category": "hull_showing",
+    "wetland": "swamp",
+    "wreck:visible_at_high_tide": "yes",
+    "wreck:visible_at_low_tide": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 309514417,
+  "center": {
+    "lat": -33.8709958,
+    "lon": 151.2488150
+  },
+  "tags": {
+    "dog": "no",
+    "name": "Seven Shillings Beach",
+    "natural": "beach",
+    "old_name": "Redleaf Beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 330361858,
+  "center": {
+    "lat": -34.0351358,
+    "lon": 151.2221952
+  },
+  "tags": {
+    "building": "lighthouse",
+    "man_made": "lighthouse",
+    "name": "Cape Baily Lighthouse",
+    "seamark:beacon_special_purpose:colour": "white",
+    "seamark:beacon_special_purpose:construction": "concreted",
+    "seamark:beacon_special_purpose:height": "9.1",
+    "seamark:beacon_special_purpose:shape": "tower",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "white",
+    "seamark:light:group": "4",
+    "seamark:light:height": "55",
+    "seamark:light:period": "16",
+    "seamark:light:range": "13",
+    "seamark:light:reference": "K 2622",
+    "seamark:light:sequence": "1+(2)+1+(2)+1+(2)+1+(6)",
+    "seamark:name": "Cape Baily",
+    "seamark:type": "beacon_special_purpose",
+    "source": "US NGA Pub. 111. 2024-04-19.",
+    "tourism": "attraction",
+    "website": "https://www.nationalparks.nsw.gov.au/things-to-do/historic-buildings-places/cape-baily-lighthouse",
+    "wikidata": "Q5034579"
+  }
+},
+{
+  "type": "way",
+  "id": 392414820,
+  "center": {
+    "lat": -33.8150942,
+    "lon": 151.2865625
+  },
+  "tags": {
+    "name": "Quarantine Beach",
+    "natural": "beach",
+    "wikidata": "Q21956839"
+  }
+},
+{
+  "type": "way",
+  "id": 394692970,
+  "center": {
+    "lat": -33.9974384,
+    "lon": 151.2445862
+  },
+  "tags": {
+    "alt_name": "Pussycats",
+    "lifeguard": "no",
+    "name": "Cruwee Cove",
+    "natural": "beach",
+    "supervised": "no",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 397373570,
+  "center": {
+    "lat": -33.8523892,
+    "lon": 151.1968192
+  },
+  "tags": {
+    "alt_name:xdk": "Me-Mel",
+    "name": "Goat Island",
+    "name:en": "Goat Island",
+    "name:xdk": "Memel",
+    "place": "islet",
+    "wikidata": "Q5575300",
+    "wikipedia": "en:Goat Island (Port Jackson)"
+  }
+},
+{
+  "type": "way",
+  "id": 402800556,
+  "center": {
+    "lat": -34.0112953,
+    "lon": 151.1513692
+  },
+  "tags": {
+    "name": "Carters Island",
+    "place": "islet"
+  }
+},
+{
+  "type": "way",
+  "id": 435461991,
+  "center": {
+    "lat": -33.8335625,
+    "lon": 151.2810052
+  },
+  "tags": {
+    "building": "lighthouse",
+    "historic": "building",
+    "man_made": "lighthouse",
+    "name": "Hornby Lighthouse",
+    "operator": "Port Authority of New South Wales",
+    "operator:wikidata": "Q60742921",
+    "ref": "SYD 003",
+    "seamark:beacon_special_purpose:colour": "white;red;white;red",
+    "seamark:beacon_special_purpose:colour_pattern": "vertical",
+    "seamark:beacon_special_purpose:height": "9.1",
+    "seamark:beacon_special_purpose:shape": "tower",
+    "seamark:light:character": "LFl",
+    "seamark:light:colour": "white",
+    "seamark:light:height": "27",
+    "seamark:light:period": "5",
+    "seamark:light:range": "15",
+    "seamark:light:reference": "K 2636",
+    "seamark:light:sequence": "2+(3)",
+    "seamark:name": "3 / Hornby",
+    "seamark:type": "light_major",
+    "source": "US NGA Pub. 111. 2024-04-19.",
+    "wikidata": "Q12060536",
+    "wikipedia": "en:Hornby Lighthouse"
+  }
+},
+{
+  "type": "way",
+  "id": 468555548,
+  "center": {
+    "lat": -34.0428185,
+    "lon": 151.1954899
+  },
+  "tags": {
+    "name": "Merries Reef",
+    "natural": "reef"
+  }
+},
+{
+  "type": "way",
+  "id": 483211748,
+  "center": {
+    "lat": -33.9911293,
+    "lon": 151.1018075
+  },
+  "tags": {
+    "name": "Kyle Bay",
+    "natural": "bay",
+    "source": "historical",
+    "source_ref": "http://parishmaps.lands.nsw.gov.au/mrsid/image_sid.pl?client=pmap&image=PMapMN05/14039501.sid"
+  }
+},
+{
+  "type": "way",
+  "id": 561377761,
+  "center": {
+    "lat": -33.7978062,
+    "lon": 151.2682774
+  },
+  "tags": {
+    "name": "Dirty Haul Beach",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 562114401,
+  "center": {
+    "lat": -33.8565416,
+    "lon": 151.2572055
+  },
+  "tags": {
+    "building": "yes",
+    "man_made": "lighthouse",
+    "name": "Shark Island Light",
+    "seamark:beacon_special_purpose:colour": "white",
+    "seamark:beacon_special_purpose:shape": "tower",
+    "seamark:light:character": "Fl",
+    "seamark:light:colour": "red",
+    "seamark:light:group": "3",
+    "seamark:light:height": "12",
+    "seamark:light:period": "8",
+    "seamark:light:range": "6",
+    "seamark:light:reference": "K 2656",
+    "seamark:light:sequence": "1+(1)+1+(1)+1+(3)",
+    "seamark:name": "Shark Island",
+    "seamark:type": "beacon_special_purpose",
+    "source": "US NGA Pub. 111. 2024-04-13.",
+    "wikidata": "Q7489800",
+    "wikimedia_commons": "File:Shark_Island_Sydney.JPG",
+    "wikipedia": "en:Shark Island Light"
+  }
+},
+{
+  "type": "way",
+  "id": 617130242,
+  "center": {
+    "lat": -34.0050264,
+    "lon": 151.1111669
+  },
+  "tags": {
+    "area": "yes",
+    "man_made": "pier",
+    "name": "Tom Ugly's Bridge Marina"
+  }
+},
+{
+  "type": "way",
+  "id": 617735247,
+  "center": {
+    "lat": -34.1377957,
+    "lon": 151.1194004
+  },
+  "tags": {
+    "name": "Providential Cove",
+    "natural": "bay"
+  }
+},
+{
+  "type": "way",
+  "id": 669047810,
+  "center": {
+    "lat": -34.1912224,
+    "lon": 151.0371254
+  },
+  "tags": {
+    "name": "Figure Eight Gully",
+    "source": "LPI Base Map Feb 2019",
+    "waterway": "stream"
+  }
+},
+{
+  "type": "way",
+  "id": 746907631,
+  "center": {
+    "lat": -33.8715046,
+    "lon": 151.1896297
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Blackwattle Bay Marine",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 838828802,
+  "center": {
+    "lat": -33.8696149,
+    "lon": 151.1783367
+  },
+  "tags": {
+    "addr:housenumber": "2",
+    "addr:street": "Waterways Court",
+    "leisure": "marina",
+    "name": "Sydney Boathouse",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://sydneyboathouse.com.au/"
+  }
+},
+{
+  "type": "way",
+  "id": 838828803,
+  "center": {
+    "lat": -33.8695520,
+    "lon": 151.1807645
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Sydney Superyacht Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://superyachtmarina.com.au/"
+  }
+},
+{
+  "type": "way",
+  "id": 838832581,
+  "center": {
+    "lat": -33.8695897,
+    "lon": 151.1871221
+  },
+  "tags": {
+    "addr:housename": "5-11",
+    "addr:street": "Bank Street",
+    "leisure": "marina",
+    "name": "Blackwattle Bay Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "http://www.blackwattlebaymarina.com.au/"
+  }
+},
+{
+  "type": "way",
+  "id": 901401971,
+  "center": {
+    "lat": -33.8368165,
+    "lon": 151.2708945
+  },
+  "tags": {
+    "name": "Sow and Pigs Reef",
+    "natural": "reef"
+  }
+},
+{
+  "type": "way",
+  "id": 958196894,
+  "center": {
+    "lat": -33.8475564,
+    "lon": 151.2706883
+  },
+  "tags": {
+    "name": "Bottle and Glass Rocks",
+    "natural": "bare_rock",
+    "place": "islet"
+  }
+},
+{
+  "type": "way",
+  "id": 982722234,
+  "center": {
+    "lat": -33.8046435,
+    "lon": 151.2519577
+  },
+  "tags": {
+    "check_date": "2026-04-11",
+    "leisure": "marina",
+    "name": "Clontarf Marina",
+    "operator": "Clontarf Marina",
+    "sanitary_dump_station": "yes",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 997796448,
+  "center": {
+    "lat": -33.8059376,
+    "lon": 151.2310277
+  },
+  "tags": {
+    "lit": "no",
+    "name": "Clive Park Beach",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 1031135654,
+  "center": {
+    "lat": -33.9966499,
+    "lon": 151.0698303
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Como Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://comomarina.com.au/",
+    "wikidata": "Q107282233"
+  }
+},
+{
+  "type": "way",
+  "id": 1031504406,
+  "center": {
+    "lat": -33.8059129,
+    "lon": 151.2215382
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Northbridge Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://www.northbridgemarina.com.au/",
+    "wikidata": "Q108455400"
+  }
+},
+{
+  "type": "way",
+  "id": 1044398769,
+  "center": {
+    "lat": -33.8560981,
+    "lon": 151.1641434
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Birkenhead Point Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://www.birkenheadpointmarina.com.au/"
+  }
+},
+{
+  "type": "way",
+  "id": 1075791122,
+  "center": {
+    "lat": -34.0007009,
+    "lon": 151.1151732
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Tom Uglys Point Reserve"
+  }
+},
+{
+  "type": "way",
+  "id": 1168929089,
+  "center": {
+    "lat": -33.9982416,
+    "lon": 151.2381712
+  },
+  "tags": {
+    "building": "yes",
+    "man_made": "lighthouse",
+    "name": "Endeavour Light"
+  }
+},
+{
+  "type": "way",
+  "id": 1210200216,
+  "center": {
+    "lat": -34.0670966,
+    "lon": 151.1410160
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Lugano Avenue Small Craft Launching Facility",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://www.sutherlandshire.nsw.gov.au/your-environment/beaches-and-waterways/boat-ramps/lugano-avenue-small-craft-launching-facility-burraneer-bay"
+  }
+},
+{
+  "type": "way",
+  "id": 1240920554,
+  "center": {
+    "lat": -33.8717404,
+    "lon": 151.2015669
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Darling Harbour Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://sydneyharbourmarina.com.au"
+  }
+},
+{
+  "type": "way",
+  "id": 1241529472,
+  "center": {
+    "lat": -33.8536123,
+    "lon": 151.2467312
+  },
+  "tags": {
+    "building": "yes",
+    "man_made": "lighthouse",
+    "name": "Bradleys Head Lighthouse",
+    "seamark:beacon_cardinal:category": "south",
+    "seamark:beacon_cardinal:colour": "white",
+    "seamark:beacon_cardinal:shape": "tower",
+    "seamark:light:character": "Oc",
+    "seamark:light:colour": "green",
+    "seamark:light:height": "7",
+    "seamark:light:period": "3",
+    "seamark:light:range": "6",
+    "seamark:light:reference": "K 2662",
+    "seamark:light:sequence": "2+(1)",
+    "seamark:name": "20 / Bradleys Head",
+    "seamark:type": "beacon_cardinal",
+    "source": "US NGA Pub. 111. 2024-04-13.",
+    "wikidata": "Q897057",
+    "wikipedia": "en:Bradleys Head Light"
+  }
+},
+{
+  "type": "way",
+  "id": 1244250288,
+  "center": {
+    "lat": -33.8409245,
+    "lon": 151.2162493
+  },
+  "tags": {
+    "check_date": "2026-05-03",
+    "leisure": "marina",
+    "name": "Neutral Bay Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1259561187,
+  "center": {
+    "lat": -33.8451307,
+    "lon": 151.1949130
+  },
+  "tags": {
+    "name": "Quarantine Boat Depot Beach",
+    "natural": "beach",
+    "surface": "sand",
+    "wikimedia_commons": "File:Quarantine Boat Depot beach.jpg"
+  }
+},
+{
+  "type": "way",
+  "id": 1265751487,
+  "center": {
+    "lat": -33.8377073,
+    "lon": 151.2323066
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Mosman Bay Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1266748167,
+  "center": {
+    "lat": -33.8416641,
+    "lon": 151.2181154
+  },
+  "tags": {
+    "fixme": "move name to loc_name ?",
+    "name": "Secret Cove",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 1269050184,
+  "center": {
+    "lat": -33.8495600,
+    "lon": 151.2739349
+  },
+  "tags": {
+    "building": "yes",
+    "check_date": "2024-04-05",
+    "man_made": "lighthouse",
+    "name": "Vaucluse Bay Front Lighthouse",
+    "seamark:beacon_special_purpose:category": "leading",
+    "seamark:beacon_special_purpose:colour": "white",
+    "seamark:beacon_special_purpose:shape": "tower",
+    "seamark:light:1:character": "F",
+    "seamark:light:1:colour": "red",
+    "seamark:light:1:height": "16",
+    "seamark:light:1:range": "5",
+    "seamark:light:1:sector_end": "231",
+    "seamark:light:1:sector_start": "143",
+    "seamark:light:reference": "K 2650",
+    "seamark:name": "Vaucluse Bay Front",
+    "seamark:topmark:colour": "white",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_special_purpose",
+    "source": "US NGA Pub. 111. 2024."
+  }
+},
+{
+  "type": "way",
+  "id": 1269923212,
+  "center": {
+    "lat": -33.8429072,
+    "lon": 151.1215864
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Cabarita Point Marina",
+    "operator": "d'Albora",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1270366938,
+  "center": {
+    "lat": -33.8582034,
+    "lon": 151.2729511
+  },
+  "tags": {
+    "building": "yes",
+    "man_made": "lighthouse",
+    "name": "Vaucluse Bay Rear Lighthouse",
+    "seamark:beacon_special_purpose:category": "leading",
+    "seamark:beacon_special_purpose:colour": "white",
+    "seamark:beacon_special_purpose:shape": "tower",
+    "seamark:light:character": "F",
+    "seamark:light:colour": "red",
+    "seamark:light:height": "84",
+    "seamark:light:range": "5",
+    "seamark:light:reference": "K 2650.10",
+    "seamark:name": "Vaucluse Bay Rear",
+    "seamark:topmark:colour": "white",
+    "seamark:topmark:shape": "cone, point up",
+    "seamark:type": "beacon_special_purpose",
+    "source": "US NGA Pub. 111. 2024-04-13."
+  }
+},
+{
+  "type": "way",
+  "id": 1284733113,
+  "center": {
+    "lat": -33.8490978,
+    "lon": 151.1722604
+  },
+  "tags": {
+    "capacity": "15",
+    "charge": "3.75 AUD/hour",
+    "fee": "yes",
+    "leisure": "marina",
+    "name": "Camber Wharf Marina",
+    "phone": "+61 488 882 462",
+    "power_supply": "yes",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1284739000,
+  "center": {
+    "lat": -33.8489704,
+    "lon": 151.1701759
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Cockatoo Marine",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "http://cockatoomarine.com.au/marina-berthing"
+  }
+},
+{
+  "type": "way",
+  "id": 1295234585,
+  "center": {
+    "lat": -33.8639170,
+    "lon": 151.1953949
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "marina",
+    "name": "Jones Bay Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1295234595,
+  "center": {
+    "lat": -33.8633366,
+    "lon": 151.1943529
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "marina",
+    "name": "Jones Bay Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1323713811,
+  "center": {
+    "lat": -33.8381878,
+    "lon": 151.1932863
+  },
+  "tags": {
+    "access": "residents",
+    "capacity": "41",
+    "leisure": "marina",
+    "maxlength": "50'",
+    "name": "Wondakiah Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1336770111,
+  "center": {
+    "lat": -34.0510831,
+    "lon": 151.1563790
+  },
+  "tags": {
+    "layer": "-1",
+    "name": "North Cronulla Beach",
+    "natural": "beach",
+    "source": "nearmap",
+    "source:name": "survey",
+    "supervised": "yes",
+    "surface": "sand",
+    "wikidata": "Q7054974",
+    "wikipedia": "en:North Cronulla Beach"
+  }
+},
+{
+  "type": "way",
+  "id": 1369913606,
+  "center": {
+    "lat": -33.8067647,
+    "lon": 151.2484215
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Middle Harbour Yacht Club Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1369925453,
+  "center": {
+    "lat": -33.8487402,
+    "lon": 151.2330255
+  },
+  "tags": {
+    "building": "yes",
+    "man_made": "lighthouse",
+    "name": "Robertsons Point",
+    "seamark:beacon_lateral:category": "starboard",
+    "seamark:beacon_lateral:colour": "white",
+    "seamark:beacon_lateral:height": "7.9",
+    "seamark:beacon_lateral:shape": "tower",
+    "seamark:light:character": "Oc",
+    "seamark:light:colour": "green",
+    "seamark:light:height": "8",
+    "seamark:light:period": "3",
+    "seamark:light:range": "5",
+    "seamark:light:reference": "K 2664",
+    "seamark:light:sequence": "2+(1)",
+    "seamark:name": "25 / Robertsons Point",
+    "seamark:type": "beacon_lateral",
+    "source": "US NGA Pub. 111. 2024-04-13.",
+    "wikidata": "Q1397837",
+    "wikipedia": "en:Robertson Point Light"
+  }
+},
+{
+  "type": "way",
+  "id": 1396134018,
+  "center": {
+    "lat": -33.8048320,
+    "lon": 151.2449267
+  },
+  "tags": {
+    "branch": "The Spit",
+    "brand": "d'Albora",
+    "leisure": "marina",
+    "name": "d'Albora Marina The Spit",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://www.dalbora.com.au/marinas/the-spit"
+  }
+},
+{
+  "type": "way",
+  "id": 1468437254,
+  "center": {
+    "lat": -33.8554913,
+    "lon": 151.2047192
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "The Pier",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1468437255,
+  "center": {
+    "lat": -33.8665949,
+    "lon": 151.1973029
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Sydney Wharf Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://sydneywharfmarina.net.au"
+  }
+},
+{
+  "type": "way",
+  "id": 1475166449,
+  "center": {
+    "lat": -34.0480240,
+    "lon": 151.1083620
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Yowie Bay Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1476463433,
+  "center": {
+    "lat": -33.8703196,
+    "lon": 151.2016287
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Pier 26 Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1476471049,
+  "center": {
+    "lat": -33.8445709,
+    "lon": 151.2159354
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Kirribilli Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1481070345,
+  "center": {
+    "lat": -33.7778751,
+    "lon": 151.2076075
+  },
+  "tags": {
+    "addr:housenumber": "15",
+    "addr:street": "Normac Street",
+    "alt_name": "Roseville Marina",
+    "leisure": "marina",
+    "name": "Roseville Bridge Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://www.rosevillemarina.com.au/"
+  }
+},
+{
+  "type": "way",
+  "id": 1484230440,
+  "center": {
+    "lat": -33.8731358,
+    "lon": 151.2452767
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Double Bay Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://doublebaymarina.com.au"
+  }
+},
+{
+  "type": "way",
+  "id": 1486282375,
+  "center": {
+    "lat": -33.8438554,
+    "lon": 151.1999978
+  },
+  "tags": {
+    "access": "residents",
+    "leisure": "marina",
+    "name": "The Waterman Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1493809232,
+  "center": {
+    "lat": -33.8670789,
+    "lon": 151.2201144
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Wharf Terraces Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://www.wharfterraces.com.au/the-wharf-terraces-marina/"
+  }
+},
+{
+  "type": "way",
+  "id": 1493809233,
+  "center": {
+    "lat": -33.8669398,
+    "lon": 151.2209304
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Woolloomooloo Wharf Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1493809977,
+  "center": {
+    "lat": -33.8694978,
+    "lon": 151.2293287
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Elizabeth Bay Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1495753350,
+  "center": {
+    "lat": -33.8608139,
+    "lon": 151.1910811
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "White Bay 6 Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1495804380,
+  "center": {
+    "lat": -33.8420508,
+    "lon": 151.2182088
+  },
+  "tags": {
+    "access": "residents",
+    "leisure": "marina",
+    "name": "Hastings Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "wikidata": "Q58202398",
+    "wikipedia": "en:Hastings (Neutral Bay)"
+  }
+},
+{
+  "type": "way",
+  "id": 1496100410,
+  "center": {
+    "lat": -33.8549982,
+    "lon": 151.1873291
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Campbell Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1496130559,
+  "center": {
+    "lat": -33.8542911,
+    "lon": 151.1709138
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Balmain Marina",
+    "old_name": "Balmain Marine Centre",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://corleonemarinas.com/marinas/balmain/"
+  }
+},
+{
+  "type": "way",
+  "id": 1496130563,
+  "center": {
+    "lat": -33.8546688,
+    "lon": 151.1710077
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Phoebe Street Marina",
+    "old_name": "Camerons Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "website": "https://www.michaelbartleyshipwrights.com.au/location"
+  }
+},
+{
+  "type": "way",
+  "id": 1496130604,
+  "center": {
+    "lat": -33.8577262,
+    "lon": 151.1675614
+  },
+  "tags": {
+    "access": "residents",
+    "leisure": "marina",
+    "name": "Balmain Cove Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1496907883,
+  "center": {
+    "lat": -33.8518088,
+    "lon": 151.1761706
+  },
+  "tags": {
+    "access": "residents",
+    "leisure": "marina",
+    "name": "Hopetoun Quays Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1497013417,
+  "center": {
+    "lat": -33.8040610,
+    "lon": 151.2476052
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Ferguson's Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "source": "http://www.sydneyharbour.com.au/",
+    "website": "https://www.fergusonsmarina.com.au/"
+  }
+},
+{
+  "type": "way",
+  "id": 1497017286,
+  "center": {
+    "lat": -33.8433808,
+    "lon": 151.1692389
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Woolwich Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1497017287,
+  "center": {
+    "lat": -33.8430548,
+    "lon": 151.1626547
+  },
+  "tags": {
+    "access": "residents",
+    "alt_name": "Fern Bay Marina;Hunters Hill Marina",
+    "leisure": "marina",
+    "name": "Pulpit Point Home Owners Association Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1498418859,
+  "center": {
+    "lat": -33.8519500,
+    "lon": 151.1613124
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Corleone Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1498418871,
+  "center": {
+    "lat": -33.8517334,
+    "lon": 151.1611662
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "President Shipwright Services",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1500242237,
+  "center": {
+    "lat": -33.8392907,
+    "lon": 151.1694519
+  },
+  "tags": {
+    "name": "Woolwich Baths Beach",
+    "natural": "beach",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 1501430939,
+  "center": {
+    "lat": -33.7997226,
+    "lon": 151.2685788
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "North Harbour Marina",
+    "old_name": "Davis Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour",
+    "source": "survey",
+    "website": "https://www.northharbourmarinasyd.com.au"
+  }
+},
+{
+  "type": "way",
+  "id": 1509740561,
+  "center": {
+    "lat": -33.8676059,
+    "lon": 151.2553452
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Royal Motor Yacht Club Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1509740564,
+  "center": {
+    "lat": -33.8685159,
+    "lon": 151.2546533
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Point Piper Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "way",
+  "id": 1509740573,
+  "center": {
+    "lat": -33.8700207,
+    "lon": 151.2557502
+  },
+  "tags": {
+    "leisure": "marina",
+    "name": "Rose Bay Marina",
+    "seamark:harbour:category": "marina",
+    "seamark:type": "harbour"
+  }
+},
+{
+  "type": "relation",
+  "id": 1249201,
+  "center": {
+    "lat": -33.9738385,
+    "lon": 151.1538185
+  },
+  "tags": {
+    "name": "Lady Margaret Beach",
+    "natural": "beach",
+    "surface": "sand",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 1286351,
+  "center": {
+    "lat": -34.0644445,
+    "lon": 151.1556348
+  },
+  "tags": {
+    "name": "Shelly Beach",
+    "natural": "beach",
+    "note": "I'm not exactly sure if both of these are Shelly Beach. The sign was just near the park.",
+    "source:name": "survey",
+    "surface": "sand",
+    "type": "multipolygon",
+    "wikidata": "Q16966439"
+  }
+},
+{
+  "type": "relation",
+  "id": 1996790,
+  "center": {
+    "lat": -34.0011115,
+    "lon": 151.0958728
+  },
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative",
+    "name": "Kangaroo Point",
+    "place": "suburb",
+    "postal_code": "2224",
+    "ref:nswlpi:cadid": "108030802",
+    "ref:psma:loc_pid": "locb59c54c80fa5",
+    "type": "boundary",
+    "wikidata": "Q6362581",
+    "wikipedia": "en:Kangaroo Point, New South Wales"
+  }
+},
+{
+  "type": "relation",
+  "id": 1998406,
+  "center": {
+    "lat": -34.0190416,
+    "lon": 151.1125180
+  },
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative",
+    "name": "Sylvania Waters",
+    "place": "suburb",
+    "postal_code": "2224",
+    "ref:nswlpi:cadid": "108031966",
+    "ref:psma:loc_pid": "loc43353f7420e0",
+    "source": "ABS2011;data.gov.au;local_knowledge;bing",
+    "type": "boundary",
+    "wikidata": "Q7660710",
+    "wikipedia": "en:Sylvania Waters, New South Wales"
+  }
+},
+{
+  "type": "relation",
+  "id": 2001197,
+  "center": {
+    "lat": -34.0163867,
+    "lon": 151.1289862
+  },
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative",
+    "name": "Taren Point",
+    "place": "suburb",
+    "postal_code": "2229",
+    "ref:nswlpi:cadid": "108033122",
+    "ref:psma:loc_pid": "loc564fee4d62f2",
+    "source": "ABS2011;data.gov.au;local_knowledge;bing",
+    "source:postal_code": "local_knowledge",
+    "type": "boundary",
+    "wikidata": "Q3643618",
+    "wikipedia": "en:Taren Point, New South Wales"
+  }
+},
+{
+  "type": "relation",
+  "id": 2014047,
+  "center": {
+    "lat": -34.0678137,
+    "lon": 151.1138590
+  },
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative",
+    "name": "Lilli Pilli",
+    "place": "suburb",
+    "postal_code": "2229",
+    "ref:nswlpi:cadid": "108031964",
+    "ref:psma:loc_pid": "loc659a1682b721",
+    "source": "ABS2011;data.gov.au;bing",
+    "source:postal_code": "local_knowledge",
+    "type": "boundary",
+    "wikidata": "Q3643081",
+    "wikipedia": "en:Lilli Pilli, New South Wales"
+  }
+},
+{
+  "type": "relation",
+  "id": 2015823,
+  "center": {
+    "lat": -34.0678293,
+    "lon": 151.1258041
+  },
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative",
+    "name": "Port Hacking",
+    "name:etymology": "Henry Hacking",
+    "place": "suburb",
+    "postal_code": "2229",
+    "ref:nswlpi:cadid": "162748544",
+    "ref:psma:loc_pid": "loc92bb0da2c9ba",
+    "source": "ABS2011;data.gov.au;bing",
+    "source:postal_code": "local_knowledge",
+    "type": "boundary",
+    "wikidata": "Q14934979",
+    "wikipedia": "en:Port Hacking, New South Wales"
+  }
+},
+{
+  "type": "relation",
+  "id": 2016008,
+  "center": {
+    "lat": -34.0625172,
+    "lon": 151.1277041
+  },
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative",
+    "name": "Dolans Bay",
+    "name:etymology": "Patrick Dolan",
+    "place": "suburb",
+    "postal_code": "2229",
+    "ref:nswlpi:cadid": "108030805",
+    "ref:psma:loc_pid": "locf765141b92ca",
+    "source": "ABS2011;data.gov.au;bing",
+    "source:postal_code": "local_knowledge",
+    "type": "boundary",
+    "wikidata": "Q5288859",
+    "wikipedia": "en:Dolans Bay, New South Wales"
+  }
+},
+{
+  "type": "relation",
+  "id": 2016121,
+  "center": {
+    "lat": -34.0637441,
+    "lon": 151.1379827
+  },
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative",
+    "name": "Burraneer",
+    "place": "suburb",
+    "postal_code": "2230",
+    "ref:nswlpi:cadid": "159792978",
+    "ref:psma:loc_pid": "loc216d45cf019d",
+    "source": "ABS2011;data.gov.au;bing",
+    "source:postal_code": "local_knowledge",
+    "type": "boundary",
+    "wikidata": "Q5000379",
+    "wikipedia": "en:Burraneer, New South Wales"
+  }
+},
+{
+  "type": "relation",
+  "id": 2017025,
+  "center": {
+    "lat": -34.0513430,
+    "lon": 151.1036132
+  },
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative",
+    "name": "Yowie Bay",
+    "place": "suburb",
+    "postal_code": "2228",
+    "ref:nswlpi:cadid": "108029654",
+    "ref:psma:loc_pid": "loc82fe21aa5c78",
+    "source": "ABS2011;data.gov.au;bing",
+    "source:postal_code": "local_knowledge",
+    "type": "boundary",
+    "wikidata": "Q4205869",
+    "wikipedia": "en:Yowie Bay, New South Wales"
+  }
+},
+{
+  "type": "relation",
+  "id": 2019808,
+  "center": {
+    "lat": -34.0567365,
+    "lon": 151.0820167
+  },
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative",
+    "name": "Grays Point",
+    "place": "suburb",
+    "postal_code": "2232",
+    "ref:nswlpi:cadid": "108033118",
+    "ref:psma:loc_pid": "locc82655524846",
+    "source": "ABS2011;data.gov.au;bing",
+    "source:postal_code": "local_knowledge",
+    "type": "boundary",
+    "wikidata": "Q5598373",
+    "wikipedia": "en:Grays Point, New South Wales"
+  }
+},
+{
+  "type": "relation",
+  "id": 2022074,
+  "center": {
+    "lat": -34.0773982,
+    "lon": 151.1284954
+  },
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative",
+    "name": "Maianbar",
+    "place": "suburb",
+    "postal_code": "2230",
+    "ref:nswlpi:cadid": "108030808",
+    "ref:psma:loc_pid": "loc7652211b70a0",
+    "type": "boundary",
+    "wikidata": "Q12734735",
+    "wikipedia": "en:Maianbar"
+  }
+},
+{
+  "type": "relation",
+  "id": 2250112,
+  "center": {
+    "lat": -33.9035901,
+    "lon": 151.2686499
+  },
+  "tags": {
+    "name": "Bronte Beach",
+    "natural": "beach",
+    "surface": "sand",
+    "type": "multipolygon",
+    "wikidata": "Q4974072",
+    "wikipedia": "en:Bronte Beach"
+  }
+},
+{
+  "type": "relation",
+  "id": 2251446,
+  "center": {
+    "lat": -33.9496645,
+    "lon": 151.2578290
+  },
+  "tags": {
+    "name": "Maroubra Beach",
+    "natural": "beach",
+    "surface": "sand",
+    "type": "multipolygon",
+    "wikidata": "Q21921810"
+  }
+},
+{
+  "type": "relation",
+  "id": 2910812,
+  "center": {
+    "lat": -34.0213580,
+    "lon": 151.1832549
+  },
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative",
+    "name": "Kurnell",
+    "place": "suburb",
+    "postal_code": "2231",
+    "ref:nswlpi:cadid": "108030807",
+    "ref:psma:loc_pid": "loc5d4054bb4b0a",
+    "source": "ABS2011-data.gov.au;bing;knowledge",
+    "type": "boundary",
+    "wikidata": "Q1637676",
+    "wikipedia": "en:Kurnell, New South Wales"
+  }
+},
+{
+  "type": "relation",
+  "id": 2911900,
+  "center": {
+    "lat": -34.0849204,
+    "lon": 151.1505267
+  },
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative",
+    "name": "Bundeena",
+    "place": "suburb",
+    "postal_code": "2230",
+    "ref:nswlpi:cadid": "108031961",
+    "ref:psma:loc_pid": "locfc4163d1e30f",
+    "type": "boundary",
+    "wikidata": "Q4997514",
+    "wikipedia": "en:Bundeena, New South Wales"
+  }
+},
+{
+  "type": "relation",
+  "id": 2927697,
+  "center": {
+    "lat": -33.8120318,
+    "lon": 151.2891174
+  },
+  "tags": {
+    "name": "Store Beach",
+    "natural": "beach",
+    "surface": "sand",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 2970109,
+  "center": {
+    "lat": -33.7932242,
+    "lon": 151.2877063
+  },
+  "tags": {
+    "name": "North Steyne Beach",
+    "natural": "beach",
+    "source": "local knowledge",
+    "surface": "sand",
+    "tourism": "attraction",
+    "type": "multipolygon",
+    "wikidata": "Q21956875"
+  }
+},
+{
+  "type": "relation",
+  "id": 3045926,
+  "center": {
+    "lat": -33.9913257,
+    "lon": 151.2404195
+  },
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative",
+    "name": "La Perouse",
+    "place": "suburb",
+    "postal_code": "2036",
+    "ref:nswlpi:cadid": "108033105",
+    "ref:psma:loc_pid": "loc734ede8f1376",
+    "source": "ABS2011-data.gov.au;bing;interpolation",
+    "type": "boundary",
+    "wikidata": "Q2918153",
+    "wikipedia": "en:La Perouse, New South Wales"
+  }
+},
+{
+  "type": "relation",
+  "id": 3359340,
+  "center": {
+    "lat": -33.7365461,
+    "lon": 151.3074514
+  },
+  "tags": {
+    "name": "Fishermans Beach",
+    "natural": "beach",
+    "surface": "sand",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 5710430,
+  "center": {
+    "lat": -33.8401401,
+    "lon": 151.2817873
+  },
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative",
+    "name": "Watsons Bay",
+    "name:etymology": "Robert Watson",
+    "place": "suburb",
+    "postal_code": "2030",
+    "ref:nswlpi:cadid": "108033257",
+    "ref:psma:loc_pid": "loc849affdcec04",
+    "type": "boundary",
+    "wikidata": "Q1002650",
+    "wikipedia": "en:Watsons Bay, New South Wales"
+  }
+},
+{
+  "type": "relation",
+  "id": 5922776,
+  "center": {
+    "lat": -33.9914086,
+    "lon": 151.2382048
+  },
+  "tags": {
+    "name": "Little Congwong Beach",
+    "natural": "beach",
+    "nudism": "yes",
+    "supervised": "no",
+    "surface": "sand",
+    "type": "multipolygon",
+    "wikidata": "Q21971994"
+  }
+},
+{
+  "type": "relation",
+  "id": 5926010,
+  "center": {
+    "lat": -33.9890482,
+    "lon": 151.2350056
+  },
+  "tags": {
+    "beach": "sand",
+    "lifeguard": "no",
+    "name": "Congwong Beach",
+    "natural": "beach",
+    "supervised": "no",
+    "surface": "sand",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 5926011,
+  "center": {
+    "lat": -33.9852962,
+    "lon": 151.2306423
+  },
+  "tags": {
+    "name": "Frenchmans Bay",
+    "natural": "beach",
+    "supervised": "no",
+    "surface": "sand",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 5926014,
+  "center": {
+    "lat": -33.9789339,
+    "lon": 151.2268757
+  },
+  "tags": {
+    "name": "Yarra Bay Beach",
+    "natural": "beach",
+    "surface": "sand",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 5926228,
+  "center": {
+    "lat": -33.9795529,
+    "lon": 151.2517362
+  },
+  "tags": {
+    "name": "Little Bay Beach",
+    "natural": "beach",
+    "supervised": "no",
+    "surface": "sand",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 7071527,
+  "center": {
+    "lat": -33.9920223,
+    "lon": 151.2313287
+  },
+  "tags": {
+    "name": "Bare Island",
+    "place": "islet",
+    "type": "multipolygon",
+    "wikidata": "Q4860286",
+    "wikipedia": "en:Bare Island (New South Wales)"
+  }
+},
+{
+  "type": "relation",
+  "id": 7071528,
+  "center": {
+    "lat": -34.0099276,
+    "lon": 151.1449349
+  },
+  "tags": {
+    "access": "private",
+    "access:note": "No entry due to protected wildlife nesting.",
+    "name": "Towra Spit Island",
+    "natural": "beach",
+    "note": "Island appears to be drifting south-westward",
+    "old_name": "Carter's Island",
+    "place": "islet",
+    "source:geometry": "NSW LPI Imagery",
+    "source:name": "knowledge",
+    "source:old_name": "historic",
+    "source_ref:old_name": "http://nla.gov.au/nla.map-rm903",
+    "surface": "sand",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 8212755,
+  "center": {
+    "lat": -33.9144163,
+    "lon": 151.2677976
+  },
+  "tags": {
+    "alt_name": "Clovelly Pool",
+    "name": "Clovelly Bay",
+    "natural": "bay",
+    "old_name": "Little Coogee Bay",
+    "source": "historical",
+    "source:name": "LPI Base Map",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 8238628,
+  "center": {
+    "lat": -33.7879311,
+    "lon": 151.2882824
+  },
+  "tags": {
+    "name": "Queenscliff Beach",
+    "natural": "beach",
+    "surface": "sand",
+    "tourism": "attraction",
+    "type": "multipolygon",
+    "wikidata": "Q21956838"
+  }
+},
+{
+  "type": "relation",
+  "id": 13802009,
+  "center": {
+    "lat": -33.9701160,
+    "lon": 151.2588510
+  },
+  "tags": {
+    "name": "Long Bay",
+    "name:en": "Long Bay",
+    "natural": "bay",
+    "source": "historical",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 13802010,
+  "center": {
+    "lat": -33.9792997,
+    "lon": 151.2534194
+  },
+  "tags": {
+    "name": "Little Bay",
+    "name:en": "Little Bay",
+    "natural": "bay",
+    "source": "historical",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 13802011,
+  "center": {
+    "lat": -33.9501465,
+    "lon": 151.2613341
+  },
+  "tags": {
+    "name": "Maroubra Bay",
+    "natural": "bay",
+    "source": "historical",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 14321609,
+  "center": {
+    "lat": -34.0034708,
+    "lon": 151.1134254
+  },
+  "tags": {
+    "alt_name": "Georges River Bridge",
+    "layer": "1",
+    "man_made": "bridge",
+    "name": "Tom Uglys Bridge",
+    "type": "multipolygon",
+    "wikidata": "Q7817898",
+    "wikipedia": "en:Tom Uglys Bridge"
+  }
+},
+{
+  "type": "relation",
+  "id": 15819042,
+  "center": {
+    "lat": -34.1945882,
+    "lon": 151.0384924
+  },
+  "tags": {
+    "alt_name": "Figure 8 Pools;Figure of Eight Pools",
+    "description": "Several rock pools with distinctive shapes. Not accessible during high tide or hazardous surf conditions.",
+    "flood_prone": "yes",
+    "hazard_prone": "yes",
+    "hazard_type": "flood",
+    "intermittent": "yes",
+    "name": "Figure Eight Pools",
+    "natural": "water",
+    "tidal": "yes",
+    "tourism": "attraction",
+    "type": "multipolygon",
+    "website": "https://www.nationalparks.nsw.gov.au/things-to-do/lookouts/figure-eight-pools"
+  }
+},
+{
+  "type": "relation",
+  "id": 17039612,
+  "center": {
+    "lat": -33.8592036,
+    "lon": 151.2011375
+  },
+  "tags": {
+    "area": "yes",
+    "name": "Nawi Cove",
+    "natural": "bay",
+    "source": "survey",
+    "swimming": "no",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 17064384,
+  "center": {
+    "lat": -33.8580824,
+    "lon": 151.2123397
+  },
+  "tags": {
+    "alt_name:aus": "Warrung",
+    "maxspeed": "8 kt",
+    "name": "Sydney Cove",
+    "name:aus": "Warrane",
+    "name:etymology": "Viscount Sydney",
+    "natural": "bay",
+    "ref:nswgnb": "56503",
+    "seamark:restricted_area:restriction": "no_anchoring;no_stopping;no_drifting;no_swimming;restricted_entry;restricted_speed",
+    "seamark:type": "restricted_area",
+    "source": "historical",
+    "source:name:aus": "nswgnb",
+    "source:name:etymology": "nswgnb",
+    "type": "multipolygon",
+    "wikidata": "Q1756937"
+  }
+},
+{
+  "type": "relation",
+  "id": 17190703,
+  "center": {
+    "lat": -34.1375120,
+    "lon": 151.1169603
+  },
+  "tags": {
+    "name": "Wattamolla Beach",
+    "natural": "beach",
+    "surface": "sand",
+    "type": "multipolygon",
+    "wikidata": "Q21956916"
+  }
+},
+{
+  "type": "relation",
+  "id": 17592853,
+  "center": {
+    "lat": -33.8407516,
+    "lon": 151.1724531
+  },
+  "tags": {
+    "area": "yes",
+    "name": "Woolwich Dock",
+    "natural": "bay",
+    "type": "multipolygon",
+    "was:waterway": "dock"
+  }
+},
+{
+  "type": "relation",
+  "id": 18179623,
+  "center": {
+    "lat": -33.9496798,
+    "lon": 151.1669633
+  },
+  "tags": {
+    "access": "yes",
+    "barrier": "no",
+    "dog": "unleashed",
+    "name": "Kyeemagh Dog Beach",
+    "natural": "beach",
+    "opening_hours": "24/7",
+    "surface": "sand",
+    "type": "multipolygon",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "relation",
+  "id": 18183670,
+  "center": {
+    "lat": -33.8013749,
+    "lon": 151.2859734
+  },
+  "tags": {
+    "lifeguard": "no",
+    "name": "East Manly Cove Beach",
+    "natural": "beach",
+    "supervised": "no",
+    "surface": "sand",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 18183678,
+  "center": {
+    "lat": -33.8549283,
+    "lon": 151.2255831
+  },
+  "tags": {
+    "alt_name": "Pinchgut",
+    "historic": "fort",
+    "name": "Fort Denison",
+    "name:aus": "Muddawahnyuh",
+    "old_name": "Matewanne;Mattawunga;Pinchgut (Nr);Rock Island",
+    "place": "islet",
+    "ref:nswgnb": "19208",
+    "source:location": "bing",
+    "source:name:aus": "nswgnb",
+    "source:old_name": "nswgnb",
+    "type": "multipolygon",
+    "website": "https://www.nationalparks.nsw.gov.au/things-to-do/historic-buildings-places/fort-denison",
+    "wikidata": "Q3748475",
+    "wikipedia": "en:Fort Denison"
+  }
+},
+{
+  "type": "relation",
+  "id": 18183680,
+  "center": {
+    "lat": -33.8549283,
+    "lon": 151.2255261
+  },
+  "tags": {
+    "name": "Pinchgut Island",
+    "place": "islet",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 18185996,
+  "center": {
+    "lat": -33.8586257,
+    "lon": 151.2578072
+  },
+  "tags": {
+    "fee": "$7",
+    "name": "Boowambillee / Shark Island",
+    "name:aus": "Boowambillee",
+    "place": "islet",
+    "source": "Bing",
+    "source:name": "knowledge",
+    "source:name:aus": "nswgnb",
+    "type": "multipolygon",
+    "wikidata": "Q7489798",
+    "wikipedia": "en:Shark Island (Port Jackson)"
+  }
+},
+{
+  "type": "relation",
+  "id": 18185997,
+  "center": {
+    "lat": -33.8627686,
+    "lon": 151.2410602
+  },
+  "tags": {
+    "name": "Billong-Olo-Lah / Clark Island",
+    "name:aus": "Billong-Olo-Lah",
+    "place": "islet",
+    "source:name": "https://osm.wiki/File:Billong-Olo-Lah_Plaque.jpg",
+    "type": "multipolygon",
+    "website": "https://www.nationalparks.nsw.gov.au/things-to-do/picnic-areas/clark-island",
+    "wikidata": "Q10454569",
+    "wikipedia": "en:Clark Island, New South Wales"
+  }
+},
+{
+  "type": "relation",
+  "id": 18185998,
+  "center": {
+    "lat": -33.8475878,
+    "lon": 151.1720717
+  },
+  "tags": {
+    "fee": "no",
+    "historic": "archaeological_site",
+    "museum": "history;maritime",
+    "name": "Cockatoo Island",
+    "opening_hours": "24/7",
+    "place": "islet",
+    "tourism": "museum",
+    "type": "multipolygon",
+    "website": "https://www.cockatooisland.gov.au",
+    "wheelchair": "limited",
+    "wikidata": "Q1105244",
+    "wikipedia": "en:Cockatoo Island (New South Wales)"
+  }
+},
+{
+  "type": "relation",
+  "id": 18185999,
+  "center": {
+    "lat": -33.8488078,
+    "lon": 151.1640726
+  },
+  "tags": {
+    "name": "Spectacle Island",
+    "place": "islet",
+    "source": "Bing imagery",
+    "type": "multipolygon",
+    "wikidata": "Q7575089",
+    "wikipedia": "en:Spectacle Island (Port Jackson)"
+  }
+},
+{
+  "type": "relation",
+  "id": 18186000,
+  "center": {
+    "lat": -33.8635487,
+    "lon": 151.1532320
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Rodd Island",
+    "name:etymology": "Brent Clements Rodd",
+    "name:etymology:wikidata": "Q4961341",
+    "place": "islet",
+    "source:location": "bing",
+    "source:name": "knowledge",
+    "type": "multipolygon",
+    "wikidata": "Q7356457",
+    "wikipedia": "en:Rodd Island"
+  }
+},
+{
+  "type": "relation",
+  "id": 19541746,
+  "center": {
+    "lat": -33.8644594,
+    "lon": 151.2225766
+  },
+  "tags": {
+    "area": "yes",
+    "name": "Woolloomooloo Bay",
+    "natural": "bay",
+    "source": "historical",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 19541747,
+  "center": {
+    "lat": -33.8723866,
+    "lon": 151.2326887
+  },
+  "tags": {
+    "area": "yes",
+    "name": "Rushcutters Bay",
+    "natural": "bay",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 19541748,
+  "center": {
+    "lat": -33.8683800,
+    "lon": 151.2288161
+  },
+  "tags": {
+    "area": "yes",
+    "name": "Elizabeth Bay",
+    "name:aus": "Gurrajin",
+    "name:en": "Elizabeth Bay",
+    "natural": "bay",
+    "old_name": "Jerrowon Bay",
+    "ref:nswgnb": "82292",
+    "source": "nswgnb",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 19541812,
+  "center": {
+    "lat": -33.8079138,
+    "lon": 151.2850195
+  },
+  "tags": {
+    "area": "yes",
+    "name": "Little Manly Cove",
+    "natural": "bay",
+    "source": "historical",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 20196892,
+  "center": {
+    "lat": -34.0547615,
+    "lon": 151.1845623
+  },
+  "tags": {
+    "area": "yes",
+    "name": "Bate Bay",
+    "natural": "bay",
+    "source": "historical",
+    "type": "multipolygon",
+    "wikidata": "Q4868738",
+    "wikipedia": "en:Bate Bay"
+  }
+}
+
+  ]
+}
