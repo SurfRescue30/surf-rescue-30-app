@@ -80,6 +80,44 @@
     return res.json();
   }
 
+  // Open-Meteo's forecast server leaves a share of requests hanging (seen in
+  // Nov 2026: ~4 in 10 never answer, the rest answer in under half a second).
+  // So if there's no answer in 2.5 s, send the same request again alongside it
+  // and take whichever answers first: up to 4 at once, each given 10 s.
+  function fetchHedged(url, { hedgeMs = 2500, max = 4, ms = 10000 } = {}) {
+    return new Promise((resolve, reject) => {
+      const ctls = [];
+      let started = 0, failed = 0, done = false, lastErr = null;
+      const finish = (ok, v) => {
+        if (done) return;
+        done = true;
+        ctls.forEach(c => c && c.abort());
+        ok ? resolve(v) : reject(v);
+      };
+      const launch = () => {
+        if (done || started >= max) return;
+        const n = started++;
+        const ctl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+        ctls.push(ctl);
+        const timer = ctl && setTimeout(() => ctl.abort(), ms);
+        // A tag makes each try a separate request (the server ignores it)
+        fetch(`${url}${url.includes('?') ? '&' : '?'}try=${n}`, { cache: 'no-store', signal: ctl?.signal })
+          .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
+          .then(d => finish(true, d))
+          .catch(e => {
+            lastErr = e;
+            if (++failed >= max) finish(false, lastErr);
+            else launch();                       // failed outright: try again now
+          })
+          .finally(() => clearTimeout(timer));
+        setTimeout(launch, hedgeMs);             // no answer yet: send another
+      };
+      launch();
+    });
+  }
+  // Is the phone actually offline? (Only then say "no signal".)
+  const offline = () => typeof navigator !== 'undefined' && navigator.onLine === false;
+
   // ── Sun: sunrise/sunset and civil twilight (first/last light) ─────
   // Standard sunrise equation; zenith 90.833° for sun, 96° for civil twilight.
   function sunEvent(dateKey, zenith, rising) {
@@ -145,10 +183,10 @@
   async function loadModel() {
     const common = `latitude=${point.lat}&longitude=${point.lon}&timezone=Australia%2FSydney&forecast_days=3`;
     const [wx, sea] = await Promise.all([
-      fetchJson(`https://api.open-meteo.com/v1/forecast?${common}&wind_speed_unit=kn` +
+      fetchHedged(`https://api.open-meteo.com/v1/forecast?${common}&wind_speed_unit=kn` +
         '&hourly=wind_speed_10m,wind_direction_10m,wind_gusts_10m,precipitation,temperature_2m,weather_code,is_day' +
         '&current=wind_speed_10m,wind_direction_10m,wind_gusts_10m,temperature_2m'),
-      fetchJson(`https://marine-api.open-meteo.com/v1/marine?${common}` +
+      fetchHedged(`https://marine-api.open-meteo.com/v1/marine?${common}` +
         '&hourly=swell_wave_height,swell_wave_direction,swell_wave_period,sea_surface_temperature')
     ]);
     return { wx, sea };
@@ -413,18 +451,21 @@
   setTimeout(() => panel.classList.remove('is-loading'), 10000);
 
   // ── Loader: try live, fall back to cache ──────────────────────────
+  let retryTimer = null;
   async function load(force = false) {
     if (!force && Date.now() - loadedAt < 10 * 60000) return;
     loadedAt = Date.now();
+    clearTimeout(retryTimer);
 
-    fetchJson(`${APP_CONFIG.dataUrl}?t=${Math.floor(Date.now() / 300000)}`)
+    fetchHedged(`${APP_CONFIG.dataUrl}?t=${Math.floor(Date.now() / 300000)}`)
       .then(d => { cacheSet(FEED_CACHE, d); renderFeed(d, Date.now()); })
       .catch(() => {
         const c = cacheGet(FEED_CACHE);
         if (c) renderFeed(c.data, c.at);
         else {
-          warningsBody.replaceChildren(el('p', 'muted', 'Warnings unavailable — no signal. Check BOM when back in range.'));
-          bomBody.replaceChildren(el('p', 'muted', 'BOM forecast unavailable — no signal.'));
+          const why = offline() ? 'no signal' : "the warnings feed didn't answer";
+          warningsBody.replaceChildren(el('p', 'muted', `Warnings unavailable — ${why}. Check BOM directly.`));
+          bomBody.replaceChildren(el('p', 'muted', `BOM forecast unavailable — ${why}.`));
           markReady('feed');
         }
       });
@@ -432,11 +473,27 @@
     loadModel()
       .then(d => { cacheSet(WX_CACHE, d); renderModel(d, Date.now()); })
       .catch(() => {
+        // Let the next tab visit try again straight away, and keep trying
+        loadedAt = 0;
+        retryTimer = setTimeout(() => load(), 30000);
         const c = cacheGet(WX_CACHE);
-        if (c) { renderModel(c.data, c.at); wxUpdated.textContent += ' (offline — saved)'; }
-        else { wxNow.replaceChildren(el('p', 'muted', 'No signal and no saved forecast yet.')); markReady('model'); }
+        if (c) {
+          renderModel(c.data, c.at);
+          wxUpdated.textContent += offline() ? ' (no signal — saved copy)' : " (forecast service didn't answer — saved copy, retrying)";
+          return;
+        }
+        const msg = el('p', 'muted', offline()
+          ? 'No signal and no saved forecast yet. It will load when there is signal.'
+          : "The forecast service didn't answer. Trying again every 30 seconds.");
+        const again = el('button', 'wx-retry', 'Try again now');
+        again.type = 'button';
+        again.addEventListener('click', () => { wxNow.replaceChildren(el('p', 'muted', 'Loading forecast…')); load(true); });
+        wxNow.replaceChildren(msg, again);
+        markReady('model');
       });
   }
+  // Signal back: fetch at once rather than waiting for the next retry
+  window.addEventListener('online', () => { if (!model || Date.now() - model.at > 10 * 60000) load(true); });
 
   // ── Live map: one Windy iframe; the pills change its layer ─────────
   // One map at a time: several Windy maps alive at once ran phones short of

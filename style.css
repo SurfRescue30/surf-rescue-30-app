@@ -611,6 +611,7 @@ details.card:not([open]) summary {
 .tile-label { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: #4A5B70; }
 .tile-big   { font-size: 1.15rem; font-weight: 900; }
 .tile-small { font-size: 0.75rem; font-weight: 600; color: #4A5B70; }
+.wx-retry { min-height: 48px; margin-top: 0.5rem; padding: 0 1rem; font: inherit; font-weight: 800; color: var(--white); background-color: var(--navy); border: none; border-radius: 8px; }
 
 .data-table {
   width: 100%;

@@ -383,6 +383,46 @@ await check('weather tab shows a loading screen until the data is in', async () 
   await ctx2.close();
 });
 
+await check('weather: a forecast request that hangs is retried, so the forecast still loads in seconds', async () => {
+  const ctx4 = await browser.newContext({ viewport: { width: 390, height: 844 }, locale: 'en-AU', timezoneId: 'Australia/Sydney' });
+  await ctx4.addInitScript(fakeSpeech);
+  await ctx4.addInitScript(() => localStorage.setItem('surfPatrolShift', JSON.stringify({ duty: 'Patrol', dutyOther: '', date: '2026-10-31', skipper: 'A', driver: 'B', crew: [], loggedOff: [] })));
+  // Like Open-Meteo in Nov 2026: the first request to each server never answers
+  const seen = { f: 0, m: 0 };
+  await ctx4.route('**/api.open-meteo.com/**', r => { if (seen.f++ === 0) return; r.fulfill({ json: forecastFixture }); });
+  await ctx4.route('**/marine-api.open-meteo.com/**', r => { if (seen.m++ === 0) return; r.fulfill({ json: marineFixture }); });
+  await ctx4.route('https://raw.githubusercontent.com/**/weather.json*', r => r.fulfill({ json: feedFixture }));
+  const p4 = await ctx4.newPage();
+  const t = Date.now();
+  await p4.goto(url);
+  await p4.click('[data-tab="weather"]');
+  await p4.waitForSelector('#wx-now .tile', { timeout: 8000 });
+  assert(Date.now() - t < 8000, `forecast took ${Date.now() - t} ms`);
+  assert(seen.f >= 2 && seen.m >= 2, `requests: forecast ${seen.f}, marine ${seen.m}`);
+  await ctx4.close();
+});
+
+await check('weather: when the forecast service never answers, it says so (not "no signal") and retries', async () => {
+  const ctx5 = await browser.newContext({ viewport: { width: 390, height: 844 }, locale: 'en-AU', timezoneId: 'Australia/Sydney' });
+  await ctx5.addInitScript(fakeSpeech);
+  await ctx5.addInitScript(() => localStorage.setItem('surfPatrolShift', JSON.stringify({ duty: 'Patrol', dutyOther: '', date: '2026-10-31', skipper: 'A', driver: 'B', crew: [], loggedOff: [] })));
+  let up = false;
+  await ctx5.route('**/api.open-meteo.com/**', r => up ? r.fulfill({ json: forecastFixture }) : r.abort('connectionreset'));
+  await ctx5.route('**/marine-api.open-meteo.com/**', r => r.fulfill({ json: marineFixture }));
+  await ctx5.route('https://raw.githubusercontent.com/**/weather.json*', r => r.fulfill({ json: feedFixture }));
+  const p5 = await ctx5.newPage();
+  await p5.goto(url);
+  await p5.click('[data-tab="weather"]');
+  await p5.waitForSelector('#wx-now .wx-retry', { timeout: 15000 });
+  const msg = await p5.textContent('#wx-now');
+  assert(!/no signal/i.test(msg) && /didn't answer/.test(msg), `message: "${msg}"`);
+  // Service back: Try again now loads it
+  up = true;
+  await p5.click('#wx-now .wx-retry');
+  await p5.waitForSelector('#wx-now .tile', { timeout: 8000 });
+  await ctx5.close();
+});
+
 await check('wind map loads when the app opens on the Weather tab', async () => {
   const ctx3 = await browser.newContext({ viewport: { width: 390, height: 844 }, locale: 'en-AU', timezoneId: 'Australia/Sydney' });
   await ctx3.route('**/api.open-meteo.com/**', r => r.fulfill({ json: forecastFixture }));
