@@ -83,8 +83,9 @@
   // Open-Meteo's forecast server leaves a share of requests hanging (seen in
   // Nov 2026: ~4 in 10 never answer, the rest answer in under half a second).
   // So if there's no answer in 2.5 s, send the same request again alongside it
-  // and take whichever answers first: up to 4 at once, each given 10 s.
-  function fetchHedged(url, { hedgeMs = 2500, max = 4, ms = 10000 } = {}) {
+  // and take whichever answers first: 2 tries, each given 10 s. (More would
+  // add to Open-Meteo's per-address limit, which shared mobile addresses hit.)
+  function fetchHedged(url, { hedgeMs = 2500, max = 2, ms = 10000 } = {}) {
     return new Promise((resolve, reject) => {
       const ctls = [];
       let started = 0, failed = 0, done = false, lastErr = null;
@@ -457,8 +458,12 @@
     loadedAt = Date.now();
     clearTimeout(retryTimer);
 
-    fetchHedged(`${APP_CONFIG.dataUrl}?t=${Math.floor(Date.now() / 300000)}`)
-      .then(d => { cacheSet(FEED_CACHE, d); renderFeed(d, Date.now()); })
+    // weather.json (built on GitHub every 30 min) carries the BOM data and,
+    // since Nov 2026, the Open-Meteo forecast too, fetched there with retries.
+    // Phones calling Open-Meteo themselves often hang or get "too many
+    // requests", so that's only the fallback when the file's copy is old.
+    const feedP = fetchHedged(`${APP_CONFIG.dataUrl}?t=${Math.floor(Date.now() / 300000)}`, { max: 2 })
+      .then(d => { cacheSet(FEED_CACHE, d); renderFeed(d, Date.now()); return d; })
       .catch(() => {
         const c = cacheGet(FEED_CACHE);
         if (c) renderFeed(c.data, c.at);
@@ -468,29 +473,45 @@
           bomBody.replaceChildren(el('p', 'muted', `BOM forecast unavailable — ${why}.`));
           markReady('feed');
         }
+        return c?.data || null;
       });
 
-    loadModel()
-      .then(d => { cacheSet(WX_CACHE, d); renderModel(d, Date.now()); })
-      .catch(() => {
-        // Let the next tab visit try again straight away, and keep trying
-        loadedAt = 0;
-        retryTimer = setTimeout(() => load(), 30000);
-        const c = cacheGet(WX_CACHE);
-        if (c) {
-          renderModel(c.data, c.at);
-          wxUpdated.textContent += offline() ? ' (no signal — saved copy)' : " (forecast service didn't answer — saved copy, retrying)";
-          return;
-        }
-        const msg = el('p', 'muted', offline()
-          ? 'No signal and no saved forecast yet. It will load when there is signal.'
-          : "The forecast service didn't answer. Trying again every 30 seconds.");
-        const again = el('button', 'wx-retry', 'Try again now');
-        again.type = 'button';
-        again.addEventListener('click', () => { wxNow.replaceChildren(el('p', 'muted', 'Loading forecast…')); load(true); });
-        wxNow.replaceChildren(msg, again);
-        markReady('model');
-      });
+    const useModel = (data, at) => {
+      try { localStorage.setItem(WX_CACHE, JSON.stringify({ at, data })); } catch { /* full */ }
+      renderModel(data, at);
+    };
+    const feedModel = d => {
+      const m = d?.model;
+      const at = m && Date.parse(m.at);
+      return m?.wx?.hourly && m?.sea?.hourly && at ? { data: { wx: m.wx, sea: m.sea }, at } : null;
+    };
+    feedP.then(d => {
+      const fm = feedModel(d);
+      if (fm && Date.now() - fm.at < 90 * 60000) { useModel(fm.data, fm.at); return; }
+      return loadModel()
+        .then(data => useModel(data, Date.now()))
+        .catch(() => {
+          // Let the next tab visit try again straight away, and keep trying
+          loadedAt = 0;
+          retryTimer = setTimeout(() => load(), 30000);
+          // An older copy from weather.json beats nothing
+          const saved = cacheGet(WX_CACHE);
+          const best = [fm, saved].filter(Boolean).sort((a, b) => b.at - a.at)[0];
+          if (best && Date.now() - best.at < 36 * 3600000) {
+            renderModel(best.data, best.at);
+            wxUpdated.textContent += offline() ? ' (no signal — saved copy)' : " (forecast service didn't answer — saved copy, retrying)";
+            return;
+          }
+          const msg = el('p', 'muted', offline()
+            ? 'No signal and no saved forecast yet. It will load when there is signal.'
+            : "The forecast service didn't answer. Trying again every 30 seconds.");
+          const again = el('button', 'wx-retry', 'Try again now');
+          again.type = 'button';
+          again.addEventListener('click', () => { wxNow.replaceChildren(el('p', 'muted', 'Loading forecast…')); load(true); });
+          wxNow.replaceChildren(msg, again);
+          markReady('model');
+        });
+    });
   }
   // Signal back: fetch at once rather than waiting for the next retry
   window.addEventListener('online', () => { if (!model || Date.now() - model.at > 10 * 60000) load(true); });

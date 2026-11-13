@@ -136,6 +136,50 @@ async function getWw() {
   return { location: data.location?.name, tides, observed };
 }
 
+// ── Open-Meteo model forecast (wind, sky, swell) for the app's Weather tab ──
+// Fetched here, every 30 min with retries, so phones read it from weather.json
+// instead of calling Open-Meteo themselves: from phones it often hangs or
+// answers 429 "Minutely API request limit exceeded" (shared mobile addresses).
+// Same request as weather.js; the point comes from config.js.
+const cfg = readFileSync(new URL('../config.js', import.meta.url), 'utf8');
+const POINT = {
+  lat: +(cfg.match(/forecastPoint:\s*{[^}]*lat:\s*(-?[\d.]+)/) || [])[1],
+  lon: +(cfg.match(/forecastPoint:\s*{[^}]*lon:\s*(-?[\d.]+)/) || [])[1]
+};
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+async function getJsonRetry(url, tries = 5) {
+  let last;
+  for (let i = 0; i < tries; i++) {
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(20000) });
+      if (res.status === 429) { last = new Error('HTTP 429 (rate limited)'); await sleep(30000); continue; }
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    } catch (e) { last = e; await sleep(4000); }
+  }
+  throw last;
+}
+async function getModel() {
+  if (!Number.isFinite(POINT.lat) || !Number.isFinite(POINT.lon)) throw new Error('forecastPoint not found in config.js');
+  const common = `latitude=${POINT.lat}&longitude=${POINT.lon}&timezone=Australia%2FSydney&forecast_days=3`;
+  const [wx, sea] = await Promise.all([
+    getJsonRetry(`https://api.open-meteo.com/v1/forecast?${common}&wind_speed_unit=kn` +
+      '&hourly=wind_speed_10m,wind_direction_10m,wind_gusts_10m,precipitation,temperature_2m,weather_code,is_day' +
+      '&current=wind_speed_10m,wind_direction_10m,wind_gusts_10m,temperature_2m'),
+    getJsonRetry(`https://marine-api.open-meteo.com/v1/marine?${common}` +
+      '&hourly=swell_wave_height,swell_wave_direction,swell_wave_period,sea_surface_temperature')
+  ]);
+  return { at: new Date().toISOString(), wx, sea };
+}
+// If Open-Meteo is down for this run, keep the forecast already published
+async function previousModel() {
+  const repo = process.env.GITHUB_REPOSITORY || 'SurfRescue30/surf-rescue-30-app';
+  const res = await fetch(`https://raw.githubusercontent.com/${repo}/weather-data/weather.json?t=${Date.now()}`, { signal: AbortSignal.timeout(20000) });
+  if (!res.ok) return null;
+  const m = (await res.json()).model;
+  return m && Date.now() - Date.parse(m.at) < 24 * 3600000 ? m : null;
+}
+
 const out = process.argv[2] || 'out';
 mkdirSync(out, { recursive: true });
 const result = { updated: new Date().toISOString(), errors: [] };
@@ -147,6 +191,7 @@ const warnings = await settle('warnings', getWarnings);
 result.bom = bom ? { issued: bom.issued, areas: bom.areas } : null;
 result.warnings = [...(bom?.coastWarnings || []), ...(warnings || [])];
 result.ww = await settle('willyweather', getWw);
+result.model = await settle('open-meteo', getModel) || await settle('open-meteo (previous)', previousModel);
 writeFileSync(join(out, 'weather.json'), JSON.stringify(result, null, 1));
-console.log(`areas ${result.bom?.areas.length ?? 0}, warnings ${result.warnings.length}, ww ${result.ww ? 'yes' : 'no'}, errors ${result.errors.length}`);
+console.log(`areas ${result.bom?.areas.length ?? 0}, warnings ${result.warnings.length}, ww ${result.ww ? 'yes' : 'no'}, model ${result.model ? result.model.at : 'no'}, errors ${result.errors.length}`);
 if (!result.bom && !warnings) process.exit(1);
