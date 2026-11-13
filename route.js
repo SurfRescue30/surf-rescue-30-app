@@ -506,9 +506,12 @@
     const path = line => line.map(([lat, lon], i) => `${i ? 'L' : 'M'}${sx(lon).toFixed(1)},${sy(lat).toFixed(1)}`).join('');
     let out = `<rect width="${W}" height="${H.toFixed(0)}" class="m-sea"/>`;
     const inView = l => l.some(([lat, lon]) => lat >= latMin && lat <= latMax && lon >= lonMin && lon <= lonMax);
+    // Land shaded so it reads apart from the water at a glance
+    (COAST.mapLand || []).forEach(poly => { out += `<path d="${poly.map(r => path(r) + 'Z').join('')}" class="m-land"/>`; });
     COAST.mapCoast.forEach(l => { out += `<path d="${path(l)}" class="m-coast"/>`; });
     // Outside the detailed area, the simplified coastline from coast-outer.js
     if (r.approx && typeof COAST_OUTER !== 'undefined') {
+      (COAST_OUTER.mapLand || []).forEach(poly => { if (poly.some(inView)) out += `<path d="${poly.map(r => path(r) + 'Z').join('')}" class="m-land"/>`; });
       COAST_OUTER.mapCoast.forEach(l => { if (inView(l)) out += `<path d="${path(l)}" class="m-coast"/>`; });
     }
     COAST.mapOutcrops.forEach(l => { out += `<path d="${path(l)}" class="m-outcrop"/>`; });

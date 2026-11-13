@@ -205,6 +205,8 @@
     if (!mapSvg || mapSvg.closest('[hidden]')) return;
     if (mapDrawn) { drawBoat(); return; }
     let svg = `<rect width="${W}" height="${H}" class="m-sea"/>`;
+    // Land shaded so it reads apart from the water at a glance
+    (COAST.mapLand || []).forEach(poly => { svg += `<path d="${poly.map(r => path(r) + 'Z').join('')}" class="m-land"/>`; });
     COAST.mapCoast.forEach(l => { svg += `<path d="${path(l)}" class="m-coast"/>`; });
     COAST.mapOutcrops.forEach(l => { svg += `<path d="${path(l)}" class="m-outcrop"/>`; });
     COAST.warnLines.forEach(l => { svg += `<path d="${path(l)}" class="m-warn"/>`; });

@@ -201,6 +201,37 @@ if est_polys:
     free |= inside | mouth_gap
     print('estuary polygons', len(est_polys), 'mouth segments', len(mouth), 'estuary cells', int(inside.sum()))
 
+# ── Land ────────────────────────────────────────────────────────────────
+# Split the map box along the coastline, keep the faces on the land side and
+# cut out every navigable water area (the harbour, bays, rivers). Inside the
+# harbour there is no coastline, only water areas, so the per-cell side test
+# above wrongly calls parts of the north shore (Georges Heights, Middle Head)
+# water. The routing grid and the maps' land fill both use this, so a route
+# can't cross land the map shows.
+_map_water = [g for g, wt in est_types if not g.is_empty and (wt in NAVIGABLE_WATER or g.area > 200_000)]
+_est = unary_union(_map_water) if _map_water else None
+_side = is_water.reshape(free.shape)
+def _is_land_face(f):
+    # Vote over grid cells in the face: one sample point can sit in a river
+    xmin, ymin, xmax, ymax = f.bounds
+    c0_, c1_ = max(0, int((xmin - x0) // CELL_M)), min(cols, int((xmax - x0) // CELL_M) + 1)
+    r0_, r1_ = max(0, int((ymin - y0) // CELL_M)), min(rows, int((ymax - y0) // CELL_M) + 1)
+    if c1_ <= c0_ or r1_ <= r0_:
+        pt = f.representative_point(); return not is_sea(pt.x, pt.y)
+    step = max(1, int(max(r1_ - r0_, c1_ - c0_) / 60))
+    rr, cc = np.mgrid[r0_:r1_:step, c0_:c1_:step]
+    ins = shapely.contains_xy(f, xs[cc], ys[rr])
+    if not ins.any():
+        pt = f.representative_point(); return not is_sea(pt.x, pt.y)
+    return _side[rr[ins], cc[ins]].mean() < 0.5
+_edges = unary_union([l.intersection(grid_box) for l in coast] + [grid_box.boundary])
+land_fill = unary_union([f for f in polygonize(_edges) if _is_land_face(f)])
+if _est is not None:
+    land_fill = land_fill.difference(_est)
+_in_land = shapely.contains_xy(land_fill, XX, YY)
+print('land cells removed from the grid', int((free & _in_land).sum()))
+free &= ~_in_land
+
 # Flood fill from the open sea (east edge) so land interiors aren't "water"
 sea = np.zeros_like(free)
 q = deque((r, cols - 1) for r in range(rows) if free[r, cols - 1])
@@ -353,6 +384,61 @@ for rank, name, reg, lat, lon in cands:
 route_places.sort(key=lambda p: (REGIONS.index(p['region']), -p['lat'] if p['region'] != 'Botany Bay & Georges River' else p['lon']))
 print('route places', len(route_places), {r: sum(1 for p in route_places if p['region'] == r) for r in REGIONS})
 
+# ── Map shoreline: coastline plus the estuary water-area outlines ─────
+# OSM's coastline closes across Sydney Harbour at the Heads (and across Port
+# Hacking), with the water behind mapped as water areas. Draw those outlines
+# too, and drop any piece with water on both sides (the made-up closing lines),
+# so the harbour shows as open water with its real shore.
+def _wet(x, y):
+    r_, c_ = int((y - y0) // CELL_M), int((x - x0) // CELL_M)
+    return 0 <= r_ < rows and 0 <= c_ < cols and bool(sea[r_, c_])
+def _shore_parts(line, off=90):
+    out, cur = [], []
+    cc = list(line.coords)
+    for (ax, ay), (bx, by) in zip(cc, cc[1:]):
+        L = math.hypot(bx - ax, by - ay) or 1
+        mx, my = (ax + bx) / 2, (ay + by) / 2
+        nx, ny = -(by - ay) / L * off, (bx - ax) / L * off
+        if _wet(mx + nx, my + ny) and _wet(mx - nx, my - ny):
+            if len(cur) > 1: out.append(LineString(cur))
+            cur = []
+        else:
+            if not cur: cur = [(ax, ay)]
+            cur.append((bx, by))
+    if len(cur) > 1: out.append(LineString(cur))
+    return out
+# Every navigable water area counts for the map, including ones routing leaves
+# out (Middle Harbour, North Harbour)
+_outlines = list(lines)
+if _map_water:
+    _b = unary_union(_map_water).boundary
+    _outlines += list(_b.geoms) if hasattr(_b, 'geoms') else [_b]
+map_coast = []
+for l in _outlines:
+    gi = l.intersection(grid_box)
+    for part in (gi.geoms if hasattr(gi, 'geoms') else [gi]):
+        if part.geom_type != 'LineString': continue
+        for piece in _shore_parts(part.segmentize(40)):
+            if piece.length > 300:
+                map_coast.append([[round(v, 5) for v in UP(x, y)] for x, y in piece.simplify(12).coords])
+print('map shoreline pieces', len(map_coast), 'points', sum(len(m) for m in map_coast))
+
+# ── Land fill for the maps: the same land the routing grid uses ─────────
+map_land = []
+for poly in (land_fill.geoms if hasattr(land_fill, 'geoms') else [land_fill]):
+    if poly.geom_type != 'Polygon' or poly.area < 2000: continue
+    poly = poly.simplify(12)
+    rings = [poly.exterior] + [r for r in poly.interiors if Polygon(r).area > 2000]
+    # Compact: each ring is "x,y;dx,dy;..." in 10 m steps from the projection
+    # origin, then from the previous point (decoded in coast.js itself)
+    enc_rings = []
+    for r in rings:
+        pts_ = [(round(x / 10), round(y / 10)) for x, y in r.coords]
+        out_ = [f'{pts_[0][0]},{pts_[0][1]}'] + [f'{b[0]-a[0]},{b[1]-a[1]}' for a, b in zip(pts_, pts_[1:]) if b != a]
+        enc_rings.append(';'.join(out_))
+    map_land.append(enc_rings)
+print('map land polygons', len(map_land), 'chars', sum(len(r) for p_ in map_land for r in p_))
+
 js = f"""/* ── Surf Patrol Log – coast.js (generated) ──
    Coastline, islands, rock platforms and reefs from South Head to Cape Baily,
    and the pre-computed 2 NM line measured from the outermost land or outcrop.
@@ -366,6 +452,8 @@ const COAST = {{
   warnM: {WARN},
   features: {json.dumps(features, separators=(',', ':'))},
   mapCoast: {json.dumps(map_coast, separators=(',', ':'))},
+  // Land for the maps' fill: polygons as [outer ring, ...holes], encoded; decoded below to lat/lon
+  mapLand: {json.dumps(map_land, separators=(',', ':'))},
   mapOutcrops: {json.dumps(islands, separators=(',', ':'))},
   limitLines: {json.dumps(limit_lines, separators=(',', ':'))},
   warnLines: {json.dumps(warn_lines, separators=(',', ':'))},
@@ -376,6 +464,15 @@ const COAST = {{
   nav: {{ origin: {json.dumps([round(UP(x0, y0)[0], 6), round(UP(x0, y0)[1], 6)])}, cellM: {CELL_M}, rows: {rows}, cols: {cols},
          proj: {{ lat0: {LAT0}, lon0: {LON0}, kx: {KX:.4f}, ky: {KY} }}, data: {json.dumps(nav_rows, separators=(',', ':'))} }}
 }};
+// Unpack mapLand: "x,y;dx,dy;..." in 10 m steps → [[lat, lon], ...]
+COAST.mapLand = COAST.mapLand.map(poly => poly.map(ring => {{
+  let x = 0, y = 0;
+  return ring.split(';').map(s => {{
+    const [dx, dy] = s.split(',');
+    x += +dx; y += +dy;
+    return [{LAT0} + y * 10 / {KY}, {LON0} + x * 10 / {KX:.4f}];
+  }});
+}}));
 """
 open('../coast.js', 'w').write(js)
 print('coast.js KB', round(len(js) / 1024))

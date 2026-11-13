@@ -713,6 +713,47 @@ await check('route engine: into Pittwater goes round Barrenjoey, not over the is
   assert(r.nm > 3, `${r.nm.toFixed(1)} NM is too short to have gone round`);
 });
 
+// Is a point on the maps' shaded land? (coast.js detailed area, coast-outer.js beyond)
+const routeLand = await (async () => {
+  const src = f => readFile(join(ROOT, f), 'utf8');
+  const ctx = {};
+  runInNewContext((await src('coast.js')).replace('const COAST', 'var COAST') + '\n' +
+    (await src('coast-outer.js')).replace('const COAST_OUTER', 'var COAST_OUTER'), ctx);
+  const inRing = (lat, lon, r) => {
+    let ins = false;
+    for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
+      const [ya, xa] = r[i], [yb, xb] = r[j];
+      if ((ya > lat) !== (yb > lat) && lon < (xb - xa) * (lat - ya) / (yb - ya) + xa) ins = !ins;
+    }
+    return ins;
+  };
+  const polys = [...ctx.COAST.mapLand, ...ctx.COAST_OUTER.mapLand];
+  return (lat, lon) => polys.some(p => inRing(lat, lon, p[0]) && !p.slice(1).some(h => inRing(lat, lon, h)));
+})();
+const landShare = r => {
+  let n = 0, land = 0;
+  for (let i = 1; i < r.pts.length; i++) {
+    const [a, b] = [r.pts[i - 1], r.pts[i]];
+    for (let k = 0; k < 40; k++) { const t = k / 40; n++; if (routeLand(a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t)) land++; }
+  }
+  return land / n;
+};
+
+await check('route engine: routes never cross the land the maps shade', async () => {
+  const ramp = { lat: -33.95815, lon: 151.19874 }, malabar = { lat: -33.96473, lon: 151.25545 };
+  for (const [a, b, name] of [
+    [malabar, { lat: -33.8445, lon: 151.2302 }, 'Malabar ramp → Mosman Bay (round Georges Head)'],
+    [malabar, { lat: -33.8380, lon: 151.2520 }, 'Malabar ramp → Chowder Bay'],
+    [ramp, { lat: -33.9530, lon: 151.1530 }, 'Botany ramp → Kyeemagh'],
+    [malabar, { lat: -33.66029, lon: 151.16067 }, 'Malabar ramp → Bobbin Head'],
+    [{ lat: -33.60055, lon: 151.32315 }, { lat: -33.48316, lon: 151.32506 }, 'Palm Beach → Woy Woy Wharf']]) {
+    const [r] = timed(a, b);
+    assert(r, `${name}: no route`);
+    const share = landShare(r);
+    assert(share < 0.01, `${name}: ${(share * 100).toFixed(1)}% of the route is over land`);
+  }
+});
+
 await check('route engine: approximate routes reach Woy Woy, Bobbin Head, Newcastle and Scarborough', async () => {
   for (const [a, b, name] of [
     [{ lat: -33.48316, lon: 151.32506 }, { lat: -33.54652, lon: 151.34544 }, 'Woy Woy Wharf → Box Head'],
