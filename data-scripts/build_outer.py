@@ -7,7 +7,7 @@
 import json, math
 from collections import deque
 import numpy as np, shapely
-from shapely.geometry import LineString, Polygon
+from shapely.geometry import LineString, Polygon, box
 from shapely.ops import unary_union, polygonize
 from scipy.spatial import cKDTree
 
@@ -85,7 +85,35 @@ vertex = SA[best_i] + (SB[best_i] - SA[best_i]) * best_t[:, None]
 side_water = ((pts - vertex) * n).sum(1) > 0
 near_coast = np.sqrt(best_d) < CLEAR_M
 in_area = shapely.contains_xy(water_area, pts[:, 0], pts[:, 1]) if water_area is not None else np.zeros(len(pts), bool)
-free = ((side_water & ~near_coast) | in_area).reshape(rows, cols)
+# Land: split the box along the coastline and keep faces on the land side.
+# The routing grid and the map's land fill both come from this, so routes
+# can't cross land the map shows. (A per-cell coastline-side test alone goes
+# wrong up rivers, where the nearest coastline is often a far bank.)
+side_grid = side_water.reshape(rows, cols)
+area_grid = in_area.reshape(rows, cols)
+def water_at(x, y):
+    r, c = int((y - y0) // CELL_M), int((x - x0) // CELL_M)
+    if not (0 <= r < rows and 0 <= c < cols): return True
+    return bool(side_grid[r, c] or area_grid[r, c])
+outer_box = box(x0, y0, x1, y1)
+detailed_box = box(*P(-34.20, 151.03), *P(-33.725, 151.37))
+faces = polygonize(unary_union([l.intersection(outer_box) for l in coast] + [outer_box.boundary]))
+# One sample point can land in a river's water area and flip a whole face, so
+# vote over the grid cells inside it, by coastline side alone
+def is_land_face(f):
+    xmin, ymin, xmax, ymax = f.bounds
+    c0, c1 = max(0, int((xmin - x0) // CELL_M)), min(cols, int((xmax - x0) // CELL_M) + 1)
+    r0, r1 = max(0, int((ymin - y0) // CELL_M)), min(rows, int((ymax - y0) // CELL_M) + 1)
+    step = max(1, int(max(r1 - r0, c1 - c0) / 60))
+    rr, cc = np.mgrid[r0:r1:step, c0:c1:step]
+    inside = shapely.contains_xy(f, xs[cc], ys[rr])
+    if not inside.any():
+        return not water_at(*f.representative_point().coords[0])
+    return side_grid[rr[inside], cc[inside]].mean() < 0.5
+land = unary_union([f for f in faces if is_land_face(f)])
+if water_area is not None: land = land.difference(water_area)
+in_land = shapely.contains_xy(land, pts[:, 0], pts[:, 1])
+free = ((~in_land & ~near_coast) | in_area).reshape(rows, cols)
 
 # Flood fill from the open sea (east edge) so lakes and land interiors drop out
 sea = np.zeros_like(free)
@@ -146,6 +174,20 @@ for l in coast + outlines:
         if s.length > 400:
             map_lines.append([[round(v, 4) for v in UP(x, y)] for x, y in s.coords])
 
+# Map fill outside the detailed area (coast.js has its own)
+map_fill = land.difference(detailed_box)
+map_land = []
+for poly in (map_fill.geoms if hasattr(land, 'geoms') else [land]):
+    if poly.geom_type != 'Polygon' or poly.area < 20000: continue
+    poly = poly.simplify(30)
+    rings = [poly.exterior] + [r for r in poly.interiors if Polygon(r).area > 20000]
+    enc = []
+    for r in rings:
+        q = [(round(x / 10), round(y / 10)) for x, y in r.coords]
+        enc.append(';'.join([f'{q[0][0]},{q[0][1]}'] + [f'{b[0]-a[0]},{b[1]-a[1]}' for a, b in zip(q, q[1:]) if b != a]))
+    map_land.append(enc)
+print('map land polygons', len(map_land), 'chars', sum(len(r) for p_ in map_land for r in p_))
+
 js = f"""/* ── Surf Patrol Log – coast-outer.js (generated) ──
    Coarse land/water grid ({int(CELL_M)} m) and simplified coastline from Newcastle to
    Scarborough, for the approximate job route outside the detailed area.
@@ -154,10 +196,21 @@ js = f"""/* ── Surf Patrol Log – coast-outer.js (generated) ──
 */
 const COAST_OUTER = {{
   mapCoast: {json.dumps(map_lines, separators=(',', ':'))},
+  // Land fill outside the detailed area: [outer ring, ...holes], encoded; decoded below
+  mapLand: {json.dumps(map_land, separators=(',', ':'))},
   // rows south→north, runs of value×count (0 land, 1 open water, 2 within 200 m of the coast)
   nav: {{ origin: {json.dumps([round(UP(x0, y0)[0], 6), round(UP(x0, y0)[1], 6)])}, cellM: {CELL_M}, rows: {rows}, cols: {cols},
          proj: {{ lat0: {LAT0}, lon0: {LON0}, kx: {KX:.4f}, ky: {KY} }}, data: {json.dumps([rle(grid[r]) for r in range(rows)], separators=(',', ':'))} }}
 }};
+// Unpack mapLand: "x,y;dx,dy;..." in 10 m steps → [[lat, lon], ...]
+COAST_OUTER.mapLand = COAST_OUTER.mapLand.map(poly => poly.map(ring => {{
+  let x = 0, y = 0;
+  return ring.split(';').map(s => {{
+    const [dx, dy] = s.split(',');
+    x += +dx; y += +dy;
+    return [{LAT0} + y * 10 / {KY}, {LON0} + x * 10 / {KX:.4f}];
+  }});
+}}));
 """
 open('../coast-outer.js', 'w').write(js)
 print('coast-outer.js KB', round(len(js) / 1024))

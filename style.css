@@ -948,6 +948,7 @@ details.card:not([open]) summary {
 }
 
 .m-sea     { fill: #BFDDF2; }
+.m-land    { fill: #E9DCB4; fill-rule: evenodd; }
 .m-coast   { fill: none; stroke: #6B4F1D; stroke-width: 1.6; }
 .m-outcrop { fill: #6B4F1D; stroke: #6B4F1D; stroke-width: 0.6; }
 .m-limit   { fill: none; stroke: var(--red); stroke-width: 2.4; }
