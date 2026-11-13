@@ -409,6 +409,7 @@ await check('weather: when the forecast service never answers, it says so (not "
   let up = false;
   await ctx5.route('**/api.open-meteo.com/**', r => up ? r.fulfill({ json: forecastFixture }) : r.abort('connectionreset'));
   await ctx5.route('**/marine-api.open-meteo.com/**', r => r.fulfill({ json: marineFixture }));
+  await ctx5.route(/windy\.com/, r => r.abort());   // the map loading shifts the page under the tap
   await ctx5.route('https://raw.githubusercontent.com/**/weather.json*', r => r.fulfill({ json: feedFixture }));
   const p5 = await ctx5.newPage();
   await p5.goto(url);
@@ -418,9 +419,29 @@ await check('weather: when the forecast service never answers, it says so (not "
   assert(!/no signal/i.test(msg) && /didn't answer/.test(msg), `message: "${msg}"`);
   // Service back: Try again now loads it
   up = true;
+  // Button near the top: tap it without scrolling it under the pinned tab bar
+  await p5.evaluate(() => window.scrollTo(0, 0));
   await p5.click('#wx-now .wx-retry');
   await p5.waitForSelector('#wx-now .tile', { timeout: 8000 });
   await ctx5.close();
+});
+
+await check('weather: forecast comes from weather.json, with no call to Open-Meteo, when its copy is fresh', async () => {
+  const ctx6 = await browser.newContext({ viewport: { width: 390, height: 844 }, locale: 'en-AU', timezoneId: 'Australia/Sydney' });
+  await ctx6.addInitScript(fakeSpeech);
+  await ctx6.addInitScript(() => localStorage.setItem('surfPatrolShift', JSON.stringify({ duty: 'Patrol', dutyOther: '', date: '2026-10-31', skipper: 'A', driver: 'B', crew: [], loggedOff: [] })));
+  let direct = 0;
+  await ctx6.route('**/api.open-meteo.com/**', r => { direct++; r.abort('connectionreset'); });
+  await ctx6.route('**/marine-api.open-meteo.com/**', r => { direct++; r.abort('connectionreset'); });
+  const at = new Date(Date.now() - 20 * 60000).toISOString();
+  await ctx6.route('https://raw.githubusercontent.com/**/weather.json*', r => r.fulfill({ json: { ...feedFixture, model: { at, wx: forecastFixture, sea: marineFixture } } }));
+  const p6 = await ctx6.newPage();
+  await p6.goto(url);
+  await p6.click('[data-tab="weather"]');
+  await p6.waitForSelector('#wx-now .tile', { timeout: 6000 });
+  assert(direct === 0, `app called Open-Meteo ${direct} times`);
+  assert(/20 min ago/.test(await p6.textContent('#wx-updated')), `age label: ${await p6.textContent('#wx-updated')}`);
+  await ctx6.close();
 });
 
 await check('wind map loads when the app opens on the Weather tab', async () => {
