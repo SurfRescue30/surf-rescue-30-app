@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="1.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.bom.gov.au/schema/v1.7/product.xsd">
+    <amoc>
+        <source>
+            <sender>Australian Government Bureau of Meteorology</sender>
+            <region>New South Wales</region>
+            <office>NSWRO</office>
+            <copyright>http://www.bom.gov.au/other/copyright.shtml</copyright>
+            <disclaimer>http://www.bom.gov.au/other/disclaimer.shtml</disclaimer>
+        </source>
+        <identifier>IDN29000</identifier>
+        <issue-time-utc>2026-11-28T11:25:08Z</issue-time-utc>
+        <issue-time-local tz="EDT">2026-11-28T22:25:08+11:00</issue-time-local>
+        <sent-time>2026-11-28T11:25:08Z</sent-time>
+        <expiry-time>2026-11-29T13:00:00Z</expiry-time>
+        <validity-bgn-time-local tz="EDT">2026-11-29T00:00:00+11:00</validity-bgn-time-local>
+        <validity-end-time-local tz="EDT">2026-11-29T23:59:59+11:00</validity-end-time-local>
+        <next-routine-issue-time-utc>2026-11-28T18:00:00Z</next-routine-issue-time-utc>
+        <next-routine-issue-time-local tz="EDT">2026-11-29T05:00:00+11:00</next-routine-issue-time-local>
+        <status>O</status>
+        <service>WSP</service>
+        <sub-service>WSG</sub-service>
+        <product-type>W</product-type>
+        <phase>REN</phase>
+    </amoc>
+    <warning>
+        <warning-info>
+            <text type="warning_title">Warning to Sheep Graziers</text>
+            <text type="warning_area_summary">Northern Tablelands forecast district</text>
+            <text type="warning_next_issue">5:00 am EDT Sunday</text>
+        </warning-info>
+        <!---->
+        <!--locale[NSW_EV001, allow-output=yes]-->
+        <!--hazards-exist="yes" non-warning-info-elements-exist="no"-->
+        <area aac="NSW_FA001" description="New South Wales" type="region">
+            <!--===============-->
+            <!--HAZARD ELEMENTS-->
+            <!--===============-->
+            <!--locale[NSW_EV001]/period[variable]-->
+            <hazard index="1" parent-aac="NSW_EV001" phase="REN" type="SHW" severity="STD" urgency="UNK" certainty="UNK" start-time-local="2026-11-29T00:00:00+11:00" end-time-local="2026-11-30T00:00:00+11:00" start-time-utc="2026-11-28T13:00:00Z" end-time-utc="2026-11-29T13:00:00Z">
+                <area-list>
+                    <area aac="NSW_PW004" phase="REN" description="Northern Tablelands" type="public-district"/>
+                </area-list>
+                <priority>W</priority>
+                <text type="warning_phenomena">Warning to Sheep Graziers</text>
+                <text type="warning_areas">Northern Tablelands forecast district</text>
+                <text type="warning">Sheep graziers are warned that, rain and showers and northwesterly winds are expected during early Sunday. Areas likely to be affected include parts of the Northern Tablelands forecast district. There is a risk of losses of lambs and sheep exposed to these conditions.</text>
+            </hazard>
+        </area>
+    </warning>
+</product>
